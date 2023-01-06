@@ -1,0 +1,445 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 291b51b96af5756469badb96c95d640d, type: 3}
+  m_Name: AkWwiseProjectData
+  m_EditorClassIdentifier: 
+  AcousticTextureWwu:
+  - PhysicalPath: Virtual Acoustics\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Virtual Acoustics
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: 3babd18ea7529840b3a772c129b9f84e
+    ParentPath: Virtual Acoustics\Default Work Unit
+    guid: 3babd18ea7529840b3a772c129b9f84e
+    GuidInternal: 
+    m_lastTime: -8585286319930573911
+    List: []
+  AuxBusWwu:
+  - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Master-Mixer Hierarchy
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: b6004cadb657344b86519f6916328172
+    ParentPath: Master-Mixer Hierarchy\Default Work Unit
+    guid: b6004cadb657344b86519f6916328172
+    GuidInternal: 
+    m_lastTime: -8585286319931789959
+    List:
+    - name: Master Audio Bus
+      guid: d8a41415a61d2a41a17e75ca0c2149f3
+      id: 3803692087
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: b6004cadb657344b86519f6916328172
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus
+  BankWwu:
+  - PhysicalPath: SoundBanks\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: SoundBanks
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: 6aa1eaea99dea04997507cd4b1b91c5f
+    ParentPath: SoundBanks\Default Work Unit
+    guid: 6aa1eaea99dea04997507cd4b1b91c5f
+    GuidInternal: 
+    m_lastTime: -8585286146349586594
+    List:
+    - name: Main
+      guid: 3a012cee5b6a2140981457a95644f402
+      id: 3161908922
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 6aa1eaea99dea04997507cd4b1b91c5f
+      - ElementName: Main
+        ObjectType: 7
+        guid: 3a012cee5b6a2140981457a95644f402
+      Path: SoundBanks\Default Work Unit\Main
+  EventWwu:
+  - PhysicalPath: Events\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Events
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: d4b514fe4a80544c843d323e6844ee2f
+    ParentPath: Events\Default Work Unit
+    guid: d4b514fe4a80544c843d323e6844ee2f
+    GuidInternal: 
+    m_lastTime: -8585286182219469731
+    List:
+    - name: New Virtual Folder
+      guid: e675ac7e37ce554ba28341d3d666df95
+      id: 3208186232
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: d4b514fe4a80544c843d323e6844ee2f
+      - ElementName: New Virtual Folder
+        ObjectType: 4
+        guid: e675ac7e37ce554ba28341d3d666df95
+      Path: Events\Default Work Unit\New Virtual Folder
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+  - PhysicalPath: Events\MIDI.wwu
+    PathAndIcons:
+    - ElementName: Events
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: MIDI
+      ObjectType: 12
+      guid: 44d996f522980f4eab14761fdfdbcb2e
+    ParentPath: Events\MIDI
+    guid: 44d996f522980f4eab14761fdfdbcb2e
+    GuidInternal: 
+    m_lastTime: -8585286181506506476
+    List:
+    - name: New_Event
+      guid: 6e2ae1cea1326d40a986f9e6701882f6
+      id: 3050945240
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: MIDI
+        ObjectType: 12
+        guid: 44d996f522980f4eab14761fdfdbcb2e
+      - ElementName: New_Event
+        ObjectType: 3
+        guid: 6e2ae1cea1326d40a986f9e6701882f6
+      Path: Events\MIDI\New_Event
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+  RtpcWwu:
+  - PhysicalPath: Game Parameters\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Game Parameters
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: 789d1955a94f0c42a6f708ae99567410
+    ParentPath: Game Parameters\Default Work Unit
+    guid: 789d1955a94f0c42a6f708ae99567410
+    GuidInternal: 
+    m_lastTime: -8585286157221397876
+    List:
+    - name: Pitch
+      guid: a62c9b199c7c514d8b4cb0f5124e8d1d
+      id: 1908158473
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 789d1955a94f0c42a6f708ae99567410
+      - ElementName: Pitch
+        ObjectType: 13
+        guid: a62c9b199c7c514d8b4cb0f5124e8d1d
+      Path: Game Parameters\Default Work Unit\Pitch
+    - name: Playback_Speed
+      guid: cf42788f46d2fd4bbd6fdc51f94daa7e
+      id: 78830142
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 789d1955a94f0c42a6f708ae99567410
+      - ElementName: Playback_Speed
+        ObjectType: 13
+        guid: cf42788f46d2fd4bbd6fdc51f94daa7e
+      Path: Game Parameters\Default Work Unit\Playback_Speed
+  StateWwu:
+  - PhysicalPath: States\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: States
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: d280c2c4ba393142a74d14ea8c2fbc1b
+    ParentPath: States\Default Work Unit
+    guid: d280c2c4ba393142a74d14ea8c2fbc1b
+    GuidInternal: 
+    m_lastTime: -8585286319931669849
+    List: []
+  SwitchWwu:
+  - PhysicalPath: Switches\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Switches
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: 85618ebb61fd914caee7f1816f7129ad
+    ParentPath: Switches\Default Work Unit
+    guid: 85618ebb61fd914caee7f1816f7129ad
+    GuidInternal: 
+    m_lastTime: -8585286156862183901
+    List:
+    - name: Pitch
+      guid: 6c8ac985064d4f45915909d6ec270468
+      id: 1908158473
+      PathAndIcons:
+      - ElementName: Switches
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 85618ebb61fd914caee7f1816f7129ad
+      - ElementName: Pitch
+        ObjectType: 11
+        guid: 6c8ac985064d4f45915909d6ec270468
+      Path: Switches\Default Work Unit\Pitch
+      values:
+      - name: A
+        guid: 4647de80ceda704ea5417d40b1bd7430
+        id: 84696446
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 85618ebb61fd914caee7f1816f7129ad
+        - ElementName: Pitch
+          ObjectType: 11
+          guid: 6c8ac985064d4f45915909d6ec270468
+        - ElementName: A
+          ObjectType: 10
+          guid: 4647de80ceda704ea5417d40b1bd7430
+      - name: A_sharp
+        guid: 6e0c89939f1fa840821db8b1b957e2b3
+        id: 164139463
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 85618ebb61fd914caee7f1816f7129ad
+        - ElementName: Pitch
+          ObjectType: 11
+          guid: 6c8ac985064d4f45915909d6ec270468
+        - ElementName: A_sharp
+          ObjectType: 10
+          guid: 6e0c89939f1fa840821db8b1b957e2b3
+      - name: B
+        guid: cab96fbc8e11904893b4df6eda326648
+        id: 84696445
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 85618ebb61fd914caee7f1816f7129ad
+        - ElementName: Pitch
+          ObjectType: 11
+          guid: 6c8ac985064d4f45915909d6ec270468
+        - ElementName: B
+          ObjectType: 10
+          guid: cab96fbc8e11904893b4df6eda326648
+      - name: C
+        guid: 30f6e59a251bfc4cb214a021c3c527f4
+        id: 84696444
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 85618ebb61fd914caee7f1816f7129ad
+        - ElementName: Pitch
+          ObjectType: 11
+          guid: 6c8ac985064d4f45915909d6ec270468
+        - ElementName: C
+          ObjectType: 10
+          guid: 30f6e59a251bfc4cb214a021c3c527f4
+      - name: C_sharp
+        guid: 61921bd049df8148a7ca6674f2bd800b
+        id: 2816864521
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 85618ebb61fd914caee7f1816f7129ad
+        - ElementName: Pitch
+          ObjectType: 11
+          guid: 6c8ac985064d4f45915909d6ec270468
+        - ElementName: C_sharp
+          ObjectType: 10
+          guid: 61921bd049df8148a7ca6674f2bd800b
+      - name: D
+        guid: 80af972d7ab45742adcd2f929489b148
+        id: 84696443
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 85618ebb61fd914caee7f1816f7129ad
+        - ElementName: Pitch
+          ObjectType: 11
+          guid: 6c8ac985064d4f45915909d6ec270468
+        - ElementName: D
+          ObjectType: 10
+          guid: 80af972d7ab45742adcd2f929489b148
+      - name: D_sharp
+        guid: 429badb864be4b4e887846804031a88e
+        id: 844677726
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 85618ebb61fd914caee7f1816f7129ad
+        - ElementName: Pitch
+          ObjectType: 11
+          guid: 6c8ac985064d4f45915909d6ec270468
+        - ElementName: D_sharp
+          ObjectType: 10
+          guid: 429badb864be4b4e887846804031a88e
+      - name: E
+        guid: a7c1185f288a3c4f838390a1a3d7e1fb
+        id: 84696442
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 85618ebb61fd914caee7f1816f7129ad
+        - ElementName: Pitch
+          ObjectType: 11
+          guid: 6c8ac985064d4f45915909d6ec270468
+        - ElementName: E
+          ObjectType: 10
+          guid: a7c1185f288a3c4f838390a1a3d7e1fb
+      - name: F
+        guid: f4b6b364415be3439c5010382c6f9bfa
+        id: 84696441
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 85618ebb61fd914caee7f1816f7129ad
+        - ElementName: Pitch
+          ObjectType: 11
+          guid: 6c8ac985064d4f45915909d6ec270468
+        - ElementName: F
+          ObjectType: 10
+          guid: f4b6b364415be3439c5010382c6f9bfa
+      - name: F_sharp
+        guid: 0cab291fb95ab9498449d33ecea31d1e
+        id: 951594152
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 85618ebb61fd914caee7f1816f7129ad
+        - ElementName: Pitch
+          ObjectType: 11
+          guid: 6c8ac985064d4f45915909d6ec270468
+        - ElementName: F_sharp
+          ObjectType: 10
+          guid: 0cab291fb95ab9498449d33ecea31d1e
+      - name: G
+        guid: f61c31bcc83a3f43a4ce548eacd7aa29
+        id: 84696440
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 85618ebb61fd914caee7f1816f7129ad
+        - ElementName: Pitch
+          ObjectType: 11
+          guid: 6c8ac985064d4f45915909d6ec270468
+        - ElementName: G
+          ObjectType: 10
+          guid: f61c31bcc83a3f43a4ce548eacd7aa29
+      - name: G_sharp
+        guid: 70cea11a5bea914b980c0e578b45532b
+        id: 3736223277
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 85618ebb61fd914caee7f1816f7129ad
+        - ElementName: Pitch
+          ObjectType: 11
+          guid: 6c8ac985064d4f45915909d6ec270468
+        - ElementName: G_sharp
+          ObjectType: 10
+          guid: 70cea11a5bea914b980c0e578b45532b
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+  TriggerWwu:
+  - PhysicalPath: Triggers\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Triggers
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: 34d23b4bfff182449c82820f82c898cd
+    ParentPath: Triggers\Default Work Unit
+    guid: 34d23b4bfff182449c82820f82c898cd
+    GuidInternal: 
+    m_lastTime: -8585286319930929214
+    List: []
+  ExpandedFileSystemItemIds: 
+  ExpandedWaapiItemIds: 0c0000000d000000
+  AutoSyncSelection: 0
+  autoPopulateEnabled: 1
+  currentDataSource: 0
+  CurrentPluginConfig: 
