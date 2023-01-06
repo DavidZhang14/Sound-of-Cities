@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="16" SoundBankVersion="145">
+	<RootPaths>
+		<ProjectRoot>../..</ProjectRoot>
+		<SourceFilesRoot>../../.cache/Mac</SourceFilesRoot>
+		<SoundBanksRoot>.</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>.</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{E77F432E-1D50-DFE0-5DA9-47925E37CA68}">
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+			<Plugins>
+				<AudioDevices>
+					<Plugin Id="2317455096" Name="No_Output" LibName="No Output" LibId="11862023"/>
+					<Plugin Id="3859886410" Name="System" LibName="System" LibId="11403271"/>
+				</AudioDevices>
+			</Plugins>
+			<Busses>
+				<Bus Id="3803692087" Name="Master Audio Bus"/>
+			</Busses>
+			<GameParameters>
+				<GameParameter Id="78830142" Name="Playback_Speed"/>
+				<GameParameter Id="1908158473" Name="Pitch"/>
+			</GameParameters>
+			<SwitchGroups>
+				<SwitchGroup Id="1908158473" Name="Pitch">
+					<GameParameterRef Id="1908158473"/>
+					<Switches>
+						<Switch Id="84696440" Name="G"/>
+						<Switch Id="84696441" Name="F"/>
+						<Switch Id="84696442" Name="E"/>
+						<Switch Id="84696443" Name="D"/>
+						<Switch Id="84696444" Name="C"/>
+						<Switch Id="84696445" Name="B"/>
+						<Switch Id="84696446" Name="A"/>
+						<Switch Id="164139463" Name="A_sharp"/>
+						<Switch Id="844677726" Name="D_sharp"/>
+						<Switch Id="951594152" Name="F_sharp"/>
+						<Switch Id="2816864521" Name="C_sharp"/>
+						<Switch Id="3736223277" Name="G_sharp"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
+		</SoundBank>
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{6A492629-FDB2-2B56-FF35-AFC777ADAB4E}">
+			<ShortName>Main</ShortName>
+			<Path>Main.bnk</Path>
+			<Events>
+				<Event Id="3050945240" Name="New_Event" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+			</Events>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{FA0D1A8E-5F95-AE01-C3DA-E00D3590AAC4}</FileHash>
+</SoundBanksInfo>
