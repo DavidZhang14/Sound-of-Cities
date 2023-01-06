@@ -13,11 +13,23 @@ namespace AK
 {
     namespace EVENTS
     {
-        static const AkUniqueID NEW_EVENT = 3050945240U;
+        static const AkUniqueID MAIN_LOOP = 3813340491U;
+        static const AkUniqueID NOTE_TRIGGER = 2201309604U;
     } // namespace EVENTS
 
     namespace SWITCHES
     {
+        namespace INSTRUMENT
+        {
+            static const AkUniqueID GROUP = 3310955382U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID HARP = 3599861402U;
+                static const AkUniqueID RECORDER = 1745032475U;
+            } // namespace SWITCH
+        } // namespace INSTRUMENT
+
         namespace PITCH
         {
             static const AkUniqueID GROUP = 1908158473U;
@@ -43,6 +55,7 @@ namespace AK
 
     namespace GAME_PARAMETERS
     {
+        static const AkUniqueID INSTRUMENT_ID = 1932249518U;
         static const AkUniqueID PITCH = 1908158473U;
         static const AkUniqueID PLAYBACK_SPEED = 78830142U;
     } // namespace GAME_PARAMETERS

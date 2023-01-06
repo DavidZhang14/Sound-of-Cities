@@ -94,8 +94,25 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: d4b514fe4a80544c843d323e6844ee2f
     GuidInternal: 
-    m_lastTime: -8585286182219469731
+    m_lastTime: -8585285718035794094
     List:
+    - name: Main_Loop
+      guid: 40394ec22fd0c8479c1c7ee0ae6ea453
+      id: 3813340491
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: d4b514fe4a80544c843d323e6844ee2f
+      - ElementName: Main_Loop
+        ObjectType: 3
+        guid: 40394ec22fd0c8479c1c7ee0ae6ea453
+      Path: Events\Default Work Unit\Main_Loop
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: New Virtual Folder
       guid: e675ac7e37ce554ba28341d3d666df95
       id: 3208186232
@@ -124,11 +141,11 @@ MonoBehaviour:
     ParentPath: Events\MIDI
     guid: 44d996f522980f4eab14761fdfdbcb2e
     GuidInternal: 
-    m_lastTime: -8585286181506506476
+    m_lastTime: -8585286070503634234
     List:
-    - name: New_Event
+    - name: Note_Trigger
       guid: 6e2ae1cea1326d40a986f9e6701882f6
-      id: 3050945240
+      id: 2201309604
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -136,10 +153,10 @@ MonoBehaviour:
       - ElementName: MIDI
         ObjectType: 12
         guid: 44d996f522980f4eab14761fdfdbcb2e
-      - ElementName: New_Event
+      - ElementName: Note_Trigger
         ObjectType: 3
         guid: 6e2ae1cea1326d40a986f9e6701882f6
-      Path: Events\MIDI\New_Event
+      Path: Events\MIDI\Note_Trigger
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -155,8 +172,22 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 789d1955a94f0c42a6f708ae99567410
     GuidInternal: 
-    m_lastTime: -8585286157221397876
+    m_lastTime: -8585286068959215817
     List:
+    - name: Instrument_ID
+      guid: 0b9192cf2349ae48a019a065c785e7c8
+      id: 1932249518
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 789d1955a94f0c42a6f708ae99567410
+      - ElementName: Instrument_ID
+        ObjectType: 13
+        guid: 0b9192cf2349ae48a019a065c785e7c8
+      Path: Game Parameters\Default Work Unit\Instrument_ID
     - name: Pitch
       guid: a62c9b199c7c514d8b4cb0f5124e8d1d
       id: 1908158473
@@ -211,8 +242,58 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: 85618ebb61fd914caee7f1816f7129ad
     GuidInternal: 
-    m_lastTime: -8585286156862183901
+    m_lastTime: -8585286067656790296
     List:
+    - name: Instrument
+      guid: 36c5dd9c5c3877478ce79d02e2b19279
+      id: 3310955382
+      PathAndIcons:
+      - ElementName: Switches
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 85618ebb61fd914caee7f1816f7129ad
+      - ElementName: Instrument
+        ObjectType: 11
+        guid: 36c5dd9c5c3877478ce79d02e2b19279
+      Path: Switches\Default Work Unit\Instrument
+      values:
+      - name: Harp
+        guid: 729f5aaffcf8ba42bcee53ec21a3df44
+        id: 3599861402
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 85618ebb61fd914caee7f1816f7129ad
+        - ElementName: Instrument
+          ObjectType: 11
+          guid: 36c5dd9c5c3877478ce79d02e2b19279
+        - ElementName: Harp
+          ObjectType: 10
+          guid: 729f5aaffcf8ba42bcee53ec21a3df44
+      - name: Recorder
+        guid: 1fe6ded1348a6c4889d45ffe1c5f7c4d
+        id: 1745032475
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 85618ebb61fd914caee7f1816f7129ad
+        - ElementName: Instrument
+          ObjectType: 11
+          guid: 36c5dd9c5c3877478ce79d02e2b19279
+        - ElementName: Recorder
+          ObjectType: 10
+          guid: 1fe6ded1348a6c4889d45ffe1c5f7c4d
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
     - name: Pitch
       guid: 6c8ac985064d4f45915909d6ec270468
       id: 1908158473
@@ -438,7 +519,7 @@ MonoBehaviour:
     m_lastTime: -8585286319930929214
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 0c0000000d000000
+  ExpandedWaapiItemIds: 02000000030000000500000006000000070000000c0000000d000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

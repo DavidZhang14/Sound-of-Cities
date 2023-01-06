@@ -20315,7 +20315,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0de986c2cb267b440881e2e987a623e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentGrid: 1
   currentBeat: 1
+  Beat2: {fileID: 1693423573}
+  Beat3: {fileID: 126944424}
+  Beat4: {fileID: 1115499473}
 --- !u!1001 &1620093911
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25306,8 +25310,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1963199580}
   - component: {fileID: 1963199579}
-  - component: {fileID: 1963199582}
   - component: {fileID: 1963199581}
+  - component: {fileID: 1963199582}
   m_Layer: 0
   m_Name: WwiseGlobal
   m_TagString: Untagged
@@ -25390,7 +25394,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1963199578}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2cffb3ea6534fd49a2926d1adc7f76a, type: 3}
+  m_Script: {fileID: 11500000, guid: 1882cc646909a6242b5e6c2881f7abcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &1964217593
