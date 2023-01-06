@@ -20315,8 +20315,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0de986c2cb267b440881e2e987a623e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentGrid: 1
-  currentBeat: 1
+  currentGrid: 0
+  currentBeat: 0
   Beat2: {fileID: 1693423573}
   Beat3: {fileID: 126944424}
   Beat4: {fileID: 1115499473}

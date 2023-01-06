@@ -7,8 +7,8 @@ public class RhythmPanel : MonoBehaviour
 {
     private short beatPerMeasure = 4;
     private short gridPerMeasure = 32;
-    public short currentGrid = 1;
-    public short currentBeat = 1;
+    public short currentGrid = 0;
+    public short currentBeat = 0;
     [SerializeField] private RawImage Beat2;
     [SerializeField] private RawImage Beat3;
     [SerializeField] private RawImage Beat4;
@@ -25,7 +25,7 @@ public class RhythmPanel : MonoBehaviour
     private void NewGrid() {
         currentGrid += 1;
         if (currentGrid > gridPerMeasure) currentGrid = 1; 
-        if (currentGrid % 8 == 0) NewBeat();
+        if (currentGrid % 8 == 1) NewBeat();
     }
     private void NewBeat() {
         currentBeat += 1;

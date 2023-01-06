@@ -172,36 +172,8 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 789d1955a94f0c42a6f708ae99567410
     GuidInternal: 
-    m_lastTime: -8585286068959215817
+    m_lastTime: -8585285658084960890
     List:
-    - name: Instrument_ID
-      guid: 0b9192cf2349ae48a019a065c785e7c8
-      id: 1932249518
-      PathAndIcons:
-      - ElementName: Game Parameters
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: 789d1955a94f0c42a6f708ae99567410
-      - ElementName: Instrument_ID
-        ObjectType: 13
-        guid: 0b9192cf2349ae48a019a065c785e7c8
-      Path: Game Parameters\Default Work Unit\Instrument_ID
-    - name: Pitch
-      guid: a62c9b199c7c514d8b4cb0f5124e8d1d
-      id: 1908158473
-      PathAndIcons:
-      - ElementName: Game Parameters
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: 789d1955a94f0c42a6f708ae99567410
-      - ElementName: Pitch
-        ObjectType: 13
-        guid: a62c9b199c7c514d8b4cb0f5124e8d1d
-      Path: Game Parameters\Default Work Unit\Pitch
     - name: Playback_Speed
       guid: cf42788f46d2fd4bbd6fdc51f94daa7e
       id: 78830142
@@ -242,7 +214,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: 85618ebb61fd914caee7f1816f7129ad
     GuidInternal: 
-    m_lastTime: -8585286067656790296
+    m_lastTime: -8585285657962200296
     List:
     - name: Instrument
       guid: 36c5dd9c5c3877478ce79d02e2b19279
@@ -519,7 +491,7 @@ MonoBehaviour:
     m_lastTime: -8585286319930929214
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 02000000030000000500000006000000070000000c0000000d000000
+  ExpandedWaapiItemIds: 02000000030000000500000006000000070000000a0000000c0000000d000000100000001100000014000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0
