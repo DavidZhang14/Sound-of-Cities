@@ -6,12 +6,21 @@ using UnityEngine.UI;
 
 public class UIController : MonoBehaviour
 {
+    public static UIController Instance;
     public Action OnRoadPlacement, OnHousePlacement, OnSpecialPlacement, OnEdit;
     public Button placeRoadButton, placeHouseButton, placeSpecialButton, editButton;
 
     public Color outlineColor;
     List<Button> buttonList;
-
+    public StructureSoundEmitter editTarget;
+    public InfoPanel infoPanel;
+    private void Awake() {
+        if (Instance != null) {
+            Destroy (gameObject);
+            return;
+        }
+        Instance = this;
+    }
     private void Start()
     {
         buttonList = new List<Button> { placeHouseButton, placeRoadButton, placeSpecialButton, editButton };
@@ -59,5 +68,9 @@ public class UIController : MonoBehaviour
         {
             button.GetComponent<Outline>().enabled = false;
         }
+    }
+
+    public void updateInfoPanel() {
+        infoPanel.Instrument.text = editTarget.instrument;
     }
 }

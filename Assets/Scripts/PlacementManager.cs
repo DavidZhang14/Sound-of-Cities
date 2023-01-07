@@ -124,4 +124,8 @@ public class PlacementManager : MonoBehaviour
         else if (structureDictionary.ContainsKey(position))
             structureDictionary[position].SwapModel(newModel, rotation);
     }
+
+    public StructureSoundEmitter GetSoundEmitter(Vector3Int position) {
+        return structureDictionary[position].structureSoundEmitter;
+    }
 }
