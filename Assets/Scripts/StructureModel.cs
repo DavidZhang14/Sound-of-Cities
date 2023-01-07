@@ -5,11 +5,13 @@ using UnityEngine;
 public class StructureModel : MonoBehaviour
 {
     float yHeight = 0;
+    public StructureSoundEmitter structureSoundEmitter;
 
     public void CreateModel(GameObject model)
     {
-        var structure = Instantiate(model, transform);
+        GameObject structure = Instantiate(model, transform);
         yHeight = structure.transform.position.y;
+        structureSoundEmitter = structure.GetComponent<StructureSoundEmitter>();
     }
 
     public void SwapModel(GameObject model, Quaternion rotation)

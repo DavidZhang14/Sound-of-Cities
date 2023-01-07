@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class StructureSoundEmitter : MonoBehaviour
 {  
+    public string pitch = "A";
+    public string instrument = "Harp";
     public short targetGrid = 1;
     public RhythmPanel rhythmPanel;
     void OnEnable() {
         MusicController.NewGridReached += EmitSound;
-        UpdateSound("A", "Harp");
+        UpdateSound();
         rhythmPanel = GameObject.Find("RhythmPanel").GetComponent<RhythmPanel>();
     }
     void OnDisable() {
@@ -19,7 +21,7 @@ public class StructureSoundEmitter : MonoBehaviour
         AkSoundEngine.PostEvent("Note_Trigger", this.gameObject);
     }
 
-    private void UpdateSound(string pitch, string instrument) {
+    private void UpdateSound() {
         AkSoundEngine.SetSwitch("Pitch", pitch, this.gameObject);
         AkSoundEngine.SetSwitch("Instrument", instrument, this.gameObject);
     }

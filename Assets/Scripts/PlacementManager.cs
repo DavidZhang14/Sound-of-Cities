@@ -52,7 +52,7 @@ public class PlacementManager : MonoBehaviour
         return CheckIfPositionIsOfType(position, CellType.Empty);
     }
 
-    private bool CheckIfPositionIsOfType(Vector3Int position, CellType type)
+    internal bool CheckIfPositionIsOfType(Vector3Int position, CellType type)
     {
         return placementGrid[position.x, position.z] == type;
     }
@@ -80,7 +80,7 @@ public class PlacementManager : MonoBehaviour
         GameObject structure = new GameObject(type.ToString());
         structure.transform.SetParent(transform);
         structure.transform.localPosition = position;
-        var structureModel = structure.AddComponent<StructureModel>();
+        StructureModel structureModel = structure.AddComponent<StructureModel>();
         structureModel.CreateModel(structurePrefab);
         return structureModel;
     }

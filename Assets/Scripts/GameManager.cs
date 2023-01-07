@@ -13,13 +13,14 @@ public class GameManager : MonoBehaviour
     public UIController uiController;
 
     public StructureManager structureManager;
+    public PlacementManager placementManager;
 
     private void Start()
     {
         uiController.OnRoadPlacement += RoadPlacementHandler;
         uiController.OnHousePlacement += HousePlacementHandler;
         uiController.OnSpecialPlacement += SpecialPlacementHandler;
-        
+        uiController.OnEdit += EditHandler;
     }
 
     private void SpecialPlacementHandler()
@@ -37,10 +38,15 @@ public class GameManager : MonoBehaviour
     private void RoadPlacementHandler()
     {
         ClearInputActions();
-
         inputManager.OnMouseClick += roadManager.PlaceRoad;
         inputManager.OnMouseHold += roadManager.PlaceRoad;
         inputManager.OnMouseUp += roadManager.FinishPlacingRoad;
+    }
+
+    private void EditHandler() 
+    {
+        ClearInputActions();
+        inputManager.OnMouseClick += selectEditTarget;
     }
 
     private void ClearInputActions()
@@ -53,5 +59,14 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
         cameraMovement.MoveCamera(new Vector3(inputManager.CameraMovementVector.x,0, inputManager.CameraMovementVector.y));
+    }
+
+    private void selectEditTarget(Vector3Int position)
+    {
+        if (placementManager.CheckIfPositionIsOfType(position, CellType.Structure) ||
+        placementManager.CheckIfPositionIsOfType(position, CellType.SpecialStructure)) 
+        {
+            //look for structureDictionary in PlacementManager
+        }
     }
 }
