@@ -7,5 +7,6 @@ using TMPro;
 public class InfoPanel : MonoBehaviour
 {
     public TMP_Text Instrument;
-    public short targetTime;
+    public TMP_Dropdown pitchDropdown;
+    public TMP_Dropdown targetGridDropdown;
 }
