@@ -43,19 +43,32 @@
 				</SwitchGroup>
 				<SwitchGroup Id="3310955382" Name="Instrument">
 					<Switches>
+						<Switch Id="290212678" Name="Kalimba"/>
+						<Switch Id="1696182583" Name="Saxello"/>
 						<Switch Id="1745032475" Name="Recorder"/>
+						<Switch Id="2146896501" Name="Xylophone"/>
+						<Switch Id="2430651588" Name="Strumstick"/>
 						<Switch Id="3599861402" Name="Harp"/>
+						<Switch Id="3984477424" Name="Balafon"/>
 					</Switches>
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{27227EB7-2CFD-392B-C14A-8727A174781B}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{FF0CEDC7-101E-0B74-08CF-4359EF5D104F}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
+				<File Id="318625" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Mbira6_Normal_MainSpirit_F#3_k10_vl3_rr2.wav</ShortName>
+					<CachePath>SFX/Mbira6_Normal_MainSpirit_F#3_k10_vl3_rr2_10C4C929.wem</CachePath>
+				</File>
 				<File Id="2790166" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>AltRecorder_Stac_A#3_rr1_Main.wav</ShortName>
 					<CachePath>SFX/AltRecorder_Stac_A#3_rr1_Main_10C4C929.wem</CachePath>
+				</File>
+				<File Id="11843585" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BrettSaxello_Stcts_MainSpirit_D5_vl1_rr6.wav</ShortName>
+					<CachePath>SFX/BrettSaxello_Stcts_MainSpirit_D5_vl1_rr6_10C4C929.wem</CachePath>
 				</File>
 				<File Id="13836558" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>E4_16.mid</ShortName>
@@ -69,9 +82,21 @@
 					<ShortName>KSHarp_B1_f1.wav</ShortName>
 					<CachePath>SFX/KSHarp_B1_f1_10C4C929.wem</CachePath>
 				</File>
+				<File Id="32833773" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Xylo_Hard_G6_pp_01_far.wav</ShortName>
+					<CachePath>SFX/Xylo_Hard_G6_pp_01_far_10C4C929.wem</CachePath>
+				</File>
 				<File Id="35272567" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>KSHarp_A2_f1.wav</ShortName>
 					<CachePath>SFX/KSHarp_A2_f1_10C4C929.wem</CachePath>
+				</File>
+				<File Id="39606912" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Strumstick_Finger_Str1_Main_F#2_vl2_rr1.wav</ShortName>
+					<CachePath>SFX/Strumstick_Finger_Str1_Main_F#2_vl2_rr1_10C4C929.wem</CachePath>
+				</File>
+				<File Id="57059248" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Strumstick_Finger_Str1_Main_D2_vl2_rr1.wav</ShortName>
+					<CachePath>SFX/Strumstick_Finger_Str1_Main_D2_vl2_rr1_10C4C929.wem</CachePath>
 				</File>
 				<File Id="93876046" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>KSHarp_G1_f1.wav</ShortName>
@@ -85,9 +110,33 @@
 					<ShortName>AltRecorder_Stac_C4_rr1_Main.wav</ShortName>
 					<CachePath>SFX/AltRecorder_Stac_C4_rr1_Main_10C4C929.wem</CachePath>
 				</File>
+				<File Id="152180770" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Strumstick_Finger_Str1_Main_G2_vl2_rr1.wav</ShortName>
+					<CachePath>SFX/Strumstick_Finger_Str1_Main_G2_vl2_rr1_10C4C929.wem</CachePath>
+				</File>
 				<File Id="154596757" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>KSHarp_G3_f1.wav</ShortName>
 					<CachePath>SFX/KSHarp_G3_f1_10C4C929.wem</CachePath>
+				</File>
+				<File Id="160909326" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BrettSaxello_Stcts_MainSpirit_D4_vl1_rr3.wav</ShortName>
+					<CachePath>SFX/BrettSaxello_Stcts_MainSpirit_D4_vl1_rr3_10C4C929.wem</CachePath>
+				</File>
+				<File Id="169905220" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BrettSaxello_Stcts_MainSpirit_A#3_vl1_rr1.wav</ShortName>
+					<CachePath>SFX/BrettSaxello_Stcts_MainSpirit_A#3_vl1_rr1_10C4C929.wem</CachePath>
+				</File>
+				<File Id="181846887" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>EthnicXylo_softM_F3_vl3_rr1_Mid.wav</ShortName>
+					<CachePath>SFX/EthnicXylo_softM_F3_vl3_rr1_Mid_10C4C929.wem</CachePath>
+				</File>
+				<File Id="198138506" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Mbira6_Normal_MainSpirit_B2_k8_vl3_rr2.wav</ShortName>
+					<CachePath>SFX/Mbira6_Normal_MainSpirit_B2_k8_vl3_rr2_10C4C929.wem</CachePath>
+				</File>
+				<File Id="228245915" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Strumstick_Finger_Str3_Main_C#4_vl2_rr1.wav</ShortName>
+					<CachePath>SFX/Strumstick_Finger_Str3_Main_C#4_vl2_rr1_10C4C929.wem</CachePath>
 				</File>
 				<File Id="240882481" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>KSHarp_E3_f1.wav</ShortName>
@@ -97,13 +146,49 @@
 					<ShortName>F4_16.mid</ShortName>
 					<CachePath>SFX/F4_16_F830F1D6.wem</CachePath>
 				</File>
+				<File Id="250794040" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Mbira6_Normal_MainSpirit_C#4_k2_vl3_rr2.wav</ShortName>
+					<CachePath>SFX/Mbira6_Normal_MainSpirit_C#4_k2_vl3_rr2_10C4C929.wem</CachePath>
+				</File>
+				<File Id="252237111" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Mbira6_Normal_MainSpirit_C#3_k7_vl3_rr2.wav</ShortName>
+					<CachePath>SFX/Mbira6_Normal_MainSpirit_C#3_k7_vl3_rr2_10C4C929.wem</CachePath>
+				</File>
+				<File Id="261474335" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Xylo_Hard_C7_pp_01_far.wav</ShortName>
+					<CachePath>SFX/Xylo_Hard_C7_pp_01_far_10C4C929.wem</CachePath>
+				</File>
+				<File Id="281229565" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Strumstick_Finger_Str2_Main_D3_vl2_rr1.wav</ShortName>
+					<CachePath>SFX/Strumstick_Finger_Str2_Main_D3_vl2_rr1_10C4C929.wem</CachePath>
+				</File>
+				<File Id="290345662" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>EthnicXylo_softM_C4_vl3_rr2_Mid.wav</ShortName>
+					<CachePath>SFX/EthnicXylo_softM_C4_vl3_rr2_Mid_10C4C929.wem</CachePath>
+				</File>
 				<File Id="312246242" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>KSHarp_B6_f1.wav</ShortName>
 					<CachePath>SFX/KSHarp_B6_f1_10C4C929.wem</CachePath>
 				</File>
+				<File Id="312506893" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Mbira6_Normal_MainSpirit_G#3_k11_vl3_rr2.wav</ShortName>
+					<CachePath>SFX/Mbira6_Normal_MainSpirit_G#3_k11_vl3_rr2_10C4C929.wem</CachePath>
+				</File>
+				<File Id="314891095" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Mbira6_Normal_MainSpirit_A4_k1_vl3_rr2.wav</ShortName>
+					<CachePath>SFX/Mbira6_Normal_MainSpirit_A4_k1_vl3_rr2_10C4C929.wem</CachePath>
+				</File>
+				<File Id="335042589" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>EthnicXylo_softM_C5_vl3_rr1_Mid.wav</ShortName>
+					<CachePath>SFX/EthnicXylo_softM_C5_vl3_rr1_Mid_10C4C929.wem</CachePath>
+				</File>
 				<File Id="335479004" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>KSHarp_D7_f1.wav</ShortName>
 					<CachePath>SFX/KSHarp_D7_f1_10C4C929.wem</CachePath>
+				</File>
+				<File Id="344324563" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BrettSaxello_Stcts_MainSpirit_F#3_vl1_rr6.wav</ShortName>
+					<CachePath>SFX/BrettSaxello_Stcts_MainSpirit_F#3_vl1_rr6_10C4C929.wem</CachePath>
 				</File>
 				<File Id="353523354" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>KSHarp_E1_f1.wav</ShortName>
@@ -121,6 +206,14 @@
 					<ShortName>KSHarp_A4_f1.wav</ShortName>
 					<CachePath>SFX/KSHarp_A4_f1_10C4C929.wem</CachePath>
 				</File>
+				<File Id="397665373" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Mbira6_Normal_MainSpirit_D#4_k13_vl3_rr2.wav</ShortName>
+					<CachePath>SFX/Mbira6_Normal_MainSpirit_D#4_k13_vl3_rr2_10C4C929.wem</CachePath>
+				</File>
+				<File Id="400401675" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>EthnicXylo_softM_F4_vl3_rr1_Mid.wav</ShortName>
+					<CachePath>SFX/EthnicXylo_softM_F4_vl3_rr1_Mid_10C4C929.wem</CachePath>
+				</File>
 				<File Id="408514955" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>KSHarp_F7_f1.wav</ShortName>
 					<CachePath>SFX/KSHarp_F7_f1_10C4C929.wem</CachePath>
@@ -129,9 +222,25 @@
 					<ShortName>KSHarp_F2_f1.wav</ShortName>
 					<CachePath>SFX/KSHarp_F2_f1_10C4C929.wem</CachePath>
 				</File>
+				<File Id="425904091" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Mbira6_Normal_MainSpirit_D#3_k9_vl3_rr2.wav</ShortName>
+					<CachePath>SFX/Mbira6_Normal_MainSpirit_D#3_k9_vl3_rr2_10C4C929.wem</CachePath>
+				</File>
+				<File Id="441551940" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Strumstick_Finger_Str1_Main_E2_vl2_rr1.wav</ShortName>
+					<CachePath>SFX/Strumstick_Finger_Str1_Main_E2_vl2_rr1_10C4C929.wem</CachePath>
+				</File>
+				<File Id="453415721" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Xylo_Hard_C5_pp_01_far.wav</ShortName>
+					<CachePath>SFX/Xylo_Hard_C5_pp_01_far_10C4C929.wem</CachePath>
+				</File>
 				<File Id="459431144" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>AltRecorder_Stac_F#3_rr1_Main.wav</ShortName>
 					<CachePath>SFX/AltRecorder_Stac_F#3_rr1_Main_10C4C929.wem</CachePath>
+				</File>
+				<File Id="470376372" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BrettSaxello_Stcts_MainSpirit_F#4_vl1_rr5.wav</ShortName>
+					<CachePath>SFX/BrettSaxello_Stcts_MainSpirit_F#4_vl1_rr5_10C4C929.wem</CachePath>
 				</File>
 				<File Id="470462091" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>KSHarp_F6_f1.wav</ShortName>
@@ -140,6 +249,10 @@
 				<File Id="500207375" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>AltRecorder_Stac_G#4_rr1_Main.wav</ShortName>
 					<CachePath>SFX/AltRecorder_Stac_G#4_rr1_Main_10C4C929.wem</CachePath>
+				</File>
+				<File Id="506962014" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BrettSaxello_Stcts_MainSpirit_A#4_vl1_rr3.wav</ShortName>
+					<CachePath>SFX/BrettSaxello_Stcts_MainSpirit_A#4_vl1_rr3_10C4C929.wem</CachePath>
 				</File>
 				<File Id="508282829" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>KSHarp_D4_f1.wav</ShortName>
@@ -153,9 +266,21 @@
 					<ShortName>AltRecorder_Stac_G#3_rr1_Main.wav</ShortName>
 					<CachePath>SFX/AltRecorder_Stac_G#3_rr1_Main_10C4C929.wem</CachePath>
 				</File>
+				<File Id="541643495" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Xylo_Hard_G5_pp_01_far.wav</ShortName>
+					<CachePath>SFX/Xylo_Hard_G5_pp_01_far_10C4C929.wem</CachePath>
+				</File>
 				<File Id="575232372" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>AltRecorder_Stac_D5_rr1_Main.wav</ShortName>
 					<CachePath>SFX/AltRecorder_Stac_D5_rr1_Main_10C4C929.wem</CachePath>
+				</File>
+				<File Id="578921772" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Xylo_Hard_C4_pp_01_far.wav</ShortName>
+					<CachePath>SFX/Xylo_Hard_C4_pp_01_far_10C4C929.wem</CachePath>
+				</File>
+				<File Id="604914124" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Strumstick_Finger_Str2_Main_B2_vl2_rr1.wav</ShortName>
+					<CachePath>SFX/Strumstick_Finger_Str2_Main_B2_vl2_rr1_10C4C929.wem</CachePath>
 				</File>
 				<File Id="613578496" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>KSHarp_G5_f1.wav</ShortName>
@@ -168,6 +293,10 @@
 				<File Id="644846080" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>AltRecorder_Stac_D4_rr1_Main.wav</ShortName>
 					<CachePath>SFX/AltRecorder_Stac_D4_rr1_Main_10C4C929.wem</CachePath>
+				</File>
+				<File Id="661558603" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Mbira6_Normal_MainSpirit_F#4_k14_vl3_rr2.wav</ShortName>
+					<CachePath>SFX/Mbira6_Normal_MainSpirit_F#4_k14_vl3_rr2_10C4C929.wem</CachePath>
 				</File>
 				<File Id="666381415" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>KSHarp_E5_f1.wav</ShortName>
@@ -185,9 +314,21 @@
 					<ShortName>D#4_16.mid</ShortName>
 					<CachePath>SFX/D#4_16_F830F1D6.wem</CachePath>
 				</File>
+				<File Id="732062789" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BrettSaxello_Stcts_MainSpirit_A#2_vl1_rr2.wav</ShortName>
+					<CachePath>SFX/BrettSaxello_Stcts_MainSpirit_A#2_vl1_rr2_10C4C929.wem</CachePath>
+				</File>
 				<File Id="754787826" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>KSHarp_B3_f1.wav</ShortName>
 					<CachePath>SFX/KSHarp_B3_f1_10C4C929.wem</CachePath>
+				</File>
+				<File Id="765440008" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Mbira6_Normal_MainSpirit_B3_k12_vl3_rr2.wav</ShortName>
+					<CachePath>SFX/Mbira6_Normal_MainSpirit_B3_k12_vl3_rr2_10C4C929.wem</CachePath>
+				</File>
+				<File Id="795793959" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Strumstick_Finger_Str3_Main_A4_vl2_rr1.wav</ShortName>
+					<CachePath>SFX/Strumstick_Finger_Str3_Main_A4_vl2_rr1_10C4C929.wem</CachePath>
 				</File>
 				<File Id="799545800" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>D4_16.mid</ShortName>
@@ -197,6 +338,14 @@
 					<ShortName>F#4_16.mid</ShortName>
 					<CachePath>SFX/F#4_16_F830F1D6.wem</CachePath>
 				</File>
+				<File Id="807680286" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Strumstick_Finger_Str3_Main_B3_vl2_rr1.wav</ShortName>
+					<CachePath>SFX/Strumstick_Finger_Str3_Main_B3_vl2_rr1_10C4C929.wem</CachePath>
+				</File>
+				<File Id="812705103" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Strumstick_Finger_Str2_Main_A2_vl2_rr1.wav</ShortName>
+					<CachePath>SFX/Strumstick_Finger_Str2_Main_A2_vl2_rr1_10C4C929.wem</CachePath>
+				</File>
 				<File Id="836161079" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>G#4_16.mid</ShortName>
 					<CachePath>SFX/G#4_16_F830F1D6.wem</CachePath>
@@ -204,6 +353,14 @@
 				<File Id="851289994" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>KSHarp_C3_f2.wav</ShortName>
 					<CachePath>SFX/KSHarp_C3_f2_10C4C929.wem</CachePath>
+				</File>
+				<File Id="861666478" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Strumstick_Finger_Str2_Main_C#3_vl2_rr1.wav</ShortName>
+					<CachePath>SFX/Strumstick_Finger_Str2_Main_C#3_vl2_rr1_10C4C929.wem</CachePath>
+				</File>
+				<File Id="866502077" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Xylo_Hard_C6_pp_01_far.wav</ShortName>
+					<CachePath>SFX/Xylo_Hard_C6_pp_01_far_10C4C929.wem</CachePath>
 				</File>
 				<File Id="874143737" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>B4_16.mid</ShortName>
@@ -225,13 +382,37 @@
 					<ShortName>C4_16.mid</ShortName>
 					<CachePath>SFX/C4_16_F830F1D6.wem</CachePath>
 				</File>
+				<File Id="923306326" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Xylo_Hard_G3_pp_01_far.wav</ShortName>
+					<CachePath>SFX/Xylo_Hard_G3_pp_01_far_10C4C929.wem</CachePath>
+				</File>
+				<File Id="924169021" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>EthnicXylo_softM_C#3_vl3_rr1_Mid.wav</ShortName>
+					<CachePath>SFX/EthnicXylo_softM_C#3_vl3_rr1_Mid_10C4C929.wem</CachePath>
+				</File>
+				<File Id="948094513" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Strumstick_Finger_Str3_Main_A3_vl2_rr1.wav</ShortName>
+					<CachePath>SFX/Strumstick_Finger_Str3_Main_A3_vl2_rr1_10C4C929.wem</CachePath>
+				</File>
 				<File Id="964226334" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>A#4_16.mid</ShortName>
 					<CachePath>SFX/A#4_16_F830F1D6.wem</CachePath>
 				</File>
+				<File Id="985173156" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BrettSaxello_Stcts_MainSpirit_D3_vl1_rr5.wav</ShortName>
+					<CachePath>SFX/BrettSaxello_Stcts_MainSpirit_D3_vl1_rr5_10C4C929.wem</CachePath>
+				</File>
 				<File Id="1006477849" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>A4_16.mid</ShortName>
 					<CachePath>SFX/A4_16_F830F1D6.wem</CachePath>
+				</File>
+				<File Id="1008463013" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Xylo_Hard_G4_pp_01_far.wav</ShortName>
+					<CachePath>SFX/Xylo_Hard_G4_pp_01_far_10C4C929.wem</CachePath>
+				</File>
+				<File Id="1025255938" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>EthnicXylo_softM_F5_vl3_rr1_Mid.wav</ShortName>
+					<CachePath>SFX/EthnicXylo_softM_F5_vl3_rr1_Mid_10C4C929.wem</CachePath>
 				</File>
 				<File Id="1030110209" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>G4_16.mid</ShortName>
@@ -290,7 +471,9 @@
 							<SwitchValue GroupType="Switch" GroupId="3310955382" Id="1745032475"/>
 							<MediaRefs>
 								<MediaRef Id="2790166"/>
+								<MediaRef Id="13836558"/>
 								<MediaRef Id="120904035"/>
+								<MediaRef Id="249309058"/>
 								<MediaRef Id="385480617"/>
 								<MediaRef Id="459431144"/>
 								<MediaRef Id="500207375"/>
@@ -299,8 +482,147 @@
 								<MediaRef Id="575232372"/>
 								<MediaRef Id="631968342"/>
 								<MediaRef Id="644846080"/>
+								<MediaRef Id="704411920"/>
+								<MediaRef Id="799545800"/>
+								<MediaRef Id="807234091"/>
+								<MediaRef Id="836161079"/>
+								<MediaRef Id="874143737"/>
 								<MediaRef Id="880739204"/>
 								<MediaRef Id="885977269"/>
+								<MediaRef Id="912392590"/>
+								<MediaRef Id="964226334"/>
+								<MediaRef Id="1006477849"/>
+								<MediaRef Id="1030110209"/>
+								<MediaRef Id="1038480441"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="3310955382" Id="3984477424"/>
+							<MediaRefs>
+								<MediaRef Id="13836558"/>
+								<MediaRef Id="181846887"/>
+								<MediaRef Id="249309058"/>
+								<MediaRef Id="290345662"/>
+								<MediaRef Id="335042589"/>
+								<MediaRef Id="400401675"/>
+								<MediaRef Id="704411920"/>
+								<MediaRef Id="799545800"/>
+								<MediaRef Id="807234091"/>
+								<MediaRef Id="836161079"/>
+								<MediaRef Id="874143737"/>
+								<MediaRef Id="912392590"/>
+								<MediaRef Id="924169021"/>
+								<MediaRef Id="964226334"/>
+								<MediaRef Id="1006477849"/>
+								<MediaRef Id="1025255938"/>
+								<MediaRef Id="1030110209"/>
+								<MediaRef Id="1038480441"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="3310955382" Id="2146896501"/>
+							<MediaRefs>
+								<MediaRef Id="13836558"/>
+								<MediaRef Id="32833773"/>
+								<MediaRef Id="249309058"/>
+								<MediaRef Id="261474335"/>
+								<MediaRef Id="453415721"/>
+								<MediaRef Id="541643495"/>
+								<MediaRef Id="578921772"/>
+								<MediaRef Id="704411920"/>
+								<MediaRef Id="799545800"/>
+								<MediaRef Id="807234091"/>
+								<MediaRef Id="836161079"/>
+								<MediaRef Id="866502077"/>
+								<MediaRef Id="874143737"/>
+								<MediaRef Id="912392590"/>
+								<MediaRef Id="923306326"/>
+								<MediaRef Id="964226334"/>
+								<MediaRef Id="1006477849"/>
+								<MediaRef Id="1008463013"/>
+								<MediaRef Id="1030110209"/>
+								<MediaRef Id="1038480441"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="3310955382" Id="1696182583"/>
+							<MediaRefs>
+								<MediaRef Id="11843585"/>
+								<MediaRef Id="13836558"/>
+								<MediaRef Id="160909326"/>
+								<MediaRef Id="169905220"/>
+								<MediaRef Id="249309058"/>
+								<MediaRef Id="344324563"/>
+								<MediaRef Id="470376372"/>
+								<MediaRef Id="506962014"/>
+								<MediaRef Id="704411920"/>
+								<MediaRef Id="732062789"/>
+								<MediaRef Id="799545800"/>
+								<MediaRef Id="807234091"/>
+								<MediaRef Id="836161079"/>
+								<MediaRef Id="874143737"/>
+								<MediaRef Id="912392590"/>
+								<MediaRef Id="964226334"/>
+								<MediaRef Id="985173156"/>
+								<MediaRef Id="1006477849"/>
+								<MediaRef Id="1030110209"/>
+								<MediaRef Id="1038480441"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="3310955382" Id="2430651588"/>
+							<MediaRefs>
+								<MediaRef Id="13836558"/>
+								<MediaRef Id="39606912"/>
+								<MediaRef Id="57059248"/>
+								<MediaRef Id="152180770"/>
+								<MediaRef Id="228245915"/>
+								<MediaRef Id="249309058"/>
+								<MediaRef Id="281229565"/>
+								<MediaRef Id="441551940"/>
+								<MediaRef Id="604914124"/>
+								<MediaRef Id="704411920"/>
+								<MediaRef Id="795793959"/>
+								<MediaRef Id="799545800"/>
+								<MediaRef Id="807234091"/>
+								<MediaRef Id="807680286"/>
+								<MediaRef Id="812705103"/>
+								<MediaRef Id="836161079"/>
+								<MediaRef Id="861666478"/>
+								<MediaRef Id="874143737"/>
+								<MediaRef Id="912392590"/>
+								<MediaRef Id="948094513"/>
+								<MediaRef Id="964226334"/>
+								<MediaRef Id="1006477849"/>
+								<MediaRef Id="1030110209"/>
+								<MediaRef Id="1038480441"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="3310955382" Id="290212678"/>
+							<MediaRefs>
+								<MediaRef Id="318625"/>
+								<MediaRef Id="13836558"/>
+								<MediaRef Id="198138506"/>
+								<MediaRef Id="249309058"/>
+								<MediaRef Id="250794040"/>
+								<MediaRef Id="252237111"/>
+								<MediaRef Id="312506893"/>
+								<MediaRef Id="314891095"/>
+								<MediaRef Id="397665373"/>
+								<MediaRef Id="425904091"/>
+								<MediaRef Id="661558603"/>
+								<MediaRef Id="704411920"/>
+								<MediaRef Id="765440008"/>
+								<MediaRef Id="799545800"/>
+								<MediaRef Id="807234091"/>
+								<MediaRef Id="836161079"/>
+								<MediaRef Id="874143737"/>
+								<MediaRef Id="912392590"/>
+								<MediaRef Id="964226334"/>
+								<MediaRef Id="1006477849"/>
+								<MediaRef Id="1030110209"/>
+								<MediaRef Id="1038480441"/>
 							</MediaRefs>
 						</SwitchContainer>
 					</SwitchContainers>
@@ -328,12 +650,17 @@
 				</SwitchGroup>
 				<SwitchGroup Id="3310955382" Name="Instrument">
 					<Switches>
+						<Switch Id="290212678" Name="Kalimba"/>
+						<Switch Id="1696182583" Name="Saxello"/>
 						<Switch Id="1745032475" Name="Recorder"/>
+						<Switch Id="2146896501" Name="Xylophone"/>
+						<Switch Id="2430651588" Name="Strumstick"/>
 						<Switch Id="3599861402" Name="Harp"/>
+						<Switch Id="3984477424" Name="Balafon"/>
 					</Switches>
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{EDDE5593-6CB6-9B15-71F1-60D33F5A1ACA}</FileHash>
+	<FileHash>{97A0C541-1AC1-3E99-A231-2D830595B2BA}</FileHash>
 </SoundBanksInfo>

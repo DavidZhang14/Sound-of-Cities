@@ -21,7 +21,7 @@ public class StructureSoundEmitter : MonoBehaviour
         AkSoundEngine.PostEvent("Note_Trigger", this.gameObject);
     }
 
-    private void UpdateSound() {
+    public void UpdateSound() {
         AkSoundEngine.SetSwitch("Pitch", pitch, this.gameObject);
         AkSoundEngine.SetSwitch("Instrument", instrument, this.gameObject);
     }

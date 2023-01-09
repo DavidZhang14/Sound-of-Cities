@@ -62,7 +62,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pitch: C
-  instrument: Harp
+  instrument: Recorder
   targetGrid: 1
   rhythmPanel: {fileID: 0}
 --- !u!54 &6513372689905031247

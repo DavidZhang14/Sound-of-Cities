@@ -159,7 +159,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pitch: E
-  instrument: Harp
+  instrument: Strumstick
   targetGrid: 1
   rhythmPanel: {fileID: 0}
 --- !u!54 &2399895010994064467

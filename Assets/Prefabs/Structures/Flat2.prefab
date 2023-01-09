@@ -159,7 +159,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pitch: B
-  instrument: Harp
+  instrument: Balafon
   targetGrid: 1
   rhythmPanel: {fileID: 0}
 --- !u!54 &3139557285674609694

@@ -62,7 +62,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pitch: D
-  instrument: Harp
+  instrument: Saxello
   targetGrid: 1
   rhythmPanel: {fileID: 0}
 --- !u!54 &8572063310417838780

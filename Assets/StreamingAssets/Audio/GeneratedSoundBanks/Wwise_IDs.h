@@ -25,8 +25,13 @@ namespace AK
 
             namespace SWITCH
             {
+                static const AkUniqueID BALAFON = 3984477424U;
                 static const AkUniqueID HARP = 3599861402U;
+                static const AkUniqueID KALIMBA = 290212678U;
                 static const AkUniqueID RECORDER = 1745032475U;
+                static const AkUniqueID SAXELLO = 1696182583U;
+                static const AkUniqueID STRUMSTICK = 2430651588U;
+                static const AkUniqueID XYLOPHONE = 2146896501U;
             } // namespace SWITCH
         } // namespace INSTRUMENT
 
