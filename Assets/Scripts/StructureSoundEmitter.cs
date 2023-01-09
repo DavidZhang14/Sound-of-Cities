@@ -7,7 +7,7 @@ public class StructureSoundEmitter : MonoBehaviour
     public string pitch = "A";
     public string instrument = "Harp";
     public short targetGrid = 1;
-    public RhythmPanel rhythmPanel;
+    private RhythmPanel rhythmPanel;
     void OnEnable() {
         MusicController.NewGridReached += EmitSound;
         UpdateSound();

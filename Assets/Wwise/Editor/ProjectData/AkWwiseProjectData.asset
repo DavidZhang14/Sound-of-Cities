@@ -214,7 +214,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: 85618ebb61fd914caee7f1816f7129ad
     GuidInternal: 
-    m_lastTime: -8585285657962200296
+    m_lastTime: -8585283785629237559
     List:
     - name: Instrument
       guid: 36c5dd9c5c3877478ce79d02e2b19279
@@ -231,6 +231,22 @@ MonoBehaviour:
         guid: 36c5dd9c5c3877478ce79d02e2b19279
       Path: Switches\Default Work Unit\Instrument
       values:
+      - name: Balafon
+        guid: f91e924bf02f74479fd2b03a45e302d4
+        id: 3984477424
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 85618ebb61fd914caee7f1816f7129ad
+        - ElementName: Instrument
+          ObjectType: 11
+          guid: 36c5dd9c5c3877478ce79d02e2b19279
+        - ElementName: Balafon
+          ObjectType: 10
+          guid: f91e924bf02f74479fd2b03a45e302d4
       - name: Harp
         guid: 729f5aaffcf8ba42bcee53ec21a3df44
         id: 3599861402
@@ -247,6 +263,22 @@ MonoBehaviour:
         - ElementName: Harp
           ObjectType: 10
           guid: 729f5aaffcf8ba42bcee53ec21a3df44
+      - name: Kalimba
+        guid: 4d5c280218b2fe4a967e6d307309233f
+        id: 290212678
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 85618ebb61fd914caee7f1816f7129ad
+        - ElementName: Instrument
+          ObjectType: 11
+          guid: 36c5dd9c5c3877478ce79d02e2b19279
+        - ElementName: Kalimba
+          ObjectType: 10
+          guid: 4d5c280218b2fe4a967e6d307309233f
       - name: Recorder
         guid: 1fe6ded1348a6c4889d45ffe1c5f7c4d
         id: 1745032475
@@ -263,6 +295,54 @@ MonoBehaviour:
         - ElementName: Recorder
           ObjectType: 10
           guid: 1fe6ded1348a6c4889d45ffe1c5f7c4d
+      - name: Saxello
+        guid: ed8862b48116bf4d8e44a485966d32f6
+        id: 1696182583
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 85618ebb61fd914caee7f1816f7129ad
+        - ElementName: Instrument
+          ObjectType: 11
+          guid: 36c5dd9c5c3877478ce79d02e2b19279
+        - ElementName: Saxello
+          ObjectType: 10
+          guid: ed8862b48116bf4d8e44a485966d32f6
+      - name: Strumstick
+        guid: c951125286ffa949ba987f0aba328dfd
+        id: 2430651588
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 85618ebb61fd914caee7f1816f7129ad
+        - ElementName: Instrument
+          ObjectType: 11
+          guid: 36c5dd9c5c3877478ce79d02e2b19279
+        - ElementName: Strumstick
+          ObjectType: 10
+          guid: c951125286ffa949ba987f0aba328dfd
+      - name: Xylophone
+        guid: 30bd0ec10af4744c9c728c369f612691
+        id: 2146896501
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 85618ebb61fd914caee7f1816f7129ad
+        - ElementName: Instrument
+          ObjectType: 11
+          guid: 36c5dd9c5c3877478ce79d02e2b19279
+        - ElementName: Xylophone
+          ObjectType: 10
+          guid: 30bd0ec10af4744c9c728c369f612691
       ValueGuids: []
       ValueIcons: []
       valuesInternal: []
@@ -490,9 +570,9 @@ MonoBehaviour:
     GuidInternal: 
     m_lastTime: -8585286319930929214
     List: []
-  ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 02000000030000000500000006000000070000000a0000000c0000000d000000100000001100000014000000
+  ExpandedFileSystemItemIds: 020000000300000005000000060000000700000008000000090000000a0000000c0000000d00000010000000110000001400000024000000
+  ExpandedWaapiItemIds: 020000000300000005000000060000000700000008000000090000000a0000000c0000000d00000010000000110000001400000024000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
-  currentDataSource: 0
+  currentDataSource: 1
   CurrentPluginConfig: 
