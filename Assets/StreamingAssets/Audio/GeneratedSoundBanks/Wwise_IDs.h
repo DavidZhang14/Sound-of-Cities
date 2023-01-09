@@ -60,6 +60,7 @@ namespace AK
 
     namespace GAME_PARAMETERS
     {
+        static const AkUniqueID PITCH = 1908158473U;
         static const AkUniqueID PLAYBACK_SPEED = 78830142U;
     } // namespace GAME_PARAMETERS
 

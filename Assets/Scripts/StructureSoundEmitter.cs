@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class StructureSoundEmitter : MonoBehaviour
 {  
-    public string pitch = "A";
+    public short pitch = 9; //A
     public string instrument = "Harp";
     public short targetGrid = 1;
     private RhythmPanel rhythmPanel;
@@ -22,7 +22,7 @@ public class StructureSoundEmitter : MonoBehaviour
     }
 
     public void UpdateSound() {
-        AkSoundEngine.SetSwitch("Pitch", pitch, this.gameObject);
+        AkSoundEngine.SetRTPCValue("Pitch", pitch, this.gameObject);
         AkSoundEngine.SetSwitch("Instrument", instrument, this.gameObject);
     }
 }

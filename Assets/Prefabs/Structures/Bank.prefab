@@ -158,10 +158,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c041b1a1ada0eaa4ba52d2f748a33a41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pitch: A
-  instrument: Harp
+  pitch: 9
+  instrument: Kalimba
   targetGrid: 1
-  rhythmPanel: {fileID: 0}
 --- !u!54 &566146862064681333
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -158,10 +158,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c041b1a1ada0eaa4ba52d2f748a33a41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pitch: E
+  pitch: 4
   instrument: Strumstick
   targetGrid: 1
-  rhythmPanel: {fileID: 0}
 --- !u!54 &2399895010994064467
 Rigidbody:
   m_ObjectHideFlags: 0

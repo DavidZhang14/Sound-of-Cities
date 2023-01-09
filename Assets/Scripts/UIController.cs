@@ -70,14 +70,10 @@ public class UIController : MonoBehaviour
         }
     }
 
-    public void updateInfoPanel() {
+    public void updateInfoPanel() 
+    {
         infoPanel.Instrument.text = editTarget.instrument;
         infoPanel.targetGridDropdown.value = editTarget.targetGrid - 1;
-        for (int i = 0; i<= 11; i++) { //一共有12种音高
-            if (infoPanel.pitchDropdown.options[i].text.Equals(editTarget.pitch)) {
-                infoPanel.pitchDropdown.value = i;
-                break;
-            }
-        }
+        infoPanel.pitchDropdown.value = editTarget.pitch;
     }
 }

@@ -12,7 +12,7 @@ public class InfoPanel : MonoBehaviour
 
     public void UpdatePitch()
     {
-        UIController.Instance.editTarget.pitch = pitchDropdown.options[pitchDropdown.value].text;
+        UIController.Instance.editTarget.pitch = (short)pitchDropdown.value;
         UIController.Instance.editTarget.UpdateSound();
     }
     public void UpdateTargetGrid()

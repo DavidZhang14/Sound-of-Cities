@@ -16,6 +16,7 @@ Switch	ID	Name	Switch Group			Notes
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	78830142	Playback_Speed			\Default Work Unit\Playback_Speed	
+	1908158473	Pitch			\Default Work Unit\Pitch	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	318625	Mbira6_Normal_MainSpirit_F#3_k10_vl3_rr2	F:\Sound-of-Cities-Demo\SoundOfCities_WwiseProject\.cache\Windows\SFX\Mbira6_Normal_MainSpirit_F#3_k10_vl3_rr2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Kalimba\Mbira6_Normal_MainSpirit_F#3_k10_vl3_rr2		1191972
