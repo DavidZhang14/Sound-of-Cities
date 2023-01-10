@@ -41,7 +41,9 @@ public class AkEarlyReflections : UnityEngine.MonoBehaviour
 	private void OnEnable()
 	{
 		if (reflectionsAuxBus != null)
+		{
 			AkSoundEngine.SetEarlyReflectionsAuxSend(gameObject, reflectionsAuxBus.Id);
+		}
 
 		AkSoundEngine.SetEarlyReflectionsVolume(gameObject, reflectionsVolume);
 	}

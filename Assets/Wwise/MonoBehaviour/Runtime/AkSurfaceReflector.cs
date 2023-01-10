@@ -85,7 +85,9 @@ public class AkSurfaceReflector : UnityEngine.MonoBehaviour
 		string name = "")
 	{
 		if (!AkSoundEngine.IsInitialized())
+		{
 			return;
+		}
 
 		var vertices = mesh.vertices;
 
@@ -143,10 +145,14 @@ public class AkSurfaceReflector : UnityEngine.MonoBehaviour
 				float occlusionValue = 1.0f;
 
 				if (acousticTextures != null && s < acousticTextures.Length)
+				{
 					acousticTexture = acousticTextures[s];
+				}
 
 				if (transmissionLossValues != null && s < transmissionLossValues.Length)
+				{
 					occlusionValue = transmissionLossValues[s];
+				}
 
 				surface.textureID = acousticTexture == null ? AK.Wwise.AcousticTexture.InvalidId : acousticTexture.Id;
 				surface.transmissionLoss = occlusionValue;
@@ -209,7 +215,9 @@ public class AkSurfaceReflector : UnityEngine.MonoBehaviour
 		UnityEngine.Transform transform)
 	{
 		if (!AkSoundEngine.IsInitialized())
+		{
 			return;
+		}
 
 		AkTransform geometryTransform = new AkTransform();
 		geometryTransform.Set(transform.position, transform.forward, transform.up);
@@ -229,9 +237,13 @@ public class AkSurfaceReflector : UnityEngine.MonoBehaviour
 	{
 		UpdateGeometry();
 		if (AssociatedRoom != null)
+		{
 			AkRoomManager.RegisterReflector(this);
+		}
 		else
+		{
 			AkRoomManager.UnregisterReflector(this);
+		}
 	}
 
 	/// <summary>
@@ -240,7 +252,9 @@ public class AkSurfaceReflector : UnityEngine.MonoBehaviour
 	public void SetGeometry()
 	{
 		if (!AkSoundEngine.IsInitialized())
+		{
 			return;
+		}
 
 		if (Mesh == null)
 		{
@@ -299,7 +313,9 @@ public class AkSurfaceReflector : UnityEngine.MonoBehaviour
 	{
 #if UNITY_EDITOR
 		if (UnityEditor.BuildPipeline.isBuildingPlayer || AkUtilities.IsMigrating)
+		{
 			return;
+		}
 
 		var reference = AkWwiseTypes.DragAndDropObjectReference;
 		if (reference)
@@ -316,14 +332,18 @@ public class AkSurfaceReflector : UnityEngine.MonoBehaviour
 		}
 
 		if (!UnityEditor.EditorApplication.isPlaying)
+		{
 			return;
+		}
 #endif
 
 		if (Mesh == null)
 		{
 			var meshFilter = GetComponent<UnityEngine.MeshFilter>();
 			if (meshFilter != null)
+			{
 				Mesh = meshFilter.sharedMesh;
+			}
 		}
  
 		SetGeometry();
@@ -338,12 +358,19 @@ public class AkSurfaceReflector : UnityEngine.MonoBehaviour
 	{
 #if UNITY_EDITOR
 		if (UnityEditor.BuildPipeline.isBuildingPlayer || AkUtilities.IsMigrating || !UnityEditor.EditorApplication.isPlaying)
+		{
 			return;
+		}
 #endif
-
-		SetGeometryInstance();
+		// Only SetGeometryInstance directly if there is no associated room because the room manager will set the geometry instance of registered reflectors.
 		if (AssociatedRoom != null)
+		{
 			AkRoomManager.RegisterReflector(this);
+		}
+		else
+		{
+			SetGeometryInstance();
+		}
 
 		AkRoom roomComponent = gameObject.GetComponent<AkRoom>();
 		if (roomComponent != null && roomComponent.isActiveAndEnabled && roomComponent.GetGeometryID() != GetID())
@@ -357,7 +384,9 @@ public class AkSurfaceReflector : UnityEngine.MonoBehaviour
 	{
 #if UNITY_EDITOR
 		if (UnityEditor.BuildPipeline.isBuildingPlayer || AkUtilities.IsMigrating || !UnityEditor.EditorApplication.isPlaying)
+		{
 			return;
+		}
 #endif
 
 		RemoveGeometryInstance();
@@ -375,7 +404,9 @@ public class AkSurfaceReflector : UnityEngine.MonoBehaviour
 	{
 #if UNITY_EDITOR
 		if (UnityEditor.BuildPipeline.isBuildingPlayer || AkUtilities.IsMigrating || !UnityEditor.EditorApplication.isPlaying)
+		{
 			return;
+		}
 #endif
 		RemoveGeometry();
 	}
@@ -384,7 +415,9 @@ public class AkSurfaceReflector : UnityEngine.MonoBehaviour
 	{
 #if UNITY_EDITOR
 		if (!UnityEditor.EditorApplication.isPlaying)
+		{
 			return;
+		}
 #endif
 
 		if (previousPosition != transform.position ||
@@ -397,104 +430,6 @@ public class AkSurfaceReflector : UnityEngine.MonoBehaviour
 			previousRotation = transform.rotation;
 		}
 	}
-
-#if UNITY_EDITOR
-	[UnityEditor.CustomEditor(typeof(AkSurfaceReflector))]
-	[UnityEditor.CanEditMultipleObjects]
-	private class Editor : UnityEditor.Editor
-	{
-		private AkSurfaceReflector m_AkSurfaceReflector;
-
-		private UnityEditor.SerializedProperty Mesh;
-		private UnityEditor.SerializedProperty AcousticTextures;
-		private UnityEditor.SerializedProperty TransmissionLossValues;
-		private UnityEditor.SerializedProperty EnableDiffraction;
-		private UnityEditor.SerializedProperty EnableDiffractionOnBoundaryEdges;
-		private UnityEditor.SerializedProperty AssociatedRoom;
-
-		public void OnEnable()
-		{
-			m_AkSurfaceReflector = target as AkSurfaceReflector;
-
-			Mesh = serializedObject.FindProperty("Mesh");
-			AcousticTextures = serializedObject.FindProperty("AcousticTextures");
-			TransmissionLossValues = serializedObject.FindProperty("TransmissionLossValues");
-			EnableDiffraction = serializedObject.FindProperty("EnableDiffraction");
-			EnableDiffractionOnBoundaryEdges = serializedObject.FindProperty("EnableDiffractionOnBoundaryEdges");
-			AssociatedRoom = serializedObject.FindProperty("AssociatedRoom");
-		}
-
-		public override void OnInspectorGUI()
-		{
-			bool GeometryNeedsUpdate = false;
-			bool GeometryInstanceNeedsUpdate = false;
-
-			serializedObject.Update();
-
-			// Start a code block to check for GUI changes
-			UnityEditor.EditorGUI.BeginChangeCheck();
-
-			UnityEditor.EditorGUILayout.PropertyField(Mesh);
-
-			UnityEditor.EditorGUILayout.PropertyField(AcousticTextures, true);
-			CheckArraySize(m_AkSurfaceReflector, m_AkSurfaceReflector.AcousticTextures.Length, "acoustic textures");
-
-			UnityEditor.EditorGUILayout.PropertyField(TransmissionLossValues, true);
-			CheckArraySize(m_AkSurfaceReflector, m_AkSurfaceReflector.TransmissionLossValues.Length, "transmission loss values");
-
-			UnityEditor.EditorGUILayout.PropertyField(EnableDiffraction);
-			if (EnableDiffraction.boolValue)
-				UnityEditor.EditorGUILayout.PropertyField(EnableDiffractionOnBoundaryEdges);
-
-			if (UnityEditor.EditorGUI.EndChangeCheck())
-			{
-				GeometryNeedsUpdate = true;
-			}
-
-			//Start a code block to check for GUI changes
-			UnityEditor.EditorGUI.BeginChangeCheck();
-
-			UnityEditor.EditorGUILayout.PropertyField(AssociatedRoom);
-
-			if (UnityEditor.EditorGUI.EndChangeCheck())
-			{
-				GeometryInstanceNeedsUpdate = true;
-			}
-
-			serializedObject.ApplyModifiedProperties();
-
-			if (GeometryNeedsUpdate)
-			{
-				m_AkSurfaceReflector.SetGeometry();
-			}
-
-			if (GeometryInstanceNeedsUpdate)
-			{
-				m_AkSurfaceReflector.UpdateAssociatedRoom();
-			}
-		}
-
-		public static void CheckArraySize(AkSurfaceReflector surfaceReflector, int length, string name)
-		{
-			if (surfaceReflector != null && surfaceReflector.Mesh != null)
-			{
-				int maxSize = surfaceReflector.Mesh.subMeshCount;
-
-				if (length > maxSize)
-				{
-					UnityEngine.GUILayout.Space(UnityEditor.EditorGUIUtility.standardVerticalSpacing);
-
-					using (new UnityEditor.EditorGUILayout.VerticalScope("box"))
-					{
-						UnityEditor.EditorGUILayout.HelpBox(
-							"There are more " + name + " than the Mesh has submeshes. Additional ones will be ignored.",
-							UnityEditor.MessageType.Warning);
-					}
-				}
-			}
-		}
-	}
-#endif
 
 	#region Obsolete
 	[System.Obsolete(AkSoundEngine.Deprecation_2019_2_0)]
@@ -512,7 +447,9 @@ public class AkSurfaceReflector : UnityEngine.MonoBehaviour
 		bool enableTriangles)
 	{
 		if (!AkSoundEngine.IsInitialized())
+		{
 			return;
+		}
 
 		if (meshFilter == null)
 		{
@@ -549,10 +486,14 @@ public class AkSurfaceReflector : UnityEngine.MonoBehaviour
 		{
 			var numAcousticTextures = (Mesh == null) ? 1 : Mesh.subMeshCount;
 			if (AcousticTextures == null || AcousticTextures.Length < numAcousticTextures)
+			{
 				AcousticTextures = new AK.Wwise.AcousticTexture[numAcousticTextures];
+			}
 
 			for (int i = 0; i < numAcousticTextures; ++i)
+			{
 				AcousticTextures[i] = new AK.Wwise.AcousticTexture { WwiseObjectReference = value != null ? value.WwiseObjectReference : null };
+			}
 		}
 	}
 
@@ -560,7 +501,9 @@ public class AkSurfaceReflector : UnityEngine.MonoBehaviour
 	public static void RemoveGeometrySet(UnityEngine.MeshFilter meshFilter)
 	{
 		if (meshFilter != null)
+		{
 			AkSoundEngine.RemoveGeometry(GetAkGeometrySetID(meshFilter));
+		}
 	}
 
 	[System.Obsolete(AkSoundEngine.Deprecation_2021_1_0)]
@@ -575,7 +518,6 @@ public class AkSurfaceReflector : UnityEngine.MonoBehaviour
 			TransmissionLossValues = value;
 		}
 	}
-	#endregion
 
 	[System.Obsolete(AkSoundEngine.Deprecation_2022_1_0)]
 	public static void SetGeometryFromMesh(
@@ -602,6 +544,7 @@ public class AkSurfaceReflector : UnityEngine.MonoBehaviour
 
 		SetGeometryInstance(geometryID, geometryID, associatedRoomID, transform);
 	}
+	#endregion
 
 	#region WwiseMigration
 #pragma warning disable 0414 // private field assigned but not used.
@@ -615,7 +558,9 @@ public class AkSurfaceReflector : UnityEngine.MonoBehaviour
 	bool AK.Wwise.IMigratable.Migrate(UnityEditor.SerializedObject obj)
 	{
 		if (!AkUtilities.IsMigrationRequired(AkUtilities.MigrationStep.NewScriptableObjectFolder_v2019_2_0))
+		{
 			return false;
+		}
 
 		var hasChanged = false;
 
@@ -646,7 +591,9 @@ public class AkSurfaceReflector : UnityEngine.MonoBehaviour
 				var acousticTextures = obj.FindProperty("AcousticTextures");
 				acousticTextures.arraySize = numAcousticTextures;
 				for (int i = 0; i < numAcousticTextures; ++i)
+				{
 					acousticTextures.GetArrayElementAtIndex(i).FindPropertyRelative("WwiseObjectReference").objectReferenceValue = objectReferenceValue;
+				}
 			}
 		}
 

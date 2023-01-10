@@ -110,7 +110,9 @@ public class AkRoomInspector : UnityEditor.Editor
 				gameObject.GetComponent<UnityEngine.CapsuleCollider>() != null ||
 				gameObject.GetComponent<UnityEngine.MeshCollider>() != null ||
 				(gameObject.GetComponent<AkSurfaceReflector>() != null && gameObject.GetComponent<AkSurfaceReflector>().enabled))
+			{
 				bSupported = true;
+			}
 
 			if (bSupported == false)
 			{

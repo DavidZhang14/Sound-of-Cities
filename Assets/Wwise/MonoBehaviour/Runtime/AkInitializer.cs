@@ -42,6 +42,11 @@ public class AkInitializer : UnityEngine.MonoBehaviour
 	public AkWwiseInitializationSettings InitializationSettings;
 #endif
 
+#if UNITY_WEBGL && !UNITY_EDITOR
+    [System.Runtime.InteropServices.DllImport("__Internal")]
+    private static extern bool AkVerifyPluginRegistration();
+#endif
+
 	private void Awake()
 	{
 #if UNITY_EDITOR
@@ -86,6 +91,11 @@ public class AkInitializer : UnityEngine.MonoBehaviour
 
 		if (ms_Instance == this)
 		{
+#if UNITY_WEBGL && !UNITY_EDITOR
+			bool bRegistered = AkVerifyPluginRegistration();
+			if (!bRegistered)
+				UnityEngine.Debug.Log("Wwise plug-in registration has failed. Some plug-ins may fail to initialize.");
+#endif
 			AkSoundEngineController.Instance.Init(this);
 		}
 	}

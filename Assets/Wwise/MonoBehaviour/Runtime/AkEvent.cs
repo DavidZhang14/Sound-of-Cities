@@ -94,6 +94,8 @@ public class AkEvent : AkDragDropTriggerHandler
 		if (useCallbacks)
 			EventCallbackMsg = new AkEventCallbackMsg { sender = gameObject };
 
+		soundEmitterObject = gameObject;
+
 		base.Start();
 	}
 
@@ -143,7 +145,7 @@ public class AkEvent : AkDragDropTriggerHandler
 
 	public void Stop(int _transitionDuration, AkCurveInterpolation _curveInterpolation)
 	{
-		data.Stop(soundEmitterObject, _transitionDuration, _curveInterpolation);
+		data.Stop(soundEmitterObject ? soundEmitterObject : gameObject, _transitionDuration, _curveInterpolation);
 	}
 
 	#region Obsolete

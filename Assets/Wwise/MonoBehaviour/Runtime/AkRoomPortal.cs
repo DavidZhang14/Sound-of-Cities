@@ -75,10 +75,14 @@ public class AkRoomPortal : AkTriggerHandler
 	private void SetRoomPortal()
 	{
 		if (!AkSoundEngine.IsInitialized())
+		{
 			return;
+		}
 
 		if (!enabled)
+		{
 			return;
+		}
 
 		if (IsValid)
 		{
@@ -96,7 +100,9 @@ public class AkRoomPortal : AkTriggerHandler
 		{
 			UnityEngine.Debug.LogError(name + " has identical front and back rooms. It will not be sent to Spatial Audio.");
 			if (portalSet)
+			{
 				AkSoundEngine.RemovePortal(GetID());
+			}
 			portalSet = false;
 		}
 	}
@@ -114,7 +120,9 @@ public class AkRoomPortal : AkTriggerHandler
 		for (int i = 0; i < MAX_ROOMS_PER_PORTAL; ++i)
 		{
 			if (roomList[i].Contains(room))
+			{
 				return true;
+			}
 		}
 
 		return false;
@@ -151,7 +159,9 @@ public class AkRoomPortal : AkTriggerHandler
 
 		//Call the ClosePortal function if registered to the Start Trigger
 		if (closePortalTriggerList.Contains(START_TRIGGER_ID))
+		{
 			ClosePortal(null);
+		}
 	}
 
 	/// Opens the portal on trigger event
@@ -184,7 +194,9 @@ public class AkRoomPortal : AkTriggerHandler
 	{
 		AkRoomManager.UnregisterPortal(this);
 		if (portalSet)
+		{
 			AkSoundEngine.RemovePortal(GetID());
+		}
 		portalSet = false;
 	}
 	private void Update()
@@ -219,7 +231,9 @@ public class AkRoomPortal : AkTriggerHandler
 	{
 		var portalCollider = gameObject.GetComponent<UnityEngine.BoxCollider>();
 		if (portalCollider == null)
+		{
 			return;
+		}
 
 		// compute halfExtents and divide the local z extent by 2
 		var halfExtentZ = portalCollider.size.z / 2;
@@ -242,7 +256,9 @@ public class AkRoomPortal : AkTriggerHandler
 		{
 			var room = collider.gameObject.GetComponent<AkRoom>();
 			if (room != null && !list.Contains(room))
+			{
 				list.Add(room);
+			}
 		}
 	}
 
@@ -257,20 +273,26 @@ public class AkRoomPortal : AkTriggerHandler
 			var room = roomList[i].GetHighestPriorityActiveAndEnabledRoom();
 
 			if (room != rooms[i])
+			{
 				wasUpdated = true;
+			}
 
 			rooms[i] = room;
 		}
 
 		if (wasUpdated)
+		{
 			AkRoomManager.RegisterPortalUpdate(this);
+		}
 	}
 
 #if UNITY_EDITOR
 	private void OnDrawGizmos()
 	{
 		if (!enabled)
+		{
 			return;
+		}
 
 		UnityEngine.Gizmos.matrix = transform.localToWorldMatrix;
 
@@ -322,7 +344,9 @@ public class AkRoomPortal : AkTriggerHandler
 
 		UnityEngine.Gizmos.color = UnityEngine.Color.red;
 		for (var i = 0; i < 4; i++)
+		{
 			UnityEngine.Gizmos.DrawLine(CornerCenterPos[i] + centreOffset, CornerCenterPos[(i + 1) % 4] + centreOffset);
+		}
 	}
 #endif
 

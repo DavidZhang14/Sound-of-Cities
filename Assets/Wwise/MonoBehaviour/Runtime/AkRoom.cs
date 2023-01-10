@@ -82,13 +82,17 @@ public class AkRoom : AkTriggerHandler
 			if (isActiveAndEnabled)
 			{
 				if(!roomAwareObjectsEntered.Contains(roomAwareObject))
+				{
 					roomAwareObjectsEntered.Add(roomAwareObject);
+				}
 				return true;
 			}
 			else
 			{
 				if (!roomAwareObjectsDetectedWhileDisabled.Contains(roomAwareObject))
+				{
 					roomAwareObjectsDetectedWhileDisabled.Add(roomAwareObject);
+				}
 				return false;
 			}
 		}
@@ -117,7 +121,15 @@ public class AkRoom : AkTriggerHandler
 
 	public void SetGeometryID(ulong id)
 	{
-		geometryID = id;
+		if (geometryID != id)
+		{
+			// if the associated geometry used to be from the collider
+			if (IsAssociatedGeometryFromCollider())
+			{
+				AkSoundEngine.RemoveGeometry(geometryID);
+			}
+			geometryID = id;
+		}
 	}
 
 	public bool IsAssociatedGeometryFromCollider()
@@ -138,7 +150,9 @@ public class AkRoom : AkTriggerHandler
 	private void _SetGeometryFromCollider(bool needSetGeometry)
 	{
 		if (roomCollider == null)
+		{
 			roomCollider = GetComponent<UnityEngine.Collider>();
+		}
 
 		if (roomCollider.GetType() == typeof(UnityEngine.MeshCollider))
 		{
@@ -146,7 +160,9 @@ public class AkRoom : AkTriggerHandler
 			UnityEngine.MeshCollider meshCollider = GetComponent<UnityEngine.MeshCollider>();
 
 			if (needSetGeometry)
+			{
 				AkSurfaceReflector.SetGeometryFromMesh(meshCollider.sharedMesh, geometryID, false, false, false);
+			}
 			AkSurfaceReflector.SetGeometryInstance(geometryID, geometryID, INVALID_ROOM_ID, transform);
 
 			previousColliderType = typeof(UnityEngine.MeshCollider);
@@ -161,13 +177,15 @@ public class AkRoom : AkTriggerHandler
 			tempGameObject.transform.position = boxCollider.bounds.center;
 			tempGameObject.transform.rotation = transform.rotation;
 			UnityEngine.Vector3 roomScale = new UnityEngine.Vector3();
-			roomScale.x = transform.localScale.x * boxCollider.size.x;
-			roomScale.y = transform.localScale.y * boxCollider.size.y;
-			roomScale.z = transform.localScale.z * boxCollider.size.z;
+			roomScale.x = transform.lossyScale.x * boxCollider.size.x;
+			roomScale.y = transform.lossyScale.y * boxCollider.size.y;
+			roomScale.z = transform.lossyScale.z * boxCollider.size.z;
 			tempGameObject.transform.localScale = roomScale;
 
 			if (needSetGeometry)
+			{
 				AkSurfaceReflector.SetGeometryFromMesh(mesh, geometryID, false, false, false);
+			}
 			AkSurfaceReflector.SetGeometryInstance(geometryID, geometryID, INVALID_ROOM_ID, tempGameObject.transform);
 
 			previousColliderType = typeof(UnityEngine.BoxCollider);
@@ -182,10 +200,12 @@ public class AkRoom : AkTriggerHandler
 
 			tempGameObject.transform.position = capsuleCollider.bounds.center;
 			tempGameObject.transform.rotation = transform.rotation;
-			tempGameObject.transform.localScale = GetCapsuleScale(transform.localScale, capsuleCollider.radius, capsuleCollider.height, capsuleCollider.direction);
+			tempGameObject.transform.localScale = GetCubeScaleFromCapsule(transform.lossyScale, capsuleCollider.radius, capsuleCollider.height, capsuleCollider.direction);
 
 			if (needSetGeometry)
+			{
 				AkSurfaceReflector.SetGeometryFromMesh(mesh, geometryID, false, false, false);
+			}
 			AkSurfaceReflector.SetGeometryInstance(geometryID, geometryID, INVALID_ROOM_ID, tempGameObject.transform);
 
 			previousColliderType = typeof(UnityEngine.CapsuleCollider);
@@ -201,7 +221,9 @@ public class AkRoom : AkTriggerHandler
 			tempGameObject.transform.localScale = roomCollider.bounds.size;
 
 			if (needSetGeometry)
+			{
 				AkSurfaceReflector.SetGeometryFromMesh(mesh, geometryID, false, false, false);
+			}
 			AkSurfaceReflector.SetGeometryInstance(geometryID, geometryID, INVALID_ROOM_ID, tempGameObject.transform);
 
 			previousColliderType = typeof(UnityEngine.SphereCollider);
@@ -215,7 +237,9 @@ public class AkRoom : AkTriggerHandler
 				previousColliderType == typeof(UnityEngine.BoxCollider) ||
 				previousColliderType == typeof(UnityEngine.SphereCollider) ||
 				previousColliderType == typeof(UnityEngine.CapsuleCollider))
+			{
 				AkSoundEngine.RemoveGeometry(GetID());
+			}
 
 			previousColliderType = roomCollider.GetType();
 			geometryID = AkSurfaceReflector.INVALID_GEOMETRY_ID;
@@ -225,7 +249,9 @@ public class AkRoom : AkTriggerHandler
 	public void SetRoom()
 	{
 		if (!AkSoundEngine.IsInitialized())
+		{
 			return;
+		}
 
 		var roomParams = new AkRoomParams
 		{
@@ -241,7 +267,9 @@ public class AkRoom : AkTriggerHandler
 		};
 
 		if (bSentToWwise == false)
+		{
 			RoomCount++;
+		}
 
 		if (geometryID == AkSurfaceReflector.INVALID_GEOMETRY_ID)
 		{
@@ -280,31 +308,35 @@ public class AkRoom : AkTriggerHandler
 		}
 	}
 
-	private UnityEngine.Vector3 GetCapsuleScale(UnityEngine.Vector3 localScale, float radius, float height, int direction)
+	private UnityEngine.Vector3 GetCubeScaleFromCapsule(UnityEngine.Vector3 capsuleScale, float capsuleRadius, float capsuleHeight, int capsuleDirection)
 	{
-		UnityEngine.Vector3 scale = new UnityEngine.Vector3();
+		UnityEngine.Vector3 cubeScale = new UnityEngine.Vector3();
 
-		switch (direction)
+		capsuleScale.x = UnityEngine.Mathf.Abs(capsuleScale.x);
+		capsuleScale.y = UnityEngine.Mathf.Abs(capsuleScale.y);
+		capsuleScale.z = UnityEngine.Mathf.Abs(capsuleScale.z);
+
+		switch (capsuleDirection)
 		{
 			case 0:
-				scale.y = UnityEngine.Mathf.Max(localScale.y, localScale.z) * (radius * 2);
-				scale.z = scale.y;
-				scale.x = UnityEngine.Mathf.Max(scale.y, localScale.x * height);
+				cubeScale.y = UnityEngine.Mathf.Max(capsuleScale.y, capsuleScale.z) * (capsuleRadius * 2);
+				cubeScale.z = cubeScale.y;
+				cubeScale.x = UnityEngine.Mathf.Max(cubeScale.y, capsuleScale.x * capsuleHeight);
 				break;
 			case 2:
-				scale.x = UnityEngine.Mathf.Max(localScale.x, localScale.y) * (radius * 2);
-				scale.y = scale.x;
-				scale.z = UnityEngine.Mathf.Max(scale.x, localScale.z * height);
+				cubeScale.x = UnityEngine.Mathf.Max(capsuleScale.x, capsuleScale.y) * (capsuleRadius * 2);
+				cubeScale.y = cubeScale.x;
+				cubeScale.z = UnityEngine.Mathf.Max(cubeScale.x, capsuleScale.z * capsuleHeight);
 				break;
 			case 1:
 			default:
-				scale.x = UnityEngine.Mathf.Max(localScale.x, localScale.z) * (radius * 2);
-				scale.y = UnityEngine.Mathf.Max(scale.x, localScale.y * height);
-				scale.z = scale.x;
+				cubeScale.x = UnityEngine.Mathf.Max(capsuleScale.x, capsuleScale.z) * (capsuleRadius * 2);
+				cubeScale.y = UnityEngine.Mathf.Max(cubeScale.x, capsuleScale.y * capsuleHeight);
+				cubeScale.z = cubeScale.x;
 				break;
 		}
 
-		return scale;
+		return cubeScale;
 	}
 
 	public override void OnEnable()
@@ -313,15 +345,21 @@ public class AkRoom : AkTriggerHandler
 
 		AkSurfaceReflector surfaceReflectorComponent = gameObject.GetComponent<AkSurfaceReflector>();
 		if (surfaceReflectorComponent != null && surfaceReflectorComponent.enabled)
+		{
 			SetGeometryID(surfaceReflectorComponent.GetID());
+		}
 		else
+		{
 			SetGeometryFromCollider();
+		}
 
 		SetRoom();
 
 		// if objects entered the room while disabled, enter them now
 		for (var i = 0; i < roomAwareObjectsDetectedWhileDisabled.Count; ++i)
+		{
 			AkRoomAwareManager.ObjectEnteredRoom(roomAwareObjectsDetectedWhileDisabled[i], this);
+		}
 
 		roomAwareObjectsDetectedWhileDisabled.Clear();
 		base.OnEnable();
@@ -349,12 +387,16 @@ public class AkRoom : AkTriggerHandler
 			previousColliderType == typeof(UnityEngine.BoxCollider) ||
 			previousColliderType == typeof(UnityEngine.SphereCollider) ||
 			previousColliderType == typeof(UnityEngine.CapsuleCollider))
+		{
 			AkSoundEngine.RemoveGeometry(GetID());
+		}
 		previousColliderType = null;
 
 		// stop sounds applied to the room game object
 		if (roomToneEvent.IsValid())
+		{
 			AkSoundEngine.StopAll(GetID());
+		}
 
 		RoomCount--;
 		AkSoundEngine.RemoveRoom(GetID());
@@ -374,7 +416,9 @@ public class AkRoom : AkTriggerHandler
 	public void PostRoomTone()
 	{
 		if (roomToneEvent.IsValid() && isActiveAndEnabled)
+		{
 			roomToneEvent.Post(GetID());
+		}
 	}
 
 	public override void HandleEvent(UnityEngine.GameObject in_gameObject)
@@ -399,7 +443,9 @@ public class AkRoom : AkTriggerHandler
 			for (int i = 0; i < rooms.Count; i++)
 			{
 				if (rooms[i].isActiveAndEnabled)
+				{
 					return rooms[i];
+				}
 			}
 
 			return null;
@@ -416,7 +462,9 @@ public class AkRoom : AkTriggerHandler
 		{
 			var index = BinarySearch(room);
 			if (index < 0)
+			{
 				rooms.Insert(~index, room);
+			}
 		}
 
 		public void Remove(AkRoom room)
@@ -445,7 +493,9 @@ public class AkRoom : AkTriggerHandler
 			{
 				var result = a.priority.CompareTo(b.priority);
 				if (result == 0 && a != b)
+				{
 					return 1;
+				}
 
 				return -result; // inverted to have highest priority first
 			}

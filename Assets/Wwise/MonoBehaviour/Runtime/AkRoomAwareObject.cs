@@ -41,7 +41,9 @@ public class AkRoomAwareObject : UnityEngine.MonoBehaviour
 	{
 		m_Collider = GetComponent<UnityEngine.Collider>();
 		if (m_Collider != null)
+		{
 			ColliderToRoomAwareObjectMap.Add(m_Collider, this);
+		}
 	}
 
 	private void OnEnable()
@@ -49,13 +51,17 @@ public class AkRoomAwareObject : UnityEngine.MonoBehaviour
 		AkRoomAwareManager.RegisterRoomAwareObject(this);
 
 		for (int i = 0; i < roomPriorityList.Count; ++i)
+		{
 			roomPriorityList[i].TryEnter(this);
+		}
 	}
 
 	private void OnDisable()
 	{
 		for (int i = 0; i < roomPriorityList.Count; ++i)
+		{
 			roomPriorityList[i].Exit(this);
+		}
 
 		AkRoomAwareManager.UnregisterRoomAwareObject(this);
 

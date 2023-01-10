@@ -37,13 +37,17 @@ public class AkRoomManager
 	public static void Init()
 	{
 		if (m_Instance == null)
+		{
 			m_Instance = new AkRoomManager();
+		}
 	}
 
 	public static void Terminate()
 	{
 		if (m_Instance != null)
+		{
 			m_Instance = null;
+		}
 	}
 
 	public static void RegisterPortal(AkRoomPortal portal)
@@ -116,14 +120,6 @@ public class AkRoomManager
 					(room == portal.frontRoom || room == portal.backRoom || portal.Overlaps(room)))
 				{
 					m_Instance.m_PortalsToUpdate.Add(portal);
-				}
-			}
-			for (var i = 0; i < m_Instance.m_Reflectors.Count; ++i)
-			{
-				var reflector = m_Instance.m_Reflectors[i];
-				if (!m_Instance.m_ReflectorsToUpdate.Contains(reflector) && (reflector.AssociatedRoom == room))
-				{
-					m_Instance.m_ReflectorsToUpdate.Add(reflector);
 				}
 			}
 		}

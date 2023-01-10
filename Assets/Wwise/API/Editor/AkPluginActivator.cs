@@ -917,7 +917,6 @@ public class AkPluginActivator
 			new System.Collections.Generic.HashSet<string>();
 
 		private readonly UnityEditor.BuildTarget Target;
-		private bool Active;
 
 		public StaticPluginRegistration(UnityEditor.BuildTarget target)
 		{
@@ -926,7 +925,6 @@ public class AkPluginActivator
 
 		public void TryAddLibrary(PlatformConfiguration config, string AssetPath)
 		{
-			Active = true;
 			if (AssetPath.Contains(".a"))
 			{
 				//Extract the lib name, generate the registration code.
@@ -958,29 +956,49 @@ public class AkPluginActivator
 
 		public void TryWriteToFile(PlatformConfiguration config)
 		{
-			if (!Active)
-				return;
+			System.Text.StringBuilder CppText = new System.Text.StringBuilder(2000);
 
-			string CppText = "#define " + config.StaticPluginDefine;
 			string RelativePath = config.DSPDirectoryPath + config.StaticPluginRegistrationName + ".cpp";
+			CppText.AppendLine("#define " + config.StaticPluginDefine);
 
-			CppText += @"
-namespace AK { class PluginRegistration; };
-#define AK_STATIC_LINK_PLUGIN(_pluginName_) \
-extern AK::PluginRegistration _pluginName_##Registration; \
-void *_pluginName_##_fp = (void*)&_pluginName_##Registration;
+			// The purpose of this cpp file is to force the linker to recognize the usage of AK::PluginRegistration global objects
+			// so that the static constructors for these objects are executed when the binary is being loaded in.
+			// However, some platforms (e.g. WebGL) have a really aggressive LTO (link-time optimization) pass that will strip these
+			// symbols even when they are defined as extern here.
+			// To avoid any stripping, we call from C# a native function (AkVerifyPluginRegistration)
+			// that looks at these symbols, forcing the linker to recognize that these symbols are required for proper program execution.
 
-";
+			CppText.AppendLine(@"namespace AK { class PluginRegistration; };");
+			CppText.AppendLine(@"class AkUnityStaticPlugin;");
+			CppText.AppendLine(@"AkUnityStaticPlugin * g_pAkUnityStaticPluginList = nullptr;");
+			CppText.AppendLine(@"class AkUnityStaticPlugin {");
+			CppText.AppendLine("\tpublic:");
+			CppText.AppendLine("\tAkUnityStaticPlugin(AK::PluginRegistration* pReg) : m_pNext(g_pAkUnityStaticPluginList), m_pReg(pReg) { g_pAkUnityStaticPluginList = this; }");
+			CppText.AppendLine("\tAkUnityStaticPlugin *m_pNext;");
+			CppText.AppendLine("\tAK::PluginRegistration * m_pReg;");
+			CppText.AppendLine(@"};");
+
+			CppText.AppendLine(@"#define AK_STATIC_LINK_PLUGIN(_pluginName_) \");
+			CppText.AppendLine(@"extern AK::PluginRegistration _pluginName_##Registration; \");
+			CppText.AppendLine(@"AkUnityStaticPlugin _pluginName_##UnityStaticPlugin(&_pluginName_##Registration);");
 
 			foreach (var filename in FactoriesHeaderFilenames)
 			{
-				CppText += "#include \"" + filename + "\"\n";
+				CppText.AppendLine("#include \"" + filename + "\"");
 			}
+			CppText.AppendLine("extern \"C\" {");
+			CppText.AppendLine("\t__attribute__ ((visibility(\"default\"))) bool AkVerifyPluginRegistration() {");
+			CppText.AppendLine("\t\tbool bReg = true;");
+			CppText.AppendLine("\t\tAkUnityStaticPlugin * pNext = g_pAkUnityStaticPluginList;");
+			CppText.AppendLine("\t\twhile (pNext != nullptr) { bReg = bReg && pNext->m_pReg != nullptr; pNext = pNext->m_pNext; }");
+			CppText.AppendLine("\t\treturn bReg;");
+			CppText.AppendLine("\t}");
+			CppText.AppendLine("}");
 
 			try
 			{
 				var FullPath = System.IO.Path.GetFullPath(AkUtilities.GetPathInPackage(WwisePluginFolder + RelativePath));
-				System.IO.File.WriteAllText(FullPath, CppText);
+				System.IO.File.WriteAllText(FullPath, CppText.ToString());
 			}
 			catch (System.Exception e)
 			{

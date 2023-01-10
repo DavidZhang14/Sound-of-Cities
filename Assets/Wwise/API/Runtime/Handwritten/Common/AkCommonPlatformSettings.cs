@@ -76,7 +76,7 @@ Copyright (c) 2022 Audiokinetic Inc.
 [System.Serializable]
 public class AkCommonOutputSettings
 {
-	[UnityEngine.Tooltip("The name of a custom audio device to be used. Custom audio devices are defined in the Audio Device Shareset section of the Wwise project. Leave this empty to output normally through the default audio device.")]
+	[UnityEngine.Tooltip("The name of a custom audio device to use. Custom audio devices are defined in the Audio Device Shareset section of the Wwise project. Leave this empty to output normally through the default audio device.")]
 	public string m_AudioDeviceShareset = string.Empty;
 
 	[UnityEngine.Tooltip("Device specific identifier, when multiple devices of the same type are possible.  If only one device is possible, leave to 0.")]
@@ -88,7 +88,7 @@ public class AkCommonOutputSettings
 		Headphones = 1
 	}
 
-	[UnityEngine.Tooltip("Rule for 3D panning of signals routed to a stereo bus. In \"Speakers\" mode, the angle of the front loudspeakers is used. In \"Headphones\" mode, the speaker angles are superseded with constant power panning between two virtual microphones spaced 180 degrees apart.")]
+	[UnityEngine.Tooltip("Rule for 3D panning of signals routed to a stereo bus. In \"Speakers\" mode, the angle of the front loudspeakers is used. In \"Headphones\" mode, the speaker angles are superseded by constant power panning between two virtual microphones spaced 180 degrees apart.")]
 	public PanningRule m_PanningRule = PanningRule.Speakers;
 
 	[System.Serializable]
@@ -101,7 +101,7 @@ public class AkCommonOutputSettings
 			Ambisonic = 0x2
 		}
 
-		[UnityEngine.Tooltip("A code that completes the identification of channels by uChannelMask. Anonymous: Channel mask == 0 and channels; Standard: Channels must be identified with standard defines in AkSpeakerConfigs; Ambisonic: Channel mask == 0 and channels follow standard ambisonic order.")]
+		[UnityEngine.Tooltip("A code that completes the identification of channels by uChannelMask. Anonymous: Channel mask == 0 and channels. Standard: Channels must be identified with standard defines in AkSpeakerConfigs. Ambisonic: Channel mask == 0 and channels follow standard ambisonic order.")]
 		public ChannelConfigType m_ChannelConfigType = ChannelConfigType.Anonymous;
 
 		public enum ChannelMask
@@ -305,10 +305,10 @@ public partial class AkCommonUserSettings
 
 	public virtual void CopyTo(AkDeviceSettings settings) { }
 
-	[UnityEngine.Tooltip("Sampling Rate. Default is 48000 Hz. Use 24000hz for low quality. Any positive reasonable sample rate is supported; however, be careful setting a custom value. Using an odd or really low sample rate may cause the sound engine to malfunction.")]
+	[UnityEngine.Tooltip("Sampling rate in Hz. The default value is 48000. Use 24000 for low quality audio. Any positive, reasonable sample rate is supported. However, very low sample rates might cause the sound engine to malfunction.")]
 	public uint m_SampleRate = 48000;
 
-	[UnityEngine.Tooltip("Number of refill buffers in voice buffer. Set to 2 for double-buffered, defaults to 4.")]
+	[UnityEngine.Tooltip("Number of refill buffers in voice buffer. Set to 2 for double-buffered. The default value is to 4.")]
 	public ushort m_NumberOfRefillsInVoice = 4;
 
 	partial void SetSampleRate(AkPlatformInitSettings settings);
@@ -359,11 +359,16 @@ public partial class AkCommonUserSettings
         /// Length of the rays that are cast inside Spatial Audio. Effectively caps the maximum length of an individual segment in a reflection or diffraction path.
         public float m_MaxPathLength = 10000.0f;
 
-        [UnityEngine.Tooltip("Controls the maximum percentage of an audio frame used by the raytracing engine. Percentage [0, 100] of the current audio frame. A value of 0 indicates no limit on the amount of CPU used for raytracing.")]
-		/// Controls the maximum percentage of an audio frame used by the raytracing engine. Percentage [0, 100] of the current audio frame. A value of 0 indicates no limit on the amount of CPU used for raytracing.
+        [UnityEngine.Tooltip("Controls the maximum percentage of an audio frame the raytracing engine can use. Percentage [0, 100] of the current audio frame. A value of 0 indicates no limit on the amount of CPU used for raytracing.")]
+		/// Controls the maximum percentage of an audio frame the raytracing engine can use. Percentage [0, 100] of the current audio frame. A value of 0 indicates no limit on the amount of CPU used for raytracing.
 		public float m_CPULimitPercentage = 0.0f;
 
-		[UnityEngine.Tooltip("Enable computation of geometric diffraction and transmission paths for all sources that have that have the \"Enable Diffraction and Transmission\" box checked in the Positioning tab of the Wwise Property Editor. This flag enables sound paths around (diffraction) and thorugh (transmission) geometry. Setting to EnableGeometricDiffractionAndTransmission to false implies that geometry is only to be used for reflection calculation. Diffraction edges must be enabled on geometry for diffraction calculation. If EnableGeometricDiffractionAndTransmission is false but a sound has \"Enable Diffraction and Transmission\" checked in the positioning tab of the authoring tool, the sound will only diffract through portals but pass through geometry as if it is not there. One would typically disable this setting if the game intends to perform its own obstruction calculation, but in the situation where geometry is still passed to spatial audio for reflection calculation.")]
+        [UnityEngine.Tooltip("Enables computation of diffraction along reflection paths.")]
+        [UnityEngine.Serialization.FormerlySerializedAs("m_EnableDiffraction")]
+        /// Enable computation of diffraction along reflection paths.
+        public bool m_EnableDiffractionOnReflections = true;
+
+		[UnityEngine.Tooltip("Enables computation of geometric diffraction and transmission paths for all sources that have the \"Enable Diffraction and Transmission\" box selected in the Positioning tab of the Wwise Property Editor. This flag enables sound paths around (diffraction) and through (transmission) geometry. Set EnableGeometricDiffractionAndTransmission to false to ensure that geometry is only used to calculate reflection. Diffraction edges must be enabled on geometry for diffraction calculation. If EnableGeometricDiffractionAndTransmission is false but a sound has \"Enable Diffraction and Transmission\" selected in the Positioning tab of the Wwise Authoring tool, the sound only diffracts through portals but passes through geometry as if it were not there. Disable this setting if the game performs its own obstruction calculation, but geometry is still passed to Spatial Audio for reflection calculation.")]
 		[UnityEngine.Serialization.FormerlySerializedAs("m_EnableDirectPathDiffraction")]
 		/// Enable direct path diffraction.
 		public bool m_EnableGeometricDiffractionAndTransmission = true;
@@ -424,7 +429,7 @@ public partial class AkCommonUserSettings
 [System.Serializable]
 public class AkCommonAdvancedSettings
 {
-	[UnityEngine.Tooltip("Size of memory pool for I/O (for automatic streams). It is passed directly to AK::MemoryMgr::CreatePool(), after having been rounded down to a multiple of uGranularity.")]
+	[UnityEngine.Tooltip("Size of memory pool for I/O (for automatic streams). It is rounded down to a multiple of uGranularity and then passed directly to AK::MemoryMgr::CreatePool().")]
 	public uint m_IOMemorySize = 2 * 1024 * 1024;
 
 	[UnityEngine.Tooltip("Targeted automatic stream buffer length (ms). When a stream reaches that buffering, it stops being scheduled for I/O except if the scheduler is idle.")]
@@ -447,19 +452,19 @@ public class AkCommonAdvancedSettings
 	[UnityEngine.Tooltip("Set to true to enable AK::SoundEngine::PrepareGameSync usage.")]
 	public bool m_EnableGameSyncPreparation = false;
 
-	[UnityEngine.Tooltip("Number of quanta ahead when continuous containers should instantiate a new voice before which next sounds should start playing. This look-ahead time allows I/O to occur, and is especially useful to reduce the latency of continuous containers with trigger rate or sample-accurate transitions.")]
+	[UnityEngine.Tooltip("Number of quanta ahead when continuous containers instantiate a new voice before the following sounds start playing. This look-ahead time allows I/O to occur, and is especially useful to reduce the latency of continuous containers with trigger rate or sample-accurate transitions.")]
 	public uint m_ContinuousPlaybackLookAhead = 1;
 
-	[UnityEngine.Tooltip("Size of the monitoring queue pool. This parameter is not used in Release build.")]
+	[UnityEngine.Tooltip("Size of the monitoring queue pool. This parameter is ignored in Release build.")]
 	public uint m_MonitorQueuePoolSize = 1024 * 1024;
 
-	[UnityEngine.Tooltip("Amount of time to wait for hardware devices to trigger an audio interrupt. If there is no interrupt after that time, the sound engine will revert to silent mode and continue operating until the hardware finally comes back.")]
+	[UnityEngine.Tooltip("Time (in milliseconds) to wait to wait for hardware devices to trigger an audio interrupt. If there is no interrupt after that time, the sound engine reverts to silent mode and continues operating until the hardware responds.")]
 	public uint m_MaximumHardwareTimeoutMs = 1000;
 
-	[UnityEngine.Tooltip("Debug setting: Enable checks for out-of-range (and NAN) floats in the processing code. Do not enable in any normal usage, this setting uses a lot of CPU. Will print error messages in the log if invalid values are found at various point in the pipeline. Contact AK Support with the new error messages for more information.")]
+	[UnityEngine.Tooltip("Debug setting: Enable checks for out-of-range (and NAN) floats in the processing code. Do not enable in any normal usage because this setting uses a lot of CPU. It prints error messages in the log if invalid values are found at various points in the pipeline. Contact AK Support with the new error messages for more information.")]
 	public bool m_DebugOutOfRangeCheckEnabled = false;
 
-	[UnityEngine.Tooltip("Debug setting: Only used when bDebugOutOfRangeCheckEnabled is true. This defines the maximum values samples can have. Normal audio must be contained within +1/-1. This limit should be set higher to allow temporary or short excursions out of range. Default is 16.")]
+	[UnityEngine.Tooltip("Debug setting: Only used when bDebugOutOfRangeCheckEnabled is true. This defines the maximum values samples can have. Normal audio must be contained within +1/-1. Set this limit to a value greater than 1 to allow temporary or short excursions out of range. The default value is 16.")]
 	public float m_DebugOutOfRangeLimit = 16.0f;
 
 	public virtual void CopyTo(AkInitSettings settings)
@@ -506,7 +511,10 @@ public class AkCommonCommSettings
 	[UnityEngine.Tooltip("The \"command\" channel port. Set to 0 to request a dynamic/ephemeral port.")]
 	public ushort m_CommandPort;
 
-	[UnityEngine.Tooltip("Indicates whether the communication system should be initialized. Some consoles have critical requirements for initialization of their communications system. Set to false only if your game already uses sockets before sound engine initialization.")]
+	[UnityEngine.Tooltip("The \"notification\" channel port. Set to 0 to request a dynamic/ephemeral port.")]
+	public ushort m_NotificationPort;
+
+	[UnityEngine.Tooltip("Indicates whether or not to initialize the communication system. Some consoles have critical requirements for initialization of their communications system. Set to false only if your game already uses sockets before sound engine initialization.")]
 	public bool m_InitializeSystemComms = true;
 
 	[UnityEngine.Tooltip("The name used to identify this game within the authoring application. Leave empty to use \"UnityEngine.Application.productName\".")]

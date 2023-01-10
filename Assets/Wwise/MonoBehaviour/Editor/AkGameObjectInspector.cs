@@ -132,8 +132,15 @@ public class AkGameObjectInspector : UnityEditor.Editor
 
 			m_AkGameObject.m_positionOffsetData = positionOffsetData;
 
+			var posOffsetDataProperty = serializedObject.FindProperty("m_positionOffsetData");
+			var KeepMeProperty = posOffsetDataProperty.FindPropertyRelative("KeepMe");
+			KeepMeProperty.boolValue = (positionOffsetData != null);
 			if (positionOffsetData != null)
-				m_AkGameObject.m_positionOffsetData.positionOffset = positionOffset;
+			{
+				var posOffsetProperty = posOffsetDataProperty.FindPropertyRelative("positionOffset");
+				posOffsetProperty.vector3Value = positionOffset;
+			}
+			serializedObject.ApplyModifiedProperties();
 
 			m_AkGameObject.isEnvironmentAware = isEnvironmentAware;
 		}

@@ -85,10 +85,14 @@ public class AkSpatialAudioListener : UnityEngine.MonoBehaviour
 		public bool Add(AkSpatialAudioListener listener)
 		{
 			if (listener == null)
+			{
 				return false;
+			}
 
 			if (listenerList.Contains(listener))
+			{
 				return false;
+			}
 
 			listenerList.Add(listener);
 			Refresh();
@@ -103,10 +107,14 @@ public class AkSpatialAudioListener : UnityEngine.MonoBehaviour
 		public bool Remove(AkSpatialAudioListener listener)
 		{
 			if (listener == null)
+			{
 				return false;
+			}
 
 			if (!listenerList.Remove(listener))
+			{
 				return false;
+			}
 
 			Refresh();
 			return true;
@@ -117,7 +125,9 @@ public class AkSpatialAudioListener : UnityEngine.MonoBehaviour
 			if (ListenerList.Count == 1)
 			{
 				if (s_SpatialAudioListener != null)
+				{
 					AkSoundEngine.UnregisterSpatialAudioListener(s_SpatialAudioListener.gameObject);
+				}
 
 				s_SpatialAudioListener = ListenerList[0];
 

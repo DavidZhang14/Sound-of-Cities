@@ -37,16 +37,24 @@ public class AkSpatialAudioDebugDraw : UnityEngine.MonoBehaviour
 	private void OnDrawGizmos()
 	{
 		if (!UnityEngine.Application.isPlaying || !AkSoundEngine.IsInitialized())
+		{
 			return;
+		}
 
 		if (debugDrawData == null)
+		{
 			debugDrawData = new DebugDrawData();
+		}
 
 		if (drawFirstOrderReflections || drawSecondOrderReflections || drawHigherOrderReflections)
+		{
 			debugDrawData.DebugDrawEarlyReflections(gameObject, drawFirstOrderReflections, drawSecondOrderReflections, drawHigherOrderReflections);
+		}
 
 		if (drawDiffractionPaths)
+		{
 			debugDrawData.DebugDrawDiffraction(gameObject);
+		}
 	}
 
 	private class DebugDrawData
@@ -74,7 +82,9 @@ public class AkSpatialAudioDebugDraw : UnityEngine.MonoBehaviour
 			var emitterPosition = UnityEngine.Vector3.zero;
 			uint numValidPaths = (uint)indirectPathInfoArray.Count();
 			if (AkSoundEngine.QueryReflectionPaths(gameObject, 0, ref listenerPosition, ref emitterPosition, indirectPathInfoArray, out numValidPaths) != AKRESULT.AK_Success)
+			{
 				return;
+			}
 
 			for (var idxPath = (int)numValidPaths - 1; idxPath >= 0; --idxPath)
 			{
@@ -87,7 +97,9 @@ public class AkSpatialAudioDebugDraw : UnityEngine.MonoBehaviour
 				if (order == 1)
 				{
 					if (!firstOrder)
+					{
 						continue;
+					}
 
 					colorLight = colorLightYellow;
 					colorDark = colorDarkYellow;
@@ -95,13 +107,17 @@ public class AkSpatialAudioDebugDraw : UnityEngine.MonoBehaviour
 				else if (order == 2)
 				{
 					if (!secondOrder)
+					{
 						continue;
+					}
 
 					colorLight = colorLightOrange;
 					colorDark = colorDarkOrange;
 				}
 				else if (order > 2 && !higherOrder)
+				{
 					continue;
+				}
 
 				var listenerPt = listenerPosition;
 
@@ -144,13 +160,17 @@ public class AkSpatialAudioDebugDraw : UnityEngine.MonoBehaviour
 			var emitterPosition = UnityEngine.Vector3.zero;
 			uint numValidPaths = (uint)diffractionPathInfoArray.Count();
 			if (AkSoundEngine.QueryDiffractionPaths(gameObject, 0, ref listenerPosition, ref emitterPosition, diffractionPathInfoArray, out numValidPaths) != AKRESULT.AK_Success)
+			{
 				return;
+			}
 
 			for (var idxPath = (int)numValidPaths - 1; idxPath >= 0; --idxPath)
 			{
 				var path = diffractionPathInfoArray[idxPath];
 				if (path.nodeCount <= 0)
+				{
 					continue;
+				}
 
 				var prevPt = listenerPosition;
 
