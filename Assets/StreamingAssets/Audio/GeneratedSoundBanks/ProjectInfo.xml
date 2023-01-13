@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ProjectInfo>
-	<Project Name="SoundOfCities_WwiseProject" GUID="{98E36BD5-ED7A-4237-B7CF-F20A760BA5F5}" Generator="2022.1.0.8070"/>
+	<Project Name="SoundOfCities_WwiseProject" GUID="{98E36BD5-ED7A-4237-B7CF-F20A760BA5F5}" Generator="2022.1.1.8100"/>
 	<CacheRoot>../../../../SoundOfCities_WwiseProject/.cache</CacheRoot>
 	<Platforms>
 		<Platform Name="Mac" GUID="{577EEA6C-1E1A-4AAF-89D5-185B9343E1D0}" BasePlatform="Mac" BasePlatformGUID="{9C6217D5-DD11-4795-87C1-6CE02853C540}" Path="../../../../SoundOfCities_WwiseProject/GeneratedSoundBanks/Mac"/>
@@ -9,5 +9,5 @@
 	<Languages>
 		<Language Name="English(US)" Id="684519430" GUID="{9C6C807F-9A61-453B-AC4B-15EFA2C54F18}" Default="true" UseAsStandIn="true"/>
 	</Languages>
-	<FileHash>{B55E687B-9BFB-54E0-EE5D-F7C23A6FDF94}</FileHash>
+	<FileHash>{BB3D74F3-A47A-DF9F-9DF7-CDC73FF47BB3}</FileHash>
 </ProjectInfo>

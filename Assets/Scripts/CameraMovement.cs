@@ -11,6 +11,7 @@ namespace SVS
     public class CameraMovement : MonoBehaviour
     {
         public Camera gameCamera;
+        public GameObject listener;
         public float cameraMovementSpeed = 5;
 
         private void Start()
@@ -21,6 +22,7 @@ namespace SVS
         {
             var movementVector = Quaternion.Euler(0,30,0) * inputVector;
             gameCamera.transform.position += movementVector * Time.deltaTime * cameraMovementSpeed;
+            listener.transform.position += movementVector * Time.deltaTime * cameraMovementSpeed;
         }
     }
 }
