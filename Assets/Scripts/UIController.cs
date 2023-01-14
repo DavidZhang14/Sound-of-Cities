@@ -14,6 +14,7 @@ public class UIController : MonoBehaviour
     List<Button> buttonList;
     public StructureSoundEmitter editTarget;
     public InfoPanel infoPanel;
+    public BuildingPanel buildingPanel;
     private void Awake() {
         if (Instance != null) {
             Destroy (gameObject);

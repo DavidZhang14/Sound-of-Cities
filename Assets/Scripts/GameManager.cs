@@ -12,11 +12,12 @@ public class GameManager : MonoBehaviour
 
     public UIController uiController;
 
-    public StructureManager structureManager;
+    private StructureManager structureManager;
     public PlacementManager placementManager;
 
     private void Start()
     {
+        structureManager = StructureManager.instance;
         uiController.OnRoadPlacement += RoadPlacementHandler;
         uiController.OnHousePlacement += HousePlacementHandler;
         uiController.OnSpecialPlacement += SpecialPlacementHandler;
@@ -26,18 +27,23 @@ public class GameManager : MonoBehaviour
     private void SpecialPlacementHandler()
     {
         ClearInputActions();
+        uiController.buildingPanel.gameObject.SetActive(true);
+        uiController.buildingPanel.DisplaySpecialList();
         inputManager.OnMouseClick += structureManager.PlaceSpecial;
     }
 
     private void HousePlacementHandler()
     {
         ClearInputActions();
+        uiController.buildingPanel.gameObject.SetActive(true);
+        uiController.buildingPanel.DisplayHouseList();
         inputManager.OnMouseClick += structureManager.PlaceHouse;
     }
 
     private void RoadPlacementHandler()
     {
         ClearInputActions();
+        uiController.buildingPanel.gameObject.SetActive(false);
         inputManager.OnMouseClick += roadManager.PlaceRoad;
         inputManager.OnMouseHold += roadManager.PlaceRoad;
         inputManager.OnMouseUp += roadManager.FinishPlacingRoad;
@@ -46,6 +52,7 @@ public class GameManager : MonoBehaviour
     private void EditHandler() 
     {
         ClearInputActions();
+        uiController.buildingPanel.gameObject.SetActive(false);
         inputManager.OnMouseClick += selectEditTarget;
     }
 
