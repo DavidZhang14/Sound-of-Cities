@@ -14,7 +14,7 @@ Licensees holding valid licenses to the AUDIOKINETIC Wwise Technology may use
 this file in accordance with the end user license agreement provided with the
 software or, alternatively, in accordance with the terms contained
 in a written agreement between you and Audiokinetic Inc.
-Copyright (c) 2022 Audiokinetic Inc.
+Copyright (c) 2023 Audiokinetic Inc.
 *******************************************************************************/
 
 
@@ -158,6 +158,7 @@ public class AkSoundEngineController
 #if UNITY_EDITOR
 			if (GetInitSettingsInstance().ResetSoundEngine(UnityEngine.Application.isPlaying || UnityEditor.BuildPipeline.isBuildingPlayer))
 			{
+				OnEnableEditorListener(akInitializer.gameObject);
 				EnableEditorLateUpdate();
 			}
 
@@ -252,6 +253,11 @@ public class AkSoundEngineController
 		{
 			ActivateAudio(pauseState != UnityEditor.PauseState.Paused);
 		}
+	}
+
+	public bool EditorListenerIsInitialized()
+	{
+		return editorListenerGameObject != null;
 	}
 #endif
 

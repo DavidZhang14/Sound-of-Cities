@@ -412,6 +412,8 @@ class AkSoundEnginePINVOKE {
   public static extern bool CSharp_AkPlaylistArray_IsGrowingAllowed(global::System.IntPtr jarg1);
   [global::System.Runtime.InteropServices.DllImport("AkSoundEngine", EntryPoint="CSharp_AkPlaylistArray_Reserve")]
   public static extern int CSharp_AkPlaylistArray_Reserve(global::System.IntPtr jarg1, uint jarg2);
+  [global::System.Runtime.InteropServices.DllImport("AkSoundEngine", EntryPoint="CSharp_AkPlaylistArray_ReserveExtra")]
+  public static extern int CSharp_AkPlaylistArray_ReserveExtra(global::System.IntPtr jarg1, uint jarg2);
   [global::System.Runtime.InteropServices.DllImport("AkSoundEngine", EntryPoint="CSharp_AkPlaylistArray_Reserved")]
   public static extern uint CSharp_AkPlaylistArray_Reserved(global::System.IntPtr jarg1);
   [global::System.Runtime.InteropServices.DllImport("AkSoundEngine", EntryPoint="CSharp_AkPlaylistArray_Term")]
@@ -1808,6 +1810,14 @@ class AkSoundEnginePINVOKE {
   public static extern void CSharp_AkChannelConfig_uChannelMask_set(global::System.IntPtr jarg1, uint jarg2);
   [global::System.Runtime.InteropServices.DllImport("AkSoundEngine", EntryPoint="CSharp_AkChannelConfig_uChannelMask_get")]
   public static extern uint CSharp_AkChannelConfig_uChannelMask_get(global::System.IntPtr jarg1);
+  [global::System.Runtime.InteropServices.DllImport("AkSoundEngine", EntryPoint="CSharp_AkChannelConfig_Standard")]
+  public static extern global::System.IntPtr CSharp_AkChannelConfig_Standard(uint jarg1);
+  [global::System.Runtime.InteropServices.DllImport("AkSoundEngine", EntryPoint="CSharp_AkChannelConfig_Anonymous")]
+  public static extern global::System.IntPtr CSharp_AkChannelConfig_Anonymous(uint jarg1);
+  [global::System.Runtime.InteropServices.DllImport("AkSoundEngine", EntryPoint="CSharp_AkChannelConfig_Ambisonic")]
+  public static extern global::System.IntPtr CSharp_AkChannelConfig_Ambisonic(uint jarg1);
+  [global::System.Runtime.InteropServices.DllImport("AkSoundEngine", EntryPoint="CSharp_AkChannelConfig_Object")]
+  public static extern global::System.IntPtr CSharp_AkChannelConfig_Object();
   [global::System.Runtime.InteropServices.DllImport("AkSoundEngine", EntryPoint="CSharp_new_AkChannelConfig__SWIG_0")]
   public static extern global::System.IntPtr CSharp_new_AkChannelConfig__SWIG_0();
   [global::System.Runtime.InteropServices.DllImport("AkSoundEngine", EntryPoint="CSharp_new_AkChannelConfig__SWIG_1")]

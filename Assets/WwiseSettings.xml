@@ -1,20 +1,9 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<WwiseSettings xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <CopySoundBanksAsPreBuildStep>true</CopySoundBanksAsPreBuildStep>
-  <GenerateSoundBanksAsPreBuildStep>false</GenerateSoundBanksAsPreBuildStep>
-  <SoundbankPath>Audio/GeneratedSoundBanks</SoundbankPath>
-  <CreatedPicker>true</CreatedPicker>
-  <CreateWwiseGlobal>true</CreateWwiseGlobal>
-  <CreateWwiseListener>false</CreateWwiseListener>
-  <ObjectReferenceAutoCleanup>true</ObjectReferenceAutoCleanup>
-  <ShowMissingRigidBodyWarning>true</ShowMissingRigidBodyWarning>
-  <ShowSpatialAudioWarningMsg>true</ShowSpatialAudioWarningMsg>
-  <WwiseInstallationPathMac />
-  <WwiseInstallationPathWindows>D:\Wwise 2022.1.1.8100</WwiseInstallationPathWindows>
-  <WwiseProjectPath>../../Sound-of-Cities-Demo/SoundOfCities_WwiseProject/SoundOfCities_WwiseProject.wproj</WwiseProjectPath>
-  <UseWaapi>true</UseWaapi>
-  <WaapiPort>8080</WaapiPort>
-  <WaapiIP>127.0.0.1</WaapiIP>
-  <XMLTranslatorTimeout>10</XMLTranslatorTimeout>
-  <WaapiTranslatorTimeout>0</WaapiTranslatorTimeout>
+<?xml version='1.0'?>
+<WwiseSettings>
+    <CreateWwiseGlobal>true</CreateWwiseGlobal>
+    <CreateWwiseListener>false</CreateWwiseListener>
+    <SoundbankPath>Audio/GeneratedSoundBanks</SoundbankPath>
+    <WwiseProjectPath>../../Sound-of-Cities-Demo/SoundOfCities_WwiseProject/SoundOfCities_WwiseProject.wproj</WwiseProjectPath>
+    <WwiseInstallationPathWindows>F:\Wwise 2022.1.2.8150</WwiseInstallationPathWindows>
+    <WwiseInstallationPathMac></WwiseInstallationPathMac>
 </WwiseSettings>

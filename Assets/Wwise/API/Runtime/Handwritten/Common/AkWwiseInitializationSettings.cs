@@ -12,7 +12,7 @@ Licensees holding valid licenses to the AUDIOKINETIC Wwise Technology may use
 this file in accordance with the end user license agreement provided with the
 software or, alternatively, in accordance with the terms contained
 in a written agreement between you and Audiokinetic Inc.
-Copyright (c) 2022 Audiokinetic Inc.
+Copyright (c) 2023 Audiokinetic Inc.
 *******************************************************************************/
 
 public class AkWwiseInitializationSettings : AkCommonPlatformSettings
@@ -344,6 +344,10 @@ public class AkWwiseInitializationSettings : AkCommonPlatformSettings
 		var canSetPersistentDataPath = !isBasePathSameAsPersistentPath;
 #endif
 
+//We don't use the standard base path with addressables, only the persistentdatapath for streaming media 
+#if AK_WWISE_ADDRESSABLES && UNITY_ADDRESSABLES
+		canSetBasePath=false;
+#endif
 		if (canSetBasePath && AkSoundEngine.SetBasePath(soundBankBasePath) != AKRESULT.AK_Success)
 		{
 #if !UNITY_ANDROID || UNITY_EDITOR
