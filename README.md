@@ -6,7 +6,7 @@ There is a metronome in the UI below. Players can adjust the pitch of each build
 
 Collaboration with a game designer is needed for further development of this project. This game probably needs to incorporate some traditional city simulation game mechanics, rather than just free music creation, otherwise many players may not find it interesting. At least the game needs to have some goals for the player to achieve. 
 
-For example, not all pitches are unlocked when you first enter the game. You can only use a simple pentatonic scale (C, D, E, G, A) at the beginning so that even if the player does not much about music theory, they can still build a nice piece by randomly selecting from these pitches. Maybe rhythms aren't all unlocked at the start, either. In this demo, there are a total of 32 "grids" in each section, and only 1, 9, 17, and 25 may be unlocked at the beginning, which are four down beats. As the game progresses, other target grids are gradually unlocked.
+For example, not all pitches are unlocked when you first enter the game. You can only use a simple pentatonic scale (C, D, E, G, A) at the beginning so that even if the player does not much about music theory, they can still build a nice piece by randomly selecting from these pitches. Maybe rhythms aren't all unlocked at the start, either. In this demo, there are a total of 32 "grids" in each bar, and only 1, 9, 17, and 25 may be unlocked at the beginning, which are four down beats. As the game progresses, other target grids are gradually unlocked.
 
 It doesn’t necessarily have to be a city simulation. It can be placing pieces of furniture in an indoor scene, or it can be placing some flowers, plants, and trees in a natural scene.
 
