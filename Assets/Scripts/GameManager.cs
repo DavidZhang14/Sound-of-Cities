@@ -82,8 +82,8 @@ public class GameManager : MonoBehaviour
 
     private void selectEditTarget(Vector3Int position)
     {
-        if (placementManager.CheckIfPositionIsOfType(position, CellType.Structure) ||
-        placementManager.CheckIfPositionIsOfType(position, CellType.SpecialStructure)) //检查选择的位置是否有建筑
+        if (placementManager.CheckIfPositionIsOfType(position, CellType.House) ||
+        placementManager.CheckIfPositionIsOfType(position, CellType.Special)) //检查选择的位置是否有建筑
         {
             UIController.Instance.infoPanel.gameObject.SetActive(true);
             UIController.Instance.editTarget = placementManager.GetSoundEmitter(position);

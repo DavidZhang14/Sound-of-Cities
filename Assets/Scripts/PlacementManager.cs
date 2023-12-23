@@ -9,7 +9,7 @@ public class PlacementManager : MonoBehaviour
     Grid placementGrid;
 
     private Dictionary<Vector3Int, StructureModel> temporaryRoadobjects = new Dictionary<Vector3Int, StructureModel>();
-    private Dictionary<Vector3Int, StructureModel> structureDictionary = new Dictionary<Vector3Int, StructureModel>();
+    private Dictionary<Vector3Int, Structure> structureDictionary = new Dictionary<Vector3Int, Structure>();
 
     private void Start()
     {
@@ -30,21 +30,21 @@ public class PlacementManager : MonoBehaviour
         return false;
     }
 
-    internal void PlaceObjectOnTheMap(Vector3Int position, GameObject structurePrefab, CellType type)
+    internal void PlaceObjectOnTheMap(Vector3Int position, int buildingIndex, CellType type)
     {
+        GameObject structurePrefab = null;
+        if (type == CellType.House) structurePrefab = StructureManager.instance.housesPrefabs[buildingIndex];
+        else if (type == CellType.Special) structurePrefab = StructureManager.instance.specialPrefabs[buildingIndex];
         placementGrid[position.x, position.z] = type;
-        StructureModel structure = CreateANewStructureModel(position, structurePrefab, type);
-        structureDictionary.Add(position, structure);
+        StructureModel model = CreateANewStructureModel(position, structurePrefab, type);
+        structureDictionary.Add(position, new Structure(buildingIndex, type, model));
         DestroyNatureAt(position);
     }
 
     private void DestroyNatureAt(Vector3Int position)
     {
         RaycastHit[] hits = Physics.BoxCastAll(position + new Vector3(0, 0.5f, 0), new Vector3(0.5f, 0.5f, 0.5f), transform.up, Quaternion.identity, 1f, 1 << LayerMask.NameToLayer("Nature"));
-        foreach (var item in hits)
-        {
-            Destroy(item.collider.gameObject);
-        }
+        foreach (var item in hits) Destroy(item.collider.gameObject);
     }
 
     internal bool CheckIfPositionIsFree(Vector3Int position)
@@ -111,7 +111,8 @@ public class PlacementManager : MonoBehaviour
     {
         foreach (var structure in temporaryRoadobjects)
         {
-            structureDictionary.Add(structure.Key, structure.Value);
+            StructureModel model = structure.Value;
+            structureDictionary.Add(structure.Key, new Structure(0, CellType.Road, model));
             DestroyNatureAt(structure.Key);
         }
         temporaryRoadobjects.Clear();
@@ -122,16 +123,21 @@ public class PlacementManager : MonoBehaviour
         if (temporaryRoadobjects.ContainsKey(position))
             temporaryRoadobjects[position].SwapModel(newModel, rotation);
         else if (structureDictionary.ContainsKey(position))
-            structureDictionary[position].SwapModel(newModel, rotation);
+            structureDictionary[position].model.SwapModel(newModel, rotation);
     }
 
     public StructureSoundEmitter GetSoundEmitter(Vector3Int position) {
-        return structureDictionary[position].structureSoundEmitter;
+        return structureDictionary[position].model.structureSoundEmitter;
     }
-    public Dictionary<Vector3Int, StructureModel> GetStructureDictionary() {
+    public Dictionary<Vector3Int, Structure> GetStructureDictionary() {
         return structureDictionary;
     }
-    public void SetStructureDictionary(Dictionary<Vector3Int, StructureModel> structureDictionary) {
+    public void SetStructureDictionary(Dictionary<Vector3Int, Structure> structureDictionary) {
         this.structureDictionary = structureDictionary;
+
+        foreach (KeyValuePair<Vector3Int, Structure> pair in structureDictionary) {
+            Vector3Int position = pair.Key;
+            PlaceObjectOnTheMap(position, pair.Value.buildingIndex, pair.Value.type);
+        }
     }
 }

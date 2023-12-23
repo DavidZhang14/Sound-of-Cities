@@ -7,8 +7,8 @@ using UnityEngine;
 public class CityData
 {
     public double[] playerPosition;
-    public Dictionary<Vector3Int, StructureModel> structureDictionary;
-    public CityData(Dictionary<Vector3Int, StructureModel> structureDictionary) {
+    public Dictionary<Vector3Int, Structure> structureDictionary;
+    public CityData(Dictionary<Vector3Int, Structure> structureDictionary) {
         this.structureDictionary = structureDictionary;
     }
 }
