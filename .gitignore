@@ -73,3 +73,6 @@ crashlytics-build.properties
 
 # Wwise project folder
 /SoundOfCities_WwiseProject/*
+
+# VS Code Settings
+/.vscode/*
