@@ -4256,6 +4256,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Female_Dress
       objectReference: {fileID: 0}
+    - target: {fileID: 5928032463670676373, guid: 646488162f240a949a4e48ed1686ccda,
+        type: 3}
+      propertyPath: m_Name
+      value: Character
+      objectReference: {fileID: 0}
     - target: {fileID: 6417430124616175919, guid: 646488162f240a949a4e48ed1686ccda,
         type: 3}
       propertyPath: m_RootOrder

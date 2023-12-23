@@ -2,10 +2,12 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager instance;
     public CameraMovement cameraMovement;
     public RoadManager roadManager;
     public InputManager inputManager;
@@ -14,9 +16,19 @@ public class GameManager : MonoBehaviour
 
     private StructureManager structureManager;
     public PlacementManager placementManager;
+    private GameObject character;
+
+    private void Awake() {
+        if (instance == null) {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else Destroy(gameObject);
+    }
 
     private void Start()
     {
+        character = GameObject.Find("Character");
         structureManager = StructureManager.instance;
         uiController.OnRoadPlacement += RoadPlacementHandler;
         uiController.OnHousePlacement += HousePlacementHandler;
@@ -81,5 +93,14 @@ public class GameManager : MonoBehaviour
         {
             UIController.Instance.infoPanel.gameObject.SetActive(false);
         }
+    }
+    
+    public void Save(string saveName = "test") {
+        //TODO: character
+        SaveSystem.saveCity(saveName, placementManager);
+    }
+    public void Load(string saveName = "test") {
+        CityData data = SaveSystem.loadCity(saveName);
+        placementManager.SetStructureDictionary(data.structureDictionary);
     }
 }

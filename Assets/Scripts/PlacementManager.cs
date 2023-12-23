@@ -128,4 +128,10 @@ public class PlacementManager : MonoBehaviour
     public StructureSoundEmitter GetSoundEmitter(Vector3Int position) {
         return structureDictionary[position].structureSoundEmitter;
     }
+    public Dictionary<Vector3Int, StructureModel> GetStructureDictionary() {
+        return structureDictionary;
+    }
+    public void SetStructureDictionary(Dictionary<Vector3Int, StructureModel> structureDictionary) {
+        this.structureDictionary = structureDictionary;
+    }
 }
