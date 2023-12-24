@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class RoadManager : MonoBehaviour
 {
+    public static RoadManager instance;
     public PlacementManager placementManager;
 
     public List<Vector3Int> temporaryPlacementPositions = new List<Vector3Int>();
@@ -16,6 +17,13 @@ public class RoadManager : MonoBehaviour
 
     public RoadFixer roadFixer;
 
+    private void Awake() {
+        if (instance == null) {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else Destroy(gameObject);
+    }
     private void Start()
     {
         roadFixer = GetComponent<RoadFixer>();
