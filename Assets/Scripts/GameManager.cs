@@ -97,7 +97,7 @@ public class GameManager : MonoBehaviour
     
     public void Save(string saveName = "test") {
         //TODO: character
-        SaveSystem.saveCity(saveName, placementManager);
+        SaveSystem.saveCity(saveName);
     }
     public void Load(string saveName = "test") {
         CityData data = SaveSystem.loadCity(saveName);

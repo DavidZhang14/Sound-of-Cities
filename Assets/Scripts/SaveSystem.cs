@@ -1,18 +1,18 @@
 using UnityEngine;
 using System.IO;
 using System.Xml.Serialization;
-using System.Numerics;
 
 public static class SaveSystem {
-    public static void saveCity(string saveName, PlacementManager placementManager) {
+    public static void saveCity(string saveName) {
         XmlSerializer serializer = new XmlSerializer(typeof(CityData));
         string path = Application.persistentDataPath + "/" + saveName + ".city";
         FileStream fs = new FileStream(path, FileMode.Create);
-        CityData data = new CityData(placementManager.GetStructureDictionary());
+        CityData data = new CityData(PlacementManager.instance.GetStructureDictionary());
         serializer.Serialize(fs, data);
         fs.Close();
+        Debug.Log("Save Path: " + path);
     }
-    
+
     public static CityData loadCity(string saveName) {
         string path = Application.persistentDataPath + "/" + saveName + ".city";
         if (File.Exists(path)) {
