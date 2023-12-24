@@ -9,7 +9,7 @@ public class PlacementManager : MonoBehaviour
     public int width, height;
     Grid placementGrid;
 
-    private Dictionary<Vector3Int, StructureModel> temporaryRoadobjects = new Dictionary<Vector3Int, StructureModel>();
+    private Dictionary<Vector3Int, Structure> temporaryRoadobjects = new Dictionary<Vector3Int, Structure>();
     private Dictionary<Vector3Int, Structure> structureDictionary = new Dictionary<Vector3Int, Structure>();
 
     private void Awake() {
@@ -44,8 +44,8 @@ public class PlacementManager : MonoBehaviour
         if (type == CellType.House) structurePrefab = StructureManager.instance.housesPrefabs[buildingIndex];
         else if (type == CellType.Special) structurePrefab = StructureManager.instance.specialPrefabs[buildingIndex];
         placementGrid[position.x, position.z] = type;
-        StructureModel model = CreateANewStructureModel(position, structurePrefab, type);
-        structureDictionary.Add(position, new Structure(buildingIndex, type, model));
+        Structure structure = CreateANewStructureModel(position, structurePrefab, type);
+        structureDictionary.Add(position, structure);
         DestroyNatureAt(position);
     }
 
@@ -68,7 +68,7 @@ public class PlacementManager : MonoBehaviour
     internal void PlaceTemporaryStructure(Vector3Int position, GameObject structurePrefab, CellType type)
     {
         placementGrid[position.x, position.z] = type;
-        StructureModel structure = CreateANewStructureModel(position, structurePrefab, type);
+        Structure structure = CreateANewStructureModel(position, structurePrefab, type);
         temporaryRoadobjects.Add(position, structure);
     }
 
@@ -83,14 +83,15 @@ public class PlacementManager : MonoBehaviour
         return neighbours;
     }
 
-    private StructureModel CreateANewStructureModel(Vector3Int position, GameObject structurePrefab, CellType type)
+    private Structure CreateANewStructureModel(Vector3Int position, GameObject structurePrefab, CellType type)
     {
-        GameObject structure = new GameObject(type.ToString());
-        structure.transform.SetParent(transform);
-        structure.transform.localPosition = position;
-        StructureModel structureModel = structure.AddComponent<StructureModel>();
-        structureModel.CreateModel(structurePrefab);
-        return structureModel;
+        GameObject structureOBject = new GameObject(type.ToString());
+        structureOBject.transform.SetParent(transform);
+        structureOBject.transform.localPosition = position;
+        Structure structure = structureOBject.AddComponent<Structure>();
+        structure.type = type;
+        structure.CreateModel(structurePrefab);
+        return structure;
     }
 
     internal List<Vector3Int> GetPathBetween(Vector3Int startPosition, Vector3Int endPosition)
@@ -117,11 +118,11 @@ public class PlacementManager : MonoBehaviour
 
     internal void AddtemporaryStructuresToStructureDictionary()
     {
-        foreach (var structure in temporaryRoadobjects)
+        foreach (var roadObject in temporaryRoadobjects)
         {
-            StructureModel model = structure.Value;
-            structureDictionary.Add(structure.Key, new Structure(0, CellType.Road, model));
-            DestroyNatureAt(structure.Key);
+            Structure structure = roadObject.Value;
+            structureDictionary.Add(roadObject.Key, structure);
+            DestroyNatureAt(roadObject.Key);
         }
         temporaryRoadobjects.Clear();
     }
@@ -131,11 +132,11 @@ public class PlacementManager : MonoBehaviour
         if (temporaryRoadobjects.ContainsKey(position))
             temporaryRoadobjects[position].SwapModel(newModel, rotation);
         else if (structureDictionary.ContainsKey(position))
-            structureDictionary[position].model.SwapModel(newModel, rotation);
+            structureDictionary[position].SwapModel(newModel, rotation);
     }
 
     public StructureSoundEmitter GetSoundEmitter(Vector3Int position) {
-        return structureDictionary[position].model.structureSoundEmitter;
+        return structureDictionary[position].structureSoundEmitter;
     }
     public Dictionary<Vector3Int, Structure> GetStructureDictionary() {
         return structureDictionary;
