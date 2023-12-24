@@ -101,6 +101,6 @@ public class GameManager : MonoBehaviour
     }
     public void Load(string saveName = "test") {
         CityData data = SaveSystem.loadCity(saveName);
-        placementManager.SetStructureDictionary(data.structureDictionary);
+        placementManager.SetStructureDictionary(data.structureDictionary());
     }
 }
