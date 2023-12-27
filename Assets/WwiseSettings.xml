@@ -10,7 +10,7 @@
   <ShowMissingRigidBodyWarning>true</ShowMissingRigidBodyWarning>
   <ShowSpatialAudioWarningMsg>true</ShowSpatialAudioWarningMsg>
   <WwiseInstallationPathMac />
-  <WwiseInstallationPathWindows>F:\Wwise 2022.1.2.8150</WwiseInstallationPathWindows>
+  <WwiseInstallationPathWindows>D:\Wwise 2022.1.9.8365</WwiseInstallationPathWindows>
   <WwiseProjectPath>../../Sound-of-Cities-Demo/SoundOfCities_WwiseProject/SoundOfCities_WwiseProject.wproj</WwiseProjectPath>
   <UseWaapi>true</UseWaapi>
   <WaapiPort>8080</WaapiPort>

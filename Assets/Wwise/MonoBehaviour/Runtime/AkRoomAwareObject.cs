@@ -63,6 +63,8 @@ public class AkRoomAwareObject : UnityEngine.MonoBehaviour
 			roomPriorityList[i].Exit(this);
 		}
 
+		roomPriorityList.Clear();
+
 		AkRoomAwareManager.UnregisterRoomAwareObject(this);
 
 		SetGameObjectInRoom(null);

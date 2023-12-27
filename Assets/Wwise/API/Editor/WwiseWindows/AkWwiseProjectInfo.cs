@@ -19,7 +19,6 @@ using UnityEngine;
 using UnityEngine.Assertions;
 using UnityEditor;
 
-[InitializeOnLoad]
 public static class AkWwiseProjectInfo
 {
 	private const string _dataFileName = "AkWwiseProjectData.asset";

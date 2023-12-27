@@ -174,6 +174,8 @@ public partial class AkSoundEngine {
 
   public static AKRESULT SetMaxNumVoicesLimit(ushort in_maxNumberVoices) { return (AKRESULT)AkSoundEnginePINVOKE.CSharp_SetMaxNumVoicesLimit(in_maxNumberVoices); }
 
+  public static AKRESULT SetJobMgrMaxActiveWorkers(uint in_jobType, uint in_uNewMaxActiveWorkers) { return (AKRESULT)AkSoundEnginePINVOKE.CSharp_SetJobMgrMaxActiveWorkers(in_jobType, in_uNewMaxActiveWorkers); }
+
   public static AKRESULT RenderAudio(bool in_bAllowSyncRender) { return (AKRESULT)AkSoundEnginePINVOKE.CSharp_RenderAudio__SWIG_0(in_bAllowSyncRender); }
 
   public static AKRESULT RenderAudio() { return (AKRESULT)AkSoundEnginePINVOKE.CSharp_RenderAudio__SWIG_1(); }
@@ -887,7 +889,7 @@ public partial class AkSoundEngine {
 
   public static AKRESULT GetPosition(ulong in_GameObjectID, AkWorldTransform out_rPosition) { return (AKRESULT)AkSoundEnginePINVOKE.CSharp_GetPosition(in_GameObjectID, AkWorldTransform.getCPtr(out_rPosition)); }
 
-  public static AKRESULT GetListenerPosition(ulong in_uIndex, AkWorldTransform out_rPosition) { return (AKRESULT)AkSoundEnginePINVOKE.CSharp_GetListenerPosition(in_uIndex, AkWorldTransform.getCPtr(out_rPosition)); }
+  public static AKRESULT GetListenerPosition(ulong in_uListenerID, AkWorldTransform out_rPosition) { return (AKRESULT)AkSoundEnginePINVOKE.CSharp_GetListenerPosition(in_uListenerID, AkWorldTransform.getCPtr(out_rPosition)); }
 
   public static AKRESULT GetRTPCValue(uint in_rtpcID, ulong in_gameObjectID, uint in_playingID, out float out_rValue, ref int io_rValueType) { return (AKRESULT)AkSoundEnginePINVOKE.CSharp_GetRTPCValue__SWIG_0(in_rtpcID, in_gameObjectID, in_playingID, out out_rValue, ref io_rValueType); }
 
@@ -1490,6 +1492,10 @@ public partial class AkSoundEngine {
   public const int AK_IDX_SETUP_WITHCENTER_BACK_RIGHT = (4);
   public const int AK_IDX_SETUP_WITHCENTER_SIDE_LEFT = (5);
   public const int AK_IDX_SETUP_WITHCENTER_SIDE_RIGHT = (6);
+  public const int AK_IDX_SETUP_WITHCENTER_HEIGHT_FRONT_LEFT = (7);
+  public const int AK_IDX_SETUP_WITHCENTER_HEIGHT_FRONT_RIGHT = (8);
+  public const int AK_IDX_SETUP_WITHCENTER_HEIGHT_BACK_LEFT = (9);
+  public const int AK_IDX_SETUP_WITHCENTER_HEIGHT_BACK_RIGHT = (10);
   public const int AK_IDX_SETUP_0_LFE = (0);
   public const int AK_IDX_SETUP_1_CENTER = (0);
   public const int AK_IDX_SETUP_1_LFE = (1);

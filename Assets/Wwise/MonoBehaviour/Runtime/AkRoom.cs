@@ -65,7 +65,6 @@ public class AkRoom : AkTriggerHandler
 	private System.Collections.Generic.List<AkRoomAwareObject> roomAwareObjectsDetectedWhileDisabled = new System.Collections.Generic.List<AkRoomAwareObject>();
 
 	private UnityEngine.Collider roomCollider = null;
-	private System.Type previousColliderType;
 
 	private UnityEngine.Vector3 previousPosition;
 	private UnityEngine.Vector3 previousScale;
@@ -164,8 +163,6 @@ public class AkRoom : AkTriggerHandler
 				AkSurfaceReflector.SetGeometryFromMesh(meshCollider.sharedMesh, geometryID, false, false, false);
 			}
 			AkSurfaceReflector.SetGeometryInstance(geometryID, geometryID, INVALID_ROOM_ID, transform);
-
-			previousColliderType = typeof(UnityEngine.MeshCollider);
 		}
 		else if (roomCollider.GetType() == typeof(UnityEngine.BoxCollider))
 		{
@@ -188,8 +185,7 @@ public class AkRoom : AkTriggerHandler
 			}
 			AkSurfaceReflector.SetGeometryInstance(geometryID, geometryID, INVALID_ROOM_ID, tempGameObject.transform);
 
-			previousColliderType = typeof(UnityEngine.BoxCollider);
-			UnityEngine.GameObject.Destroy(tempGameObject);
+			UnityEngine.GameObject.DestroyImmediate(tempGameObject);
 		}
 		else if (roomCollider.GetType() == typeof(UnityEngine.CapsuleCollider))
 		{
@@ -208,8 +204,7 @@ public class AkRoom : AkTriggerHandler
 			}
 			AkSurfaceReflector.SetGeometryInstance(geometryID, geometryID, INVALID_ROOM_ID, tempGameObject.transform);
 
-			previousColliderType = typeof(UnityEngine.CapsuleCollider);
-			UnityEngine.GameObject.Destroy(tempGameObject);
+			UnityEngine.GameObject.DestroyImmediate(tempGameObject);
 		}
 		else if (roomCollider.GetType() == typeof(UnityEngine.SphereCollider))
 		{
@@ -226,22 +221,13 @@ public class AkRoom : AkTriggerHandler
 			}
 			AkSurfaceReflector.SetGeometryInstance(geometryID, geometryID, INVALID_ROOM_ID, tempGameObject.transform);
 
-			previousColliderType = typeof(UnityEngine.SphereCollider);
-			UnityEngine.GameObject.Destroy(tempGameObject);
+			UnityEngine.GameObject.DestroyImmediate(tempGameObject);
 		}
 		else
 		{
 			UnityEngine.Debug.LogWarning(name + " has an invalid collider for wet transmission. Wet Transmission will be disabled.");
-			// in case a geometry was added with the room's ID, remove it
-			if (previousColliderType == typeof(UnityEngine.MeshCollider) ||
-				previousColliderType == typeof(UnityEngine.BoxCollider) ||
-				previousColliderType == typeof(UnityEngine.SphereCollider) ||
-				previousColliderType == typeof(UnityEngine.CapsuleCollider))
-			{
-				AkSoundEngine.RemoveGeometry(GetID());
-			}
+			SetGeometryID(AkSurfaceReflector.INVALID_GEOMETRY_ID);
 
-			previousColliderType = roomCollider.GetType();
 			geometryID = AkSurfaceReflector.INVALID_GEOMETRY_ID;
 		}
 	}
@@ -382,15 +368,7 @@ public class AkRoom : AkTriggerHandler
 
 		AkRoomManager.RegisterRoomUpdate(this);
 
-		// in case a geometry was added with the room's ID, remove it
-		if (previousColliderType == typeof(UnityEngine.MeshCollider) ||
-			previousColliderType == typeof(UnityEngine.BoxCollider) ||
-			previousColliderType == typeof(UnityEngine.SphereCollider) ||
-			previousColliderType == typeof(UnityEngine.CapsuleCollider))
-		{
-			AkSoundEngine.RemoveGeometry(GetID());
-		}
-		previousColliderType = null;
+		SetGeometryID(AkSurfaceReflector.INVALID_GEOMETRY_ID);
 
 		// stop sounds applied to the room game object
 		if (roomToneEvent.IsValid())

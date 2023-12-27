@@ -106,6 +106,7 @@ public class AkWwiseInitializationSettings : AkCommonPlatformSettings
 		"AdvancedSettings.m_MaximumHardwareTimeoutMs",
 		"AdvancedSettings.m_SpatialAudioSettings.m_DiffractionShadowAttenuationFactor",
 		"AdvancedSettings.m_SpatialAudioSettings.m_DiffractionShadowDegrees",
+		"AdvancedSettings.m_SuspendAudioDuringFocusLoss",
 		"AdvancedSettings.m_RenderDuringFocusLoss",
 		"AdvancedSettings.m_UseAsyncOpen",
 		"AdvancedSettings.m_SoundBankPersistentDataPath",
@@ -371,6 +372,14 @@ public class AkWwiseInitializationSettings : AkCommonPlatformSettings
 		{
 			// AkSoundEngine.SetDecodedBankPath creates the folders for writing to (if they don't exist)
 			AkSoundEngine.SetDecodedBankPath(decodedBankFullPath);
+
+			int lastSeparatorIndex = decodedBankFullPath.LastIndexOf('\\');
+			if (lastSeparatorIndex >= 0)
+			{
+				string parentPath = decodedBankFullPath.Substring(0, lastSeparatorIndex);
+				// Some media are put in the platform folder directly (instead of the decoded banks folder), so add it the base paths.
+				AkSoundEngine.AddBasePath(parentPath);
+			}
 
 			// Adding decoded bank path last to ensure that it is the first one used when writing decoded banks.
 			AkSoundEngine.AddBasePath(decodedBankFullPath);

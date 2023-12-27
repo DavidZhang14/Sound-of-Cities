@@ -52,9 +52,54 @@ public class AkSurfaceReflector : UnityEngine.MonoBehaviour
 	/// Optional room with which this surface reflector is associated. It is recommended to associate geometry with a particular room if the geometry is fully contained within the room and the room does not share any geometry with any other rooms. Doing so reduces the search space for ray casting performed by reflection and diffraction calculations.
 	public AkRoom AssociatedRoom = null;
 
-	private UnityEngine.Vector3 previousPosition;
-	private UnityEngine.Vector3 previousScale;
-	private UnityEngine.Quaternion previousRotation;
+	private int TransformState, PreviousTransformState;
+	private int GeometryState, PreviousGeometryState;
+	private int AssociatedRoomState, PreviousAssociatedRoomState;
+
+	private int GetTransformState()
+	{
+		int[] hashCodes = new[] {
+			transform.position.GetHashCode(),
+			transform.lossyScale.GetHashCode(),
+			transform.rotation.GetHashCode()
+		};
+
+		return AK.Wwise.BaseType.CombineHashCodes(hashCodes);
+	}
+
+	private int GetGeometryState()
+	{
+		int[] hashCodes = new int[3 + AcousticTextures.Length + TransmissionLossValues.Length];
+
+		hashCodes[0] = Mesh.GetHashCode();
+		hashCodes[1] = EnableDiffraction.GetHashCode();
+		hashCodes[2] = EnableDiffractionOnBoundaryEdges.GetHashCode();
+
+		int idx = 3;
+
+		foreach (var AcousticTexture in AcousticTextures)
+		{
+			hashCodes[idx] = AcousticTexture.ObjectReference != null? AcousticTexture.GetHashCode() : 0;
+			idx++;
+		}
+
+		foreach (var TransmissionLossValue in TransmissionLossValues)
+		{
+			hashCodes[idx] = TransmissionLossValue.GetHashCode();
+			idx++;
+		}
+
+		return AK.Wwise.BaseType.CombineHashCodes(hashCodes);
+	}
+
+	private int GetAssociatedRoomState()
+	{
+		int[] hashCodes = new[] {
+			AssociatedRoom != null ? AssociatedRoom.GetHashCode() : 0
+		};
+
+		return AK.Wwise.BaseType.CombineHashCodes(hashCodes);
+	}
 
 	public ulong GetID()
 	{
@@ -345,14 +390,7 @@ public class AkSurfaceReflector : UnityEngine.MonoBehaviour
 				Mesh = meshFilter.sharedMesh;
 			}
 		}
- 
-		SetGeometry();
-
-		// init update conditions
-		previousPosition = transform.position;
-		previousScale = transform.lossyScale;
-		previousRotation = transform.rotation;
-}
+	}
 
 	private void OnEnable()
 	{
@@ -362,6 +400,13 @@ public class AkSurfaceReflector : UnityEngine.MonoBehaviour
 			return;
 		}
 #endif
+		SetGeometry();
+
+		// init update conditions
+		PreviousTransformState = GetTransformState();
+		PreviousGeometryState = GetGeometryState();
+		PreviousAssociatedRoomState = GetAssociatedRoomState();
+
 		// Only SetGeometryInstance directly if there is no associated room because the room manager will set the geometry instance of registered reflectors.
 		if (AssociatedRoom != null)
 		{
@@ -419,15 +464,26 @@ public class AkSurfaceReflector : UnityEngine.MonoBehaviour
 			return;
 		}
 #endif
+		int CurrentGeometryState = GetGeometryState();
+		int CurrentTransformState = GetTransformState();
+		int CurrentAssociatedRoomState = GetAssociatedRoomState();
 
-		if (previousPosition != transform.position ||
-			previousScale != transform.lossyScale ||
-			previousRotation != transform.rotation)
+		if (PreviousGeometryState != CurrentGeometryState)
+		{
+			SetGeometry();
+			PreviousGeometryState = CurrentGeometryState;
+		}
+
+		if (PreviousTransformState != CurrentTransformState)
 		{
 			UpdateGeometry();
-			previousPosition = transform.position;
-			previousScale = transform.lossyScale;
-			previousRotation = transform.rotation;
+			PreviousTransformState = CurrentTransformState;
+		}
+
+		if (PreviousAssociatedRoomState != CurrentAssociatedRoomState)
+		{
+			SetAssociatedRoom(AssociatedRoom);
+			PreviousAssociatedRoomState = CurrentAssociatedRoomState;
 		}
 	}
 

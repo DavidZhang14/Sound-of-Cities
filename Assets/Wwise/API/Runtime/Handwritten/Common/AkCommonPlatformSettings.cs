@@ -42,6 +42,11 @@ Copyright (c) 2023 Audiokinetic Inc.
 		get { return "English(US)"; }
 	}
 
+	public virtual bool SuspendAudioDuringFocusLoss
+	{
+		get { return true; }
+	}
+
 	public virtual bool RenderDuringFocusLoss
 	{
 		get { return false; }
@@ -481,7 +486,10 @@ public class AkCommonAdvancedSettings
 
 	public virtual void CopyTo(AkUnityPlatformSpecificSettings settings) { }
 
-	[UnityEngine.Tooltip("The state of the \"in_bRenderAnyway\" argument passed to the AkSoundEngine.Suspend() function when the \"OnApplicationFocus\" Unity callback is received with \"false\" as its argument.")]
+	[UnityEngine.Tooltip("Whether to suspend the Wwise SoundEngine when the application loses focus.")]
+	public bool m_SuspendAudioDuringFocusLoss = true;
+	
+	[UnityEngine.Tooltip("Only used when \"Suspend Audio During Focus Loss\" is enabled. The state of the \"in_bRenderAnyway\" argument passed to the AkSoundEngine.Suspend() function when the \"OnApplicationFocus\" Unity callback is received with \"false\" as its argument.")]
 	public bool m_RenderDuringFocusLoss;
 
 	[UnityEngine.Tooltip("Sets the sub-folder underneath UnityEngine.Application.persistentDataPath that will be used as the SoundBank base path. This is useful when the Init.bnk needs to be downloaded. Setting this to an empty string uses the typical SoundBank base path resolution. Setting this to \".\" uses UnityEngine.Application.persistentDataPath.")]
@@ -605,6 +613,11 @@ public abstract class AkCommonPlatformSettings : AkBasePlatformSettings
 	public override string SoundBankPersistentDataPath
 	{
 		get { return GetAdvancedSettings().m_SoundBankPersistentDataPath; }
+	}
+
+	public override bool SuspendAudioDuringFocusLoss
+	{
+		get { return GetAdvancedSettings().m_SuspendAudioDuringFocusLoss; }
 	}
 
 	public override bool RenderDuringFocusLoss

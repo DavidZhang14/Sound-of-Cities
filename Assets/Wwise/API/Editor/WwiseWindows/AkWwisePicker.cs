@@ -33,7 +33,9 @@ public class AkWwisePicker : UnityEditor.EditorWindow
 	public void OnEnable()
 	{
 		if (m_treeViewState == null)
+		{
 			m_treeViewState = new UnityEditor.IMGUI.Controls.TreeViewState();
+		}
 
 		var multiColumnHeaderState = AkWwiseTreeView.CreateDefaultMultiColumnHeaderState();
 		var multiColumnHeader = new UnityEditor.IMGUI.Controls.MultiColumnHeader(multiColumnHeaderState);
@@ -42,9 +44,20 @@ public class AkWwisePicker : UnityEditor.EditorWindow
 
 		m_treeView.dirtyDelegate = RequestRepaint;
 
+		if (m_treeView.dataSource.Data.ItemDict.Count == 0)
+		{
+			Refresh();
+			RequestRepaint();
+		}
+		
 		m_SearchField = new UnityEditor.IMGUI.Controls.SearchField();
 		m_SearchField.downOrUpArrowKeyPressed += m_treeView.SetFocusAndEnsureSelectedItem;
 		m_SearchField.SetFocus();
+	}
+
+	public void OnDisable()
+	{
+		m_treeView.SaveExpansionStatus();
 	}
 
 	public static void Refresh(bool ignoreIfWaapi = false)
@@ -63,7 +76,9 @@ public class AkWwisePicker : UnityEditor.EditorWindow
 	private void PlayPauseItem(AkWwiseTreeViewItem item)
 	{
 		if (m_treeView != null && m_treeView.CheckWaapi())
+		{
 			AkWaapiUtilities.TogglePlayEvent(item.objectType, item.objectGuid);
+		}
 	}
 
 	private bool isDirty;
@@ -142,9 +157,13 @@ public class AkWwisePicker : UnityEditor.EditorWindow
 			}
 
 			if (projectData.autoPopulateEnabled && AkUtilities.IsWwiseProjectAvailable)
+			{
 				AkWwiseWWUBuilder.StartWWUWatcher();
+			}
 			else
+			{
 				AkWwiseWWUBuilder.StopWWUWatcher();
+			}
 		}
 
 		using (new UnityEngine.GUILayout.HorizontalScope("box"))
@@ -177,7 +196,9 @@ public class AkWwisePicker : UnityEditor.EditorWindow
 		m_treeView.OnGUI(new UnityEngine.Rect(lastRect.x, lastRect.y, position.width, lastRect.height));
 
 		if (UnityEngine.GUI.changed && AkUtilities.IsWwiseProjectAvailable)
+		{
 			UnityEditor.EditorUtility.SetDirty(AkWwiseProjectInfo.GetData());
+		}
 	}
 
 	static void SelectInWwisePicker(System.Guid guid)

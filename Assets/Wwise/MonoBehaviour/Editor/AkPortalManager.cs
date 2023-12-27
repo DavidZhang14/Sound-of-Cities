@@ -40,6 +40,11 @@ public class AkPortalManager
 
 	static AkPortalManager()
 	{
+		if (UnityEditor.AssetDatabase.IsAssetImportWorkerProcess())
+		{
+			return;
+		}
+
 		//This constructor is called before any game object is created when there is a compilation which makes the 'FindObjectsOfType' function return null.
 		//So we register the init function to be called at hte first update.
 		UnityEditor.EditorApplication.update += Init;

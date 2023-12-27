@@ -28,6 +28,11 @@ public class AkWwisePostImportCallbackSetup
 
 	static AkWwisePostImportCallbackSetup()
 	{
+		if (UnityEditor.AssetDatabase.IsAssetImportWorkerProcess())
+		{
+			return;
+		}
+
 		var arguments = System.Environment.GetCommandLineArgs();
 		if (UnityEngine.Application.isBatchMode
 			&& System.Array.IndexOf(arguments, "-wwiseEnableWithNoGraphics") == -1)

@@ -37,6 +37,11 @@ public class AkWwiseWWUBuilder
 
 	static AkWwiseWWUBuilder()
 	{
+		if (UnityEditor.AssetDatabase.IsAssetImportWorkerProcess())
+		{
+			return;
+		}
+
 		// This method gets called from InitializeOnLoad and uses the AkWwiseProjectInfo later on so it needs to check if it can run right now
 		InitializeWwiseProjectData();
 
@@ -51,24 +56,42 @@ public class AkWwiseWWUBuilder
 
 	private static void Tick()
 	{
-		if (AkWwiseProjectInfo.GetData() != null)
+		if (System.DateTime.Now.Subtract(s_lastFileCheck).Seconds < s_SecondsBetweenChecks)
 		{
-			if (System.DateTime.Now.Subtract(s_lastFileCheck).Seconds > s_SecondsBetweenChecks &&
-				!UnityEditor.EditorApplication.isCompiling && !UnityEditor.EditorApplication.isPlayingOrWillChangePlaymode &&
-				AkWwiseProjectInfo.GetData().autoPopulateEnabled)
-			{
-				if (Populate())
-				{
-					AkWwiseXMLBuilder.Populate();
-					//check if WAAPI or not
-					AkWwisePicker.Refresh(ignoreIfWaapi: true);
-					//Make sure that the Wwise picker and the inspector are updated
-					AkUtilities.RepaintInspector();
-				}
-
-				s_lastFileCheck = System.DateTime.Now;
-			}
+			return;
 		}
+
+		if (AkWwiseProjectInfo.GetData() == null)
+		{
+			return;
+		}
+
+		if (UnityEditor.EditorApplication.isCompiling)
+		{
+			return;
+		}
+
+		if (UnityEditor.EditorApplication.isPlayingOrWillChangePlaymode)
+		{
+			return;
+		}
+
+		if (!AkWwiseProjectInfo.GetData().autoPopulateEnabled)
+		{
+			return;
+		}
+
+		if (Populate())
+		{
+			AkWwiseXMLBuilder.Populate();
+			//check if WAAPI or not
+			AkWwisePicker.Refresh(ignoreIfWaapi: true);
+			//Make sure that the Wwise picker and the inspector are updated
+			AkUtilities.RepaintInspector();
+		}
+
+		AkUtilities.SoundBankDestinationsUpdated(AkWwiseEditorSettings.Instance.WwiseProjectPath);
+		s_lastFileCheck = System.DateTime.Now;
 	}
 
 	public static void InitializeWwiseProjectData()
@@ -297,6 +320,11 @@ public class AkWwiseWWUBuilder
 	{
 		if (isTicking)
 			return;
+
+		if (!AkWwiseProjectInfo.GetData().autoPopulateEnabled || !AkUtilities.IsWwiseProjectAvailable)
+		{
+			return;
+		}
 
 		isTicking = true;
 		Tick();

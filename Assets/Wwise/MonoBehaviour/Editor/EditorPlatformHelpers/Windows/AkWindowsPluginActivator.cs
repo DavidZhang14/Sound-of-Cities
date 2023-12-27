@@ -21,6 +21,11 @@ public class AkWindowsPluginActivator
 {
 	static AkWindowsPluginActivator()
 	{
+		if (UnityEditor.AssetDatabase.IsAssetImportWorkerProcess())
+		{
+			return;
+		}
+
 		AkPluginActivator.RegisterBuildTarget(UnityEditor.BuildTarget.StandaloneWindows, new AkPluginActivator.PlatformConfiguration
 		{
 			WwisePlatformName = "Windows",

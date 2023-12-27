@@ -48,7 +48,7 @@ public abstract class AkObstructionOcclusion : UnityEngine.MonoBehaviour
 
 	protected void InitIntervalsAndFadeRates()
 	{
-		refreshTime = UnityEngine.Random.Range(0.0f, refreshInterval);
+		refreshTime = refreshInterval + UnityEngine.Random.Range(0.0f, refreshInterval);
 		fadeRate = 1 / fadeTime;
 	}
 
@@ -84,7 +84,7 @@ public abstract class AkObstructionOcclusion : UnityEngine.MonoBehaviour
 
 	private void CastRays()
 	{
-		if (refreshTime > refreshInterval)
+		if (refreshTime >= refreshInterval)
 		{
 			refreshTime -= refreshInterval;
 

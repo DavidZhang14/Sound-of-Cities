@@ -21,6 +21,11 @@ public class AkMacPluginActivator
 {
 	static AkMacPluginActivator()
 	{
+		if (UnityEditor.AssetDatabase.IsAssetImportWorkerProcess())
+		{
+			return;
+		}
+
 		AkPluginActivator.RegisterBuildTarget(UnityEditor.BuildTarget.StandaloneOSX, new AkPluginActivator.PlatformConfiguration
 		{
 			WwisePlatformName = "Mac",

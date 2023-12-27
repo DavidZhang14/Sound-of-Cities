@@ -23,7 +23,12 @@ public class AkWwiseXMLBuilder
 
 	static AkWwiseXMLBuilder()
 	{
-		AkWwiseFileWatcher.Instance.PopulateXML += Populate;
+		if (UnityEditor.AssetDatabase.IsAssetImportWorkerProcess())
+		{
+			return;
+		}
+
+		AkWwiseSoundbanksInfoXMLFileWatcher.Instance.PopulateXML += Populate;
 		UnityEditor.EditorApplication.playModeStateChanged += PlayModeChanged;
 	}
 
@@ -32,7 +37,7 @@ public class AkWwiseXMLBuilder
 		if (mode == UnityEditor.PlayModeStateChange.EnteredEditMode)
 		{
 			AkWwiseProjectInfo.Populate();
-			AkWwiseFileWatcher.Instance.StartWatchers();
+			AkWwiseSoundbanksInfoXMLFileWatcher.Instance.StartWatcher();
 		}
 	}
 
@@ -104,7 +109,7 @@ public class AkWwiseXMLBuilder
 	private static bool SerialiseSoundBank(System.Xml.XmlNode node)
 	{
 		var bChanged = false;
-		var includedEvents = node.SelectNodes("IncludedEvents");
+		var includedEvents = node.SelectNodes("Events");
 		for (var i = 0; i < includedEvents.Count; i++)
 		{
 			var events = includedEvents[i].SelectNodes("Event");

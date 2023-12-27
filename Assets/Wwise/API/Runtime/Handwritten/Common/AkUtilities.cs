@@ -281,7 +281,7 @@ public partial class AkUtilities
 			if (WwiseProjectPath.Length == 0)
 				return;
 
-			if (!System.IO.File.Exists(WwiseProjectPath))
+			if (!AkUtilities.IsWwiseProjectAvailable)
 				return;
 
 			var t = System.IO.File.GetLastWriteTime(WwiseProjectPath);
@@ -680,37 +680,6 @@ public partial class AkUtilities
 
 		UnityEngine.Debug.LogWarningFormat("WwiseUnity: Error while attempting to move folder <{0}> to <{1}>: {2}", oldPath, newPath, error);
 		return false;
-	}
-
-	///This function returns the absolute position and the width and height of the last drawn GuiLayout(or EditorGuiLayout) element in the inspector window.
-	///This function must be called in the OnInspectorGUI function
-	/// 
-	///The inspector must be in repaint mode in order to get the correct position 
-	///Example => if(Event.current.type == EventType.Repaint) Rect pos = AkUtilities.GetLastRectAbsolute();
-	public static UnityEngine.Rect GetLastRectAbsolute(UnityEngine.Rect relativePos)
-	{
-		var lastRectAbsolute = relativePos;
-		try
-		{
-			lastRectAbsolute.x += UnityEditor.EditorWindow.focusedWindow.position.x;
-			lastRectAbsolute.y += UnityEditor.EditorWindow.focusedWindow.position.y;
-
-			var inspectorType = UnityEditor.EditorWindow.focusedWindow.GetType();
-			var currentInspectorFieldInfo = inspectorType.GetField("s_CurrentInspectorWindow",
-				System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Static);
-
-			var scrollPosInfo = inspectorType.GetField("m_ScrollPosition",
-				System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
-
-			var scrollPos = (UnityEngine.Vector2)scrollPosInfo.GetValue(currentInspectorFieldInfo.GetValue(null));
-			lastRectAbsolute.x -= scrollPos.x;
-			lastRectAbsolute.y -= scrollPos.y;
-		}
-		catch
-		{
-		}
-
-		return lastRectAbsolute;
 	}
 
 	public static void RepaintInspector()

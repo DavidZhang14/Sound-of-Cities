@@ -662,6 +662,8 @@ class AkSoundEnginePINVOKE {
   public static extern int CSharp_SetVolumeThreshold(float jarg1);
   [global::System.Runtime.InteropServices.DllImport("AkSoundEngine", EntryPoint="CSharp_SetMaxNumVoicesLimit")]
   public static extern int CSharp_SetMaxNumVoicesLimit(ushort jarg1);
+  [global::System.Runtime.InteropServices.DllImport("AkSoundEngine", EntryPoint="CSharp_SetJobMgrMaxActiveWorkers")]
+  public static extern int CSharp_SetJobMgrMaxActiveWorkers(uint jarg1, uint jarg2);
   [global::System.Runtime.InteropServices.DllImport("AkSoundEngine", EntryPoint="CSharp_RenderAudio__SWIG_0")]
   public static extern int CSharp_RenderAudio__SWIG_0(bool jarg1);
   [global::System.Runtime.InteropServices.DllImport("AkSoundEngine", EntryPoint="CSharp_RenderAudio__SWIG_1")]

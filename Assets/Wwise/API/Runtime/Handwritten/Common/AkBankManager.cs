@@ -36,7 +36,11 @@ public static class AkBankManager
 
 	internal static void Reset()
 	{
-		m_BankHandles.Clear();
+		lock (m_BankHandles)
+		{
+			m_BankHandles.Clear();
+		}
+
 		BanksToUnload.Clear();
 	}
 

@@ -55,6 +55,11 @@ public class AkEventPlayableBehavior : UnityEngine.Playables.PlayableBehaviour
 	[UnityEditor.InitializeOnLoadMethod]
 	private static void DetermineCanPostEvents()
 	{
+		if (UnityEditor.AssetDatabase.IsAssetImportWorkerProcess())
+		{
+			return;
+		}
+
 		UnityEditor.Compilation.CompilationPipeline.assemblyCompilationFinished += (string text, UnityEditor.Compilation.CompilerMessage[] messages) =>
 		{
 			if (!UnityEditor.EditorApplication.isPlaying)

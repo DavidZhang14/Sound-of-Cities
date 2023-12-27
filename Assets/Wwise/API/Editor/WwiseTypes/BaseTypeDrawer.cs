@@ -54,7 +54,7 @@ namespace AK.Wwise.Editor
 					pickedSourceEditorWindow = UnityEditor.EditorWindow.focusedWindow,
 					//Useful to control event source
 					pickedSourceControlId = controlId,
-					pickerPosition = AkUtilities.GetLastRectAbsolute(position),
+					pickerPosition = UnityEditor.EditorGUIUtility.GUIToScreenRect(position),
 				};
 			}
 

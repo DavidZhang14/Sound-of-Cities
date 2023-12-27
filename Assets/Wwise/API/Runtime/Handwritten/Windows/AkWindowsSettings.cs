@@ -31,6 +31,11 @@ public class AkWindowsSettings : AkWwiseInitializationSettings.PlatformSettings
 	[UnityEditor.InitializeOnLoadMethod]
 	private static void AutomaticPlatformRegistration()
 	{
+		if (UnityEditor.AssetDatabase.IsAssetImportWorkerProcess())
+		{
+			return;
+		}
+
 		RegisterPlatformSettingsClass<AkWindowsSettings>("Windows");
 	}
 #endif // UNITY_EDITOR

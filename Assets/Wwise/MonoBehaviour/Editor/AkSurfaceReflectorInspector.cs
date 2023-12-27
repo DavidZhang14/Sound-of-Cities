@@ -43,13 +43,7 @@ public class AkSurfaceReflectorInspector : UnityEditor.Editor
 
 	public override void OnInspectorGUI()
 	{
-		bool GeometryNeedsUpdate = false;
-		bool GeometryInstanceNeedsUpdate = false;
-
 		serializedObject.Update();
-
-		// Start a code block to check for GUI changes
-		UnityEditor.EditorGUI.BeginChangeCheck();
 
 		UnityEditor.EditorGUILayout.PropertyField(Mesh);
 
@@ -65,32 +59,9 @@ public class AkSurfaceReflectorInspector : UnityEditor.Editor
 			UnityEditor.EditorGUILayout.PropertyField(EnableDiffractionOnBoundaryEdges);
 		}
 
-		if (UnityEditor.EditorGUI.EndChangeCheck())
-		{
-			GeometryNeedsUpdate = true;
-		}
-
-		//Start a code block to check for GUI changes
-		UnityEditor.EditorGUI.BeginChangeCheck();
-
 		UnityEditor.EditorGUILayout.PropertyField(AssociatedRoom);
 
-		if (UnityEditor.EditorGUI.EndChangeCheck())
-		{
-			GeometryInstanceNeedsUpdate = true;
-		}
-
 		serializedObject.ApplyModifiedProperties();
-
-		if (GeometryNeedsUpdate)
-		{
-			m_AkSurfaceReflector.SetGeometry();
-		}
-
-		if (GeometryInstanceNeedsUpdate)
-		{
-			m_AkSurfaceReflector.UpdateAssociatedRoom();
-		}
 	}
 
 	public static void CheckArraySize(AkSurfaceReflector surfaceReflector, int length, string name)

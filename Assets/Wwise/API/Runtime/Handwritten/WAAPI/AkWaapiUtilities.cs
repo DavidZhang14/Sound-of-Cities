@@ -75,6 +75,11 @@ public class AkWaapiUtilities
 	/// </summary>
 	static AkWaapiUtilities()
 	{
+		if (UnityEditor.AssetDatabase.IsAssetImportWorkerProcess())
+		{
+			return;
+		}
+
 #if UNITY_2019_1_OR_NEWER
 		UnityEditor.Compilation.CompilationPipeline.compilationStarted += (object context) => FireDisconnect(true);
 #else

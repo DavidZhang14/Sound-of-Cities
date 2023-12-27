@@ -31,6 +31,11 @@ public class AkMacSettings : AkWwiseInitializationSettings.CommonPlatformSetting
 	[UnityEditor.InitializeOnLoadMethod]
 	private static void AutomaticPlatformRegistration()
 	{
+		if (UnityEditor.AssetDatabase.IsAssetImportWorkerProcess())
+		{
+			return;
+		}
+
 		RegisterPlatformSettingsClass<AkMacSettings>("Mac");
 	}
 #endif // UNITY_EDITOR

@@ -281,7 +281,7 @@ public class AkDocHelper
 			m_WwiseVersionString += "_" + (temp2 & 0xFFFF);
 		}
 
-		var docUrl = "http://www.audiokinetic.com/library/" + m_WwiseVersionString + "/?source=Unity&id=main.html";
+		var docUrl = "http://www.audiokinetic.com/library/" + m_WwiseVersionString + "/?source=Unity&id=index.html";
 		var isConnected = false;
 		try
 		{

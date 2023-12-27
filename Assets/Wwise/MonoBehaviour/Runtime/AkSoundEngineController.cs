@@ -264,7 +264,7 @@ public class AkSoundEngineController
 #if UNITY_EDITOR || !UNITY_IOS
 	private void ActivateAudio(bool activate, bool renderAnyway = false)
 	{
-		if (AkSoundEngine.IsInitialized())
+		if (AkSoundEngine.IsInitialized() && AkWwiseInitializationSettings.Instance.SuspendAudioDuringFocusLoss)
 		{
 			if (activate)
 				AkSoundEngine.WakeupFromSuspend();

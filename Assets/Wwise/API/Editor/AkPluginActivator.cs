@@ -55,6 +55,7 @@ public class AkPluginActivator
 			PluginID.AkParametricEQ,
 			PluginID.AkPeakLimiter,
 			PluginID.AkRoomVerb,
+			PluginID.AkReflect,
 #if !UNITY_2018_3_OR_NEWER
 			PluginID.VitaReverb,
 			PluginID.VitaCompressor,
@@ -143,6 +144,10 @@ public class AkPluginActivator
 
 	static AkPluginActivator()
 	{
+		if (UnityEditor.AssetDatabase.IsAssetImportWorkerProcess())
+		{
+			return;
+		}
 		ActivatePluginsForEditor();
 	}
 

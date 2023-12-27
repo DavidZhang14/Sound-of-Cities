@@ -46,6 +46,7 @@ public class AkWwiseTreeView : TreeView
 			{ typeof(AkEnvironment), WwiseObjectType.AuxBus },
 			{ typeof(AkState), WwiseObjectType.State },
 			{ typeof(AkSurfaceReflector), WwiseObjectType.AcousticTexture },
+			{ typeof(AkWwiseTrigger), WwiseObjectType.Trigger },
 			{ typeof(AkSwitch), WwiseObjectType.Switch },
 		};
 
@@ -236,20 +237,13 @@ public class AkWwiseTreeView : TreeView
 
 		foreach (AkWwiseTreeViewItem child in parent.children)
 		{
-			var item = new AkWwiseTreeViewItem(child);
-			item.parent = parent;
-			item.children = child.children;
-			newRows.Add(item);
+			newRows.Add(child);
 
 			if (child.children.Count > 0)
 			{
 				if (TestExpanded(child))
 				{
 					AddChildrenRecursive(child, newRows);
-				}
-				else
-				{
-					item.children = AkWwiseTreeDataSource.CreateCollapsedChild();
 				}
 			}
 		}
@@ -876,14 +870,6 @@ public class AkWwiseTreeView : TreeView
 		m_dataSource.FetchData();
 	}
 
-	~AkWwiseTreeView()
-	{
-		if (m_pickerMode != PickerMode.ComponentPicker && StoredSearchString == System.String.Empty)
-		{
-			SaveExpansionStatus();
-		}
-	}
-
 #endregion
 }
 
@@ -907,6 +893,7 @@ public class AkWwisePickerIcons
 	private UnityEngine.Texture2D m_textureWwiseSwitchIcon;
 	private UnityEngine.Texture2D m_textureWwiseSwitchGroupIcon;
 	private UnityEngine.Texture2D m_textureWwiseWorkUnitIcon;
+	private UnityEngine.Texture2D m_textureWwiseTriggerIcon;
 
 	protected UnityEngine.Texture2D GetTexture(string texturePath)
 	{
@@ -939,6 +926,7 @@ public class AkWwisePickerIcons
 		m_textureWwiseSwitchIcon = GetTexture(tempWwisePath + "switch_nor.png");
 		m_textureWwiseSwitchGroupIcon = GetTexture(tempWwisePath + "switchgroup_nor.png");
 		m_textureWwiseWorkUnitIcon = GetTexture(tempWwisePath + "workunit_nor.png");
+		m_textureWwiseTriggerIcon = GetTexture(tempWwisePath + "trigger_nor.png");
 	}
 
 	public UnityEngine.Texture2D GetIcon(WwiseObjectType type)
@@ -973,6 +961,8 @@ public class AkWwisePickerIcons
 				return m_textureWwiseSwitchGroupIcon;
 			case WwiseObjectType.WorkUnit:
 				return m_textureWwiseWorkUnitIcon;
+			case WwiseObjectType.Trigger:
+				return m_textureWwiseTriggerIcon;
 			default:
 				return m_textureWwisePhysicalFolderIcon;
 		}

@@ -69,7 +69,7 @@ public class AkInitializer : UnityEngine.MonoBehaviour
 			return;
 
 		#if !(AK_WWISE_ADDRESSABLES && UNITY_ADDRESSABLES)
-				AkWwiseFileWatcher.Instance.XMLUpdated += AkBankManager.ReloadAllBanks;
+				AkWwiseSoundbanksInfoXMLFileWatcher.Instance.XMLUpdated += AkBankManager.ReloadAllBanks;
 		#endif
 #endif
 

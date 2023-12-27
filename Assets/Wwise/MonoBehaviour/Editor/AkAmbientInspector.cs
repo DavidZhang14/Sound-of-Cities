@@ -54,7 +54,7 @@ public class AkAmbientInspector : AkEventInspector
 
         currentAttSphereOp = attSphereProperties[target];
 
-        AkWwiseFileWatcher.Instance.XMLUpdated += PopulateMaxAttenuation;
+        AkWwiseSoundbanksInfoXMLFileWatcher.Instance.XMLUpdated += PopulateMaxAttenuation;
     }
 
     public new void OnDisable()
@@ -63,7 +63,7 @@ public class AkAmbientInspector : AkEventInspector
 
         DefaultHandles.Hidden = false;
 
-        AkWwiseFileWatcher.Instance.XMLUpdated -= PopulateMaxAttenuation;
+        AkWwiseSoundbanksInfoXMLFileWatcher.Instance.XMLUpdated -= PopulateMaxAttenuation;
     }
 
     public override void OnChildInspectorGUI()

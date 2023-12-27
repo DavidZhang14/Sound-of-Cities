@@ -179,6 +179,11 @@ public class AkWwiseTreeViewItem : TreeViewItem, System.IEquatable<AkWwiseTreeVi
 	{
 		if (this.objectType == t) return true;
 
+		if (!hasChildren)
+		{
+			return false;
+		}
+
 		foreach (var child in children)
 		{
 			if ((child as AkWwiseTreeViewItem).WwiseTypeInChildren(t)) return true;
