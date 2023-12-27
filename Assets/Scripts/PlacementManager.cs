@@ -40,12 +40,12 @@ public class PlacementManager : MonoBehaviour
 
     internal void PlaceObjectOnTheMap(Vector3Int position, int buildingIndex, CellType type)
     {
-        placementGrid[position.x, position.z] = type;
         if (type == CellType.Road) {
             RoadManager.instance.PlaceRoad(position);
             RoadManager.instance.FinishPlacingRoad();
             return;
         }
+        placementGrid[position.x, position.z] = type;
         GameObject structurePrefab = null;
         if (type == CellType.House) structurePrefab = StructureManager.instance.housesPrefabs[buildingIndex];
         else if (type == CellType.Special) structurePrefab = StructureManager.instance.specialPrefabs[buildingIndex];
