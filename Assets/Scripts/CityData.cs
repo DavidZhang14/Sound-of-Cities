@@ -1,7 +1,4 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 [System.Serializable]
@@ -24,9 +21,11 @@ public class CityData
         this.playerPosition[0] = playerPosition.x;
         this.playerPosition[1] = playerPosition.z;
     }
+    private static Vector3 cameraOffset = new Vector3(-4, 7, -6);
     public void Deserialize() {
         Vector3 newPosition = new Vector3(playerPosition[0], 0, playerPosition[1]);
         GameObject.Find("Character").transform.position = newPosition;
+        GameObject.Find("Main Camera").transform.position = newPosition + cameraOffset;
         for(int i = 0; i < structures.Count; i++)
             PlacementManager.instance.PlaceObjectOnTheMap(structures[i].position, structures[i].buildingIndex, structures[i].type);
             //TODO: pitch and rhythm
