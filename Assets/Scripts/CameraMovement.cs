@@ -13,7 +13,14 @@ namespace SVS
         private Camera gameCamera;
         private GameObject listener;
         public float cameraMovementSpeed = 5;
-
+        public static CameraMovement instance;
+        private void Awake() {
+            if (instance == null) {
+                instance = this;
+                DontDestroyOnLoad(gameObject);
+            }
+            else Destroy(gameObject);
+        }
         private void Start()
         {
             listener = GameObject.Find("Character");

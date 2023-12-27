@@ -6,6 +6,7 @@ using UnityEngine.EventSystems;
 
 public class InputManager : MonoBehaviour
 {
+	public static InputManager instance;
     public Action<Vector3Int> OnMouseClick, OnMouseHold;
     public Action OnMouseUp;
 	private Vector2 cameraMovementVector;
@@ -18,6 +19,13 @@ public class InputManager : MonoBehaviour
 	public Vector2 CameraMovementVector
 	{
 		get { return cameraMovementVector; }
+	}
+	private void Awake() {
+		if (instance == null) {
+			instance = this;
+			DontDestroyOnLoad(gameObject);
+		}
+		else Destroy(gameObject);
 	}
 
 	private void Update()

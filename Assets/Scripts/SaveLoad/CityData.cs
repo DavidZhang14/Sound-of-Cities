@@ -23,6 +23,7 @@ public class CityData
     }
     private static Vector3 cameraOffset = new Vector3(-4, 7, -6);
     public void Deserialize() {
+        PlacementManager.instance.ClearCity();
         Vector3 newPosition = new Vector3(playerPosition[0], 0, playerPosition[1]);
         GameObject.Find("Character").transform.position = newPosition;
         GameObject.Find("Main Camera").transform.position = newPosition + cameraOffset;

@@ -5,9 +5,9 @@ using TMPro;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-    public CameraMovement cameraMovement;
+    private CameraMovement cameraMovement;
     public RoadManager roadManager;
-    public InputManager inputManager;
+    private InputManager inputManager;
 
     public UIController uiController;
 
@@ -24,6 +24,10 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        if (CameraMovement.instance != null) cameraMovement = CameraMovement.instance;
+        else Debug.LogError("CameraMovement not found.");
+        if (InputManager.instance != null) inputManager = InputManager.instance;
+        else Debug.LogError("InputManager not found.");
         if (StructureManager.instance != null) structureManager = StructureManager.instance;
         else Debug.LogError("StructureManager not found.");
         uiController.OnRoadPlacement += RoadPlacementHandler;

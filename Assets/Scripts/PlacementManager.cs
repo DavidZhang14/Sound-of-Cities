@@ -40,14 +40,15 @@ public class PlacementManager : MonoBehaviour
 
     internal void PlaceObjectOnTheMap(Vector3Int position, int buildingIndex, CellType type)
     {
+        placementGrid[position.x, position.z] = type;
         if (type == CellType.Road) {
             RoadManager.instance.PlaceRoad(position);
+            RoadManager.instance.FinishPlacingRoad();
             return;
         }
         GameObject structurePrefab = null;
         if (type == CellType.House) structurePrefab = StructureManager.instance.housesPrefabs[buildingIndex];
         else if (type == CellType.Special) structurePrefab = StructureManager.instance.specialPrefabs[buildingIndex];
-        placementGrid[position.x, position.z] = type;
         Structure structure = CreateANewStructureModel(position, structurePrefab, type);
         structureDictionary.Add(position, structure);
         DestroyNatureAt(position);
@@ -145,12 +146,14 @@ public class PlacementManager : MonoBehaviour
     public Dictionary<Vector3Int, Structure> GetStructureDictionary() {
         return structureDictionary;
     }
-    public void SetStructureDictionary(Dictionary<Vector3Int, Structure> structureDictionary) {
-        this.structureDictionary = structureDictionary;
-
-        foreach (KeyValuePair<Vector3Int, Structure> pair in structureDictionary) {
-            Vector3Int position = pair.Key;
-            PlaceObjectOnTheMap(position, pair.Value.buildingIndex, pair.Value.type);
+    public void ClearCity() {
+        foreach (KeyValuePair<Vector3Int, Structure> pair in structureDictionary)
+            Destroy(pair.Value.gameObject);
+        structureDictionary.Clear();
+        for(int i = 0; i < width; i++) {
+            for(int j = 0; j < height; j++) {
+                placementGrid[i,j] = CellType.Empty;
+            }
         }
     }
 }
