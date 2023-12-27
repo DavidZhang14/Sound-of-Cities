@@ -13,7 +13,6 @@ public class GameManager : MonoBehaviour
 
     private StructureManager structureManager;
     public PlacementManager placementManager;
-    private GameObject character;
 
     private void Awake() {
         if (instance == null) {
@@ -25,7 +24,6 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        character = GameObject.Find("Character");
         if (StructureManager.instance != null) structureManager = StructureManager.instance;
         else Debug.LogError("StructureManager not found.");
         uiController.OnRoadPlacement += RoadPlacementHandler;
@@ -92,15 +90,17 @@ public class GameManager : MonoBehaviour
             UIController.Instance.infoPanel.gameObject.SetActive(false);
         }
     }
-    public void OpenSavePanel() {
+    public static void OpenSavePanel() {
         GameObject savePanel = GameObject.Find("Canvas").transform.Find("SavePanel").gameObject;
         if (savePanel != null) savePanel.SetActive(true);
         else Debug.LogError("GameObject 'SavePanel' not found.");
     }
     public void OpenLoadPanel() {
-        //TODO
+        GameObject loadPanel = GameObject.Find("Canvas").transform.Find("LoadPanel").gameObject;
+        if (loadPanel != null) loadPanel.SetActive(true);
+        else Debug.LogError("GameObject 'LoadPanel' not found.");
     }
-    public static void SaveButtonClicked() {
+    public void SaveButtonClicked() {
         string saveName = GameObject.Find("SaveInput").GetComponent<TMP_InputField>().text;
         SaveSystem.SaveCity(saveName);
         GameObject.Find("SavePanel").SetActive(false);
@@ -109,5 +109,6 @@ public class GameManager : MonoBehaviour
         string saveName = "test"; //TODO
         CityData data = SaveSystem.loadCity(saveName);
         data.Deserialize();
+        GameObject.Find("LoadPanel").SetActive(false);
     }
 }

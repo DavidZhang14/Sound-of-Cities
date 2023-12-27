@@ -7,7 +7,8 @@ public static class SaveSystem {
         XmlSerializer serializer = new XmlSerializer(typeof(CityData));
         string path = Application.persistentDataPath + "/" + saveName + ".city";
         FileStream fs = new FileStream(path, FileMode.Create);
-        CityData data = new CityData(PlacementManager.instance.GetStructureDictionary());
+        Vector3 characterPosition = GameObject.Find("Character").transform.position;
+        CityData data = new CityData(PlacementManager.instance.GetStructureDictionary(), characterPosition);
         serializer.Serialize(fs, data);
         fs.Close();
         Debug.Log("Save Path: " + path);
