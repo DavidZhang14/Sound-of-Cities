@@ -10,12 +10,14 @@ namespace SVS
 
     public class CameraMovement : MonoBehaviour
     {
-        public Camera gameCamera;
-        public GameObject listener;
+        private Camera gameCamera;
+        private GameObject listener;
         public float cameraMovementSpeed = 5;
 
         private void Start()
         {
+            listener = GameObject.Find("Character");
+            if (listener == null) Debug.LogError("Can't find character listener.");
             gameCamera = GetComponent<Camera>();
         }
         public void MoveCamera(Vector3 inputVector)
