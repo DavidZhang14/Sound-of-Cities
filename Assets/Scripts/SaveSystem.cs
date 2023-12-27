@@ -3,7 +3,7 @@ using System.IO;
 using System.Xml.Serialization;
 
 public static class SaveSystem {
-    public static void saveCity(string saveName) {
+    public static void SaveCity(string saveName) {
         XmlSerializer serializer = new XmlSerializer(typeof(CityData));
         string path = Application.persistentDataPath + "/" + saveName + ".city";
         FileStream fs = new FileStream(path, FileMode.Create);

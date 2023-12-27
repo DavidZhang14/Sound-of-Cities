@@ -1,9 +1,6 @@
 ﻿using SVS;
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.IO;
 using UnityEngine;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -29,7 +26,8 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         character = GameObject.Find("Character");
-        structureManager = StructureManager.instance;
+        if (StructureManager.instance != null) structureManager = StructureManager.instance;
+        else Debug.LogError("StructureManager not found.");
         uiController.OnRoadPlacement += RoadPlacementHandler;
         uiController.OnHousePlacement += HousePlacementHandler;
         uiController.OnSpecialPlacement += SpecialPlacementHandler;
@@ -94,12 +92,21 @@ public class GameManager : MonoBehaviour
             UIController.Instance.infoPanel.gameObject.SetActive(false);
         }
     }
-    
-    public void Save(string saveName = "test") {
-        //TODO: character
-        SaveSystem.saveCity(saveName);
+    public void OpenSavePanel() {
+        GameObject savePanel = GameObject.Find("Canvas").transform.Find("SavePanel").gameObject;
+        if (savePanel != null) savePanel.SetActive(true);
+        else Debug.LogError("GameObject 'SavePanel' not found.");
     }
-    public void Load(string saveName = "test") {
+    public void OpenLoadPanel() {
+        //TODO
+    }
+    public static void SaveButtonClicked() {
+        string saveName = GameObject.Find("SaveInput").GetComponent<TMP_InputField>().text;
+        SaveSystem.SaveCity(saveName);
+        GameObject.Find("SavePanel").SetActive(false);
+    }
+    public static void LoadButtonClicked() {
+        string saveName = "test"; //TODO
         CityData data = SaveSystem.loadCity(saveName);
         data.Deserialize();
     }
