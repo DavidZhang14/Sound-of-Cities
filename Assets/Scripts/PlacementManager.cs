@@ -161,5 +161,6 @@ public class PlacementManager : MonoBehaviour
                 placementGrid[i,j] = CellType.Empty;
             }
         }
+        InfoPanel.instance.gameObject.SetActive(false);
     }
 }
