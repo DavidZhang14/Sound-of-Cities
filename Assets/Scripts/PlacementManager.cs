@@ -38,7 +38,7 @@ public class PlacementManager : MonoBehaviour
         return false;
     }
 
-    internal void PlaceObjectOnTheMap(Vector3Int position, int buildingIndex, CellType type)
+    internal void PlaceObjectOnTheMap(Vector3Int position, int buildingIndex, CellType type, short pitch = 9, short targetGrid = 1)
     {
         if (type == CellType.Road) {
             RoadManager.instance.PlaceRoad(position);
@@ -51,6 +51,11 @@ public class PlacementManager : MonoBehaviour
         else if (type == CellType.Special) structurePrefab = StructureManager.instance.specialPrefabs[buildingIndex];
         Structure structure = CreateANewStructureModel(position, structurePrefab, type);
         structureDictionary.Add(position, structure);
+
+        // Set pitch and rhythm
+        structure.structureSoundEmitter.pitch = pitch;
+        structure.structureSoundEmitter.targetGrid = targetGrid;
+
         DestroyNatureAt(position);
     }
 

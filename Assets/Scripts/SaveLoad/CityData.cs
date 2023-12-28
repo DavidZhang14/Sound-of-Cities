@@ -27,8 +27,13 @@ public class CityData
         Vector3 newPosition = new Vector3(playerPosition[0], 0, playerPosition[1]);
         GameObject.Find("Character").transform.position = newPosition;
         GameObject.Find("Main Camera").transform.position = newPosition + cameraOffset;
-        for(int i = 0; i < structures.Count; i++)
-            PlacementManager.instance.PlaceObjectOnTheMap(structures[i].position, structures[i].buildingIndex, structures[i].type);
-            //TODO: pitch and rhythm
+        for(int i = 0; i < structures.Count; i++) {
+            PlacementManager.instance.PlaceObjectOnTheMap(
+                structures[i].position, 
+                structures[i].buildingIndex, 
+                structures[i].type, 
+                structures[i].pitch, 
+                structures[i].targetGrid);
+        }
     }
 }

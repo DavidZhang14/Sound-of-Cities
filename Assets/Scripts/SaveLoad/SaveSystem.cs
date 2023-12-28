@@ -14,7 +14,7 @@ public static class SaveSystem {
         Debug.Log("Save Path: " + path);
     }
 
-    public static CityData loadCity(string saveName) {
+    public static CityData LoadCity(string saveName) {
         string path = Application.persistentDataPath + "/" + saveName + ".city";
         if (File.Exists(path)) {
             XmlSerializer serializer = new XmlSerializer(typeof(CityData));
