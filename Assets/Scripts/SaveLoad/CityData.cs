@@ -6,13 +6,7 @@ public class CityData
 {
     public float[] playerPosition = new float[2];
     public List<SerializableStructure> structures = new();
-    public CityData() {
-        Dictionary<Vector3Int, Structure> structureDictionary = PlacementManager.instance.GetStructureDictionary();
-        foreach(KeyValuePair<Vector3Int, Structure> pair in structureDictionary) {
-            SerializableStructure structure = new SerializableStructure(pair.Key, pair.Value);
-            structures.Add(structure);
-        }
-    }
+    public CityData() {}
     public CityData(Dictionary<Vector3Int, Structure> structureDictionary, Vector3 playerPosition) {
         foreach(KeyValuePair<Vector3Int, Structure> pair in structureDictionary) {
             SerializableStructure structure = new SerializableStructure(pair.Key, pair.Value);
@@ -24,6 +18,8 @@ public class CityData
     private static Vector3 cameraOffset = new Vector3(-4, 7, -6);
     public void Deserialize() {
         PlacementManager.instance.ClearCity();
+
+        // Set player and camera position
         Vector3 newPosition = new Vector3(playerPosition[0], 0, playerPosition[1]);
         GameObject.Find("Character").transform.position = newPosition;
         GameObject.Find("Main Camera").transform.position = newPosition + cameraOffset;

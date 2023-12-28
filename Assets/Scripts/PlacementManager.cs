@@ -153,14 +153,18 @@ public class PlacementManager : MonoBehaviour
         return structureDictionary;
     }
     public void ClearCity() {
-        foreach (KeyValuePair<Vector3Int, Structure> pair in structureDictionary)
-            Destroy(pair.Value.gameObject);
+        RemoveAllTemporaryStructures();
+        for (int i = gameObject.transform.childCount - 1; i >= 0; i--) {
+            GameObject child = gameObject.transform.GetChild(i).gameObject;
+            Destroy(child);
+        }
         structureDictionary.Clear();
         for(int i = 0; i < width; i++) {
             for(int j = 0; j < height; j++) {
                 placementGrid[i,j] = CellType.Empty;
             }
         }
-        InfoPanel.instance.gameObject.SetActive(false);
+        // Close info panel
+        if (InfoPanel.instance) InfoPanel.instance.gameObject.SetActive(false);
     }
 }
