@@ -55,6 +55,7 @@ public class PlacementManager : MonoBehaviour
         // Set pitch and rhythm
         structure.structureSoundEmitter.pitch = pitch;
         structure.structureSoundEmitter.targetGrid = targetGrid;
+        structure.structureSoundEmitter.UpdateSound();
 
         DestroyNatureAt(position);
     }
