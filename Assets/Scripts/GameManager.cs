@@ -1,7 +1,7 @@
 ﻿using SVS;
 using UnityEngine;
 using TMPro;
-
+using System.IO;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
 
     private StructureManager structureManager;
     public PlacementManager placementManager;
+    public GameObject loadBtnPrefab;
 
     private void Awake() {
         if (instance == null) {
@@ -103,16 +104,29 @@ public class GameManager : MonoBehaviour
         GameObject loadPanel = GameObject.Find("Canvas").transform.Find("LoadPanel").gameObject;
         if (loadPanel != null) loadPanel.SetActive(true);
         else Debug.LogError("GameObject 'LoadPanel' not found.");
+
+        Transform content = GameObject.Find("Canvas").transform
+                .Find("LoadPanel")
+                .Find("Scroll View")
+                .Find("Viewport")
+                .Find("Content");
+        //Clear list
+        for (int i = content.childCount - 1; i >= 0; i--) {
+                GameObject child = content.transform.GetChild(i).gameObject;
+                Destroy(child);
+            }
+        //Create new list
+        string[] filePaths = Directory.GetFiles(Application.persistentDataPath);
+        foreach (string filePath in filePaths)
+        {
+            string fileName = Path.GetFileNameWithoutExtension(filePath);
+            GameObject newBtn = Instantiate(loadBtnPrefab, content);
+            newBtn.transform.Find("Text (TMP)").GetComponent<TMP_Text>().text = fileName;
+        }
     }
     public void SaveButtonClicked() {
         string saveName = GameObject.Find("SaveInput").GetComponent<TMP_InputField>().text;
         SaveSystem.SaveCity(saveName);
         GameObject.Find("SavePanel").SetActive(false);
-    }
-    public static void LoadButtonClicked() {
-        string saveName = "test"; //TODO
-        CityData data = SaveSystem.loadCity(saveName);
-        data.Deserialize();
-        GameObject.Find("LoadPanel").SetActive(false);
     }
 }
