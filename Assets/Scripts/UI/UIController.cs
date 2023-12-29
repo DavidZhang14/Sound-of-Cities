@@ -15,6 +15,7 @@ public class UIController : MonoBehaviour
     public StructureSoundEmitter editTarget;
     public InfoPanel infoPanel;
     public BuildingPanel buildingPanel;
+    private GameObject advancedPanel;
     private void Awake() {
         if (Instance != null) {
             Destroy (gameObject);
@@ -24,6 +25,8 @@ public class UIController : MonoBehaviour
     }
     private void Start()
     {
+        advancedPanel = transform.Find("AdvancedPanel").gameObject;
+
         buttonList = new List<Button> { placeHouseButton, placeRoadButton, placeSpecialButton, editButton };
 
         placeRoadButton.onClick.AddListener(() =>
@@ -71,10 +74,16 @@ public class UIController : MonoBehaviour
         }
     }
 
-    public void updateInfoPanel() 
+    public void UpdateInfoPanel() 
     {
         infoPanel.Instrument.text = editTarget.instrument;
         infoPanel.targetGridDropdown.value = editTarget.targetGrid - 1;
         infoPanel.pitchDropdown.value = editTarget.pitch;
+    }
+
+    private void Update() {
+        if (Input.GetKeyDown(KeyCode.Escape)) {
+            advancedPanel.SetActive(!advancedPanel.activeSelf);
+        }
     }
 }

@@ -88,7 +88,7 @@ public class GameManager : MonoBehaviour
         {
             UIController.Instance.infoPanel.gameObject.SetActive(true);
             UIController.Instance.editTarget = placementManager.GetSoundEmitter(position);
-            UIController.Instance.updateInfoPanel();
+            UIController.Instance.UpdateInfoPanel();
         }
         else 
         {
