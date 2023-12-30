@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -8,14 +7,15 @@ public class UIController : MonoBehaviour
 {
     public static UIController Instance;
     public Action OnRoadPlacement, OnHousePlacement, OnSpecialPlacement, OnEdit;
-    public Button placeRoadButton, placeHouseButton, placeSpecialButton, editButton;
+    [SerializeField] private Button placeRoadButton, placeHouseButton, placeSpecialButton, editButton;
 
     public Color outlineColor;
     List<Button> buttonList;
     public StructureSoundEmitter editTarget;
     public InfoPanel infoPanel;
     public BuildingPanel buildingPanel;
-    private GameObject advancedPanel;
+    [SerializeField] private GameObject advancedPanel;
+    [SerializeField] private GameObject ConfirmationPanel;
     private void Awake() {
         if (Instance != null) {
             Destroy (gameObject);
@@ -25,8 +25,6 @@ public class UIController : MonoBehaviour
     }
     private void Start()
     {
-        advancedPanel = transform.Find("AdvancedPanel").gameObject;
-
         buttonList = new List<Button> { placeHouseButton, placeRoadButton, placeSpecialButton, editButton };
 
         placeRoadButton.onClick.AddListener(() =>
