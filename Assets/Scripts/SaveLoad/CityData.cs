@@ -9,18 +9,18 @@ public class CityData
     public CityData() {}
     public CityData(Dictionary<Vector3Int, Structure> structureDictionary, Vector3 playerPosition) {
         foreach(KeyValuePair<Vector3Int, Structure> pair in structureDictionary) {
-            SerializableStructure structure = new SerializableStructure(pair.Key, pair.Value);
+            SerializableStructure structure = new(pair.Key, pair.Value);
             structures.Add(structure);
         }
         this.playerPosition[0] = playerPosition.x;
         this.playerPosition[1] = playerPosition.z;
     }
-    private static Vector3 cameraOffset = new Vector3(-4, 7, -6);
+    private static Vector3 cameraOffset = new(-4, 7, -6);
     public void Deserialize() {
         PlacementManager.instance.ClearCity();
 
         // Set player and camera position
-        Vector3 newPosition = new Vector3(playerPosition[0], 0, playerPosition[1]);
+        Vector3 newPosition = new(playerPosition[0], 0, playerPosition[1]);
         GameObject.Find("Character").transform.position = newPosition;
         GameObject.Find("Main Camera").transform.position = newPosition + cameraOffset;
         for(int i = 0; i < structures.Count; i++) {

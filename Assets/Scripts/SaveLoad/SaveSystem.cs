@@ -4,11 +4,11 @@ using System.Xml.Serialization;
 
 public static class SaveSystem {
     public static void SaveCity(string saveName) {
-        XmlSerializer serializer = new XmlSerializer(typeof(CityData));
+        XmlSerializer serializer = new(typeof(CityData));
         string path = Application.persistentDataPath + "/" + saveName + ".city";
-        FileStream fs = new FileStream(path, FileMode.Create);
+        FileStream fs = new(path, FileMode.Create);
         Vector3 characterPosition = GameObject.Find("Character").transform.position;
-        CityData data = new CityData(PlacementManager.instance.GetStructureDictionary(), characterPosition);
+        CityData data = new(PlacementManager.instance.GetStructureDictionary(), characterPosition);
         serializer.Serialize(fs, data);
         fs.Close();
         Debug.Log("Save Path: " + path);
@@ -17,8 +17,8 @@ public static class SaveSystem {
     public static CityData LoadCity(string saveName) {
         string path = Application.persistentDataPath + "/" + saveName + ".city";
         if (File.Exists(path)) {
-            XmlSerializer serializer = new XmlSerializer(typeof(CityData));
-            FileStream fs = new FileStream(path, FileMode.Open);
+            XmlSerializer serializer = new(typeof(CityData));
+            FileStream fs = new(path, FileMode.Open);
             CityData data = serializer.Deserialize(fs) as CityData;
             fs.Close();
             return data;

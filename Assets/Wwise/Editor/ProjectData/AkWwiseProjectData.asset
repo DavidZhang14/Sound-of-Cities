@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: b6004cadb657344b86519f6916328172
     GuidInternal: 
-    m_lastTime: -8585286319931789959
+    m_lastTime: -8584976653155209224
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -172,7 +172,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 789d1955a94f0c42a6f708ae99567410
     GuidInternal: 
-    m_lastTime: -8585283008149263397
+    m_lastTime: -8584976654403249101
     List:
     - name: Pitch
       guid: 2c15926b6eaa9e45b7b09f8c54a15fb4
@@ -202,6 +202,20 @@ MonoBehaviour:
         ObjectType: 13
         guid: cf42788f46d2fd4bbd6fdc51f94daa7e
       Path: Game Parameters\Default Work Unit\Playback_Speed
+    - name: Volume
+      guid: afae4b394672f943af8301c667cb918b
+      id: 2415836739
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 789d1955a94f0c42a6f708ae99567410
+      - ElementName: Volume
+        ObjectType: 13
+        guid: afae4b394672f943af8301c667cb918b
+      Path: Game Parameters\Default Work Unit\Volume
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     PathAndIcons:
@@ -585,8 +599,8 @@ MonoBehaviour:
     m_lastTime: -8585286319930929214
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
-  AutoSyncSelection: 0
+  ExpandedWaapiItemIds: 190000001a000000
+  AutoSyncSelection: 1
   autoPopulateEnabled: 1
   currentDataSource: 0
   CurrentPluginConfig: 

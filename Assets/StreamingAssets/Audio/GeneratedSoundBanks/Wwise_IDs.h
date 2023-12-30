@@ -62,6 +62,7 @@ namespace AK
     {
         static const AkUniqueID PITCH = 1908158473U;
         static const AkUniqueID PLAYBACK_SPEED = 78830142U;
+        static const AkUniqueID VOLUME = 2415836739U;
     } // namespace GAME_PARAMETERS
 
     namespace BANKS
