@@ -63,8 +63,8 @@ public class Grid
     private int _height;
     public int Height { get { return _height; } }
 
-    private List<Point> _roadList = new List<Point>();
-    private List<Point> _specialStructure = new List<Point>();
+    private List<Point> _roadList = new();
+    private List<Point> _specialStructure = new();
 
     public Grid(int width, int height)
     {
@@ -113,13 +113,13 @@ public class Grid
 
     public Point GetRandomRoadPoint()
     {
-        Random rand = new Random();
+        Random rand = new();
         return _roadList[rand.Next(0, _roadList.Count - 1)];
     }
 
     public Point GetRandomSpecialStructurePoint()
     {
-        Random rand = new Random();
+        Random rand = new();
         return _roadList[rand.Next(0, _roadList.Count - 1)];
     }
 
@@ -135,7 +135,7 @@ public class Grid
 
     public List<Point> GetAllAdjacentCells(int x, int y)
     {
-        List<Point> adjacentCells = new List<Point>();
+        List<Point> adjacentCells = new();
         if (x > 0)
         {
             adjacentCells.Add(new Point(x - 1, y));

@@ -9,8 +9,8 @@ public class PlacementManager : MonoBehaviour
     public int width, height;
     Grid placementGrid;
 
-    private Dictionary<Vector3Int, Structure> temporaryRoadobjects = new Dictionary<Vector3Int, Structure>();
-    private Dictionary<Vector3Int, Structure> structureDictionary = new Dictionary<Vector3Int, Structure>();
+    private Dictionary<Vector3Int, Structure> temporaryRoadobjects = new();
+    private Dictionary<Vector3Int, Structure> structureDictionary = new();
 
     private void Awake() {
         if (instance == null) {
@@ -86,7 +86,7 @@ public class PlacementManager : MonoBehaviour
     internal List<Vector3Int> GetNeighboursOfTypeFor(Vector3Int position, CellType type)
     {
         var neighbourVertices = placementGrid.GetAdjacentCellsOfType(position.x, position.z, type);
-        List<Vector3Int> neighbours = new List<Vector3Int>();
+        List<Vector3Int> neighbours = new();
         foreach (var point in neighbourVertices)
         {
             neighbours.Add(new Vector3Int(point.X, 0, point.Y));
@@ -96,7 +96,7 @@ public class PlacementManager : MonoBehaviour
 
     private Structure CreateANewStructureModel(Vector3Int position, GameObject structurePrefab, CellType type)
     {
-        GameObject structureOBject = new GameObject(type.ToString());
+        GameObject structureOBject = new(type.ToString());
         structureOBject.transform.SetParent(transform);
         structureOBject.transform.localPosition = position;
         Structure structure = structureOBject.AddComponent<Structure>();
@@ -108,7 +108,7 @@ public class PlacementManager : MonoBehaviour
     internal List<Vector3Int> GetPathBetween(Vector3Int startPosition, Vector3Int endPosition)
     {
         var resultPath = GridSearch.AStarSearch(placementGrid, new Point(startPosition.x, startPosition.z), new Point(endPosition.x, endPosition.z));
-        List<Vector3Int> path = new List<Vector3Int>();
+        List<Vector3Int> path = new();
         foreach (Point point in resultPath)
         {
             path.Add(new Vector3Int(point.X, 0, point.Y));

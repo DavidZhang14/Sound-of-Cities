@@ -13,8 +13,8 @@ public class RhythmPanel : MonoBehaviour
     [SerializeField] private RawImage Beat3;
     [SerializeField] private RawImage Beat4;
 
-    private Color transparent = new Color(255, 255, 255, 0); 
-    private Color opaque = new Color(255, 255, 255, 255);
+    private Color transparent = new(255, 255, 255, 0); 
+    private Color opaque = new(255, 255, 255, 255);
 
     void OnEnable() {
         MusicController.NewGridReached += NewGrid;

@@ -80,10 +80,7 @@ public class UIController : MonoBehaviour
         infoPanel.targetGridDropdown.value = editTarget.targetGrid - 1;
         infoPanel.pitchDropdown.value = editTarget.pitch;
     }
-
     private void Update() {
-        if (Input.GetKeyDown(KeyCode.Escape)) {
-            advancedPanel.SetActive(!advancedPanel.activeSelf);
-        }
+        if (Input.GetKeyDown(KeyCode.Escape)) advancedPanel.SetActive(!advancedPanel.activeSelf);
     }
 }

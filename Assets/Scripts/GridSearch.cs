@@ -16,12 +16,12 @@ public class GridSearch {
 
     public static List<Point> AStarSearch(Grid grid, Point startPosition, Point endPosition, bool isAgent = false)
     {
-        List<Point> path = new List<Point>();
+        List<Point> path = new();
 
-        List<Point> positionsTocheck = new List<Point>();
-        Dictionary<Point, float> costDictionary = new Dictionary<Point, float>();
-        Dictionary<Point, float> priorityDictionary = new Dictionary<Point, float>();
-        Dictionary<Point, Point> parentsDictionary = new Dictionary<Point, Point>();
+        List<Point> positionsTocheck = new();
+        Dictionary<Point, float> costDictionary = new();
+        Dictionary<Point, float> priorityDictionary = new();
+        Dictionary<Point, Point> parentsDictionary = new();
 
         positionsTocheck.Add(startPosition);
         priorityDictionary.Add(startPosition, 0);
@@ -76,7 +76,7 @@ public class GridSearch {
 
     public static List<Point> GeneratePath(Dictionary<Point, Point> parentMap, Point endState)
     {
-        List<Point> path = new List<Point>();
+        List<Point> path = new();
         Point parent = endState;
         while (parent != null && parentMap.ContainsKey(parent))
         {
