@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -80,5 +81,9 @@ public class UIController : MonoBehaviour
     }
     private void Update() {
         if (Input.GetKeyDown(KeyCode.Escape)) advancedPanel.SetActive(!advancedPanel.activeSelf);
+    }
+    public void OpenConfirmationPanel(string message) {
+        ConfirmationPanel.SetActive(true);
+        ConfirmationPanel.transform.Find("Message").GetComponent<TMP_Text>().SetText(message);
     }
 }

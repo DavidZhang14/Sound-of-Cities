@@ -6,8 +6,8 @@ public class ConfirmationPanel : MonoBehaviour
 {
     [SerializeField] private Button yesButton, noButton;
     [SerializeField] private TMP_Text confirmationText;
-    public delegate void Confirmed();
-    public static event Confirmed YesButtonClicked;
+    public delegate void Confirmation();
+    public static event Confirmation YesButtonClicked, NoButtonClicked;
     private void Awake() {
         yesButton.onClick.AddListener(YesButtonClick);
         noButton.onClick.AddListener(NoButtonClick);
@@ -19,6 +19,7 @@ public class ConfirmationPanel : MonoBehaviour
     }
     private void NoButtonClick()
     {
+        NoButtonClicked?.Invoke();
         gameObject.SetActive(false);
     }
 }

@@ -28,4 +28,9 @@ public static class SaveSystem {
             return null;
         }
     }
+
+    public static void DeleteCity(string saveName) {
+        string path = Application.persistentDataPath + "/" + saveName + ".city";
+        if (File.Exists(path)) File.Delete(path);
+    }
 }
