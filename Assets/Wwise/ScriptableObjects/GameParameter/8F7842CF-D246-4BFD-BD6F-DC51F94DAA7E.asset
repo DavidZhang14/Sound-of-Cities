@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9d6fde809278f34d851ed7f8645de63, type: 3}
   m_Name: 8F7842CF-D246-4BFD-BD6F-DC51F94DAA7E
   m_EditorClassIdentifier: 
-  objectName: Playback_Speed
-  id: 78830142
+  objectName: Tempo
+  id: 307962790
   guid: 8F7842CF-D246-4BFD-BD6F-DC51F94DAA7E

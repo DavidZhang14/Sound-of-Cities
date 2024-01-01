@@ -9435,7 +9435,8 @@ MonoBehaviour:
   tempoRTPC:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 02ee32414187ae645b71a524eb7ad3df,
+      type: 2}
 --- !u!1 &603889760
 GameObject:
   m_ObjectHideFlags: 0
@@ -32915,10 +32916,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 1138267613}
   m_HandleRect: {fileID: 1284720418}
   m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 1
-  m_WholeNumbers: 0
-  m_Value: 0
+  m_MinValue: 45
+  m_MaxValue: 135
+  m_WholeNumbers: 1
+  m_Value: 45
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []

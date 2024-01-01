@@ -16,12 +16,16 @@ public class AdvancedPanel : MonoBehaviour
             volumeText.SetText("Master Volume\n" + (int)v);
         });
         tempoSlider.onValueChanged.AddListener((v) => {
-            //volumeRTPC.SetGlobalValue(v);
+            tempoRTPC.SetGlobalValue(v);
+            MusicController.instance.Reset();
             tempoText.SetText("Tempo\n" + (int)v);
         });
     } 
     private void OnEnable() {
         volumeSlider.value = volumeRTPC.GetValue(gameObject);
         volumeText.SetText("Master Volume\n" + (int)volumeSlider.value);
+
+        tempoSlider.value = tempoRTPC.GetValue(gameObject);
+        tempoText.SetText("Tempo\n" + (int)tempoSlider.value);
     }
 }
