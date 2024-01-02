@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     private StructureManager structureManager;
     public PlacementManager placementManager;
     public GameObject loadBtnPrefab;
+    private string savePath;
 
     private void Awake() {
         if (instance == null) {
@@ -35,6 +36,10 @@ public class GameManager : MonoBehaviour
         uiController.OnHousePlacement += HousePlacementHandler;
         uiController.OnSpecialPlacement += SpecialPlacementHandler;
         uiController.OnEdit += EditHandler;
+
+        savePath = Application.persistentDataPath + "/save/";
+        if (!Directory.Exists(savePath))
+            Directory.CreateDirectory(savePath);
     }
 
     private void SpecialPlacementHandler()
@@ -112,11 +117,11 @@ public class GameManager : MonoBehaviour
                 .Find("Content");
         //Clear list
         for (int i = content.childCount - 1; i >= 0; i--) {
-                GameObject child = content.transform.GetChild(i).gameObject;
-                Destroy(child);
-            }
+            GameObject child = content.transform.GetChild(i).gameObject;
+            Destroy(child);
+        }
         //Create new list
-        string[] filePaths = Directory.GetFiles(Application.persistentDataPath);
+        string[] filePaths = Directory.GetFiles(savePath);
         foreach (string filePath in filePaths)
         {
             string fileName = Path.GetFileNameWithoutExtension(filePath);
