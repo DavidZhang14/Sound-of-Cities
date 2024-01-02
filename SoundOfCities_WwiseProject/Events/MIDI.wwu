@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{F596D944-9822-4E0F-AB14-761FDFDBCB2E}" SchemaVersion="110">
+	<Events>
+		<WorkUnit Name="MIDI" ID="{F596D944-9822-4E0F-AB14-761FDFDBCB2E}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Note_Trigger" ID="{CEE12A6E-32A1-406D-A986-F9E6701882F6}">
+					<ChildrenList>
+						<Action Name="" ID="{BBA74883-8805-49F0-80CE-2E23A901B945}" ShortID="898901231">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Note_Trigger" ID="{BB8543ED-4108-4257-861F-6BD35FF9BED0}" WorkUnitID="{332BF720-A0B2-431F-AC9D-E2EFA7AC307B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

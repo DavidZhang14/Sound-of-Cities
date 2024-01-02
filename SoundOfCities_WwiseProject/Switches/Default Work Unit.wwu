@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{BB8E6185-FD61-4C91-AEE7-F1816F7129AD}" SchemaVersion="110">
+	<Switches>
+		<WorkUnit Name="Default Work Unit" ID="{BB8E6185-FD61-4C91-AEE7-F1816F7129AD}" PersistMode="Standalone">
+			<ChildrenList>
+				<SwitchGroup Name="Pitch" ID="{85C98A6C-4D06-454F-9159-09D6EC270468}">
+					<PropertyList>
+						<Property Name="UseGameParameter" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Switch Name="C" ID="{9AE5F630-1B25-4CFC-B214-A021C3C527F4}"/>
+						<Switch Name="C_sharp" ID="{D01B9261-DF49-4881-A7CA-6674F2BD800B}"/>
+						<Switch Name="D" ID="{2D97AF80-B47A-4257-ADCD-2F929489B148}"/>
+						<Switch Name="D_sharp" ID="{B8AD9B42-BE64-4E4B-8878-46804031A88E}"/>
+						<Switch Name="E" ID="{5F18C1A7-8A28-4F3C-8383-90A1A3D7E1FB}"/>
+						<Switch Name="F" ID="{64B3B6F4-5B41-43E3-9C50-10382C6F9BFA}"/>
+						<Switch Name="F_sharp" ID="{1F29AB0C-5AB9-49B9-8449-D33ECEA31D1E}"/>
+						<Switch Name="G" ID="{BC311CF6-3AC8-433F-A4CE-548EACD7AA29}"/>
+						<Switch Name="G_sharp" ID="{1AA1CE70-EA5B-4B91-980C-0E578B45532B}"/>
+						<Switch Name="A" ID="{80DE4746-DACE-4E70-A541-7D40B1BD7430}"/>
+						<Switch Name="A_sharp" ID="{93890C6E-1F9F-40A8-821D-B8B1B957E2B3}"/>
+						<Switch Name="B" ID="{BC6FB9CA-118E-4890-93B4-DF6EDA326648}"/>
+					</ChildrenList>
+					<SwitchOnRTPC>
+						<GameParameterRef Name="Pitch" ID="{6B92152C-AA6E-459E-B7B0-9F8C54A15FB4}"/>
+						<Curve Name="" ID="{CBD41E73-21D0-42EB-8A9E-67E9FF9D31CB}">
+							<PropertyList>
+								<Property Name="Flags" Type="int32" Value="65537"/>
+							</PropertyList>
+							<PointList>
+								<Point>
+									<XPos>0</XPos>
+									<YPos>1</YPos>
+									<Flags>5</Flags>
+								</Point>
+								<Point>
+									<XPos>1</XPos>
+									<YPos>2</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>2</XPos>
+									<YPos>3</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>3</XPos>
+									<YPos>4</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>4</XPos>
+									<YPos>5</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>5</XPos>
+									<YPos>6</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>6</XPos>
+									<YPos>7</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>7</XPos>
+									<YPos>8</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>8</XPos>
+									<YPos>9</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>9</XPos>
+									<YPos>10</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>10</XPos>
+									<YPos>11</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>11</XPos>
+									<YPos>12</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>12</XPos>
+									<YPos>0</YPos>
+									<Flags>37</Flags>
+								</Point>
+							</PointList>
+						</Curve>
+					</SwitchOnRTPC>
+				</SwitchGroup>
+				<SwitchGroup Name="Instrument" ID="{9CDDC536-385C-4777-8CE7-9D02E2B19279}">
+					<ChildrenList>
+						<Switch Name="Harp" ID="{AF5A9F72-F8FC-42BA-BCEE-53EC21A3DF44}"/>
+						<Switch Name="Recorder" ID="{D1DEE61F-8A34-486C-89D4-5FFE1C5F7C4D}"/>
+						<Switch Name="Balafon" ID="{4B921EF9-2FF0-4774-9FD2-B03A45E302D4}"/>
+						<Switch Name="Xylophone" ID="{C10EBD30-F40A-4C74-9C72-8C369F612691}"/>
+						<Switch Name="Kalimba" ID="{02285C4D-B218-4AFE-967E-6D307309233F}"/>
+						<Switch Name="Saxello" ID="{B46288ED-1681-4DBF-8E44-A485966D32F6}"/>
+						<Switch Name="Strumstick" ID="{521251C9-FF86-49A9-BA98-7F0ABA328DFD}"/>
+					</ChildrenList>
+				</SwitchGroup>
+			</ChildrenList>
+		</WorkUnit>
+	</Switches>
+</WwiseDocument>

@@ -1,0 +1,27 @@
+Switch Group	ID	Name			Wwise Object Path	Notes
+	1908158473	Pitch			\Default Work Unit\Pitch	
+
+Switch	ID	Name	Switch Group			Notes
+	84696440	G	Pitch			
+	84696441	F	Pitch			
+	84696442	E	Pitch			
+	84696443	D	Pitch			
+	84696444	C	Pitch			
+	84696445	B	Pitch			
+	84696446	A	Pitch			
+	164139463	A_sharp	Pitch			
+	844677726	D_sharp	Pitch			
+	951594152	F_sharp	Pitch			
+	2816864521	C_sharp	Pitch			
+	3736223277	G_sharp	Pitch			
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	2415836739	Volume			\Default Work Unit\Volume	
+
+Audio Bus	ID	Name			Wwise Object Path	Notes
+	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+
+Audio Devices	ID	Name	Type				Notes
+	2317455096	No_Output	No Output			
+	3859886410	System	System			
+

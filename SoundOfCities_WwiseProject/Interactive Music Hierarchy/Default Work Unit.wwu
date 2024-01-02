@@ -1,0 +1,3442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{332BF720-A0B2-431F-AC9D-E2EFA7AC307B}" SchemaVersion="110">
+	<InteractiveMusic>
+		<WorkUnit Name="Default Work Unit" ID="{332BF720-A0B2-431F-AC9D-E2EFA7AC307B}" PersistMode="Standalone">
+			<ChildrenList>
+				<MusicPlaylistContainer Name="Main_Loop" ID="{71CC36C5-0CCE-4888-99B3-385A18E210C7}" ShortID="425574280">
+					<PropertyList>
+						<Property Name="GridFrequencyPreset" Type="int16" Value="67"/>
+						<Property Name="Tempo" Type="Real64" Value="90"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E08D5B1-EA04-49C9-9828-89D98FD2B816}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AD4C00B6-57B6-4B34-8651-9F6916328172}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<MusicSegment Name="Main_Loop" ID="{B769A31A-5A88-45AF-8FDE-6ACD74FF50B4}" ShortID="42051762">
+							<PropertyList>
+								<Property Name="EndPosition" Type="Real64" Value="3340.61302792125"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E08D5B1-EA04-49C9-9828-89D98FD2B816}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AD4C00B6-57B6-4B34-8651-9F6916328172}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicTrack Name="empty" ID="{2B31D8EF-33D9-4078-83AD-1B9A289B042D}" ShortID="685765717">
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AD4C00B6-57B6-4B34-8651-9F6916328172}"/>
+										</Reference>
+									</ReferenceList>
+									<TransitionList>
+										<MusicTransition Name="Root" ID="{F56D9B9F-26EF-45F4-B073-25D4FC3CC3B9}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</TransitionList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{F7C0BDA4-38F9-450F-A90D-4F812D1C7D2B}"/>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Cues">
+									<Reference>
+										<Local>
+											<MusicCue Name="Entry Cue" ID="{B064E2AE-DF5C-44FB-B166-6C964FF1787B}"/>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<MusicCue Name="Exit Cue" ID="{42A8188D-A70E-472E-BFD2-4C9EBB77D07B}">
+												<PropertyList>
+													<Property Name="CueType" Type="int16" Value="1"/>
+													<Property Name="TimeMs" Type="Real64" Value="2666.66666666667"/>
+												</PropertyList>
+											</MusicCue>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</MusicSegment>
+					</ChildrenList>
+					<TransitionList>
+						<MusicTransition Name="Root" ID="{A6F202F1-0B77-4DF2-93E9-36410CD5C927}">
+							<PropertyList>
+								<Property Name="IsFolder" Type="bool" Value="True"/>
+							</PropertyList>
+							<ChildrenList>
+								<MusicTransition Name="Transition" ID="{900D6376-7759-4735-8523-10C0ADC00301}">
+									<TransitionInfo/>
+								</MusicTransition>
+							</ChildrenList>
+							<TransitionInfo/>
+						</MusicTransition>
+					</TransitionList>
+					<ObjectLists>
+						<ObjectList Name="RTPC">
+							<Reference>
+								<Local>
+									<RTPC Name="" ID="{9EC6D4F2-6B2D-4857-B756-6F1197D3E31C}" ShortID="714826602">
+										<PropertyList>
+											<Property Name="PropertyName" Type="string" Value="PlaybackSpeed"/>
+										</PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="Tempo" ID="{8F7842CF-D246-4BFD-BD6F-DC51F94DAA7E}" WorkUnitID="{55199D78-4FA9-420C-A6F7-08AE99567410}"/>
+											</Reference>
+											<Reference Name="Curve">
+												<Custom>
+													<Curve Name="" ID="{6C26F4C9-F5F9-4D71-9EDF-D0AAB8200DC0}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="1"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>45</XPos>
+																<YPos>0.5</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>90</XPos>
+																<YPos>1</YPos>
+																<Flags>0</Flags>
+															</Point>
+															<Point>
+																<XPos>180</XPos>
+																<YPos>2</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</Custom>
+											</Reference>
+										</ReferenceList>
+									</RTPC>
+								</Local>
+							</Reference>
+						</ObjectList>
+					</ObjectLists>
+					<Playlist>
+						<MusicPlaylistItem Name="" ID="{6A67B7CC-9ED6-40AA-8B56-0B891FF7D7F2}" ShortID="122629990">
+							<PropertyList>
+								<Property Name="LoopCount" Type="int16" Value="0"/>
+							</PropertyList>
+							<ChildrenList>
+								<MusicPlaylistItem Name="" ID="{E9423C03-84C1-4ACF-ACCD-C0D06CF44971}" ShortID="156523809">
+									<PropertyList>
+										<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+									</PropertyList>
+									<SegmentRef Name="Main_Loop" ID="{B769A31A-5A88-45AF-8FDE-6ACD74FF50B4}"/>
+								</MusicPlaylistItem>
+							</ChildrenList>
+						</MusicPlaylistItem>
+					</Playlist>
+				</MusicPlaylistContainer>
+				<MusicSwitchContainer Name="Note_Trigger" ID="{BB8543ED-4108-4257-861F-6BD35FF9BED0}" ShortID="902231738">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E08D5B1-EA04-49C9-9828-89D98FD2B816}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AD4C00B6-57B6-4B34-8651-9F6916328172}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<MusicSegment Name="Harp_Trigger_4" ID="{B95EA0BC-234C-4B1C-89B2-32F2FD29506F}" ShortID="423537256">
+							<PropertyList>
+								<Property Name="OverrideMidiTarget" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-1</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E08D5B1-EA04-49C9-9828-89D98FD2B816}"/>
+								</Reference>
+								<Reference Name="MidiTarget">
+									<ObjectRef Name="KSHarp" ID="{A6F9B73A-3B19-4E28-9C38-71A7BBF66AAB}" WorkUnitID="{D73AEB30-A411-4A82-9240-A8D9F5FD0045}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AD4C00B6-57B6-4B34-8651-9F6916328172}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicTrack Name="MIDI_Note" ID="{175BEB3D-3635-42CE-B448-9BF79A785EA2}" ShortID="138794232">
+									<PropertyList>
+										<Property Name="MusicTrackType" Type="int16" Value="3"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AD4C00B6-57B6-4B34-8651-9F6916328172}"/>
+										</Reference>
+										<Reference Name="SwitchGroupOrStateGroup">
+											<ObjectRef Name="Pitch" ID="{85C98A6C-4D06-454F-9159-09D6EC270468}" WorkUnitID="{BB8E6185-FD61-4C91-AEE7-F1816F7129AD}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MidiFileSource Name="E4_16" ID="{45E50B43-888C-4982-9B65-20B3A272DDE7}" ShortID="13836558">
+											<Language>SFX</Language>
+											<MidiFile>E4_16.mid</MidiFile>
+											<MediaIDList>
+												<MediaID ID="13836558"/>
+											</MediaIDList>
+										</MidiFileSource>
+										<MidiFileSource Name="F4_16" ID="{A51C5418-F2C0-45B9-937B-1ED0739FE2CB}" ShortID="249309058">
+											<Language>SFX</Language>
+											<MidiFile>F4_16.mid</MidiFile>
+											<MediaIDList>
+												<MediaID ID="249309058"/>
+											</MediaIDList>
+										</MidiFileSource>
+										<MidiFileSource Name="D#4_16" ID="{81234020-FECA-4DD8-82A7-DAF82726BCBD}" ShortID="704411920">
+											<Language>SFX</Language>
+											<MidiFile>D#4_16.mid</MidiFile>
+											<MediaIDList>
+												<MediaID ID="704411920"/>
+											</MediaIDList>
+										</MidiFileSource>
+										<MidiFileSource Name="D4_16" ID="{A5DAD641-22EA-46F7-BA0E-E410E43B59C1}" ShortID="799545800">
+											<Language>SFX</Language>
+											<MidiFile>D4_16.mid</MidiFile>
+											<MediaIDList>
+												<MediaID ID="799545800"/>
+											</MediaIDList>
+										</MidiFileSource>
+										<MidiFileSource Name="C#4_16" ID="{D596303A-8C38-4935-A08F-E01362832DCA}" ShortID="1038480441">
+											<Language>SFX</Language>
+											<MidiFile>C#4_16.mid</MidiFile>
+											<MediaIDList>
+												<MediaID ID="1038480441"/>
+											</MediaIDList>
+										</MidiFileSource>
+										<MidiFileSource Name="C4_16" ID="{8755EAB0-3F6E-45F9-A9CC-275688C88417}" ShortID="912392590">
+											<Language>SFX</Language>
+											<MidiFile>C4_16.mid</MidiFile>
+											<MediaIDList>
+												<MediaID ID="912392590"/>
+											</MediaIDList>
+										</MidiFileSource>
+										<MidiFileSource Name="F#4_16" ID="{9E1E9A59-ADAD-48A9-B3BB-C26DBC01FC8D}" ShortID="807234091">
+											<Language>SFX</Language>
+											<MidiFile>F#4_16.mid</MidiFile>
+											<MediaIDList>
+												<MediaID ID="807234091"/>
+											</MediaIDList>
+										</MidiFileSource>
+										<MidiFileSource Name="G#4_16" ID="{BABBB1E1-DC46-4ACE-A19C-E8F49A1351D1}" ShortID="836161079">
+											<Language>SFX</Language>
+											<MidiFile>G#4_16.mid</MidiFile>
+											<MediaIDList>
+												<MediaID ID="836161079"/>
+											</MediaIDList>
+										</MidiFileSource>
+										<MidiFileSource Name="G4_16" ID="{50676AA5-620C-4BCE-BE76-94C1217F4D93}" ShortID="1030110209">
+											<Language>SFX</Language>
+											<MidiFile>G4_16.mid</MidiFile>
+											<MediaIDList>
+												<MediaID ID="1030110209"/>
+											</MediaIDList>
+										</MidiFileSource>
+										<MidiFileSource Name="A4_16" ID="{2241C060-090B-4D32-823F-5F9E7220AEBF}" ShortID="1006477849">
+											<Language>SFX</Language>
+											<MidiFile>A4_16.mid</MidiFile>
+											<MediaIDList>
+												<MediaID ID="1006477849"/>
+											</MediaIDList>
+										</MidiFileSource>
+										<MidiFileSource Name="A#4_16" ID="{1EF635D9-E8EA-474C-8F1E-48B8A1922EF0}" ShortID="964226334">
+											<Language>SFX</Language>
+											<MidiFile>A#4_16.mid</MidiFile>
+											<MediaIDList>
+												<MediaID ID="964226334"/>
+											</MediaIDList>
+										</MidiFileSource>
+										<MidiFileSource Name="B4_16" ID="{9784CC88-887A-4187-AB1A-4F89571EFA5B}" ShortID="874143737">
+											<Language>SFX</Language>
+											<MidiFile>B4_16.mid</MidiFile>
+											<MediaIDList>
+												<MediaID ID="874143737"/>
+											</MediaIDList>
+										</MidiFileSource>
+									</ChildrenList>
+									<TransitionList>
+										<MusicTransition Name="Root" ID="{586F7FDC-7CD3-49C0-A275-AC3674CF0006}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<ChildrenList>
+												<MusicTransition Name="Transition" ID="{73F0F0AC-9F63-4E1B-8E07-F4A81A74041A}">
+													<TransitionInfo/>
+												</MusicTransition>
+											</ChildrenList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</TransitionList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{E95E86C6-F7FA-4EBD-A5F3-A6BA5691DA8C}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClipMidi Name="C4_16" ID="{098737C8-9DFD-4C62-B05D-77BCB93E3B95}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="125"/>
+																			</PropertyList>
+																			<MidiSourceRef Name="C4_16" ID="{8755EAB0-3F6E-45F9-A9CC-275688C88417}"/>
+																		</MusicClipMidi>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="C" ID="{9AE5F630-1B25-4CFC-B214-A021C3C527F4}" WorkUnitID="{BB8E6185-FD61-4C91-AEE7-F1816F7129AD}"/>
+															</Reference>
+														</ReferenceList>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{A36D061A-2267-461F-BD66-729574472AF7}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClipMidi Name="C#4_16" ID="{7EF84C37-2C0B-42F3-9682-8827AACAC5CC}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="125"/>
+																			</PropertyList>
+																			<MidiSourceRef Name="C#4_16" ID="{D596303A-8C38-4935-A08F-E01362832DCA}"/>
+																		</MusicClipMidi>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="C_sharp" ID="{D01B9261-DF49-4881-A7CA-6674F2BD800B}" WorkUnitID="{BB8E6185-FD61-4C91-AEE7-F1816F7129AD}"/>
+															</Reference>
+														</ReferenceList>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{3C17A62A-3922-4558-BEE9-FE0A14B4707C}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClipMidi Name="D4_16" ID="{35B12126-7DD0-4D50-A8D8-18E0B94B841E}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="125"/>
+																			</PropertyList>
+																			<MidiSourceRef Name="D4_16" ID="{A5DAD641-22EA-46F7-BA0E-E410E43B59C1}"/>
+																		</MusicClipMidi>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="D" ID="{2D97AF80-B47A-4257-ADCD-2F929489B148}" WorkUnitID="{BB8E6185-FD61-4C91-AEE7-F1816F7129AD}"/>
+															</Reference>
+														</ReferenceList>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{99517C2E-E8AD-4DE5-8069-690D2DB7D283}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClipMidi Name="D#4_16" ID="{09AB6B4E-7011-4358-8AF9-2F37B1F889BF}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="125"/>
+																			</PropertyList>
+																			<MidiSourceRef Name="D#4_16" ID="{81234020-FECA-4DD8-82A7-DAF82726BCBD}"/>
+																		</MusicClipMidi>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="D_sharp" ID="{B8AD9B42-BE64-4E4B-8878-46804031A88E}" WorkUnitID="{BB8E6185-FD61-4C91-AEE7-F1816F7129AD}"/>
+															</Reference>
+														</ReferenceList>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{5544B56C-64EB-40F7-96D4-3188BAA16EA6}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClipMidi Name="E4_16" ID="{02BFA2B4-A4F5-4BC5-8B47-07AE43D8DDE2}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="125"/>
+																			</PropertyList>
+																			<MidiSourceRef Name="E4_16" ID="{45E50B43-888C-4982-9B65-20B3A272DDE7}"/>
+																		</MusicClipMidi>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="E" ID="{5F18C1A7-8A28-4F3C-8383-90A1A3D7E1FB}" WorkUnitID="{BB8E6185-FD61-4C91-AEE7-F1816F7129AD}"/>
+															</Reference>
+														</ReferenceList>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{F4A8492F-AF3F-4299-83AD-1AAB49F5282D}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClipMidi Name="F4_16" ID="{8B3CE103-38FC-4326-B38B-D881A65FEDCA}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="125"/>
+																			</PropertyList>
+																			<MidiSourceRef Name="F4_16" ID="{A51C5418-F2C0-45B9-937B-1ED0739FE2CB}"/>
+																		</MusicClipMidi>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="F" ID="{64B3B6F4-5B41-43E3-9C50-10382C6F9BFA}" WorkUnitID="{BB8E6185-FD61-4C91-AEE7-F1816F7129AD}"/>
+															</Reference>
+														</ReferenceList>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{DE22842C-F6CB-440D-86C6-CEF2A4892166}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClipMidi Name="F#4_16" ID="{EDC895DB-00FF-477B-A9B8-AD3236E0FBF8}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="125"/>
+																			</PropertyList>
+																			<MidiSourceRef Name="F#4_16" ID="{9E1E9A59-ADAD-48A9-B3BB-C26DBC01FC8D}"/>
+																		</MusicClipMidi>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="F_sharp" ID="{1F29AB0C-5AB9-49B9-8449-D33ECEA31D1E}" WorkUnitID="{BB8E6185-FD61-4C91-AEE7-F1816F7129AD}"/>
+															</Reference>
+														</ReferenceList>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{64970817-8071-4D7C-9346-20AA8EBE8DD7}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClipMidi Name="G4_16" ID="{AE93F822-1B6F-484F-ABCC-D82F0F0EF544}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="125"/>
+																			</PropertyList>
+																			<MidiSourceRef Name="G4_16" ID="{50676AA5-620C-4BCE-BE76-94C1217F4D93}"/>
+																		</MusicClipMidi>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="G" ID="{BC311CF6-3AC8-433F-A4CE-548EACD7AA29}" WorkUnitID="{BB8E6185-FD61-4C91-AEE7-F1816F7129AD}"/>
+															</Reference>
+														</ReferenceList>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{52F195E2-5B88-4775-93AF-98C7C791DC35}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClipMidi Name="G#4_16" ID="{ACA8862B-CA35-4904-BB36-0B1D57B7B102}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="125"/>
+																			</PropertyList>
+																			<MidiSourceRef Name="G#4_16" ID="{BABBB1E1-DC46-4ACE-A19C-E8F49A1351D1}"/>
+																		</MusicClipMidi>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="G_sharp" ID="{1AA1CE70-EA5B-4B91-980C-0E578B45532B}" WorkUnitID="{BB8E6185-FD61-4C91-AEE7-F1816F7129AD}"/>
+															</Reference>
+														</ReferenceList>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{A22C8169-0A93-4BDF-B4B2-3B2EAA5CC97B}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClipMidi Name="A4_16" ID="{69CF0658-C805-4F2A-BAD9-05E9363BB70C}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="125"/>
+																			</PropertyList>
+																			<MidiSourceRef Name="A4_16" ID="{2241C060-090B-4D32-823F-5F9E7220AEBF}"/>
+																		</MusicClipMidi>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="A" ID="{80DE4746-DACE-4E70-A541-7D40B1BD7430}" WorkUnitID="{BB8E6185-FD61-4C91-AEE7-F1816F7129AD}"/>
+															</Reference>
+														</ReferenceList>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{17C13EEA-36A2-49BD-85C4-2C9D7F4C64A8}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClipMidi Name="A#4_16" ID="{EC9A68A4-FD47-4F3D-92D0-F8F7F850A27E}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="125"/>
+																			</PropertyList>
+																			<MidiSourceRef Name="A#4_16" ID="{1EF635D9-E8EA-474C-8F1E-48B8A1922EF0}"/>
+																		</MusicClipMidi>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="A_sharp" ID="{93890C6E-1F9F-40A8-821D-B8B1B957E2B3}" WorkUnitID="{BB8E6185-FD61-4C91-AEE7-F1816F7129AD}"/>
+															</Reference>
+														</ReferenceList>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{220D6045-E133-452A-91E9-C3A86287FF03}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClipMidi Name="B4_16" ID="{35D8A505-C577-4CEB-9EFB-73E5A83A0FBF}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="125"/>
+																			</PropertyList>
+																			<MidiSourceRef Name="B4_16" ID="{9784CC88-887A-4187-AB1A-4F89571EFA5B}"/>
+																		</MusicClipMidi>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="B" ID="{BC6FB9CA-118E-4890-93B4-DF6EDA326648}" WorkUnitID="{BB8E6185-FD61-4C91-AEE7-F1816F7129AD}"/>
+															</Reference>
+														</ReferenceList>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Cues">
+									<Reference>
+										<Local>
+											<MusicCue Name="Entry Cue" ID="{03165551-FF4C-4263-8571-63B9DB7CE735}"/>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<MusicCue Name="Exit Cue" ID="{954E0699-696A-4370-927E-081C34B8523B}">
+												<PropertyList>
+													<Property Name="CueType" Type="int16" Value="1"/>
+													<Property Name="TimeMs" Type="Real64" Value="1000"/>
+												</PropertyList>
+											</MusicCue>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</MusicSegment>
+						<MusicSegment Name="Recorder_Trigger_4" ID="{9D167883-968A-4C92-B8E7-6564A2BD6105}" ShortID="16759246">
+							<PropertyList>
+								<Property Name="OverrideMidiTarget" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E08D5B1-EA04-49C9-9828-89D98FD2B816}"/>
+								</Reference>
+								<Reference Name="MidiTarget">
+									<ObjectRef Name="AltRecorder_Stac" ID="{BB0B2918-D02B-4FFF-9370-7B2A618C7308}" WorkUnitID="{D73AEB30-A411-4A82-9240-A8D9F5FD0045}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AD4C00B6-57B6-4B34-8651-9F6916328172}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicTrack Name="MIDI_Note" ID="{C89218E1-D4B8-4D56-BA23-42FDFCBFF16A}" ShortID="132303585">
+									<PropertyList>
+										<Property Name="MusicTrackType" Type="int16" Value="3"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AD4C00B6-57B6-4B34-8651-9F6916328172}"/>
+										</Reference>
+										<Reference Name="SwitchGroupOrStateGroup">
+											<ObjectRef Name="Pitch" ID="{85C98A6C-4D06-454F-9159-09D6EC270468}" WorkUnitID="{BB8E6185-FD61-4C91-AEE7-F1816F7129AD}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MidiFileSource Name="A#4_16" ID="{E8DAA162-89A0-49E7-8DEA-B93143F182F8}" ShortID="390555612">
+											<Language>SFX</Language>
+											<MidiFile>A#4_16.mid</MidiFile>
+											<MediaIDList>
+												<MediaID ID="964226334"/>
+											</MediaIDList>
+										</MidiFileSource>
+										<MidiFileSource Name="C#4_16" ID="{046A31E9-1214-4265-94B9-28D47C7BAC61}" ShortID="1028700949">
+											<Language>SFX</Language>
+											<MidiFile>C#4_16.mid</MidiFile>
+											<MediaIDList>
+												<MediaID ID="1038480441"/>
+											</MediaIDList>
+										</MidiFileSource>
+										<MidiFileSource Name="E4_16" ID="{A0FE301A-FFB0-448F-B476-456C3650E424}" ShortID="443983684">
+											<Language>SFX</Language>
+											<MidiFile>E4_16.mid</MidiFile>
+											<MediaIDList>
+												<MediaID ID="13836558"/>
+											</MediaIDList>
+										</MidiFileSource>
+										<MidiFileSource Name="B4_16" ID="{9A2EC7F8-BF21-4E1C-9528-7306AF53C469}" ShortID="1023933487">
+											<Language>SFX</Language>
+											<MidiFile>B4_16.mid</MidiFile>
+											<MediaIDList>
+												<MediaID ID="874143737"/>
+											</MediaIDList>
+										</MidiFileSource>
+										<MidiFileSource Name="C4_16" ID="{CF7781AF-237C-4DB4-B25A-56F79F963FAA}" ShortID="695564116">
+											<Language>SFX</Language>
+											<MidiFile>C4_16.mid</MidiFile>
+											<MediaIDList>
+												<MediaID ID="912392590"/>
+											</MediaIDList>
+										</MidiFileSource>
+										<MidiFileSource Name="F#4_16" ID="{AC035FA0-836D-4A3A-840E-A2D10E3B8C3A}" ShortID="316067528">
+											<Language>SFX</Language>
+											<MidiFile>F#4_16.mid</MidiFile>
+											<MediaIDList>
+												<MediaID ID="807234091"/>
+											</MediaIDList>
+										</MidiFileSource>
+										<MidiFileSource Name="G4_16" ID="{5A9945EE-1FA0-4B3C-8C4D-5E9228D9416A}" ShortID="49922152">
+											<Language>SFX</Language>
+											<MidiFile>G4_16.mid</MidiFile>
+											<MediaIDList>
+												<MediaID ID="1030110209"/>
+											</MediaIDList>
+										</MidiFileSource>
+										<MidiFileSource Name="D#4_16" ID="{112A2CE2-FDA4-409B-8E3C-FB16F8E76397}" ShortID="679472249">
+											<Language>SFX</Language>
+											<MidiFile>D#4_16.mid</MidiFile>
+											<MediaIDList>
+												<MediaID ID="704411920"/>
+											</MediaIDList>
+										</MidiFileSource>
+										<MidiFileSource Name="G#4_16" ID="{C60A91C4-1F80-41C5-B050-B964C59D101B}" ShortID="756776428">
+											<Language>SFX</Language>
+											<MidiFile>G#4_16.mid</MidiFile>
+											<MediaIDList>
+												<MediaID ID="836161079"/>
+											</MediaIDList>
+										</MidiFileSource>
+										<MidiFileSource Name="D4_16" ID="{BE51244D-4172-4FCD-B2D9-C5045B4346EA}" ShortID="946546253">
+											<Language>SFX</Language>
+											<MidiFile>D4_16.mid</MidiFile>
+											<MediaIDList>
+												<MediaID ID="799545800"/>
+											</MediaIDList>
+										</MidiFileSource>
+										<MidiFileSource Name="F4_16" ID="{FD4816B4-C839-4208-8E91-CAAA90A34C0F}" ShortID="74947037">
+											<Language>SFX</Language>
+											<MidiFile>F4_16.mid</MidiFile>
+											<MediaIDList>
+												<MediaID ID="249309058"/>
+											</MediaIDList>
+										</MidiFileSource>
+										<MidiFileSource Name="A4_16" ID="{6C7E3063-3992-4163-A7F0-F8768713E997}" ShortID="176801898">
+											<Language>SFX</Language>
+											<MidiFile>A4_16.mid</MidiFile>
+											<MediaIDList>
+												<MediaID ID="1006477849"/>
+											</MediaIDList>
+										</MidiFileSource>
+									</ChildrenList>
+									<TransitionList>
+										<MusicTransition Name="Root" ID="{43680A99-3CAC-4304-975A-F956C1BF8536}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<ChildrenList>
+												<MusicTransition Name="Transition" ID="{4066E206-DB33-4CCB-ADC0-2794627CA436}">
+													<TransitionInfo/>
+												</MusicTransition>
+											</ChildrenList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</TransitionList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{442C9D22-262C-458E-BD1E-DAA8358A131F}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClipMidi Name="C4_16" ID="{BCA19D2D-0542-4733-80C9-382574763544}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="125"/>
+																			</PropertyList>
+																			<MidiSourceRef Name="C4_16" ID="{CF7781AF-237C-4DB4-B25A-56F79F963FAA}"/>
+																		</MusicClipMidi>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="C" ID="{9AE5F630-1B25-4CFC-B214-A021C3C527F4}" WorkUnitID="{BB8E6185-FD61-4C91-AEE7-F1816F7129AD}"/>
+															</Reference>
+														</ReferenceList>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{DE07C1F5-9604-4973-B7EC-D13338A7E698}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClipMidi Name="C#4_16" ID="{648B5D0F-B8C5-4D79-AA84-5F063B1AD069}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="125"/>
+																			</PropertyList>
+																			<MidiSourceRef Name="C#4_16" ID="{046A31E9-1214-4265-94B9-28D47C7BAC61}"/>
+																		</MusicClipMidi>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="C_sharp" ID="{D01B9261-DF49-4881-A7CA-6674F2BD800B}" WorkUnitID="{BB8E6185-FD61-4C91-AEE7-F1816F7129AD}"/>
+															</Reference>
+														</ReferenceList>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{AE1C13B1-56C7-45F0-BC5D-A11A69021659}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClipMidi Name="D4_16" ID="{E66B2FF8-23FD-4A91-9CF2-84AAFA5FACDA}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="125"/>
+																			</PropertyList>
+																			<MidiSourceRef Name="D4_16" ID="{BE51244D-4172-4FCD-B2D9-C5045B4346EA}"/>
+																		</MusicClipMidi>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="D" ID="{2D97AF80-B47A-4257-ADCD-2F929489B148}" WorkUnitID="{BB8E6185-FD61-4C91-AEE7-F1816F7129AD}"/>
+															</Reference>
+														</ReferenceList>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{81A44B19-55DC-41F8-BC44-AD7924969F73}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClipMidi Name="D#4_16" ID="{6305E927-C91B-4224-BFCD-2B94CA45F5E1}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="125"/>
+																			</PropertyList>
+																			<MidiSourceRef Name="D#4_16" ID="{112A2CE2-FDA4-409B-8E3C-FB16F8E76397}"/>
+																		</MusicClipMidi>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="D_sharp" ID="{B8AD9B42-BE64-4E4B-8878-46804031A88E}" WorkUnitID="{BB8E6185-FD61-4C91-AEE7-F1816F7129AD}"/>
+															</Reference>
+														</ReferenceList>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{28A489B7-F39B-4685-8B24-0895CC140F9E}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClipMidi Name="E4_16" ID="{03892D64-89D8-4BB2-B5C8-1A0BC24A2142}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="125"/>
+																			</PropertyList>
+																			<MidiSourceRef Name="E4_16" ID="{A0FE301A-FFB0-448F-B476-456C3650E424}"/>
+																		</MusicClipMidi>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="E" ID="{5F18C1A7-8A28-4F3C-8383-90A1A3D7E1FB}" WorkUnitID="{BB8E6185-FD61-4C91-AEE7-F1816F7129AD}"/>
+															</Reference>
+														</ReferenceList>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{F6D92034-6AB5-4F0B-BD49-55F43CBFFC82}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClipMidi Name="F4_16" ID="{706F7350-8F13-48A8-8D08-C6DEF2B57EFE}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="125"/>
+																			</PropertyList>
+																			<MidiSourceRef Name="F4_16" ID="{FD4816B4-C839-4208-8E91-CAAA90A34C0F}"/>
+																		</MusicClipMidi>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="F" ID="{64B3B6F4-5B41-43E3-9C50-10382C6F9BFA}" WorkUnitID="{BB8E6185-FD61-4C91-AEE7-F1816F7129AD}"/>
+															</Reference>
+														</ReferenceList>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{EF9BF5D7-A954-47A3-A8D1-B745FB70BD7A}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClipMidi Name="F#4_16" ID="{8BC44567-AC43-4949-B20F-388E33752A86}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="125"/>
+																			</PropertyList>
+																			<MidiSourceRef Name="F#4_16" ID="{AC035FA0-836D-4A3A-840E-A2D10E3B8C3A}"/>
+																		</MusicClipMidi>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="F_sharp" ID="{1F29AB0C-5AB9-49B9-8449-D33ECEA31D1E}" WorkUnitID="{BB8E6185-FD61-4C91-AEE7-F1816F7129AD}"/>
+															</Reference>
+														</ReferenceList>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{30D51597-2156-4C7A-BC13-243DD6FA8C2D}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClipMidi Name="G4_16" ID="{9CFB9429-E9AE-483A-8EA8-9BA19F1F3E19}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="125"/>
+																			</PropertyList>
+																			<MidiSourceRef Name="G4_16" ID="{5A9945EE-1FA0-4B3C-8C4D-5E9228D9416A}"/>
+																		</MusicClipMidi>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="G" ID="{BC311CF6-3AC8-433F-A4CE-548EACD7AA29}" WorkUnitID="{BB8E6185-FD61-4C91-AEE7-F1816F7129AD}"/>
+															</Reference>
+														</ReferenceList>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{43D68D41-9B9F-4386-A449-76E29769993B}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClipMidi Name="G#4_16" ID="{864CD148-1870-43B5-9941-BB844CD2B6AB}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="125"/>
+																			</PropertyList>
+																			<MidiSourceRef Name="G#4_16" ID="{C60A91C4-1F80-41C5-B050-B964C59D101B}"/>
+																		</MusicClipMidi>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="G_sharp" ID="{1AA1CE70-EA5B-4B91-980C-0E578B45532B}" WorkUnitID="{BB8E6185-FD61-4C91-AEE7-F1816F7129AD}"/>
+															</Reference>
+														</ReferenceList>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{9204AE0C-45D1-4E3D-91D1-C7BD2083AC3E}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClipMidi Name="A4_16" ID="{AF05665F-9478-47BF-ACF8-ED9E62A0C205}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="125"/>
+																			</PropertyList>
+																			<MidiSourceRef Name="A4_16" ID="{6C7E3063-3992-4163-A7F0-F8768713E997}"/>
+																		</MusicClipMidi>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="A" ID="{80DE4746-DACE-4E70-A541-7D40B1BD7430}" WorkUnitID="{BB8E6185-FD61-4C91-AEE7-F1816F7129AD}"/>
+															</Reference>
+														</ReferenceList>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{E643A8C3-80B8-42F1-A69A-9345CDC77275}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClipMidi Name="A#4_16" ID="{6382E92C-04B0-473E-AA24-5265EED5BA40}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="125"/>
+																			</PropertyList>
+																			<MidiSourceRef Name="A#4_16" ID="{E8DAA162-89A0-49E7-8DEA-B93143F182F8}"/>
+																		</MusicClipMidi>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="A_sharp" ID="{93890C6E-1F9F-40A8-821D-B8B1B957E2B3}" WorkUnitID="{BB8E6185-FD61-4C91-AEE7-F1816F7129AD}"/>
+															</Reference>
+														</ReferenceList>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{D3DD9B63-1120-4ACE-AAA7-7063203481A4}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClipMidi Name="B4_16" ID="{5B09BF94-247E-4DED-A5B0-F94926B4E343}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="125"/>
+																			</PropertyList>
+																			<MidiSourceRef Name="B4_16" ID="{9A2EC7F8-BF21-4E1C-9528-7306AF53C469}"/>
+																		</MusicClipMidi>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="B" ID="{BC6FB9CA-118E-4890-93B4-DF6EDA326648}" WorkUnitID="{BB8E6185-FD61-4C91-AEE7-F1816F7129AD}"/>
+															</Reference>
+														</ReferenceList>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Cues">
+									<Reference>
+										<Local>
+											<MusicCue Name="Entry Cue" ID="{3ED3B540-D1F9-4062-A95D-56D17497E685}"/>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<MusicCue Name="Exit Cue" ID="{E7BB5BC1-1885-4FDC-899F-78AA83F5EDCA}">
+												<PropertyList>
+													<Property Name="CueType" Type="int16" Value="1"/>
+													<Property Name="TimeMs" Type="Real64" Value="1000"/>
+												</PropertyList>
+											</MusicCue>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</MusicSegment>
+						<MusicSegment Name="Balafon_Trigger_4" ID="{93600545-103B-48C7-86CD-A8E723EAFA9B}" ShortID="94729860">
+							<PropertyList>
+								<Property Name="OverrideMidiTarget" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>3</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E08D5B1-EA04-49C9-9828-89D98FD2B816}"/>
+								</Reference>
+								<Reference Name="MidiTarget">
+									<ObjectRef Name="Balafon" ID="{32940895-D081-4017-AF67-65B765074D7F}" WorkUnitID="{D73AEB30-A411-4A82-9240-A8D9F5FD0045}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AD4C00B6-57B6-4B34-8651-9F6916328172}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicTrack Name="MIDI_Note" ID="{47F756E8-F2B8-435D-8FAF-35BB92E27B02}" ShortID="377280165">
+									<PropertyList>
+										<Property Name="MusicTrackType" Type="int16" Value="3"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AD4C00B6-57B6-4B34-8651-9F6916328172}"/>
+										</Reference>
+										<Reference Name="SwitchGroupOrStateGroup">
+											<ObjectRef Name="Pitch" ID="{85C98A6C-4D06-454F-9159-09D6EC270468}" WorkUnitID="{BB8E6185-FD61-4C91-AEE7-F1816F7129AD}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MidiFileSource Name="E4_16" ID="{78E4999D-346F-478E-95F7-C0D7305EFB4A}" ShortID="185487245">
+											<Language>SFX</Language>
+											<MidiFile>E4_16.mid</MidiFile>
+											<MediaIDList>
+												<MediaID ID="13836558"/>
+											</MediaIDList>
+										</MidiFileSource>
+										<MidiFileSource Name="F4_16" ID="{2093B459-CEC7-4364-8AF9-1CE094079B93}" ShortID="225453243">
+											<Language>SFX</Language>
+											<MidiFile>F4_16.mid</MidiFile>
+											<MediaIDList>
+												<MediaID ID="249309058"/>
+											</MediaIDList>
+										</MidiFileSource>
+										<MidiFileSource Name="D#4_16" ID="{04147D86-ED58-433A-914A-E71A0EDAB65C}" ShortID="144660482">
+											<Language>SFX</Language>
+											<MidiFile>D#4_16.mid</MidiFile>
+											<MediaIDList>
+												<MediaID ID="704411920"/>
+											</MediaIDList>
+										</MidiFileSource>
+										<MidiFileSource Name="D4_16" ID="{309A0FE2-41DC-4F0B-85DD-0F6140B0EA5F}" ShortID="171240920">
+											<Language>SFX</Language>
+											<MidiFile>D4_16.mid</MidiFile>
+											<MediaIDList>
+												<MediaID ID="799545800"/>
+											</MediaIDList>
+										</MidiFileSource>
+										<MidiFileSource Name="C#4_16" ID="{BD1DA445-8B1E-44B3-BF5B-959772364A92}" ShortID="485555316">
+											<Language>SFX</Language>
+											<MidiFile>C#4_16.mid</MidiFile>
+											<MediaIDList>
+												<MediaID ID="1038480441"/>
+											</MediaIDList>
+										</MidiFileSource>
+										<MidiFileSource Name="C4_16" ID="{14E8C04A-C983-4FD8-9EE2-0E8BE7EE64CB}" ShortID="924704197">
+											<Language>SFX</Language>
+											<MidiFile>C4_16.mid</MidiFile>
+											<MediaIDList>
+												<MediaID ID="912392590"/>
+											</MediaIDList>
+										</MidiFileSource>
+										<MidiFileSource Name="F#4_16" ID="{E3958EE1-E540-4531-8FCD-CE3D85EE3834}" ShortID="564276381">
+											<Language>SFX</Language>
+											<MidiFile>F#4_16.mid</MidiFile>
+											<MediaIDList>
+												<MediaID ID="807234091"/>
+											</MediaIDList>
+										</MidiFileSource>
+										<MidiFileSource Name="G#4_16" ID="{18E7B413-9091-4E91-A9E9-88BC1788551E}" ShortID="528801416">
+											<Language>SFX</Language>
+											<MidiFile>G#4_16.mid</MidiFile>
+											<MediaIDList>
+												<MediaID ID="836161079"/>
+											</MediaIDList>
+										</MidiFileSource>
+										<MidiFileSource Name="G4_16" ID="{0CEE6A14-104A-4B73-83F1-8DDF28F9BEBA}" ShortID="567373304">
+											<Language>SFX</Language>
+											<MidiFile>G4_16.mid</MidiFile>
+											<MediaIDList>
+												<MediaID ID="1030110209"/>
+											</MediaIDList>
+										</MidiFileSource>
+										<MidiFileSource Name="A4_16" ID="{D161393B-FB97-4C24-9DF8-9B84FBEEE61E}" ShortID="569576726">
+											<Language>SFX</Language>
+											<MidiFile>A4_16.mid</MidiFile>
+											<MediaIDList>
+												<MediaID ID="1006477849"/>
+											</MediaIDList>
+										</MidiFileSource>
+										<MidiFileSource Name="A#4_16" ID="{20461D93-78A9-49F3-B239-139A945DBB1A}" ShortID="640854429">
+											<Language>SFX</Language>
+											<MidiFile>A#4_16.mid</MidiFile>
+											<MediaIDList>
+												<MediaID ID="964226334"/>
+											</MediaIDList>
+										</MidiFileSource>
+										<MidiFileSource Name="B4_16" ID="{F65D6549-5D72-4C7C-84F8-50AD5B138BD2}" ShortID="162569232">
+											<Language>SFX</Language>
+											<MidiFile>B4_16.mid</MidiFile>
+											<MediaIDList>
+												<MediaID ID="874143737"/>
+											</MediaIDList>
+										</MidiFileSource>
+									</ChildrenList>
+									<TransitionList>
+										<MusicTransition Name="Root" ID="{C9E9AD7E-C1B8-4152-A906-647C6B7BF25B}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<ChildrenList>
+												<MusicTransition Name="Transition" ID="{38CCBD07-2E11-4081-B56A-312EF2B5CB75}">
+													<TransitionInfo/>
+												</MusicTransition>
+											</ChildrenList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</TransitionList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{9A135B96-9BCD-42C4-992E-EC2A44FC2247}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClipMidi Name="C4_16" ID="{874AA2A4-B7D4-48BA-99FB-FF7CF9724B3B}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="125"/>
+																			</PropertyList>
+																			<MidiSourceRef Name="C4_16" ID="{14E8C04A-C983-4FD8-9EE2-0E8BE7EE64CB}"/>
+																		</MusicClipMidi>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="C" ID="{9AE5F630-1B25-4CFC-B214-A021C3C527F4}" WorkUnitID="{BB8E6185-FD61-4C91-AEE7-F1816F7129AD}"/>
+															</Reference>
+														</ReferenceList>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{F53EF41D-D56F-4CBF-B80C-BCE170765B12}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClipMidi Name="C#4_16" ID="{8E73DFF9-A987-48AC-BD0C-D69129FE52C8}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="125"/>
+																			</PropertyList>
+																			<MidiSourceRef Name="C#4_16" ID="{BD1DA445-8B1E-44B3-BF5B-959772364A92}"/>
+																		</MusicClipMidi>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="C_sharp" ID="{D01B9261-DF49-4881-A7CA-6674F2BD800B}" WorkUnitID="{BB8E6185-FD61-4C91-AEE7-F1816F7129AD}"/>
+															</Reference>
+														</ReferenceList>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{F82BC3E6-8542-40B7-BB77-3EDF54FEF21A}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClipMidi Name="D4_16" ID="{68BDC29C-AA73-44FB-8081-F9F7D39FFE6D}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="125"/>
+																			</PropertyList>
+																			<MidiSourceRef Name="D4_16" ID="{309A0FE2-41DC-4F0B-85DD-0F6140B0EA5F}"/>
+																		</MusicClipMidi>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="D" ID="{2D97AF80-B47A-4257-ADCD-2F929489B148}" WorkUnitID="{BB8E6185-FD61-4C91-AEE7-F1816F7129AD}"/>
+															</Reference>
+														</ReferenceList>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{59CF4988-3B59-41B1-8C84-4BCBAD738207}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClipMidi Name="D#4_16" ID="{FE1C1DBC-E41A-4748-9518-CE30C5B06F1E}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="125"/>
+																			</PropertyList>
+																			<MidiSourceRef Name="D#4_16" ID="{04147D86-ED58-433A-914A-E71A0EDAB65C}"/>
+																		</MusicClipMidi>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="D_sharp" ID="{B8AD9B42-BE64-4E4B-8878-46804031A88E}" WorkUnitID="{BB8E6185-FD61-4C91-AEE7-F1816F7129AD}"/>
+															</Reference>
+														</ReferenceList>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{09496C41-AF96-43F0-86CE-6B210F3E5283}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClipMidi Name="E4_16" ID="{3A760D04-3ABE-403F-9BA8-32A6A35E092A}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="125"/>
+																			</PropertyList>
+																			<MidiSourceRef Name="E4_16" ID="{78E4999D-346F-478E-95F7-C0D7305EFB4A}"/>
+																		</MusicClipMidi>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="E" ID="{5F18C1A7-8A28-4F3C-8383-90A1A3D7E1FB}" WorkUnitID="{BB8E6185-FD61-4C91-AEE7-F1816F7129AD}"/>
+															</Reference>
+														</ReferenceList>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{8E777D9B-38EB-44B6-9051-BA0D36FB56DC}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClipMidi Name="F4_16" ID="{262847CC-D685-4509-BBC0-560B93A836A0}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="125"/>
+																			</PropertyList>
+																			<MidiSourceRef Name="F4_16" ID="{2093B459-CEC7-4364-8AF9-1CE094079B93}"/>
+																		</MusicClipMidi>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="F" ID="{64B3B6F4-5B41-43E3-9C50-10382C6F9BFA}" WorkUnitID="{BB8E6185-FD61-4C91-AEE7-F1816F7129AD}"/>
+															</Reference>
+														</ReferenceList>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{0D3BD717-2C19-4D46-9E76-29383CFCBFB6}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClipMidi Name="F#4_16" ID="{83FF6AB3-0EFF-42C5-87E2-82A2F25CD9B5}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="125"/>
+																			</PropertyList>
+																			<MidiSourceRef Name="F#4_16" ID="{E3958EE1-E540-4531-8FCD-CE3D85EE3834}"/>
+																		</MusicClipMidi>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="F_sharp" ID="{1F29AB0C-5AB9-49B9-8449-D33ECEA31D1E}" WorkUnitID="{BB8E6185-FD61-4C91-AEE7-F1816F7129AD}"/>
+															</Reference>
+														</ReferenceList>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{A2EAE052-5B6D-4E1B-A576-2B69D792BF73}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClipMidi Name="G4_16" ID="{4D3C91A0-4980-434A-8794-1367D97672E2}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="125"/>
+																			</PropertyList>
+																			<MidiSourceRef Name="G4_16" ID="{0CEE6A14-104A-4B73-83F1-8DDF28F9BEBA}"/>
+																		</MusicClipMidi>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="G" ID="{BC311CF6-3AC8-433F-A4CE-548EACD7AA29}" WorkUnitID="{BB8E6185-FD61-4C91-AEE7-F1816F7129AD}"/>
+															</Reference>
+														</ReferenceList>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{0FF95FA7-D4C4-49F7-9C1A-7AA7278717CA}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClipMidi Name="G#4_16" ID="{D0A8D82C-AABA-40C4-B32C-1B87DFFC728D}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="125"/>
+																			</PropertyList>
+																			<MidiSourceRef Name="G#4_16" ID="{18E7B413-9091-4E91-A9E9-88BC1788551E}"/>
+																		</MusicClipMidi>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="G_sharp" ID="{1AA1CE70-EA5B-4B91-980C-0E578B45532B}" WorkUnitID="{BB8E6185-FD61-4C91-AEE7-F1816F7129AD}"/>
+															</Reference>
+														</ReferenceList>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{9BA32A13-9096-4CE7-AC6D-BC8204D4FE44}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClipMidi Name="A4_16" ID="{EA45914F-80B0-44F5-913F-624AA1C90348}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="125"/>
+																			</PropertyList>
+																			<MidiSourceRef Name="A4_16" ID="{D161393B-FB97-4C24-9DF8-9B84FBEEE61E}"/>
+																		</MusicClipMidi>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="A" ID="{80DE4746-DACE-4E70-A541-7D40B1BD7430}" WorkUnitID="{BB8E6185-FD61-4C91-AEE7-F1816F7129AD}"/>
+															</Reference>
+														</ReferenceList>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{EC9A0D36-8539-4944-AF83-B9AE395ADE06}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClipMidi Name="A#4_16" ID="{75A19665-131F-44D7-B510-EACA4524024F}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="125"/>
+																			</PropertyList>
+																			<MidiSourceRef Name="A#4_16" ID="{20461D93-78A9-49F3-B239-139A945DBB1A}"/>
+																		</MusicClipMidi>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="A_sharp" ID="{93890C6E-1F9F-40A8-821D-B8B1B957E2B3}" WorkUnitID="{BB8E6185-FD61-4C91-AEE7-F1816F7129AD}"/>
+															</Reference>
+														</ReferenceList>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{2B93ACD5-9B06-4F27-8F5C-26BE4B4DF935}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClipMidi Name="B4_16" ID="{A797AEF8-80A9-499E-ABA1-34DC97C8835E}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="125"/>
+																			</PropertyList>
+																			<MidiSourceRef Name="B4_16" ID="{F65D6549-5D72-4C7C-84F8-50AD5B138BD2}"/>
+																		</MusicClipMidi>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="B" ID="{BC6FB9CA-118E-4890-93B4-DF6EDA326648}" WorkUnitID="{BB8E6185-FD61-4C91-AEE7-F1816F7129AD}"/>
+															</Reference>
+														</ReferenceList>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Cues">
+									<Reference>
+										<Local>
+											<MusicCue Name="Entry Cue" ID="{7EE00B08-89AF-404C-B6E0-78D7D035D7FB}"/>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<MusicCue Name="Exit Cue" ID="{31368889-C6E6-45AA-AE53-E1175DE3E70E}">
+												<PropertyList>
+													<Property Name="CueType" Type="int16" Value="1"/>
+													<Property Name="TimeMs" Type="Real64" Value="1000"/>
+												</PropertyList>
+											</MusicCue>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</MusicSegment>
+						<MusicSegment Name="Xylophone_Trigger_4" ID="{971D0E86-4C4B-41C3-B88E-2B0038D66B85}" ShortID="25489317">
+							<PropertyList>
+								<Property Name="OverrideMidiTarget" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E08D5B1-EA04-49C9-9828-89D98FD2B816}"/>
+								</Reference>
+								<Reference Name="MidiTarget">
+									<ObjectRef Name="Xylo" ID="{8A0104DD-EECE-4653-8652-EA0872B21FB0}" WorkUnitID="{D73AEB30-A411-4A82-9240-A8D9F5FD0045}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AD4C00B6-57B6-4B34-8651-9F6916328172}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicTrack Name="MIDI_Note" ID="{4B40AEF6-1925-44CC-88F5-53886A1131FC}" ShortID="1003474307">
+									<PropertyList>
+										<Property Name="MusicTrackType" Type="int16" Value="3"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AD4C00B6-57B6-4B34-8651-9F6916328172}"/>
+										</Reference>
+										<Reference Name="SwitchGroupOrStateGroup">
+											<ObjectRef Name="Pitch" ID="{85C98A6C-4D06-454F-9159-09D6EC270468}" WorkUnitID="{BB8E6185-FD61-4C91-AEE7-F1816F7129AD}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MidiFileSource Name="E4_16" ID="{3A3599EF-111B-4B15-928E-E50E4F7DC0E5}" ShortID="406484976">
+											<Language>SFX</Language>
+											<MidiFile>E4_16.mid</MidiFile>
+											<MediaIDList>
+												<MediaID ID="13836558"/>
+											</MediaIDList>
+										</MidiFileSource>
+										<MidiFileSource Name="F4_16" ID="{CF87452F-EB49-4EA7-8AE3-66EF7744CDD5}" ShortID="561122747">
+											<Language>SFX</Language>
+											<MidiFile>F4_16.mid</MidiFile>
+											<MediaIDList>
+												<MediaID ID="249309058"/>
+											</MediaIDList>
+										</MidiFileSource>
+										<MidiFileSource Name="D#4_16" ID="{1DC995B1-9B85-4899-A912-D0BC8A35BB61}" ShortID="587097137">
+											<Language>SFX</Language>
+											<MidiFile>D#4_16.mid</MidiFile>
+											<MediaIDList>
+												<MediaID ID="704411920"/>
+											</MediaIDList>
+										</MidiFileSource>
+										<MidiFileSource Name="D4_16" ID="{79822E13-A1A3-42E5-98EC-8EEB74A5E27C}" ShortID="279933704">
+											<Language>SFX</Language>
+											<MidiFile>D4_16.mid</MidiFile>
+											<MediaIDList>
+												<MediaID ID="799545800"/>
+											</MediaIDList>
+										</MidiFileSource>
+										<MidiFileSource Name="C#4_16" ID="{CC999346-21FB-4B32-9104-12E5F7D35E17}" ShortID="692646882">
+											<Language>SFX</Language>
+											<MidiFile>C#4_16.mid</MidiFile>
+											<MediaIDList>
+												<MediaID ID="1038480441"/>
+											</MediaIDList>
+										</MidiFileSource>
+										<MidiFileSource Name="C4_16" ID="{4D36C79A-7F95-43F5-987B-C25BEB20BC3A}" ShortID="725746778">
+											<Language>SFX</Language>
+											<MidiFile>C4_16.mid</MidiFile>
+											<MediaIDList>
+												<MediaID ID="912392590"/>
+											</MediaIDList>
+										</MidiFileSource>
+										<MidiFileSource Name="F#4_16" ID="{079F0383-276E-4B53-B517-F8E63545B0BB}" ShortID="523087403">
+											<Language>SFX</Language>
+											<MidiFile>F#4_16.mid</MidiFile>
+											<MediaIDList>
+												<MediaID ID="807234091"/>
+											</MediaIDList>
+										</MidiFileSource>
+										<MidiFileSource Name="G#4_16" ID="{EC43997D-CC5B-4053-BF54-CE23D8475E76}" ShortID="682946868">
+											<Language>SFX</Language>
+											<MidiFile>G#4_16.mid</MidiFile>
+											<MediaIDList>
+												<MediaID ID="836161079"/>
+											</MediaIDList>
+										</MidiFileSource>
+										<MidiFileSource Name="G4_16" ID="{50A5F9C1-852D-4794-AADB-0FD1BDBA6C0E}" ShortID="721906004">
+											<Language>SFX</Language>
+											<MidiFile>G4_16.mid</MidiFile>
+											<MediaIDList>
+												<MediaID ID="1030110209"/>
+											</MediaIDList>
+										</MidiFileSource>
+										<MidiFileSource Name="A4_16" ID="{11A2DB4B-F75D-431C-B10A-7308A9F28259}" ShortID="359437625">
+											<Language>SFX</Language>
+											<MidiFile>A4_16.mid</MidiFile>
+											<MediaIDList>
+												<MediaID ID="1006477849"/>
+											</MediaIDList>
+										</MidiFileSource>
+										<MidiFileSource Name="A#4_16" ID="{31B745DB-E581-440B-B600-5C627CA26083}" ShortID="900241653">
+											<Language>SFX</Language>
+											<MidiFile>A#4_16.mid</MidiFile>
+											<MediaIDList>
+												<MediaID ID="964226334"/>
+											</MediaIDList>
+										</MidiFileSource>
+										<MidiFileSource Name="B4_16" ID="{86AFA4CB-3ECE-4E5F-A396-323F0DE56AC2}" ShortID="86071223">
+											<Language>SFX</Language>
+											<MidiFile>B4_16.mid</MidiFile>
+											<MediaIDList>
+												<MediaID ID="874143737"/>
+											</MediaIDList>
+										</MidiFileSource>
+									</ChildrenList>
+									<TransitionList>
+										<MusicTransition Name="Root" ID="{349ED43D-BC85-477A-B28C-14F560BC6535}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<ChildrenList>
+												<MusicTransition Name="Transition" ID="{FAAADE95-C1CC-4937-BC57-F97266CD4790}">
+													<TransitionInfo/>
+												</MusicTransition>
+											</ChildrenList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</TransitionList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{74174C72-4971-4BDA-8FC4-48B0C9CB73B2}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClipMidi Name="C4_16" ID="{04FC18C0-A563-4027-B341-D7AA7CEBA5A1}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="125"/>
+																			</PropertyList>
+																			<MidiSourceRef Name="C4_16" ID="{4D36C79A-7F95-43F5-987B-C25BEB20BC3A}"/>
+																		</MusicClipMidi>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="C" ID="{9AE5F630-1B25-4CFC-B214-A021C3C527F4}" WorkUnitID="{BB8E6185-FD61-4C91-AEE7-F1816F7129AD}"/>
+															</Reference>
+														</ReferenceList>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{8A09445C-3878-4048-9849-62AC04C90CA5}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClipMidi Name="C#4_16" ID="{BB7FCEB9-4544-4D60-B49A-3FF3E61A4BE9}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="125"/>
+																			</PropertyList>
+																			<MidiSourceRef Name="C#4_16" ID="{CC999346-21FB-4B32-9104-12E5F7D35E17}"/>
+																		</MusicClipMidi>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="C_sharp" ID="{D01B9261-DF49-4881-A7CA-6674F2BD800B}" WorkUnitID="{BB8E6185-FD61-4C91-AEE7-F1816F7129AD}"/>
+															</Reference>
+														</ReferenceList>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{1854B583-A1FE-465F-AD27-023392EE39C7}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClipMidi Name="D4_16" ID="{4262233E-C441-4C49-9AF5-5B78BD376D2F}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="125"/>
+																			</PropertyList>
+																			<MidiSourceRef Name="D4_16" ID="{79822E13-A1A3-42E5-98EC-8EEB74A5E27C}"/>
+																		</MusicClipMidi>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="D" ID="{2D97AF80-B47A-4257-ADCD-2F929489B148}" WorkUnitID="{BB8E6185-FD61-4C91-AEE7-F1816F7129AD}"/>
+															</Reference>
+														</ReferenceList>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{27B10F96-9F1E-418E-B0F1-93405223F61A}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClipMidi Name="D#4_16" ID="{A0E70A4D-BEE6-434A-9446-078A2D53CDA7}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="125"/>
+																			</PropertyList>
+																			<MidiSourceRef Name="D#4_16" ID="{1DC995B1-9B85-4899-A912-D0BC8A35BB61}"/>
+																		</MusicClipMidi>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="D_sharp" ID="{B8AD9B42-BE64-4E4B-8878-46804031A88E}" WorkUnitID="{BB8E6185-FD61-4C91-AEE7-F1816F7129AD}"/>
+															</Reference>
+														</ReferenceList>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{1165F58D-AFFC-4DC9-9488-619890B4F820}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClipMidi Name="E4_16" ID="{4A2E191A-BD3E-49A3-BC25-44D44F85B892}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="125"/>
+																			</PropertyList>
+																			<MidiSourceRef Name="E4_16" ID="{3A3599EF-111B-4B15-928E-E50E4F7DC0E5}"/>
+																		</MusicClipMidi>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="E" ID="{5F18C1A7-8A28-4F3C-8383-90A1A3D7E1FB}" WorkUnitID="{BB8E6185-FD61-4C91-AEE7-F1816F7129AD}"/>
+															</Reference>
+														</ReferenceList>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{B88188B5-741D-4246-ADCC-96160568CDF5}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClipMidi Name="F4_16" ID="{C8C7BEC6-8CF3-4D53-9F08-41C88FD91463}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="125"/>
+																			</PropertyList>
+																			<MidiSourceRef Name="F4_16" ID="{CF87452F-EB49-4EA7-8AE3-66EF7744CDD5}"/>
+																		</MusicClipMidi>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="F" ID="{64B3B6F4-5B41-43E3-9C50-10382C6F9BFA}" WorkUnitID="{BB8E6185-FD61-4C91-AEE7-F1816F7129AD}"/>
+															</Reference>
+														</ReferenceList>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{DC60926B-A1AA-475E-8466-C4454AEE3A1D}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClipMidi Name="F#4_16" ID="{E0CD38C9-3B9F-4687-9189-1E30A6F2C3E9}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="125"/>
+																			</PropertyList>
+																			<MidiSourceRef Name="F#4_16" ID="{079F0383-276E-4B53-B517-F8E63545B0BB}"/>
+																		</MusicClipMidi>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="F_sharp" ID="{1F29AB0C-5AB9-49B9-8449-D33ECEA31D1E}" WorkUnitID="{BB8E6185-FD61-4C91-AEE7-F1816F7129AD}"/>
+															</Reference>
+														</ReferenceList>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{6DE3C7DD-A834-45D4-A918-2DB61A1A9B0B}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClipMidi Name="G4_16" ID="{912896C6-37C0-47D3-AA65-A3DDB510FF1C}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="125"/>
+																			</PropertyList>
+																			<MidiSourceRef Name="G4_16" ID="{50A5F9C1-852D-4794-AADB-0FD1BDBA6C0E}"/>
+																		</MusicClipMidi>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="G" ID="{BC311CF6-3AC8-433F-A4CE-548EACD7AA29}" WorkUnitID="{BB8E6185-FD61-4C91-AEE7-F1816F7129AD}"/>
+															</Reference>
+														</ReferenceList>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{634C1DA2-53B8-408F-AC56-DD35A683418D}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClipMidi Name="G#4_16" ID="{ED038ED9-BE76-4BAD-9F56-C2DBCAE28CFD}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="125"/>
+																			</PropertyList>
+																			<MidiSourceRef Name="G#4_16" ID="{EC43997D-CC5B-4053-BF54-CE23D8475E76}"/>
+																		</MusicClipMidi>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="G_sharp" ID="{1AA1CE70-EA5B-4B91-980C-0E578B45532B}" WorkUnitID="{BB8E6185-FD61-4C91-AEE7-F1816F7129AD}"/>
+															</Reference>
+														</ReferenceList>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{C7940F99-F033-44E3-ABC4-B7120B806512}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClipMidi Name="A4_16" ID="{3A46F960-FC51-45FB-9B8B-F4CC33C887F6}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="125"/>
+																			</PropertyList>
+																			<MidiSourceRef Name="A4_16" ID="{11A2DB4B-F75D-431C-B10A-7308A9F28259}"/>
+																		</MusicClipMidi>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="A" ID="{80DE4746-DACE-4E70-A541-7D40B1BD7430}" WorkUnitID="{BB8E6185-FD61-4C91-AEE7-F1816F7129AD}"/>
+															</Reference>
+														</ReferenceList>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{2144B688-1B5C-4350-8ED2-9B7CAB2F4BBC}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClipMidi Name="A#4_16" ID="{49E9B861-59A7-4A0A-A950-5F07F571A7A8}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="125"/>
+																			</PropertyList>
+																			<MidiSourceRef Name="A#4_16" ID="{31B745DB-E581-440B-B600-5C627CA26083}"/>
+																		</MusicClipMidi>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="A_sharp" ID="{93890C6E-1F9F-40A8-821D-B8B1B957E2B3}" WorkUnitID="{BB8E6185-FD61-4C91-AEE7-F1816F7129AD}"/>
+															</Reference>
+														</ReferenceList>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{9A85811E-6CE8-4E46-ABE2-4D323E18EFDC}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClipMidi Name="B4_16" ID="{11925D8A-EB5C-4A28-81A7-E81982E5615F}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="125"/>
+																			</PropertyList>
+																			<MidiSourceRef Name="B4_16" ID="{86AFA4CB-3ECE-4E5F-A396-323F0DE56AC2}"/>
+																		</MusicClipMidi>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="B" ID="{BC6FB9CA-118E-4890-93B4-DF6EDA326648}" WorkUnitID="{BB8E6185-FD61-4C91-AEE7-F1816F7129AD}"/>
+															</Reference>
+														</ReferenceList>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Cues">
+									<Reference>
+										<Local>
+											<MusicCue Name="Entry Cue" ID="{10AE41D5-FE7B-4CD5-8AF7-EEA7F6800C23}"/>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<MusicCue Name="Exit Cue" ID="{9636182F-77DA-4E77-9962-937962E27E71}">
+												<PropertyList>
+													<Property Name="CueType" Type="int16" Value="1"/>
+													<Property Name="TimeMs" Type="Real64" Value="1000"/>
+												</PropertyList>
+											</MusicCue>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</MusicSegment>
+						<MusicSegment Name="Kalimba_Trigger_4" ID="{DFA61C0B-1E40-4C9F-A4C1-669559A07753}" ShortID="6868795">
+							<PropertyList>
+								<Property Name="OverrideMidiTarget" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>3</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E08D5B1-EA04-49C9-9828-89D98FD2B816}"/>
+								</Reference>
+								<Reference Name="MidiTarget">
+									<ObjectRef Name="Kalimba" ID="{D6CCA23C-8D44-4E15-AF2E-448BFE6059A7}" WorkUnitID="{D73AEB30-A411-4A82-9240-A8D9F5FD0045}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AD4C00B6-57B6-4B34-8651-9F6916328172}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicTrack Name="MIDI_Note" ID="{BF294CC9-3CF3-4ED3-8887-35E5D0FD26E8}" ShortID="241268030">
+									<PropertyList>
+										<Property Name="MusicTrackType" Type="int16" Value="3"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AD4C00B6-57B6-4B34-8651-9F6916328172}"/>
+										</Reference>
+										<Reference Name="SwitchGroupOrStateGroup">
+											<ObjectRef Name="Pitch" ID="{85C98A6C-4D06-454F-9159-09D6EC270468}" WorkUnitID="{BB8E6185-FD61-4C91-AEE7-F1816F7129AD}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MidiFileSource Name="E4_16" ID="{643BBC13-6F52-4635-8A37-C40F50F444A3}" ShortID="367916799">
+											<Language>SFX</Language>
+											<MidiFile>E4_16.mid</MidiFile>
+											<MediaIDList>
+												<MediaID ID="13836558"/>
+											</MediaIDList>
+										</MidiFileSource>
+										<MidiFileSource Name="F4_16" ID="{281A286D-0923-4AB7-808B-1F85D32520A8}" ShortID="204731003">
+											<Language>SFX</Language>
+											<MidiFile>F4_16.mid</MidiFile>
+											<MediaIDList>
+												<MediaID ID="249309058"/>
+											</MediaIDList>
+										</MidiFileSource>
+										<MidiFileSource Name="D#4_16" ID="{E1BA2D24-5CC6-434B-B1CB-F7D9CF5143F2}" ShortID="948401052">
+											<Language>SFX</Language>
+											<MidiFile>D#4_16.mid</MidiFile>
+											<MediaIDList>
+												<MediaID ID="704411920"/>
+											</MediaIDList>
+										</MidiFileSource>
+										<MidiFileSource Name="D4_16" ID="{AA9E97EB-D9DD-4C55-B58C-03E78F477882}" ShortID="270950778">
+											<Language>SFX</Language>
+											<MidiFile>D4_16.mid</MidiFile>
+											<MediaIDList>
+												<MediaID ID="799545800"/>
+											</MediaIDList>
+										</MidiFileSource>
+										<MidiFileSource Name="C#4_16" ID="{CB5E7751-84A9-43D1-81F1-535EB4AA99CE}" ShortID="993609131">
+											<Language>SFX</Language>
+											<MidiFile>C#4_16.mid</MidiFile>
+											<MediaIDList>
+												<MediaID ID="1038480441"/>
+											</MediaIDList>
+										</MidiFileSource>
+										<MidiFileSource Name="C4_16" ID="{E085B027-8122-4C92-8703-F44EFD1CED6F}" ShortID="982111660">
+											<Language>SFX</Language>
+											<MidiFile>C4_16.mid</MidiFile>
+											<MediaIDList>
+												<MediaID ID="912392590"/>
+											</MediaIDList>
+										</MidiFileSource>
+										<MidiFileSource Name="F#4_16" ID="{97FB11D8-8CAB-4585-BCEE-BD0A0541B09A}" ShortID="77923222">
+											<Language>SFX</Language>
+											<MidiFile>F#4_16.mid</MidiFile>
+											<MediaIDList>
+												<MediaID ID="807234091"/>
+											</MediaIDList>
+										</MidiFileSource>
+										<MidiFileSource Name="G#4_16" ID="{8FC73441-8827-4988-9431-C2ECD1F4DB32}" ShortID="298167808">
+											<Language>SFX</Language>
+											<MidiFile>G#4_16.mid</MidiFile>
+											<MediaIDList>
+												<MediaID ID="836161079"/>
+											</MediaIDList>
+										</MidiFileSource>
+										<MidiFileSource Name="G4_16" ID="{C24F46C9-2D0B-404B-9554-64A74FFC0C28}" ShortID="671117264">
+											<Language>SFX</Language>
+											<MidiFile>G4_16.mid</MidiFile>
+											<MediaIDList>
+												<MediaID ID="1030110209"/>
+											</MediaIDList>
+										</MidiFileSource>
+										<MidiFileSource Name="A4_16" ID="{B11A6505-3ADA-4881-86D9-0A55325BC24A}" ShortID="825319117">
+											<Language>SFX</Language>
+											<MidiFile>A4_16.mid</MidiFile>
+											<MediaIDList>
+												<MediaID ID="1006477849"/>
+											</MediaIDList>
+										</MidiFileSource>
+										<MidiFileSource Name="A#4_16" ID="{E3244E17-185E-4E03-A56B-D5B38204F2A8}" ShortID="28477737">
+											<Language>SFX</Language>
+											<MidiFile>A#4_16.mid</MidiFile>
+											<MediaIDList>
+												<MediaID ID="964226334"/>
+											</MediaIDList>
+										</MidiFileSource>
+										<MidiFileSource Name="B4_16" ID="{7E2F1EDC-5E34-4486-AB4D-9A1B9A9B015E}" ShortID="724676593">
+											<Language>SFX</Language>
+											<MidiFile>B4_16.mid</MidiFile>
+											<MediaIDList>
+												<MediaID ID="874143737"/>
+											</MediaIDList>
+										</MidiFileSource>
+									</ChildrenList>
+									<TransitionList>
+										<MusicTransition Name="Root" ID="{10247FCB-E343-4482-9A44-178B13AEB146}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<ChildrenList>
+												<MusicTransition Name="Transition" ID="{4885EB7F-D3E0-4BD7-A41F-91C9DBB6FB9A}">
+													<TransitionInfo/>
+												</MusicTransition>
+											</ChildrenList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</TransitionList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{532C1F71-7B9C-4360-8639-B032385C0078}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClipMidi Name="C4_16" ID="{D786CDE3-3502-4DCA-981C-36C5C09C6CDC}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="125"/>
+																			</PropertyList>
+																			<MidiSourceRef Name="C4_16" ID="{E085B027-8122-4C92-8703-F44EFD1CED6F}"/>
+																		</MusicClipMidi>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="C" ID="{9AE5F630-1B25-4CFC-B214-A021C3C527F4}" WorkUnitID="{BB8E6185-FD61-4C91-AEE7-F1816F7129AD}"/>
+															</Reference>
+														</ReferenceList>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{A871EBFA-1CD8-4DD3-9F9E-D891BC2BC42E}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClipMidi Name="C#4_16" ID="{C369DC76-E1D0-47D3-9F29-B8CA3CFC8490}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="125"/>
+																			</PropertyList>
+																			<MidiSourceRef Name="C#4_16" ID="{CB5E7751-84A9-43D1-81F1-535EB4AA99CE}"/>
+																		</MusicClipMidi>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="C_sharp" ID="{D01B9261-DF49-4881-A7CA-6674F2BD800B}" WorkUnitID="{BB8E6185-FD61-4C91-AEE7-F1816F7129AD}"/>
+															</Reference>
+														</ReferenceList>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{4B237D7B-7271-46FF-A25A-67B9D007DDA6}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClipMidi Name="D4_16" ID="{B5549E0F-9635-4F72-BFB6-6F3A0A7850E9}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="125"/>
+																			</PropertyList>
+																			<MidiSourceRef Name="D4_16" ID="{AA9E97EB-D9DD-4C55-B58C-03E78F477882}"/>
+																		</MusicClipMidi>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="D" ID="{2D97AF80-B47A-4257-ADCD-2F929489B148}" WorkUnitID="{BB8E6185-FD61-4C91-AEE7-F1816F7129AD}"/>
+															</Reference>
+														</ReferenceList>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{C0AFFD62-D9AC-4E6E-8845-9C2491BD9962}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClipMidi Name="D#4_16" ID="{FE2B92B8-B1AC-492F-B118-BAD098A01054}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="125"/>
+																			</PropertyList>
+																			<MidiSourceRef Name="D#4_16" ID="{E1BA2D24-5CC6-434B-B1CB-F7D9CF5143F2}"/>
+																		</MusicClipMidi>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="D_sharp" ID="{B8AD9B42-BE64-4E4B-8878-46804031A88E}" WorkUnitID="{BB8E6185-FD61-4C91-AEE7-F1816F7129AD}"/>
+															</Reference>
+														</ReferenceList>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{4D45322E-688D-40F9-9A4A-D4A7CABB8A84}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClipMidi Name="E4_16" ID="{4CC3C229-D4E2-4612-B3FE-3D297B8060B2}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="125"/>
+																			</PropertyList>
+																			<MidiSourceRef Name="E4_16" ID="{643BBC13-6F52-4635-8A37-C40F50F444A3}"/>
+																		</MusicClipMidi>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="E" ID="{5F18C1A7-8A28-4F3C-8383-90A1A3D7E1FB}" WorkUnitID="{BB8E6185-FD61-4C91-AEE7-F1816F7129AD}"/>
+															</Reference>
+														</ReferenceList>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{97902A87-1032-452E-9C7B-063686501F5B}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClipMidi Name="F4_16" ID="{D88D51B6-7BA2-4996-9C09-3C9C40F64024}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="125"/>
+																			</PropertyList>
+																			<MidiSourceRef Name="F4_16" ID="{281A286D-0923-4AB7-808B-1F85D32520A8}"/>
+																		</MusicClipMidi>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="F" ID="{64B3B6F4-5B41-43E3-9C50-10382C6F9BFA}" WorkUnitID="{BB8E6185-FD61-4C91-AEE7-F1816F7129AD}"/>
+															</Reference>
+														</ReferenceList>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{C2198854-6F4B-486F-A3AA-90C49734E52D}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClipMidi Name="F#4_16" ID="{C39BB4C4-2670-4EBF-BA97-42DDAD7D0FA8}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="125"/>
+																			</PropertyList>
+																			<MidiSourceRef Name="F#4_16" ID="{97FB11D8-8CAB-4585-BCEE-BD0A0541B09A}"/>
+																		</MusicClipMidi>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="F_sharp" ID="{1F29AB0C-5AB9-49B9-8449-D33ECEA31D1E}" WorkUnitID="{BB8E6185-FD61-4C91-AEE7-F1816F7129AD}"/>
+															</Reference>
+														</ReferenceList>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{BDAD3E69-74FD-4650-9ECB-8DB7BBFD264C}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClipMidi Name="G4_16" ID="{36D3D8CB-7E65-4A61-9908-795E1EA602E0}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="125"/>
+																			</PropertyList>
+																			<MidiSourceRef Name="G4_16" ID="{C24F46C9-2D0B-404B-9554-64A74FFC0C28}"/>
+																		</MusicClipMidi>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="G" ID="{BC311CF6-3AC8-433F-A4CE-548EACD7AA29}" WorkUnitID="{BB8E6185-FD61-4C91-AEE7-F1816F7129AD}"/>
+															</Reference>
+														</ReferenceList>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{B525D812-F568-4ADC-AE1A-C3F84E6F32CC}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClipMidi Name="G#4_16" ID="{DD141683-802E-4D5E-AE43-65ECB583E7E8}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="125"/>
+																			</PropertyList>
+																			<MidiSourceRef Name="G#4_16" ID="{8FC73441-8827-4988-9431-C2ECD1F4DB32}"/>
+																		</MusicClipMidi>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="G_sharp" ID="{1AA1CE70-EA5B-4B91-980C-0E578B45532B}" WorkUnitID="{BB8E6185-FD61-4C91-AEE7-F1816F7129AD}"/>
+															</Reference>
+														</ReferenceList>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{8E29D9CF-B257-4F65-8E35-697A96D8E416}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClipMidi Name="A4_16" ID="{E7212AA9-40F2-4954-811D-A2514FCF7328}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="125"/>
+																			</PropertyList>
+																			<MidiSourceRef Name="A4_16" ID="{B11A6505-3ADA-4881-86D9-0A55325BC24A}"/>
+																		</MusicClipMidi>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="A" ID="{80DE4746-DACE-4E70-A541-7D40B1BD7430}" WorkUnitID="{BB8E6185-FD61-4C91-AEE7-F1816F7129AD}"/>
+															</Reference>
+														</ReferenceList>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{0AECD9DF-C198-4B77-ACE3-E37D1A0DB553}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClipMidi Name="A#4_16" ID="{811A3A47-0B65-4AB9-8FC5-5FF969B6F7F3}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="125"/>
+																			</PropertyList>
+																			<MidiSourceRef Name="A#4_16" ID="{E3244E17-185E-4E03-A56B-D5B38204F2A8}"/>
+																		</MusicClipMidi>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="A_sharp" ID="{93890C6E-1F9F-40A8-821D-B8B1B957E2B3}" WorkUnitID="{BB8E6185-FD61-4C91-AEE7-F1816F7129AD}"/>
+															</Reference>
+														</ReferenceList>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{D65D5884-CFBC-498E-BA7E-39DB9B5B9F60}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClipMidi Name="B4_16" ID="{9CF51B5C-A088-4B41-9BB4-6A0037AF164E}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="125"/>
+																			</PropertyList>
+																			<MidiSourceRef Name="B4_16" ID="{7E2F1EDC-5E34-4486-AB4D-9A1B9A9B015E}"/>
+																		</MusicClipMidi>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="B" ID="{BC6FB9CA-118E-4890-93B4-DF6EDA326648}" WorkUnitID="{BB8E6185-FD61-4C91-AEE7-F1816F7129AD}"/>
+															</Reference>
+														</ReferenceList>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Cues">
+									<Reference>
+										<Local>
+											<MusicCue Name="Entry Cue" ID="{6E0FC48F-8D1B-4C4A-B98C-A2E51206C144}"/>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<MusicCue Name="Exit Cue" ID="{90258CBA-1A3B-43D4-AF8F-C8FC8AFCE85B}">
+												<PropertyList>
+													<Property Name="CueType" Type="int16" Value="1"/>
+													<Property Name="TimeMs" Type="Real64" Value="1000"/>
+												</PropertyList>
+											</MusicCue>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</MusicSegment>
+						<MusicSegment Name="Saxello_Trigger_4" ID="{9EC65724-ABAA-465C-90C3-DB9968CF15B9}" ShortID="294596479">
+							<PropertyList>
+								<Property Name="OverrideMidiTarget" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>3</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E08D5B1-EA04-49C9-9828-89D98FD2B816}"/>
+								</Reference>
+								<Reference Name="MidiTarget">
+									<ObjectRef Name="Saxello" ID="{7C57FF0B-88A5-4916-9D32-4992BBCD0D3F}" WorkUnitID="{D73AEB30-A411-4A82-9240-A8D9F5FD0045}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AD4C00B6-57B6-4B34-8651-9F6916328172}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicTrack Name="MIDI_Note" ID="{B1C82D93-FBDC-431C-A523-C9D5883BB64F}" ShortID="149713753">
+									<PropertyList>
+										<Property Name="MusicTrackType" Type="int16" Value="3"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AD4C00B6-57B6-4B34-8651-9F6916328172}"/>
+										</Reference>
+										<Reference Name="SwitchGroupOrStateGroup">
+											<ObjectRef Name="Pitch" ID="{85C98A6C-4D06-454F-9159-09D6EC270468}" WorkUnitID="{BB8E6185-FD61-4C91-AEE7-F1816F7129AD}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MidiFileSource Name="E4_16" ID="{2B71D192-A30D-4725-82F5-63A74C0CB45D}" ShortID="372568897">
+											<Language>SFX</Language>
+											<MidiFile>E4_16.mid</MidiFile>
+											<MediaIDList>
+												<MediaID ID="13836558"/>
+											</MediaIDList>
+										</MidiFileSource>
+										<MidiFileSource Name="F4_16" ID="{8AE867A8-96C8-4452-9C80-FD5DCF21C34B}" ShortID="758649405">
+											<Language>SFX</Language>
+											<MidiFile>F4_16.mid</MidiFile>
+											<MediaIDList>
+												<MediaID ID="249309058"/>
+											</MediaIDList>
+										</MidiFileSource>
+										<MidiFileSource Name="D#4_16" ID="{9AF66EDE-C9D4-4C84-9572-561EE71D04FC}" ShortID="985269376">
+											<Language>SFX</Language>
+											<MidiFile>D#4_16.mid</MidiFile>
+											<MediaIDList>
+												<MediaID ID="704411920"/>
+											</MediaIDList>
+										</MidiFileSource>
+										<MidiFileSource Name="D4_16" ID="{66A6A6F1-F445-484B-B0F1-2D0954A8033B}" ShortID="258474117">
+											<Language>SFX</Language>
+											<MidiFile>D4_16.mid</MidiFile>
+											<MediaIDList>
+												<MediaID ID="799545800"/>
+											</MediaIDList>
+										</MidiFileSource>
+										<MidiFileSource Name="C#4_16" ID="{85BB449E-C8CB-41EF-B316-0F8A54FA3C3A}" ShortID="1030011013">
+											<Language>SFX</Language>
+											<MidiFile>C#4_16.mid</MidiFile>
+											<MediaIDList>
+												<MediaID ID="1038480441"/>
+											</MediaIDList>
+										</MidiFileSource>
+										<MidiFileSource Name="C4_16" ID="{14E78BDB-362F-4F22-9B3E-374C24609A79}" ShortID="687304417">
+											<Language>SFX</Language>
+											<MidiFile>C4_16.mid</MidiFile>
+											<MediaIDList>
+												<MediaID ID="912392590"/>
+											</MediaIDList>
+										</MidiFileSource>
+										<MidiFileSource Name="F#4_16" ID="{BDD5AB13-345F-415E-8380-140B1142467F}" ShortID="202371583">
+											<Language>SFX</Language>
+											<MidiFile>F#4_16.mid</MidiFile>
+											<MediaIDList>
+												<MediaID ID="807234091"/>
+											</MediaIDList>
+										</MidiFileSource>
+										<MidiFileSource Name="G#4_16" ID="{1B6C9672-1264-4773-8609-364431B683E4}" ShortID="294629233">
+											<Language>SFX</Language>
+											<MidiFile>G#4_16.mid</MidiFile>
+											<MediaIDList>
+												<MediaID ID="836161079"/>
+											</MediaIDList>
+										</MidiFileSource>
+										<MidiFileSource Name="G4_16" ID="{734D1BE6-395D-4B47-8555-886DF145E095}" ShortID="1017128060">
+											<Language>SFX</Language>
+											<MidiFile>G4_16.mid</MidiFile>
+											<MediaIDList>
+												<MediaID ID="1030110209"/>
+											</MediaIDList>
+										</MidiFileSource>
+										<MidiFileSource Name="A4_16" ID="{15EF0583-DC1A-4608-8BA6-ACF46681D4D0}" ShortID="260581064">
+											<Language>SFX</Language>
+											<MidiFile>A4_16.mid</MidiFile>
+											<MediaIDList>
+												<MediaID ID="1006477849"/>
+											</MediaIDList>
+										</MidiFileSource>
+										<MidiFileSource Name="A#4_16" ID="{62E2B09E-D673-4EC6-9289-6CC3E1681B3C}" ShortID="643168343">
+											<Language>SFX</Language>
+											<MidiFile>A#4_16.mid</MidiFile>
+											<MediaIDList>
+												<MediaID ID="964226334"/>
+											</MediaIDList>
+										</MidiFileSource>
+										<MidiFileSource Name="B4_16" ID="{16D4F7FA-09B0-433F-A41F-B85A8284C87B}" ShortID="185937088">
+											<Language>SFX</Language>
+											<MidiFile>B4_16.mid</MidiFile>
+											<MediaIDList>
+												<MediaID ID="874143737"/>
+											</MediaIDList>
+										</MidiFileSource>
+									</ChildrenList>
+									<TransitionList>
+										<MusicTransition Name="Root" ID="{50554C7C-7373-40D8-ABBA-FEB2F9A3D552}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<ChildrenList>
+												<MusicTransition Name="Transition" ID="{066070D1-976A-48BC-AFB0-5405C472FA59}">
+													<TransitionInfo/>
+												</MusicTransition>
+											</ChildrenList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</TransitionList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{A55FBF0A-E9C0-430A-8618-D7E097AFFEB6}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClipMidi Name="C4_16" ID="{841A7790-1D24-4868-B293-F3A06F79DC32}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="125"/>
+																			</PropertyList>
+																			<MidiSourceRef Name="C4_16" ID="{14E78BDB-362F-4F22-9B3E-374C24609A79}"/>
+																		</MusicClipMidi>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="C" ID="{9AE5F630-1B25-4CFC-B214-A021C3C527F4}" WorkUnitID="{BB8E6185-FD61-4C91-AEE7-F1816F7129AD}"/>
+															</Reference>
+														</ReferenceList>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{577E34DD-AEE7-407C-8D8D-250E4898AB69}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClipMidi Name="C#4_16" ID="{2A767C27-434D-45DE-A2C5-D73398268BB1}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="125"/>
+																			</PropertyList>
+																			<MidiSourceRef Name="C#4_16" ID="{85BB449E-C8CB-41EF-B316-0F8A54FA3C3A}"/>
+																		</MusicClipMidi>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="C_sharp" ID="{D01B9261-DF49-4881-A7CA-6674F2BD800B}" WorkUnitID="{BB8E6185-FD61-4C91-AEE7-F1816F7129AD}"/>
+															</Reference>
+														</ReferenceList>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{0F596661-C3AD-4413-849C-1965FCD7EE02}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClipMidi Name="D4_16" ID="{032C66A4-7BFA-475E-BCF1-68DD930AE497}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="125"/>
+																			</PropertyList>
+																			<MidiSourceRef Name="D4_16" ID="{66A6A6F1-F445-484B-B0F1-2D0954A8033B}"/>
+																		</MusicClipMidi>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="D" ID="{2D97AF80-B47A-4257-ADCD-2F929489B148}" WorkUnitID="{BB8E6185-FD61-4C91-AEE7-F1816F7129AD}"/>
+															</Reference>
+														</ReferenceList>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{C90F52E6-FCBB-40F7-84A6-ABC610EF533C}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClipMidi Name="D#4_16" ID="{25EFD98D-B5EC-4662-BC37-7B744D75E84B}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="125"/>
+																			</PropertyList>
+																			<MidiSourceRef Name="D#4_16" ID="{9AF66EDE-C9D4-4C84-9572-561EE71D04FC}"/>
+																		</MusicClipMidi>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="D_sharp" ID="{B8AD9B42-BE64-4E4B-8878-46804031A88E}" WorkUnitID="{BB8E6185-FD61-4C91-AEE7-F1816F7129AD}"/>
+															</Reference>
+														</ReferenceList>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{5675EE5D-ACEB-421A-9B0C-45B8D7349342}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClipMidi Name="E4_16" ID="{EBC5568D-8500-4674-9051-F134511DB668}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="125"/>
+																			</PropertyList>
+																			<MidiSourceRef Name="E4_16" ID="{2B71D192-A30D-4725-82F5-63A74C0CB45D}"/>
+																		</MusicClipMidi>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="E" ID="{5F18C1A7-8A28-4F3C-8383-90A1A3D7E1FB}" WorkUnitID="{BB8E6185-FD61-4C91-AEE7-F1816F7129AD}"/>
+															</Reference>
+														</ReferenceList>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{0C1D9AA4-C49A-476A-8EF6-B06F95472D13}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClipMidi Name="F4_16" ID="{F6D13FEC-108B-4564-8794-ECF71FEC0424}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="125"/>
+																			</PropertyList>
+																			<MidiSourceRef Name="F4_16" ID="{8AE867A8-96C8-4452-9C80-FD5DCF21C34B}"/>
+																		</MusicClipMidi>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="F" ID="{64B3B6F4-5B41-43E3-9C50-10382C6F9BFA}" WorkUnitID="{BB8E6185-FD61-4C91-AEE7-F1816F7129AD}"/>
+															</Reference>
+														</ReferenceList>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{DCBA4DFA-CFBA-4BF8-89D1-1CDE5DD95633}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClipMidi Name="F#4_16" ID="{2B43D035-3A05-4B59-90B0-AE0132836B3D}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="125"/>
+																			</PropertyList>
+																			<MidiSourceRef Name="F#4_16" ID="{BDD5AB13-345F-415E-8380-140B1142467F}"/>
+																		</MusicClipMidi>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="F_sharp" ID="{1F29AB0C-5AB9-49B9-8449-D33ECEA31D1E}" WorkUnitID="{BB8E6185-FD61-4C91-AEE7-F1816F7129AD}"/>
+															</Reference>
+														</ReferenceList>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{FA10FD2F-221E-4D37-AAC1-BC35FCCB8600}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClipMidi Name="G4_16" ID="{33C318AD-111C-4AD0-BD0B-480297D4DF6B}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="125"/>
+																			</PropertyList>
+																			<MidiSourceRef Name="G4_16" ID="{734D1BE6-395D-4B47-8555-886DF145E095}"/>
+																		</MusicClipMidi>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="G" ID="{BC311CF6-3AC8-433F-A4CE-548EACD7AA29}" WorkUnitID="{BB8E6185-FD61-4C91-AEE7-F1816F7129AD}"/>
+															</Reference>
+														</ReferenceList>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{302A3E1E-492F-4932-AE83-54125172617E}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClipMidi Name="G#4_16" ID="{7A922898-2CB4-4650-BA00-F52AF1F08A22}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="125"/>
+																			</PropertyList>
+																			<MidiSourceRef Name="G#4_16" ID="{1B6C9672-1264-4773-8609-364431B683E4}"/>
+																		</MusicClipMidi>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="G_sharp" ID="{1AA1CE70-EA5B-4B91-980C-0E578B45532B}" WorkUnitID="{BB8E6185-FD61-4C91-AEE7-F1816F7129AD}"/>
+															</Reference>
+														</ReferenceList>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{BDB7EBA5-DFDB-4C43-B155-D7C9C13B7833}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClipMidi Name="A4_16" ID="{ACEB9AAB-D5E1-49C3-B501-AEC01B5D3353}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="125"/>
+																			</PropertyList>
+																			<MidiSourceRef Name="A4_16" ID="{15EF0583-DC1A-4608-8BA6-ACF46681D4D0}"/>
+																		</MusicClipMidi>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="A" ID="{80DE4746-DACE-4E70-A541-7D40B1BD7430}" WorkUnitID="{BB8E6185-FD61-4C91-AEE7-F1816F7129AD}"/>
+															</Reference>
+														</ReferenceList>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{3156EC91-3E4D-405F-9987-4150B22CDC18}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClipMidi Name="A#4_16" ID="{08BEC6F2-35CE-44DF-95F2-EDE948792A5E}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="125"/>
+																			</PropertyList>
+																			<MidiSourceRef Name="A#4_16" ID="{62E2B09E-D673-4EC6-9289-6CC3E1681B3C}"/>
+																		</MusicClipMidi>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="A_sharp" ID="{93890C6E-1F9F-40A8-821D-B8B1B957E2B3}" WorkUnitID="{BB8E6185-FD61-4C91-AEE7-F1816F7129AD}"/>
+															</Reference>
+														</ReferenceList>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{08B85E5D-57BA-4826-B068-36758EF7CF18}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClipMidi Name="B4_16" ID="{DD3CB6DC-7E26-4EE6-8088-21A636CE39EB}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="125"/>
+																			</PropertyList>
+																			<MidiSourceRef Name="B4_16" ID="{16D4F7FA-09B0-433F-A41F-B85A8284C87B}"/>
+																		</MusicClipMidi>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="B" ID="{BC6FB9CA-118E-4890-93B4-DF6EDA326648}" WorkUnitID="{BB8E6185-FD61-4C91-AEE7-F1816F7129AD}"/>
+															</Reference>
+														</ReferenceList>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Cues">
+									<Reference>
+										<Local>
+											<MusicCue Name="Entry Cue" ID="{5984A4CF-4321-44FE-A723-F4E61B96D1FF}"/>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<MusicCue Name="Exit Cue" ID="{9EC4EAD5-7E09-46D9-8BE3-D367CE58E347}">
+												<PropertyList>
+													<Property Name="CueType" Type="int16" Value="1"/>
+													<Property Name="TimeMs" Type="Real64" Value="1000"/>
+												</PropertyList>
+											</MusicCue>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</MusicSegment>
+						<MusicSegment Name="Strumstick_Trigger_4" ID="{C64C5020-D61D-4A11-98E9-7180FC880C20}" ShortID="213856431">
+							<PropertyList>
+								<Property Name="OverrideMidiTarget" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>3</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E08D5B1-EA04-49C9-9828-89D98FD2B816}"/>
+								</Reference>
+								<Reference Name="MidiTarget">
+									<ObjectRef Name="Strumstick" ID="{40E3D61D-4E47-4303-B0EB-E4442567EBA1}" WorkUnitID="{D73AEB30-A411-4A82-9240-A8D9F5FD0045}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AD4C00B6-57B6-4B34-8651-9F6916328172}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicTrack Name="MIDI_Note" ID="{2C107F57-DCBB-46DA-8CD1-69EFFEE1A638}" ShortID="1059836509">
+									<PropertyList>
+										<Property Name="MusicTrackType" Type="int16" Value="3"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AD4C00B6-57B6-4B34-8651-9F6916328172}"/>
+										</Reference>
+										<Reference Name="SwitchGroupOrStateGroup">
+											<ObjectRef Name="Pitch" ID="{85C98A6C-4D06-454F-9159-09D6EC270468}" WorkUnitID="{BB8E6185-FD61-4C91-AEE7-F1816F7129AD}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MidiFileSource Name="E4_16" ID="{3283B950-8CFF-4F46-AA23-EED624F36330}" ShortID="773225084">
+											<Language>SFX</Language>
+											<MidiFile>E4_16.mid</MidiFile>
+											<MediaIDList>
+												<MediaID ID="13836558"/>
+											</MediaIDList>
+										</MidiFileSource>
+										<MidiFileSource Name="F4_16" ID="{14FAFDE8-6F67-42DB-92E1-26C57F92FD79}" ShortID="281872559">
+											<Language>SFX</Language>
+											<MidiFile>F4_16.mid</MidiFile>
+											<MediaIDList>
+												<MediaID ID="249309058"/>
+											</MediaIDList>
+										</MidiFileSource>
+										<MidiFileSource Name="D#4_16" ID="{9F3FF4DA-8FB0-45F8-B9E1-0D35FFAF93D6}" ShortID="328251955">
+											<Language>SFX</Language>
+											<MidiFile>D#4_16.mid</MidiFile>
+											<MediaIDList>
+												<MediaID ID="704411920"/>
+											</MediaIDList>
+										</MidiFileSource>
+										<MidiFileSource Name="D4_16" ID="{793DA1C6-3C4A-4FC8-BB0E-2C3BED03F79F}" ShortID="594652903">
+											<Language>SFX</Language>
+											<MidiFile>D4_16.mid</MidiFile>
+											<MediaIDList>
+												<MediaID ID="799545800"/>
+											</MediaIDList>
+										</MidiFileSource>
+										<MidiFileSource Name="C#4_16" ID="{52F4C256-E56F-4067-8176-1324803333FE}" ShortID="531850206">
+											<Language>SFX</Language>
+											<MidiFile>C#4_16.mid</MidiFile>
+											<MediaIDList>
+												<MediaID ID="1038480441"/>
+											</MediaIDList>
+										</MidiFileSource>
+										<MidiFileSource Name="C4_16" ID="{DDD2ACFF-E4C9-4B14-A467-5CA16A2ACA91}" ShortID="867289923">
+											<Language>SFX</Language>
+											<MidiFile>C4_16.mid</MidiFile>
+											<MediaIDList>
+												<MediaID ID="912392590"/>
+											</MediaIDList>
+										</MidiFileSource>
+										<MidiFileSource Name="F#4_16" ID="{1B6811F7-1C39-44AA-B339-DD3904201340}" ShortID="732266114">
+											<Language>SFX</Language>
+											<MidiFile>F#4_16.mid</MidiFile>
+											<MediaIDList>
+												<MediaID ID="807234091"/>
+											</MediaIDList>
+										</MidiFileSource>
+										<MidiFileSource Name="G#4_16" ID="{3464C42D-8F19-4C40-B825-9FBFC388DCF8}" ShortID="126693688">
+											<Language>SFX</Language>
+											<MidiFile>G#4_16.mid</MidiFile>
+											<MediaIDList>
+												<MediaID ID="836161079"/>
+											</MediaIDList>
+										</MidiFileSource>
+										<MidiFileSource Name="G4_16" ID="{C4BC5C26-9C7B-4625-B8E0-BB87E5F1A014}" ShortID="117391991">
+											<Language>SFX</Language>
+											<MidiFile>G4_16.mid</MidiFile>
+											<MediaIDList>
+												<MediaID ID="1030110209"/>
+											</MediaIDList>
+										</MidiFileSource>
+										<MidiFileSource Name="A4_16" ID="{F1F117DF-A77C-474C-A90D-60FED487DAE8}" ShortID="920524637">
+											<Language>SFX</Language>
+											<MidiFile>A4_16.mid</MidiFile>
+											<MediaIDList>
+												<MediaID ID="1006477849"/>
+											</MediaIDList>
+										</MidiFileSource>
+										<MidiFileSource Name="A#4_16" ID="{BC57B317-6E4A-4B91-97BA-6BF3E5483DF1}" ShortID="323401027">
+											<Language>SFX</Language>
+											<MidiFile>A#4_16.mid</MidiFile>
+											<MediaIDList>
+												<MediaID ID="964226334"/>
+											</MediaIDList>
+										</MidiFileSource>
+										<MidiFileSource Name="B4_16" ID="{85967A76-6D64-4255-AA01-7F2D80C61A8B}" ShortID="590174527">
+											<Language>SFX</Language>
+											<MidiFile>B4_16.mid</MidiFile>
+											<MediaIDList>
+												<MediaID ID="874143737"/>
+											</MediaIDList>
+										</MidiFileSource>
+									</ChildrenList>
+									<TransitionList>
+										<MusicTransition Name="Root" ID="{A84DF198-C073-4D0B-B9EC-D597B599F551}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<ChildrenList>
+												<MusicTransition Name="Transition" ID="{23554A65-66F8-4346-9DDF-FC2B23C60DD7}">
+													<TransitionInfo/>
+												</MusicTransition>
+											</ChildrenList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</TransitionList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{E53C74CB-5C80-49EF-92D3-C31060A4BD98}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClipMidi Name="C4_16" ID="{23C2A3EF-0583-48E1-9E85-9E70A49B9AC2}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="125"/>
+																			</PropertyList>
+																			<MidiSourceRef Name="C4_16" ID="{DDD2ACFF-E4C9-4B14-A467-5CA16A2ACA91}"/>
+																		</MusicClipMidi>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="C" ID="{9AE5F630-1B25-4CFC-B214-A021C3C527F4}" WorkUnitID="{BB8E6185-FD61-4C91-AEE7-F1816F7129AD}"/>
+															</Reference>
+														</ReferenceList>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{D5B9530A-A9BD-4443-96CF-5BF74D2BD8E2}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClipMidi Name="C#4_16" ID="{5E03B8D5-7244-48CA-81F5-5B12AAF3BCC4}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="125"/>
+																			</PropertyList>
+																			<MidiSourceRef Name="C#4_16" ID="{52F4C256-E56F-4067-8176-1324803333FE}"/>
+																		</MusicClipMidi>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="C_sharp" ID="{D01B9261-DF49-4881-A7CA-6674F2BD800B}" WorkUnitID="{BB8E6185-FD61-4C91-AEE7-F1816F7129AD}"/>
+															</Reference>
+														</ReferenceList>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{E9F59843-4CD6-4B2A-AFAB-A604D0148873}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClipMidi Name="D4_16" ID="{94CA9408-1C5A-4F3B-96DA-00EF51F05B95}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="125"/>
+																			</PropertyList>
+																			<MidiSourceRef Name="D4_16" ID="{793DA1C6-3C4A-4FC8-BB0E-2C3BED03F79F}"/>
+																		</MusicClipMidi>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="D" ID="{2D97AF80-B47A-4257-ADCD-2F929489B148}" WorkUnitID="{BB8E6185-FD61-4C91-AEE7-F1816F7129AD}"/>
+															</Reference>
+														</ReferenceList>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{F765051C-5403-46A5-8EBF-A33E75E235DE}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClipMidi Name="D#4_16" ID="{F5BF61C8-6B6C-456A-9302-3B1914041ADF}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="125"/>
+																			</PropertyList>
+																			<MidiSourceRef Name="D#4_16" ID="{9F3FF4DA-8FB0-45F8-B9E1-0D35FFAF93D6}"/>
+																		</MusicClipMidi>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="D_sharp" ID="{B8AD9B42-BE64-4E4B-8878-46804031A88E}" WorkUnitID="{BB8E6185-FD61-4C91-AEE7-F1816F7129AD}"/>
+															</Reference>
+														</ReferenceList>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{83C92A3F-2823-47DF-B7D1-F49278105F28}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClipMidi Name="E4_16" ID="{957EDF6B-950B-44AC-9463-01E60BBD248F}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="125"/>
+																			</PropertyList>
+																			<MidiSourceRef Name="E4_16" ID="{3283B950-8CFF-4F46-AA23-EED624F36330}"/>
+																		</MusicClipMidi>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="E" ID="{5F18C1A7-8A28-4F3C-8383-90A1A3D7E1FB}" WorkUnitID="{BB8E6185-FD61-4C91-AEE7-F1816F7129AD}"/>
+															</Reference>
+														</ReferenceList>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{B572DC6A-9804-4C8D-9A93-F44961FD8C04}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClipMidi Name="F4_16" ID="{2A7C043F-0D2B-4A45-BDC5-58350D850F10}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="125"/>
+																			</PropertyList>
+																			<MidiSourceRef Name="F4_16" ID="{14FAFDE8-6F67-42DB-92E1-26C57F92FD79}"/>
+																		</MusicClipMidi>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="F" ID="{64B3B6F4-5B41-43E3-9C50-10382C6F9BFA}" WorkUnitID="{BB8E6185-FD61-4C91-AEE7-F1816F7129AD}"/>
+															</Reference>
+														</ReferenceList>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{B0A1DA3D-90BC-419F-A758-78B09758C0EF}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClipMidi Name="F#4_16" ID="{6A3B5042-7454-4A53-947E-B9705DCE4A22}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="125"/>
+																			</PropertyList>
+																			<MidiSourceRef Name="F#4_16" ID="{1B6811F7-1C39-44AA-B339-DD3904201340}"/>
+																		</MusicClipMidi>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="F_sharp" ID="{1F29AB0C-5AB9-49B9-8449-D33ECEA31D1E}" WorkUnitID="{BB8E6185-FD61-4C91-AEE7-F1816F7129AD}"/>
+															</Reference>
+														</ReferenceList>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{83CE2AE4-54A0-427C-BEB1-07710A0F8525}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClipMidi Name="G4_16" ID="{4D4C46A9-5240-45BA-BB10-E2645E6538FC}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="125"/>
+																			</PropertyList>
+																			<MidiSourceRef Name="G4_16" ID="{C4BC5C26-9C7B-4625-B8E0-BB87E5F1A014}"/>
+																		</MusicClipMidi>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="G" ID="{BC311CF6-3AC8-433F-A4CE-548EACD7AA29}" WorkUnitID="{BB8E6185-FD61-4C91-AEE7-F1816F7129AD}"/>
+															</Reference>
+														</ReferenceList>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{553679B3-8871-4CA4-A179-3FAF4D81F9A1}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClipMidi Name="G#4_16" ID="{4D8733B0-32AC-4A02-BF0C-6AA27F9EB9D8}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="125"/>
+																			</PropertyList>
+																			<MidiSourceRef Name="G#4_16" ID="{3464C42D-8F19-4C40-B825-9FBFC388DCF8}"/>
+																		</MusicClipMidi>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="G_sharp" ID="{1AA1CE70-EA5B-4B91-980C-0E578B45532B}" WorkUnitID="{BB8E6185-FD61-4C91-AEE7-F1816F7129AD}"/>
+															</Reference>
+														</ReferenceList>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{26BD644E-252B-420F-9208-4BEDC4D3991B}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClipMidi Name="A4_16" ID="{1C497025-1BDB-4D18-8721-56FB1F5E20E8}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="125"/>
+																			</PropertyList>
+																			<MidiSourceRef Name="A4_16" ID="{F1F117DF-A77C-474C-A90D-60FED487DAE8}"/>
+																		</MusicClipMidi>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="A" ID="{80DE4746-DACE-4E70-A541-7D40B1BD7430}" WorkUnitID="{BB8E6185-FD61-4C91-AEE7-F1816F7129AD}"/>
+															</Reference>
+														</ReferenceList>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{40AE77CB-EEE7-48A4-81C4-84BDD144CAAA}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClipMidi Name="A#4_16" ID="{E76463EC-A206-43F6-80A2-6F4148081B03}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="125"/>
+																			</PropertyList>
+																			<MidiSourceRef Name="A#4_16" ID="{BC57B317-6E4A-4B91-97BA-6BF3E5483DF1}"/>
+																		</MusicClipMidi>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="A_sharp" ID="{93890C6E-1F9F-40A8-821D-B8B1B957E2B3}" WorkUnitID="{BB8E6185-FD61-4C91-AEE7-F1816F7129AD}"/>
+															</Reference>
+														</ReferenceList>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{2196B796-2434-4F97-B8AA-F2DA70C91B5A}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClipMidi Name="B4_16" ID="{6A91AA66-163E-4152-95E5-60A67FA42B17}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="125"/>
+																			</PropertyList>
+																			<MidiSourceRef Name="B4_16" ID="{85967A76-6D64-4255-AA01-7F2D80C61A8B}"/>
+																		</MusicClipMidi>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+														<ReferenceList>
+															<Reference Name="TrackSequenceSwitch">
+																<ObjectRef Name="B" ID="{BC6FB9CA-118E-4890-93B4-DF6EDA326648}" WorkUnitID="{BB8E6185-FD61-4C91-AEE7-F1816F7129AD}"/>
+															</Reference>
+														</ReferenceList>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Cues">
+									<Reference>
+										<Local>
+											<MusicCue Name="Entry Cue" ID="{D298BD57-2F61-46DF-8DEA-30AF265DD7CA}"/>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<MusicCue Name="Exit Cue" ID="{808353B6-9161-4D92-8F9D-8B92BEC922E7}">
+												<PropertyList>
+													<Property Name="CueType" Type="int16" Value="1"/>
+													<Property Name="TimeMs" Type="Real64" Value="1000"/>
+												</PropertyList>
+											</MusicCue>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</MusicSegment>
+					</ChildrenList>
+					<TransitionList>
+						<MusicTransition Name="Root" ID="{A3F22DB4-A966-47E5-B033-11AB55764397}">
+							<PropertyList>
+								<Property Name="IsFolder" Type="bool" Value="True"/>
+							</PropertyList>
+							<ChildrenList>
+								<MusicTransition Name="Transition" ID="{F468405C-9DD4-47EF-8EEF-CB4DEDF3A11A}">
+									<TransitionInfo/>
+								</MusicTransition>
+							</ChildrenList>
+							<TransitionInfo/>
+						</MusicTransition>
+					</TransitionList>
+					<ArgumentList>
+						<ArgumentRef Name="Instrument" ID="{9CDDC536-385C-4777-8CE7-9D02E2B19279}"/>
+					</ArgumentList>
+					<EntryList>
+						<Entry>
+							<Path>
+								<PathElementRef Name="Harp" ID="{AF5A9F72-F8FC-42BA-BCEE-53EC21A3DF44}"/>
+							</Path>
+							<AudioNodeInfo>
+								<AudioNodeRef Name="Harp_Trigger_4" ID="{B95EA0BC-234C-4B1C-89B2-32F2FD29506F}" WorkUnitID="{332BF720-A0B2-431F-AC9D-E2EFA7AC307B}" Platform="Linked"/>
+							</AudioNodeInfo>
+						</Entry>
+						<Entry>
+							<Path>
+								<PathElementRef Name="Recorder" ID="{D1DEE61F-8A34-486C-89D4-5FFE1C5F7C4D}"/>
+							</Path>
+							<AudioNodeInfo>
+								<AudioNodeRef Name="Recorder_Trigger_4" ID="{9D167883-968A-4C92-B8E7-6564A2BD6105}" WorkUnitID="{332BF720-A0B2-431F-AC9D-E2EFA7AC307B}" Platform="Linked"/>
+							</AudioNodeInfo>
+						</Entry>
+						<Entry>
+							<Path>
+								<PathElementRef Name="Balafon" ID="{4B921EF9-2FF0-4774-9FD2-B03A45E302D4}"/>
+							</Path>
+							<AudioNodeInfo>
+								<AudioNodeRef Name="Balafon_Trigger_4" ID="{93600545-103B-48C7-86CD-A8E723EAFA9B}" WorkUnitID="{332BF720-A0B2-431F-AC9D-E2EFA7AC307B}" Platform="Linked"/>
+							</AudioNodeInfo>
+						</Entry>
+						<Entry>
+							<Path>
+								<PathElementRef Name="Xylophone" ID="{C10EBD30-F40A-4C74-9C72-8C369F612691}"/>
+							</Path>
+							<AudioNodeInfo>
+								<AudioNodeRef Name="Xylophone_Trigger_4" ID="{971D0E86-4C4B-41C3-B88E-2B0038D66B85}" WorkUnitID="{332BF720-A0B2-431F-AC9D-E2EFA7AC307B}" Platform="Linked"/>
+							</AudioNodeInfo>
+						</Entry>
+						<Entry>
+							<Path>
+								<PathElementRef Name="Saxello" ID="{B46288ED-1681-4DBF-8E44-A485966D32F6}"/>
+							</Path>
+							<AudioNodeInfo>
+								<AudioNodeRef Name="Saxello_Trigger_4" ID="{9EC65724-ABAA-465C-90C3-DB9968CF15B9}" WorkUnitID="{332BF720-A0B2-431F-AC9D-E2EFA7AC307B}" Platform="Linked"/>
+							</AudioNodeInfo>
+						</Entry>
+						<Entry>
+							<Path>
+								<PathElementRef Name="Strumstick" ID="{521251C9-FF86-49A9-BA98-7F0ABA328DFD}"/>
+							</Path>
+							<AudioNodeInfo>
+								<AudioNodeRef Name="Strumstick_Trigger_4" ID="{C64C5020-D61D-4A11-98E9-7180FC880C20}" WorkUnitID="{332BF720-A0B2-431F-AC9D-E2EFA7AC307B}" Platform="Linked"/>
+							</AudioNodeInfo>
+						</Entry>
+						<Entry>
+							<Path>
+								<PathElementRef Name="Kalimba" ID="{02285C4D-B218-4AFE-967E-6D307309233F}"/>
+							</Path>
+							<AudioNodeInfo>
+								<AudioNodeRef Name="Kalimba_Trigger_4" ID="{DFA61C0B-1E40-4C9F-A4C1-669559A07753}" WorkUnitID="{332BF720-A0B2-431F-AC9D-E2EFA7AC307B}" Platform="Linked"/>
+							</AudioNodeInfo>
+						</Entry>
+					</EntryList>
+				</MusicSwitchContainer>
+			</ChildrenList>
+		</WorkUnit>
+	</InteractiveMusic>
+</WwiseDocument>

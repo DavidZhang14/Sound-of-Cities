@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{50B74AA7-9791-45D1-89FD-6B0C01FD742D}" SchemaVersion="110">
+	<SoundcasterSessions>
+		<WorkUnit Name="Default Work Unit" ID="{50B74AA7-9791-45D1-89FD-6B0C01FD742D}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundcasterSession Name="Main" ID="{75D1C55B-EF09-49E7-A564-584AD9C0DEA8}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Note_Trigger" ID="{CEE12A6E-32A1-406D-A986-F9E6701882F6}" WorkUnitID="{F596D944-9822-4E0F-AB14-761FDFDBCB2E}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true">
+						<RTPCValue>
+							<GameParameterRef Name="Volume" ID="{394BAEAF-7246-43F9-AF83-01C667CB918B}"/>
+							<Value>90.0088417329797</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="Pitch" ID="{6B92152C-AA6E-459E-B7B0-9F8C54A15FB4}"/>
+							<Value>10</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="Tempo" ID="{8F7842CF-D246-4BFD-BD6F-DC51F94DAA7E}"/>
+							<Value>1.4137068626047E-311</Value>
+						</RTPCValue>
+					</RTPCValueList>
+					<CurrentStateList ShowAll="true"/>
+					<CurrentSwitchList ShowAll="true">
+						<CurrentSwitchRef Name="A_sharp" ID="{93890C6E-1F9F-40A8-821D-B8B1B957E2B3}"/>
+						<CurrentSwitchRef Name="Balafon" ID="{4B921EF9-2FF0-4774-9FD2-B03A45E302D4}"/>
+					</CurrentSwitchList>
+				</SoundcasterSession>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundcasterSessions>
+</WwiseDocument>
