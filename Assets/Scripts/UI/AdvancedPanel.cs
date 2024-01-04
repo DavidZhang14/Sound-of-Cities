@@ -2,6 +2,7 @@ using AK.Wwise;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEditor;
 
 public class AdvancedPanel : MonoBehaviour
 {
@@ -27,5 +28,12 @@ public class AdvancedPanel : MonoBehaviour
 
         tempoSlider.value = tempoRTPC.GetValue(gameObject);
         tempoText.SetText("Tempo\n" + (int)tempoSlider.value);
+    }
+    public void Exit() {
+        #if UNITY_EDITOR
+            EditorApplication.ExitPlaymode();
+        #else
+            Application.Quit();
+        #endif
     }
 }
