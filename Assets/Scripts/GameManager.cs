@@ -1,5 +1,6 @@
 ﻿using SVS;
 using UnityEngine;
+using UnityEditor;
 using TMPro;
 using System.IO;
 public class GameManager : MonoBehaviour
@@ -133,5 +134,8 @@ public class GameManager : MonoBehaviour
         string saveName = GameObject.Find("SaveInput").GetComponent<TMP_InputField>().text;
         SaveSystem.SaveCity(saveName);
         GameObject.Find("SavePanel").SetActive(false);
+    }
+    public void ExplorerButtonClicked() {
+        EditorUtility.RevealInFinder(savePath);
     }
 }
