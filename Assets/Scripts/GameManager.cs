@@ -1,6 +1,7 @@
 ﻿using SVS;
 using UnityEngine;
-using UnityEditor;
+using System.Diagnostics;
+using Debug = UnityEngine.Debug;
 using TMPro;
 using System.IO;
 public class GameManager : MonoBehaviour
@@ -136,6 +137,6 @@ public class GameManager : MonoBehaviour
         GameObject.Find("SavePanel").SetActive(false);
     }
     public void ExplorerButtonClicked() {
-        EditorUtility.RevealInFinder(savePath);
+        Process.Start(savePath);
     }
 }
