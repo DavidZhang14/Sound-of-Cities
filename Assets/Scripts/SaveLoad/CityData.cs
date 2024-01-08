@@ -15,7 +15,7 @@ public class CityData
         this.playerPosition[0] = playerPosition.x;
         this.playerPosition[1] = playerPosition.z;
     }
-    private static Vector3 cameraOffset = new(-4, 7, -6);
+    private readonly Vector3 cameraOffset = new(-4, 7, -6);
     public void Deserialize() {
         PlacementManager.instance.ClearCity();
 
@@ -29,7 +29,8 @@ public class CityData
                 structures[i].buildingIndex, 
                 structures[i].type, 
                 structures[i].pitch, 
-                structures[i].targetGrid);
+                structures[i].targetGrid,
+                structures[i].objectVolume);
         }
     }
 }

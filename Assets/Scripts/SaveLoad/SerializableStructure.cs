@@ -8,6 +8,7 @@ public class SerializableStructure
     public short pitch;
     public string instrument;
     public short targetGrid;
+    public short objectVolume = 100;
     public SerializableStructure(){}
     public SerializableStructure(Vector3Int position, Structure structure) {
         this.position = position;
@@ -17,6 +18,7 @@ public class SerializableStructure
             pitch = structure.structureSoundEmitter.pitch;
             instrument = structure.structureSoundEmitter.instrument;
             targetGrid = structure.structureSoundEmitter.targetGrid;
+            objectVolume = structure.structureSoundEmitter.objectVolume;
         }
         else {
             buildingIndex = 0;
