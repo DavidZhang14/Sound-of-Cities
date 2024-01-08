@@ -12,12 +12,16 @@
 					</ModuleList>
 					<RTPCValueList ShowAll="true">
 						<RTPCValue>
+							<GameParameterRef Name="ObjectVolume" ID="{8ED0ABD4-57D5-426C-BA18-B5A3C2FCCF8C}"/>
+							<Value>0</Value>
+						</RTPCValue>
+						<RTPCValue>
 							<GameParameterRef Name="Volume" ID="{394BAEAF-7246-43F9-AF83-01C667CB918B}"/>
 							<Value>90.0088417329797</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="Pitch" ID="{6B92152C-AA6E-459E-B7B0-9F8C54A15FB4}"/>
-							<Value>10</Value>
+							<Value>1</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="Tempo" ID="{8F7842CF-D246-4BFD-BD6F-DC51F94DAA7E}"/>
@@ -26,7 +30,7 @@
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true"/>
 					<CurrentSwitchList ShowAll="true">
-						<CurrentSwitchRef Name="A_sharp" ID="{93890C6E-1F9F-40A8-821D-B8B1B957E2B3}"/>
+						<CurrentSwitchRef Name="C_sharp" ID="{D01B9261-DF49-4881-A7CA-6674F2BD800B}"/>
 						<CurrentSwitchRef Name="Balafon" ID="{4B921EF9-2FF0-4774-9FD2-B03A45E302D4}"/>
 					</CurrentSwitchList>
 				</SoundcasterSession>

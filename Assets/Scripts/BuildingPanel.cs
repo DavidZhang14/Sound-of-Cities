@@ -7,7 +7,7 @@ public class BuildingPanel : MonoBehaviour
 {
     [SerializeField] private TMP_Dropdown buildingDropdown;
     List<string> newOptions = new();
-    public int getDropdownValue() 
+    public int GetDropdownValue() 
     {
         return buildingDropdown.value;
     }

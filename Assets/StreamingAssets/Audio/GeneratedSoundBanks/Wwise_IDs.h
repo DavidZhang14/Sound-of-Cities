@@ -60,6 +60,7 @@ namespace AK
 
     namespace GAME_PARAMETERS
     {
+        static const AkUniqueID OBJECTVOLUME = 2485433642U;
         static const AkUniqueID PITCH = 1908158473U;
         static const AkUniqueID TEMPO = 307962790U;
         static const AkUniqueID VOLUME = 2415836739U;

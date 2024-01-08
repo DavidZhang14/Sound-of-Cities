@@ -20,7 +20,7 @@ public class StructureManager : MonoBehaviour
     {
         if (CheckPositionBeforePlacement(position))
         {
-            int buildingIndex = buildingPanel.getDropdownValue();
+            int buildingIndex = buildingPanel.GetDropdownValue();
             placementManager.PlaceObjectOnTheMap(position, buildingIndex, CellType.House);
             AudioPlayer.instance.PlayPlacementSound();
         }
@@ -30,7 +30,7 @@ public class StructureManager : MonoBehaviour
     {
         if (CheckPositionBeforePlacement(position))
         {
-            int buildingIndex = buildingPanel.getDropdownValue();
+            int buildingIndex = buildingPanel.GetDropdownValue();
             placementManager.PlaceObjectOnTheMap(position, buildingIndex, CellType.Special);
             AudioPlayer.instance.PlayPlacementSound();
         }

@@ -8,6 +8,7 @@ public class InfoPanel : MonoBehaviour
     public TMP_Text Instrument;
     public TMP_Dropdown pitchDropdown;
     public TMP_Dropdown targetGridDropdown;
+    public Slider volumeSlider;
     private void Awake() {
         if (instance == null) instance = this;
     }
@@ -19,5 +20,11 @@ public class InfoPanel : MonoBehaviour
     public void UpdateTargetGrid()
     {
         UIController.Instance.editTarget.targetGrid = (short)(targetGridDropdown.value + 1);
+        //UpdateSound() is not necessary for changing targetGrid
+    }
+    public void UpdateObjectVolume() {
+        UIController.Instance.editTarget.objectVolume = (short)volumeSlider.value;
+        Debug.Log("UpdateObjectVolume called. UIController.Instance.editTarget.objectVolume = " + UIController.Instance.editTarget.objectVolume);
+        UIController.Instance.editTarget.UpdateSound();
     }
 }

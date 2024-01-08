@@ -21,6 +21,11 @@
 						<Property Name="InitialValue" Type="Real64" Value="90"/>
 					</PropertyList>
 				</GameParameter>
+				<GameParameter Name="ObjectVolume" ID="{8ED0ABD4-57D5-426C-BA18-B5A3C2FCCF8C}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="100"/>
+					</PropertyList>
+				</GameParameter>
 			</ChildrenList>
 		</WorkUnit>
 	</GameParameters>

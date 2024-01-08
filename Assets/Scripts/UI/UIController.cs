@@ -78,6 +78,7 @@ public class UIController : MonoBehaviour
         infoPanel.Instrument.text = editTarget.instrument;
         infoPanel.targetGridDropdown.value = editTarget.targetGrid - 1;
         infoPanel.pitchDropdown.value = editTarget.pitch;
+        infoPanel.volumeSlider.value = editTarget.objectVolume;
     }
     private void Update() {
         if (Input.GetKeyDown(KeyCode.Escape)) advancedPanel.SetActive(!advancedPanel.activeSelf);

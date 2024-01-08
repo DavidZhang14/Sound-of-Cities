@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{3D4D6EC5-5132-2C2E-D5FD-9392B9C3F255}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{2D3BA901-944B-6FB6-8C27-3402A383D8B7}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -25,6 +25,7 @@
 				<GameParameter Id="307962790" Name="Tempo"/>
 				<GameParameter Id="1908158473" Name="Pitch"/>
 				<GameParameter Id="2415836739" Name="Volume"/>
+				<GameParameter Id="2485433642" Name="ObjectVolume"/>
 			</GameParameters>
 			<SwitchGroups>
 				<SwitchGroup Id="1908158473" Name="Pitch">
@@ -57,7 +58,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{639F5BE6-212A-7EDD-B4ED-A3743C70ED45}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{CC07D42C-9CF2-3A28-54CB-223C011FAF2E}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -634,6 +635,7 @@
 			<GameParameters>
 				<GameParameter Id="307962790" Name="Tempo"/>
 				<GameParameter Id="1908158473" Name="Pitch"/>
+				<GameParameter Id="2485433642" Name="ObjectVolume"/>
 			</GameParameters>
 			<SwitchGroups>
 				<SwitchGroup Id="1908158473" Name="Pitch">
@@ -667,5 +669,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{1D0AC2E7-A2DD-8653-3E75-201A81C9BF24}</FileHash>
+	<FileHash>{8242C3B1-B1C0-ECBB-BC61-E7784534CCB3}</FileHash>
 </SoundBanksInfo>

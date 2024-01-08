@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: 3babd18ea7529840b3a772c129b9f84e
     GuidInternal: 
-    m_lastTime: -8584973707414365154
+    m_lastTime: -8585286319930573911
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: b6004cadb657344b86519f6916328172
     GuidInternal: 
-    m_lastTime: -8584973707433354725
+    m_lastTime: -8584976653155209224
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 6aa1eaea99dea04997507cd4b1b91c5f
     GuidInternal: 
-    m_lastTime: -8584973707414784053
+    m_lastTime: -8585286146349586594
     List:
     - name: Main
       guid: 3a012cee5b6a2140981457a95644f402
@@ -94,7 +94,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: d4b514fe4a80544c843d323e6844ee2f
     GuidInternal: 
-    m_lastTime: -8584973707447097984
+    m_lastTime: -8584974552793841514
     List:
     - name: Main_Loop
       guid: 40394ec22fd0c8479c1c7ee0ae6ea453
@@ -124,7 +124,7 @@ MonoBehaviour:
     ParentPath: Events\MIDI
     guid: 44d996f522980f4eab14761fdfdbcb2e
     GuidInternal: 
-    m_lastTime: -8584973707447097984
+    m_lastTime: -8585286070503634234
     List:
     - name: Note_Trigger
       guid: 6e2ae1cea1326d40a986f9e6701882f6
@@ -155,8 +155,22 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 789d1955a94f0c42a6f708ae99567410
     GuidInternal: 
-    m_lastTime: -8584973707447087976
+    m_lastTime: -8584969291210992093
     List:
+    - name: ObjectVolume
+      guid: d4abd08ed5576c42ba18b5a3c2fccf8c
+      id: 2485433642
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 789d1955a94f0c42a6f708ae99567410
+      - ElementName: ObjectVolume
+        ObjectType: 13
+        guid: d4abd08ed5576c42ba18b5a3c2fccf8c
+      Path: Game Parameters\Default Work Unit\ObjectVolume
     - name: Pitch
       guid: 2c15926b6eaa9e45b7b09f8c54a15fb4
       id: 1908158473
@@ -211,7 +225,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: d280c2c4ba393142a74d14ea8c2fbc1b
     GuidInternal: 
-    m_lastTime: -8584973707414624451
+    m_lastTime: -8585286319931669849
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
@@ -225,7 +239,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: 85618ebb61fd914caee7f1816f7129ad
     GuidInternal: 
-    m_lastTime: -8584973707414624451
+    m_lastTime: -8585283007947850150
     List:
     - name: Instrument
       guid: 36c5dd9c5c3877478ce79d02e2b19279
@@ -579,7 +593,7 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: 34d23b4bfff182449c82820f82c898cd
     GuidInternal: 
-    m_lastTime: -8584973707414484857
+    m_lastTime: -8585286319930929214
     List: []
   ExpandedFileSystemItemIds: 
   ExpandedWaapiItemIds: 

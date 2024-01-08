@@ -362,6 +362,45 @@
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
+					<ObjectLists>
+						<ObjectList Name="RTPC">
+							<Reference>
+								<Local>
+									<RTPC Name="" ID="{5E42A33C-E275-464A-8730-889CB214E02A}" ShortID="139076250">
+										<PropertyList>
+											<Property Name="PropertyName" Type="string" Value="Volume"/>
+										</PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="ObjectVolume" ID="{8ED0ABD4-57D5-426C-BA18-B5A3C2FCCF8C}" WorkUnitID="{55199D78-4FA9-420C-A6F7-08AE99567410}"/>
+											</Reference>
+											<Reference Name="Curve">
+												<Custom>
+													<Curve Name="" ID="{FF198C43-3F19-47C2-A6CE-D5FDE8108E1F}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="3"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>-200</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>100</XPos>
+																<YPos>0</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</Custom>
+											</Reference>
+										</ReferenceList>
+									</RTPC>
+								</Local>
+							</Reference>
+						</ObjectList>
+					</ObjectLists>
 				</BlendContainer>
 				<BlendContainer Name="KSHarp" ID="{A6F9B73A-3B19-4E28-9C38-71A7BBF66AAB}" ShortID="695925800">
 					<ReferenceList>
@@ -1042,6 +1081,45 @@
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
+					<ObjectLists>
+						<ObjectList Name="RTPC">
+							<Reference>
+								<Local>
+									<RTPC Name="" ID="{8932815E-F4BB-4E6E-8495-FD92C7311876}" ShortID="392894030">
+										<PropertyList>
+											<Property Name="PropertyName" Type="string" Value="Volume"/>
+										</PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="ObjectVolume" ID="{8ED0ABD4-57D5-426C-BA18-B5A3C2FCCF8C}" WorkUnitID="{55199D78-4FA9-420C-A6F7-08AE99567410}"/>
+											</Reference>
+											<Reference Name="Curve">
+												<Custom>
+													<Curve Name="" ID="{84EE8B14-61DD-4A07-B83C-D0C2B73D4A41}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="3"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>-200</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>100</XPos>
+																<YPos>0</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</Custom>
+											</Reference>
+										</ReferenceList>
+									</RTPC>
+								</Local>
+							</Reference>
+						</ObjectList>
+					</ObjectLists>
 				</BlendContainer>
 				<BlendContainer Name="Balafon" ID="{32940895-D081-4017-AF67-65B765074D7F}" ShortID="1054422332">
 					<ReferenceList>
@@ -1228,6 +1306,45 @@
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
+					<ObjectLists>
+						<ObjectList Name="RTPC">
+							<Reference>
+								<Local>
+									<RTPC Name="" ID="{AB517B4B-B525-4BEB-B9FE-2934B2CF1272}" ShortID="310093872">
+										<PropertyList>
+											<Property Name="PropertyName" Type="string" Value="Volume"/>
+										</PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="ObjectVolume" ID="{8ED0ABD4-57D5-426C-BA18-B5A3C2FCCF8C}" WorkUnitID="{55199D78-4FA9-420C-A6F7-08AE99567410}"/>
+											</Reference>
+											<Reference Name="Curve">
+												<Custom>
+													<Curve Name="" ID="{BE986501-C91B-4C9E-A593-BFD9FEE815F5}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="3"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>-200</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>100</XPos>
+																<YPos>0</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</Custom>
+											</Reference>
+										</ReferenceList>
+									</RTPC>
+								</Local>
+							</Reference>
+						</ObjectList>
+					</ObjectLists>
 				</BlendContainer>
 				<BlendContainer Name="Xylo" ID="{8A0104DD-EECE-4653-8652-EA0872B21FB0}" ShortID="675383036">
 					<ReferenceList>
@@ -1472,6 +1589,45 @@
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
+					<ObjectLists>
+						<ObjectList Name="RTPC">
+							<Reference>
+								<Local>
+									<RTPC Name="" ID="{1633F112-8D02-4F0B-8615-DE55009FCCB2}" ShortID="605762006">
+										<PropertyList>
+											<Property Name="PropertyName" Type="string" Value="Volume"/>
+										</PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="ObjectVolume" ID="{8ED0ABD4-57D5-426C-BA18-B5A3C2FCCF8C}" WorkUnitID="{55199D78-4FA9-420C-A6F7-08AE99567410}"/>
+											</Reference>
+											<Reference Name="Curve">
+												<Custom>
+													<Curve Name="" ID="{8723639C-2F03-45F6-AF53-CF99D1B7E804}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="3"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>-200</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>100</XPos>
+																<YPos>0</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</Custom>
+											</Reference>
+										</ReferenceList>
+									</RTPC>
+								</Local>
+							</Reference>
+						</ObjectList>
+					</ObjectLists>
 				</BlendContainer>
 				<BlendContainer Name="Kalimba" ID="{D6CCA23C-8D44-4E15-AF2E-448BFE6059A7}" ShortID="620398302">
 					<ReferenceList>
@@ -1775,6 +1931,45 @@
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
+					<ObjectLists>
+						<ObjectList Name="RTPC">
+							<Reference>
+								<Local>
+									<RTPC Name="" ID="{BD2FF2A4-E2DC-4DB7-832D-343FBE143BED}" ShortID="664413020">
+										<PropertyList>
+											<Property Name="PropertyName" Type="string" Value="Volume"/>
+										</PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="ObjectVolume" ID="{8ED0ABD4-57D5-426C-BA18-B5A3C2FCCF8C}" WorkUnitID="{55199D78-4FA9-420C-A6F7-08AE99567410}"/>
+											</Reference>
+											<Reference Name="Curve">
+												<Custom>
+													<Curve Name="" ID="{F0A4C3A8-BAFA-4EB4-8E06-98EC441A2098}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="3"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>-200</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>100</XPos>
+																<YPos>0</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</Custom>
+											</Reference>
+										</ReferenceList>
+									</RTPC>
+								</Local>
+							</Reference>
+						</ObjectList>
+					</ObjectLists>
 				</BlendContainer>
 				<BlendContainer Name="Saxello" ID="{7C57FF0B-88A5-4916-9D32-4992BBCD0D3F}" ShortID="309124925">
 					<ReferenceList>
@@ -2020,6 +2215,45 @@
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
+					<ObjectLists>
+						<ObjectList Name="RTPC">
+							<Reference>
+								<Local>
+									<RTPC Name="" ID="{F9D55FAE-9BA6-4B34-B2B4-2ABE97A8B0D0}" ShortID="910376397">
+										<PropertyList>
+											<Property Name="PropertyName" Type="string" Value="Volume"/>
+										</PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="ObjectVolume" ID="{8ED0ABD4-57D5-426C-BA18-B5A3C2FCCF8C}" WorkUnitID="{55199D78-4FA9-420C-A6F7-08AE99567410}"/>
+											</Reference>
+											<Reference Name="Curve">
+												<Custom>
+													<Curve Name="" ID="{2BC8D30C-5933-47C5-B8A0-E0874B26B327}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="3"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>-200</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>100</XPos>
+																<YPos>0</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</Custom>
+											</Reference>
+										</ReferenceList>
+									</RTPC>
+								</Local>
+							</Reference>
+						</ObjectList>
+					</ObjectLists>
 				</BlendContainer>
 				<BlendContainer Name="Strumstick" ID="{40E3D61D-4E47-4303-B0EB-E4442567EBA1}" ShortID="369330466">
 					<ReferenceList>
@@ -2381,6 +2615,45 @@
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
+					<ObjectLists>
+						<ObjectList Name="RTPC">
+							<Reference>
+								<Local>
+									<RTPC Name="" ID="{744836F2-7A1D-4A21-8F33-6C69D17D5AB5}" ShortID="444164389">
+										<PropertyList>
+											<Property Name="PropertyName" Type="string" Value="Volume"/>
+										</PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="ObjectVolume" ID="{8ED0ABD4-57D5-426C-BA18-B5A3C2FCCF8C}" WorkUnitID="{55199D78-4FA9-420C-A6F7-08AE99567410}"/>
+											</Reference>
+											<Reference Name="Curve">
+												<Custom>
+													<Curve Name="" ID="{31D4419D-6235-45E5-8C93-C67567FE3AE7}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="3"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>-200</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>100</XPos>
+																<YPos>0</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</Custom>
+											</Reference>
+										</ReferenceList>
+									</RTPC>
+								</Local>
+							</Reference>
+						</ObjectList>
+					</ObjectLists>
 				</BlendContainer>
 			</ChildrenList>
 		</WorkUnit>
