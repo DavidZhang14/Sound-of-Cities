@@ -24,7 +24,6 @@ public class InfoPanel : MonoBehaviour
     }
     public void UpdateObjectVolume() {
         UIController.Instance.editTarget.objectVolume = (short)volumeSlider.value;
-        Debug.Log("UpdateObjectVolume called. UIController.Instance.editTarget.objectVolume = " + UIController.Instance.editTarget.objectVolume);
         UIController.Instance.editTarget.UpdateSound();
     }
 }

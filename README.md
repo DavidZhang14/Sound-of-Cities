@@ -21,3 +21,9 @@ It doesn’t necessarily have to be a city simulation. It can be placing pieces 
 节奏也不会在一开始就全部解锁。在这个demo里每个小节一共有32个“grid”，而一开始可能只解锁1,9,17,25，也就是四个正拍。随着游戏的进行逐渐解锁别的target grid。
 
 也未必做成城市模拟，可以是在室内摆放家具，也可以在自然场景里摆一些花草树木之类。
+
+Unity Version: 2021.3.33f1
+Wwise Version: 2022.1.9.8365
+
+The art assets and some non-audio parts of the code come from this free online tutorial by Sunny Valley Studio.
+https://www.youtube.com/playlist?list=PLcRSafycjWFd6YOvRE3GQqURFpIxZpErI
