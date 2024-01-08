@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -69,7 +67,6 @@ public class InputManager : MonoBehaviour
 		if (Input.GetMouseButtonUp(0) && EventSystem.current.IsPointerOverGameObject() == false)
 		{
 			OnMouseUp?.Invoke();
-
 		}
 	}
 
@@ -80,7 +77,6 @@ public class InputManager : MonoBehaviour
 			var position = RaycastGround();
 			if (position != null)
 				OnMouseClick?.Invoke(position.Value);
-
 		}
 	}
 }
