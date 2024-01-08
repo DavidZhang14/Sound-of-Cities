@@ -28,10 +28,16 @@ public class InputManager : MonoBehaviour
 
 	private void Update()
 	{
+		// Mouse
 		CheckClickDownEvent();
 		CheckClickUpEvent();
 		CheckClickHoldEvent();
+
+		// Arrow keys
 		CheckArrowInput();
+
+		// Ctrl
+		CheckCommand();
 	}
 
 	private Vector3Int? RaycastGround()
@@ -77,6 +83,13 @@ public class InputManager : MonoBehaviour
 			var position = RaycastGround();
 			if (position != null)
 				OnMouseClick?.Invoke(position.Value);
+		}
+	}
+
+	private void CheckCommand() {
+		if (Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.RightControl)) 
+		{
+			if (Input.GetKeyDown(KeyCode.S)) GameManager.OpenSavePanel();
 		}
 	}
 }

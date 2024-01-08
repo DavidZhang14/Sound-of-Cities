@@ -84,10 +84,10 @@ public class UIController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape)) advancedPanel.SetActive(!advancedPanel.activeSelf);
         
         // Number hotkeys
-        if (Input.GetKey(KeyCode.Alpha1)) placeRoadButton.onClick.Invoke();
-        else if (Input.GetKey(KeyCode.Alpha2)) placeHouseButton.onClick.Invoke();
-        else if (Input.GetKey(KeyCode.Alpha3)) placeSpecialButton.onClick.Invoke();
-        else if (Input.GetKey(KeyCode.Alpha4)) editButton.onClick.Invoke();
+        if (Input.GetKeyDown(KeyCode.Alpha1)) placeRoadButton.onClick.Invoke();
+        else if (Input.GetKeyDown(KeyCode.Alpha2)) placeHouseButton.onClick.Invoke();
+        else if (Input.GetKeyDown(KeyCode.Alpha3)) placeSpecialButton.onClick.Invoke();
+        else if (Input.GetKeyDown(KeyCode.Alpha4)) editButton.onClick.Invoke();
     }
     public void OpenConfirmationPanel(string message) {
         ConfirmationPanel.SetActive(true);
