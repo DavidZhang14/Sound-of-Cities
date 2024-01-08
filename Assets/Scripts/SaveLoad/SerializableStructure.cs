@@ -15,10 +15,10 @@ public class SerializableStructure
         type = structure.type;
         if (type != CellType.Road) {
             buildingIndex = structure.buildingIndex;
-            pitch = structure.structureSoundEmitter.pitch;
-            instrument = structure.structureSoundEmitter.instrument;
-            targetGrid = structure.structureSoundEmitter.targetGrid;
-            objectVolume = structure.structureSoundEmitter.objectVolume;
+            pitch = structure.soundEmitter.pitch;
+            instrument = structure.soundEmitter.instrument;
+            targetGrid = structure.soundEmitter.targetGrid;
+            objectVolume = structure.soundEmitter.objectVolume;
         }
         else {
             buildingIndex = 0;

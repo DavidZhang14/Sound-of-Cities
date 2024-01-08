@@ -91,7 +91,7 @@ public class InputManager : MonoBehaviour
 			var position = RaycastGround();
 			if (position != null) {
 				Vector3Int deletePosition = position.Value;
-				PlacementManager.instance.DeleteObjectOnTheMap(deletePosition);
+				PlacementManager.instance.TryDeleteObject(deletePosition);
 			}
 		}
 	}

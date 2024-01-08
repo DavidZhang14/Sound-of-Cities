@@ -51,10 +51,10 @@ public class PlacementManager : MonoBehaviour
         structureDictionary.Add(position, structure);
 
         // Set pitch, rhythm, and object volume
-        structure.structureSoundEmitter.pitch = pitch;
-        structure.structureSoundEmitter.targetGrid = targetGrid;
-        structure.structureSoundEmitter.objectVolume = objectVolume;
-        structure.structureSoundEmitter.UpdateSound();
+        structure.soundEmitter.pitch = pitch;
+        structure.soundEmitter.targetGrid = targetGrid;
+        structure.soundEmitter.objectVolume = objectVolume;
+        structure.soundEmitter.UpdateSound();
 
         DestroyNatureAt(position);
     }
@@ -146,7 +146,7 @@ public class PlacementManager : MonoBehaviour
     }
 
     public StructureSoundEmitter GetSoundEmitter(Vector3Int position) {
-        return structureDictionary[position].structureSoundEmitter;
+        return structureDictionary[position].soundEmitter;
     }
     public Dictionary<Vector3Int, Structure> GetStructureDictionary() {
         return structureDictionary;
@@ -167,12 +167,33 @@ public class PlacementManager : MonoBehaviour
         if (InfoPanel.instance) InfoPanel.instance.gameObject.SetActive(false);
     }
 
-    internal void DeleteObjectOnTheMap(Vector3Int position) {
-        if (structureDictionary.TryGetValue(position, out Structure structure)) {
-            Destroy(structure.gameObject);
-            structureDictionary.Remove(position);
-            placementGrid[position.x, position.z] = CellType.Empty;
+    private Vector3Int deletePos;
+    internal void TryDeleteObject(Vector3Int position) {
+        deletePos = position;
+        CellType cellType = placementGrid[position.x, position.z];
+        if (cellType == CellType.Road) {
+            DeleteObjectConfirmed();
             RoadManager.instance.FixRoadPrefabs();
         }
+        else if (cellType != CellType.Empty) {
+            string message = "Are you sure to delete this structure?";
+            UIController.Instance.OpenConfirmationPanel(message);
+            ConfirmationPanel.YesButtonClicked += DeleteObjectConfirmed;
+            ConfirmationPanel.NoButtonClicked += DeleteObjectCancelled;
+        }
+    }
+
+    private void DeleteObjectConfirmed() {
+        ConfirmationPanel.YesButtonClicked -= DeleteObjectConfirmed;
+        ConfirmationPanel.NoButtonClicked -= DeleteObjectCancelled;
+        structureDictionary.TryGetValue(deletePos, out Structure structure);
+        Destroy(structure.gameObject);
+        structureDictionary.Remove(deletePos);
+        placementGrid[deletePos.x, deletePos.z] = CellType.Empty;
+    }
+    
+    private void DeleteObjectCancelled() {
+        ConfirmationPanel.YesButtonClicked -= DeleteObjectConfirmed;
+        ConfirmationPanel.NoButtonClicked -= DeleteObjectCancelled;
     }
 }

@@ -7,13 +7,13 @@ public class Structure : MonoBehaviour
     public int buildingIndex;
     public CellType type;
     float yHeight = 0;
-    public StructureSoundEmitter structureSoundEmitter;
+    public StructureSoundEmitter soundEmitter;
 
     public void CreateModel(GameObject model)
     {
         GameObject structure = Instantiate(model, transform);
         yHeight = structure.transform.position.y;
-        structureSoundEmitter = structure.GetComponent<StructureSoundEmitter>();
+        soundEmitter = structure.GetComponent<StructureSoundEmitter>();
     }
 
     public void SwapModel(GameObject model, Quaternion rotation)
