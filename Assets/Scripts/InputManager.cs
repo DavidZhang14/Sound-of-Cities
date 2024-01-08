@@ -32,6 +32,7 @@ public class InputManager : MonoBehaviour
 		CheckClickDownEvent();
 		CheckClickUpEvent();
 		CheckClickHoldEvent();
+		CheckRightClickDownEvent();
 
 		// Arrow keys
 		CheckArrowInput();
@@ -64,7 +65,6 @@ public class InputManager : MonoBehaviour
 			var position = RaycastGround();
 			if (position != null)
 				OnMouseHold?.Invoke(position.Value);
-
 		}
 	}
 
@@ -83,6 +83,16 @@ public class InputManager : MonoBehaviour
 			var position = RaycastGround();
 			if (position != null)
 				OnMouseClick?.Invoke(position.Value);
+		}
+	}
+
+	private void CheckRightClickDownEvent() {
+		if(Input.GetMouseButtonDown(1) && EventSystem.current.IsPointerOverGameObject() == false) {
+			var position = RaycastGround();
+			if (position != null) {
+				Vector3Int deletePosition = position.Value;
+				PlacementManager.instance.DeleteObjectOnTheMap(deletePosition);
+			}
 		}
 	}
 

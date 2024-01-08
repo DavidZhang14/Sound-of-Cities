@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public class PlacementManager : MonoBehaviour
@@ -167,5 +165,14 @@ public class PlacementManager : MonoBehaviour
         }
         // Close info panel
         if (InfoPanel.instance) InfoPanel.instance.gameObject.SetActive(false);
+    }
+
+    internal void DeleteObjectOnTheMap(Vector3Int position) {
+        if (structureDictionary.TryGetValue(position, out Structure structure)) {
+            Destroy(structure.gameObject);
+            structureDictionary.Remove(position);
+            placementGrid[position.x, position.z] = CellType.Empty;
+            RoadManager.instance.FixRoadPrefabs();
+        }
     }
 }

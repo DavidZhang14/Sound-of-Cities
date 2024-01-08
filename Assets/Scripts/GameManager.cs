@@ -73,7 +73,7 @@ public class GameManager : MonoBehaviour
     {
         ClearInputActions();
         uiController.buildingPanel.gameObject.SetActive(false);
-        inputManager.OnMouseClick += selectEditTarget;
+        inputManager.OnMouseClick += SelectEditTarget;
     }
 
     private void ClearInputActions()
@@ -88,7 +88,7 @@ public class GameManager : MonoBehaviour
         cameraMovement.MoveCamera(new Vector3(inputManager.CameraMovementVector.x,0, inputManager.CameraMovementVector.y));
     }
 
-    private void selectEditTarget(Vector3Int position)
+    private void SelectEditTarget(Vector3Int position)
     {
         if (placementManager.CheckIfPositionIsOfType(position, CellType.House) ||
         placementManager.CheckIfPositionIsOfType(position, CellType.Special)) //检查选择的位置是否有建筑

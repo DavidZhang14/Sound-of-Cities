@@ -23,6 +23,7 @@ public class CityData
         Vector3 newPosition = new(playerPosition[0], 0, playerPosition[1]);
         GameObject.Find("Character").transform.position = newPosition;
         GameObject.Find("Main Camera").transform.position = newPosition + cameraOffset;
+        // Place structures
         for(int i = 0; i < structures.Count; i++) {
             PlacementManager.instance.PlaceObjectOnTheMap(
                 structures[i].position, 
