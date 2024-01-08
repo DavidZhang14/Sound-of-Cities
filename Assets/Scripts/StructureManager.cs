@@ -41,16 +41,19 @@ public class StructureManager : MonoBehaviour
         if (placementManager.CheckIfPositionInBound(position) == false)
         {
             Debug.Log("This position is out of bounds");
+            MessagePanel.instance.Message("This position is out of bounds");
             return false;
         }
         if (placementManager.CheckIfPositionIsFree(position) == false)
         {
             Debug.Log("This position is not EMPTY");
+            MessagePanel.instance.Message("This position is not EMPTY");
             return false;
         }
         if(placementManager.GetNeighboursOfTypeFor(position,CellType.Road).Count <= 0)
         {
             Debug.Log("Must be placed near a road");
+            MessagePanel.instance.Message("Must be placed near a road");
             return false;
         }
         return true;
