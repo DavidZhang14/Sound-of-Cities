@@ -48,6 +48,7 @@ public class PlacementManager : MonoBehaviour
         if (type == CellType.House) structurePrefab = StructureManager.instance.housesPrefabs[buildingIndex];
         else if (type == CellType.Special) structurePrefab = StructureManager.instance.specialPrefabs[buildingIndex];
         Structure structure = CreateANewStructureModel(position, structurePrefab, type);
+        structure.buildingIndex = buildingIndex;
         structureDictionary.Add(position, structure);
 
         // Set pitch, rhythm, and object volume
