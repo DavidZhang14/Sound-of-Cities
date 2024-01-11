@@ -152,6 +152,11 @@ public class PlacementManager : MonoBehaviour
     public Dictionary<Vector3Int, Structure> GetStructureDictionary() {
         return structureDictionary;
     }
+    public void TryClearCity() {
+        UIController.Instance.OpenConfirmationPanel("Are you sure to clear the city?");
+        ConfirmationPanel.YesButtonClicked += ClearCity;
+        ConfirmationPanel.NoButtonClicked += ClearCityCancelled;
+    }
     public void ClearCity() {
         RemoveAllTemporaryStructures();
         for (int i = gameObject.transform.childCount - 1; i >= 0; i--) {
@@ -166,6 +171,12 @@ public class PlacementManager : MonoBehaviour
         }
         // Close info panel
         if (InfoPanel.instance) InfoPanel.instance.gameObject.SetActive(false);
+        ConfirmationPanel.YesButtonClicked -= ClearCity;
+        ConfirmationPanel.NoButtonClicked -= ClearCityCancelled;
+    }
+    private void ClearCityCancelled() {
+        ConfirmationPanel.YesButtonClicked -= ClearCity;
+        ConfirmationPanel.NoButtonClicked -= ClearCityCancelled;
     }
 
     private Vector3Int deletePos;
