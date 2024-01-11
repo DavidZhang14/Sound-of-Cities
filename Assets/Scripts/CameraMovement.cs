@@ -33,5 +33,16 @@ namespace SVS
             gameCamera.transform.position += movementVector * Time.deltaTime * cameraMovementSpeed;
             listener.transform.position += movementVector * Time.deltaTime * cameraMovementSpeed;
         }
+
+        // Scroll Wheel Zoom-in/Zoom-out
+        readonly float zoomSpeed = 2f;
+        readonly float minSize = 2f;
+        readonly float maxSize = 6f;
+        private void Update() {
+            float scrollWheel = Input.GetAxis("Mouse ScrollWheel");
+            float newSize = Camera.main.orthographicSize - scrollWheel * zoomSpeed;
+            newSize = Mathf.Clamp(newSize, minSize, maxSize);
+            Camera.main.orthographicSize = newSize;
+        }
     }
 }
