@@ -9,6 +9,7 @@ public class AdvancedPanel : MonoBehaviour
     [SerializeField] private Slider volumeSlider, tempoSlider;
     [SerializeField] private TMP_Text volumeText, tempoText;
     [SerializeField] private RTPC volumeRTPC, tempoRTPC;
+    [SerializeField] private Toggle randomPitchToggle, randomRhythmToggle;
 
     void Start()
     {
@@ -21,6 +22,12 @@ public class AdvancedPanel : MonoBehaviour
             MusicController.instance.Reset();
             tempoText.SetText("Tempo\n" + (int)v);
         });
+        randomPitchToggle.onValueChanged.AddListener((v) => {
+            GameManager.randomPitch = v;
+        });
+        randomRhythmToggle.onValueChanged.AddListener((v) => {
+            GameManager.randomRhythm = v;
+        });
     } 
     private void OnEnable() {
         volumeSlider.value = volumeRTPC.GetValue(gameObject);
@@ -28,6 +35,9 @@ public class AdvancedPanel : MonoBehaviour
 
         tempoSlider.value = tempoRTPC.GetValue(gameObject);
         tempoText.SetText("Tempo\n" + (int)tempoSlider.value);
+
+        randomPitchToggle.isOn = GameManager.randomPitch;
+        randomRhythmToggle.isOn = GameManager.randomRhythm;
     }
     public void Exit() {
         #if UNITY_EDITOR

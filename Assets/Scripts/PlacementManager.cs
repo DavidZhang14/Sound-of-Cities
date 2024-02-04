@@ -36,7 +36,7 @@ public class PlacementManager : MonoBehaviour
         return false;
     }
 
-    internal void PlaceObjectOnTheMap(Vector3Int position, int buildingIndex, CellType type, short pitch = 9, short targetGrid = 1, short objectVolume = 100)
+    internal void PlaceObjectOnTheMap(Vector3Int position, int buildingIndex, CellType type, short pitch, short targetGrid, short objectVolume)
     {
         if (type == CellType.Road) {
             RoadManager.instance.PlaceRoad(position);
@@ -55,6 +55,30 @@ public class PlacementManager : MonoBehaviour
         structure.soundEmitter.pitch = pitch;
         structure.soundEmitter.targetGrid = targetGrid;
         structure.soundEmitter.objectVolume = objectVolume;
+        structure.soundEmitter.UpdateSound();
+
+        DestroyNatureAt(position);
+    }
+    internal void PlaceObjectOnTheMap(Vector3Int position, int buildingIndex, CellType type)
+    {
+        if (type == CellType.Road) {
+            RoadManager.instance.PlaceRoad(position);
+            RoadManager.instance.FinishPlacingRoad();
+            return;
+        }
+        placementGrid[position.x, position.z] = type;
+        GameObject structurePrefab = null;
+        if (type == CellType.House) structurePrefab = StructureManager.instance.housesPrefabs[buildingIndex];
+        else if (type == CellType.Special) structurePrefab = StructureManager.instance.specialPrefabs[buildingIndex];
+        Structure structure = CreateANewStructureModel(position, structurePrefab, type);
+        structure.buildingIndex = buildingIndex;
+        structureDictionary.Add(position, structure);
+
+        // Set pitch, rhythm, and object volume
+        if (GameManager.randomPitch) structure.soundEmitter.pitch = (short)Random.Range(0, 12);
+        else structure.soundEmitter.pitch = 9; //A
+        if (GameManager.randomRhythm) structure.soundEmitter.targetGrid = (short)Random.Range(0, 32);
+        else structure.soundEmitter.targetGrid = 1;
         structure.soundEmitter.UpdateSound();
 
         DestroyNatureAt(position);

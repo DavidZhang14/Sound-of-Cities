@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     public PlacementManager placementManager;
     public GameObject loadBtnPrefab;
     private string savePath;
+    public static bool randomPitch = true, randomRhythm = true;
 
     private void Awake() {
         if (instance == null) {

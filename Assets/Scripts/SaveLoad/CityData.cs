@@ -4,8 +4,7 @@ using UnityEngine;
 [System.Serializable]
 public class CityData
 {
-    public float[] playerPosition = new float[2];
-    public List<SerializableStructure> structures = new();
+    // Constructor
     public CityData() {}
     public CityData(Dictionary<Vector3Int, Structure> structureDictionary, Vector3 playerPosition) {
         foreach(KeyValuePair<Vector3Int, Structure> pair in structureDictionary) {
@@ -15,6 +14,13 @@ public class CityData
         this.playerPosition[0] = playerPosition.x;
         this.playerPosition[1] = playerPosition.z;
     }
+
+    // Data
+    public float[] playerPosition = new float[2];
+    public List<SerializableStructure> structures = new();
+    public bool randomPitch, randomRhythm;
+
+    // Deserialization
     private readonly Vector3 cameraOffset = new(-4, 7, -6);
     public void Deserialize() {
         PlacementManager.instance.ClearCity();
