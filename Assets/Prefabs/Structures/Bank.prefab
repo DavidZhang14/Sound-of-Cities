@@ -161,6 +161,7 @@ MonoBehaviour:
   pitch: 9
   instrument: Kalimba
   targetGrid: 1
+  objectVolume: 100
 --- !u!54 &566146862064681333
 Rigidbody:
   m_ObjectHideFlags: 0

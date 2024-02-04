@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UI_Outline = UnityEngine.UI.Outline;
 
 public class UIController : MonoBehaviour
 {
@@ -60,7 +61,7 @@ public class UIController : MonoBehaviour
 
     private void ModifyOutline(Button button)
     {
-        var outline = button.GetComponent<Outline>();
+        UI_Outline outline = button.GetComponent<UI_Outline>();
         outline.effectColor = outlineColor;
         outline.enabled = true;
     }
@@ -69,7 +70,7 @@ public class UIController : MonoBehaviour
     {
         foreach (Button button in buttonList)
         {
-            button.GetComponent<Outline>().enabled = false;
+            button.GetComponent<UI_Outline>().enabled = false;
         }
     }
 

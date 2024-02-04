@@ -11,10 +11,7 @@ public class PlacementManager : MonoBehaviour
     private Dictionary<Vector3Int, Structure> structureDictionary = new();
 
     private void Awake() {
-        if (instance == null) {
-            instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
+        if (instance == null) instance = this;
         else Destroy(gameObject);
     }
     private void Start()
