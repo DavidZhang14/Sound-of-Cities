@@ -3,17 +3,20 @@ using UnityEngine.UI;
 
 public class RhythmPanel : MonoBehaviour
 {
-    private short beatPerMeasure = 4;
-    private short gridPerMeasure = 32;
+    public static RhythmPanel instance;
     public short currentGrid = 0;
     public short currentBeat = 0;
-    [SerializeField] private RawImage Beat2;
-    [SerializeField] private RawImage Beat3;
-    [SerializeField] private RawImage Beat4;
+    [SerializeField] private RawImage[] Beats = new RawImage[5];
+    
+    public static short beatPerMeasure = 4;
+    public static short gridPerMeasure = 32;
 
     private Color transparent = new(255, 255, 255, 0); 
     private Color opaque = new(255, 255, 255, 255);
-
+    private void Awake() {
+        if (instance == null) instance = this;
+        else Destroy(gameObject);
+    }
     void OnEnable() {
         MusicController.NewGridReached += NewGrid;
     }
@@ -22,7 +25,7 @@ public class RhythmPanel : MonoBehaviour
     }
     private void NewGrid() {
         currentGrid += 1;
-        if (currentGrid > gridPerMeasure) currentGrid = 1; 
+        if (currentGrid > gridPerMeasure) currentGrid = 1;
         if (currentGrid % 8 == 1) NewBeat();
     }
     private void NewBeat() {
@@ -32,12 +35,16 @@ public class RhythmPanel : MonoBehaviour
     }
     private void UpdateRhythmPanel() {
         if (currentBeat == 1) {
-            Beat2.color = transparent;
-            Beat3.color = transparent;
-            Beat4.color = transparent;
+            for (int i = 0; i < beatPerMeasure - 1; i++) Beats[i].color = transparent;
         }
-        if (currentBeat >= 2) Beat2.color = opaque;
-        if (currentBeat >= 3) Beat3.color = opaque;
-        if (currentBeat >= 4) Beat4.color = opaque;
+        else {
+            for (int i = 0; i < currentBeat - 1; i++) Beats[i].color = opaque;
+        }
+    }
+    public void UpdateBeatPerMeasure(short newMeter) {
+        beatPerMeasure = newMeter;
+        gridPerMeasure = (short)(newMeter*8);
+        for (int i = 0; i < beatPerMeasure - 1; i++) Beats[i].gameObject.SetActive(true);
+        for (int i = beatPerMeasure - 1; i < Beats.Length; i++) Beats[i].gameObject.SetActive(false);
     }
 }
