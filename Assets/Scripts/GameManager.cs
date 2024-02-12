@@ -94,13 +94,28 @@ public class GameManager : MonoBehaviour
         if (placementManager.CheckIfPositionIsOfType(position, CellType.House) ||
         placementManager.CheckIfPositionIsOfType(position, CellType.Special)) //检查选择的位置是否有建筑
         {
+            // Destroy previous outline
+            if (UIController.Instance.editTarget && 
+                (UIController.Instance.editTarget != placementManager.GetSoundEmitter(position)))
+                    Destroy(UIController.Instance.editTarget.gameObject.GetComponent<Outline>());
+
             UIController.Instance.infoPanel.gameObject.SetActive(true);
             UIController.Instance.editTarget = placementManager.GetSoundEmitter(position);
+
+            // Create new outline
+            if (!UIController.Instance.editTarget.gameObject.GetComponent<Outline>())
+                UIController.Instance.editTarget.gameObject.AddComponent<Outline>();
+
             UIController.Instance.UpdateInfoPanel();
         }
         else 
         {
             UIController.Instance.infoPanel.gameObject.SetActive(false);
+            if (UIController.Instance.editTarget) 
+            {
+                Destroy(UIController.Instance.editTarget.gameObject.GetComponent<Outline>());
+                UIController.Instance.editTarget = null;
+            }
         }
     }
     public static void OpenSavePanel() {
