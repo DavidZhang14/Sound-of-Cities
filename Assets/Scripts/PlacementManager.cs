@@ -220,6 +220,11 @@ public class PlacementManager : MonoBehaviour
         ConfirmationPanel.YesButtonClicked -= DeleteObjectConfirmed;
         ConfirmationPanel.NoButtonClicked -= DeleteObjectCancelled;
         structureDictionary.TryGetValue(deletePos, out Structure structure);
+
+        // If the structure is the edit target, close the info panel
+        if (structure.soundEmitter == UIController.Instance.editTarget)
+            InfoPanel.instance.gameObject.SetActive(false);
+            
         Destroy(structure.gameObject);
         structureDictionary.Remove(deletePos);
         placementGrid[deletePos.x, deletePos.z] = CellType.Empty;
