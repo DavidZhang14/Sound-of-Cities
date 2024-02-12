@@ -1073,11 +1073,6 @@
 						<MusicSegment Name="Balafon_Trigger_4" ID="{93600545-103B-48C7-86CD-A8E723EAFA9B}" ShortID="94729860">
 							<PropertyList>
 								<Property Name="OverrideMidiTarget" Type="bool" Value="True"/>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>3</Value>
-									</ValueList>
-								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">

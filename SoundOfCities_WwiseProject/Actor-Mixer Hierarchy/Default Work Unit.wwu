@@ -1122,6 +1122,13 @@
 					</ObjectLists>
 				</BlendContainer>
 				<BlendContainer Name="Balafon" ID="{32940895-D081-4017-AF67-65B765074D7F}" ShortID="1054422332">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>1.5</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Attenuation">
 							<ObjectRef Name="Structures" ID="{334C9E31-4737-432C-827E-31DB3F53FE0E}" WorkUnitID="{4852CDA9-AEFE-45E6-85E8-FCFEFAED3BB4}"/>
