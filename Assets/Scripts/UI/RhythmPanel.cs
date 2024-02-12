@@ -44,7 +44,11 @@ public class RhythmPanel : MonoBehaviour
     public void UpdateBeatPerMeasure(short newMeter) {
         beatPerMeasure = newMeter;
         gridPerMeasure = (short)(newMeter*8);
-        for (int i = 0; i < beatPerMeasure - 1; i++) Beats[i].gameObject.SetActive(true);
+        for (int i = 0; i < beatPerMeasure - 1; i++) 
+        {
+            Beats[i].gameObject.SetActive(true);
+            if (currentBeat < i + 2) Beats[i].color = transparent;
+        }
         for (int i = beatPerMeasure - 1; i < Beats.Length; i++) Beats[i].gameObject.SetActive(false);
     }
 }
