@@ -59,8 +59,11 @@ public class AdvancedPanel : MonoBehaviour
         foreach (var pair in PlacementManager.instance.GetStructureDictionary())
         {
             Structure structure = pair.Value;
-            structure.soundEmitter.pitch += 1;
-            if (structure.soundEmitter.pitch == 12) structure.soundEmitter.pitch = 0;
+            if (structure.type != CellType.Road) {
+                structure.soundEmitter.pitch += 1;
+                if (structure.soundEmitter.pitch == 12) structure.soundEmitter.pitch = 0;
+                structure.soundEmitter.UpdateSound();
+            }
         }
     }
 
@@ -68,8 +71,11 @@ public class AdvancedPanel : MonoBehaviour
         foreach (var pair in PlacementManager.instance.GetStructureDictionary())
         {
             Structure structure = pair.Value;
-            structure.soundEmitter.pitch -= 1;
-            if (structure.soundEmitter.pitch == -1) structure.soundEmitter.pitch = 11;
+            if (structure.type != CellType.Road) {
+                structure.soundEmitter.pitch -= 1;
+                if (structure.soundEmitter.pitch == -1) structure.soundEmitter.pitch = 11;
+                structure.soundEmitter.UpdateSound();
+            }
         }
     }
 }
