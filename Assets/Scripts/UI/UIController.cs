@@ -77,8 +77,8 @@ public class UIController : MonoBehaviour
     public void UpdateInfoPanel() 
     {
         infoPanel.Instrument.text = editTarget.instrument;
-        infoPanel.targetBeatDropdown.value = editTarget.targetGrid / 8;
-        infoPanel.targetGridDropdown.value = (editTarget.targetGrid - 1) % 8;
+        infoPanel.targetBeatDropdown.SetValueWithoutNotify(editTarget.targetGrid / 8);
+        infoPanel.targetGridDropdown.SetValueWithoutNotify((editTarget.targetGrid - 1) % 8);
         infoPanel.pitchDropdown.value = editTarget.pitch;
         infoPanel.volumeSlider.value = editTarget.objectVolume;
     }
