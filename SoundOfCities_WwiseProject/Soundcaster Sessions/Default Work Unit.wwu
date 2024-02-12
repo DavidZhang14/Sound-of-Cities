@@ -24,6 +24,10 @@
 							<Value>1</Value>
 						</RTPCValue>
 						<RTPCValue>
+							<GameParameterRef Name="Attenuation" ID="{4DD08CF3-944A-46D6-B202-EC79E8362131}"/>
+							<Value>0</Value>
+						</RTPCValue>
+						<RTPCValue>
 							<GameParameterRef Name="Tempo" ID="{8F7842CF-D246-4BFD-BD6F-DC51F94DAA7E}"/>
 							<Value>1.4137068626047E-311</Value>
 						</RTPCValue>

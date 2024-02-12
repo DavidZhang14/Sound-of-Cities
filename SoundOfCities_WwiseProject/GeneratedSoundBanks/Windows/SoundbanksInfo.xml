@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{43AE0891-515E-AA33-EFB4-1193CC220CA9}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{60856BCD-CA7C-8A36-7ABE-E6372A2C1E61}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -23,6 +23,7 @@
 			</Busses>
 			<GameParameters>
 				<GameParameter Id="307962790" Name="Tempo"/>
+				<GameParameter Id="508408299" Name="Attenuation"/>
 				<GameParameter Id="1908158473" Name="Pitch"/>
 				<GameParameter Id="2415836739" Name="Volume"/>
 				<GameParameter Id="2485433642" Name="ObjectVolume"/>
@@ -58,7 +59,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{CC07D42C-9CF2-3A28-54CB-223C011FAF2E}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{FC065705-B24B-829F-8800-BFC2AB0D4749}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -669,5 +670,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{9857ABEA-B7F4-5101-253D-568B7C2780CF}</FileHash>
+	<FileHash>{2A3D2210-798F-2FA5-E189-5EE981E42E34}</FileHash>
 </SoundBanksInfo>

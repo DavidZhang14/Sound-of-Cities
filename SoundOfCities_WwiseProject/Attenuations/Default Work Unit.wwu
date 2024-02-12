@@ -5,6 +5,13 @@
 			<ChildrenList>
 				<Attenuation Name="Structures" ID="{334C9E31-4737-432C-827E-31DB3F53FE0E}" ShortID="334591617">
 					<PropertyList>
+						<Property Name="ConeAttenuation" Type="Real64">
+							<ValueList>
+								<Value>0</Value>
+							</ValueList>
+						</Property>
+						<Property Name="ConeInnerAngle" Type="int32" Value="360"/>
+						<Property Name="ConeOuterAngle" Type="int32" Value="360"/>
 						<Property Name="RadiusMax" Type="Real64" Value="15"/>
 					</PropertyList>
 					<CurveUsageInfoList>
@@ -25,7 +32,7 @@
 											<XPos>1</XPos>
 											<YPos>0</YPos>
 											<Flags>0</Flags>
-											<SegmentShape>Log1</SegmentShape>
+											<SegmentShape>Log2</SegmentShape>
 										</Point>
 										<Point>
 											<XPos>15</XPos>

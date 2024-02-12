@@ -74,7 +74,7 @@ public class PlacementManager : MonoBehaviour
         // Set pitch, rhythm, and object volume
         if (GameManager.randomPitch) structure.soundEmitter.pitch = (short)Random.Range(0, 12);
         else structure.soundEmitter.pitch = 9; //A
-        if (GameManager.randomRhythm) structure.soundEmitter.targetGrid = (short)Random.Range(0, 32);
+        if (GameManager.randomRhythm) structure.soundEmitter.targetGrid = (short)(Random.Range(0, RhythmPanel.beatPerMeasure * 8) + 1);
         else structure.soundEmitter.targetGrid = 1;
         structure.soundEmitter.UpdateSound();
 
@@ -224,7 +224,7 @@ public class PlacementManager : MonoBehaviour
         // If the structure is the edit target, close the info panel
         if (structure.soundEmitter == UIController.Instance.editTarget)
             InfoPanel.instance.gameObject.SetActive(false);
-            
+
         Destroy(structure.gameObject);
         structureDictionary.Remove(deletePos);
         placementGrid[deletePos.x, deletePos.z] = CellType.Empty;
