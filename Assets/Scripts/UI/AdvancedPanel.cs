@@ -24,6 +24,7 @@ public class AdvancedPanel : MonoBehaviour
         });
         loopLengthSlider.onValueChanged.AddListener((v) => {
             RhythmPanel.instance.UpdateBeatPerMeasure((short)v);
+            if (InfoPanel.instance) InfoPanel.instance.UpdateBeatDropdownText();
             loopLengthText.SetText("Loop Length\n" + (int)v);
         });
         randomPitchToggle.onValueChanged.AddListener((v) => {
