@@ -155,8 +155,22 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 789d1955a94f0c42a6f708ae99567410
     GuidInternal: 
-    m_lastTime: -8584969291210992093
+    m_lastTime: -8584938528095948650
     List:
+    - name: Attenuation
+      guid: f38cd04d4a94d646b202ec79e8362131
+      id: 508408299
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 789d1955a94f0c42a6f708ae99567410
+      - ElementName: Attenuation
+        ObjectType: 13
+        guid: f38cd04d4a94d646b202ec79e8362131
+      Path: Game Parameters\Default Work Unit\Attenuation
     - name: ObjectVolume
       guid: d4abd08ed5576c42ba18b5a3c2fccf8c
       id: 2485433642
