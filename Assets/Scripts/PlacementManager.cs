@@ -205,24 +205,27 @@ public class PlacementManager : MonoBehaviour
         deletePos = position;
         CellType cellType = placementGrid[position.x, position.z];
         if (cellType == CellType.Road) {
-            DeleteObjectConfirmed();
+            DeleteObject();
             RoadManager.instance.FixRoadPrefabs();
         }
         else if (cellType != CellType.Empty) {
+            // if ...
+            // DeleteObject();
+            // break;
             string message = "Are you sure to delete this structure?";
             UIController.Instance.OpenConfirmationPanel(message);
-            ConfirmationPanel.YesButtonClicked += DeleteObjectConfirmed;
+            ConfirmationPanel.YesButtonClicked += DeleteObject;
             ConfirmationPanel.NoButtonClicked += DeleteObjectCancelled;
         }
     }
 
-    private void DeleteObjectConfirmed() {
-        ConfirmationPanel.YesButtonClicked -= DeleteObjectConfirmed;
+    private void DeleteObject() {
+        ConfirmationPanel.YesButtonClicked -= DeleteObject;
         ConfirmationPanel.NoButtonClicked -= DeleteObjectCancelled;
         structureDictionary.TryGetValue(deletePos, out Structure structure);
 
         // If the structure is the edit target, close the info panel
-        if (structure.soundEmitter == UIController.Instance.editTarget)
+        if (structure.soundEmitter == UIController.editTarget)
             InfoPanel.instance.gameObject.SetActive(false);
 
         Destroy(structure.gameObject);
@@ -231,7 +234,7 @@ public class PlacementManager : MonoBehaviour
     }
     
     private void DeleteObjectCancelled() {
-        ConfirmationPanel.YesButtonClicked -= DeleteObjectConfirmed;
+        ConfirmationPanel.YesButtonClicked -= DeleteObject;
         ConfirmationPanel.NoButtonClicked -= DeleteObjectCancelled;
     }
 }

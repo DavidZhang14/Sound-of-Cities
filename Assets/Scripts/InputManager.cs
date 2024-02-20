@@ -1,4 +1,5 @@
 ﻿using System;
+using TMPro.EditorUtilities;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -100,6 +101,88 @@ public class InputManager : MonoBehaviour
 		if (Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.RightControl)) 
 		{
 			if (Input.GetKeyDown(KeyCode.S)) GameManager.OpenSavePanel();
+		}
+
+		// Pitch and Rhythm Shortcuts
+		if (UIController.editTarget) {
+			//if hold down shift key
+			if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)) 
+			{
+				if (Input.GetKeyDown(KeyCode.Alpha1)) {
+					short newTargetGrid = (short)(1 + (--UIController.editTarget.targetGrid) % 8);
+					UIController.editTarget.targetGrid = newTargetGrid;
+					UIController.Instance.UpdateInfoPanel();
+				}
+				else if (Input.GetKeyDown(KeyCode.Alpha2)) {
+					short newTargetGrid = (short)(9 + (--UIController.editTarget.targetGrid) % 8);
+					UIController.editTarget.targetGrid = newTargetGrid;
+					UIController.Instance.UpdateInfoPanel();
+				}
+				else if (Input.GetKeyDown(KeyCode.Alpha3)) {
+					short newTargetGrid = (short)(17 + (--UIController.editTarget.targetGrid) % 8);
+					UIController.editTarget.targetGrid = newTargetGrid;
+					UIController.Instance.UpdateInfoPanel();
+				}
+				else if (Input.GetKeyDown(KeyCode.Alpha4)) {
+					short newTargetGrid = (short)(25 + (--UIController.editTarget.targetGrid) % 8);
+					UIController.editTarget.targetGrid = newTargetGrid;
+					UIController.Instance.UpdateInfoPanel();
+				}
+				else if (Input.GetKeyDown(KeyCode.Alpha5)) {
+					short newTargetGrid = (short)(33 + (--UIController.editTarget.targetGrid) % 8);
+					UIController.editTarget.targetGrid = newTargetGrid;
+					UIController.Instance.UpdateInfoPanel();
+				}
+				else if (Input.GetKeyDown(KeyCode.Alpha6)) {
+					short newTargetGrid = (short)(41 + (--UIController.editTarget.targetGrid) % 8);
+					UIController.editTarget.targetGrid = newTargetGrid;
+					UIController.Instance.UpdateInfoPanel();
+				}
+			}
+			//if not hold down shift key
+			else 
+			{
+				if (Input.GetKeyDown(KeyCode.BackQuote)) {
+					short newTargetGrid = (short)(UIController.editTarget.targetGrid - (--UIController.editTarget.targetGrid) % 8);
+					UIController.editTarget.targetGrid = newTargetGrid;
+					UIController.Instance.UpdateInfoPanel();
+				}
+				else if (Input.GetKeyDown(KeyCode.Alpha1)) {
+					short newTargetGrid = (short)(1 + UIController.editTarget.targetGrid - (--UIController.editTarget.targetGrid) % 8);
+					UIController.editTarget.targetGrid = newTargetGrid;
+					UIController.Instance.UpdateInfoPanel();
+				}
+				else if (Input.GetKeyDown(KeyCode.Alpha2)) {
+					short newTargetGrid = (short)(2 + UIController.editTarget.targetGrid - (--UIController.editTarget.targetGrid) % 8);
+					UIController.editTarget.targetGrid = newTargetGrid;
+					UIController.Instance.UpdateInfoPanel();
+				}
+				else if (Input.GetKeyDown(KeyCode.Alpha3)) {
+					short newTargetGrid = (short)(3 + UIController.editTarget.targetGrid - (--UIController.editTarget.targetGrid) % 8);
+					UIController.editTarget.targetGrid = newTargetGrid;
+					UIController.Instance.UpdateInfoPanel();
+				}
+				else if (Input.GetKeyDown(KeyCode.Alpha4)) {
+					short newTargetGrid = (short)(4 + UIController.editTarget.targetGrid - (--UIController.editTarget.targetGrid) % 8);
+					UIController.editTarget.targetGrid = newTargetGrid;
+					UIController.Instance.UpdateInfoPanel();
+				}
+				else if (Input.GetKeyDown(KeyCode.Alpha5)) {
+					short newTargetGrid = (short)(5 + UIController.editTarget.targetGrid - (--UIController.editTarget.targetGrid) % 8);
+					UIController.editTarget.targetGrid = newTargetGrid;
+					UIController.Instance.UpdateInfoPanel();
+				}
+				else if (Input.GetKeyDown(KeyCode.Alpha6)) {
+					short newTargetGrid = (short)(6 + UIController.editTarget.targetGrid - (--UIController.editTarget.targetGrid) % 8);
+					UIController.editTarget.targetGrid = newTargetGrid;
+					UIController.Instance.UpdateInfoPanel();
+				}
+				else if (Input.GetKeyDown(KeyCode.Alpha7)) {
+					short newTargetGrid = (short)(7 + UIController.editTarget.targetGrid - (--UIController.editTarget.targetGrid) % 8);
+					UIController.editTarget.targetGrid = newTargetGrid;
+					UIController.Instance.UpdateInfoPanel();
+				}
+			}
 		}
 	}
 }

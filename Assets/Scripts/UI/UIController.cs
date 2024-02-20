@@ -13,7 +13,7 @@ public class UIController : MonoBehaviour
 
     public Color outlineColor;
     List<Button> buttonList;
-    public StructureSoundEmitter editTarget;
+    public static StructureSoundEmitter editTarget;
     public InfoPanel infoPanel;
     public BuildingPanel buildingPanel;
     [SerializeField] private GameObject advancedPanel;
@@ -77,7 +77,7 @@ public class UIController : MonoBehaviour
     public void UpdateInfoPanel() 
     {
         infoPanel.Instrument.text = editTarget.instrument;
-        infoPanel.targetBeatDropdown.SetValueWithoutNotify(editTarget.targetGrid / 8);
+        infoPanel.targetBeatDropdown.SetValueWithoutNotify((editTarget.targetGrid - 1) / 8);
         infoPanel.targetGridDropdown.SetValueWithoutNotify((editTarget.targetGrid - 1) % 8);
         infoPanel.pitchDropdown.value = editTarget.pitch;
         infoPanel.volumeSlider.value = editTarget.objectVolume;
@@ -86,10 +86,10 @@ public class UIController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape)) advancedPanel.SetActive(!advancedPanel.activeSelf);
         
         // Number hotkeys
-        if (Input.GetKeyDown(KeyCode.Alpha1)) placeRoadButton.onClick.Invoke();
-        else if (Input.GetKeyDown(KeyCode.Alpha2)) placeHouseButton.onClick.Invoke();
-        else if (Input.GetKeyDown(KeyCode.Alpha3)) placeSpecialButton.onClick.Invoke();
-        else if (Input.GetKeyDown(KeyCode.Alpha4)) editButton.onClick.Invoke();
+        if (Input.GetKeyDown(KeyCode.F1)) placeRoadButton.onClick.Invoke();
+        else if (Input.GetKeyDown(KeyCode.F2)) placeHouseButton.onClick.Invoke();
+        else if (Input.GetKeyDown(KeyCode.F3)) placeSpecialButton.onClick.Invoke();
+        else if (Input.GetKeyDown(KeyCode.F4)) editButton.onClick.Invoke();
     }
     public void OpenConfirmationPanel(string message) {
         ConfirmationPanel.SetActive(true);

@@ -95,26 +95,26 @@ public class GameManager : MonoBehaviour
         placementManager.CheckIfPositionIsOfType(position, CellType.Special)) //检查选择的位置是否有建筑
         {
             // Destroy previous outline
-            if (UIController.Instance.editTarget && 
-                (UIController.Instance.editTarget != placementManager.GetSoundEmitter(position)))
-                    Destroy(UIController.Instance.editTarget.gameObject.GetComponent<Outline>());
+            if (UIController.editTarget && 
+                (UIController.editTarget != placementManager.GetSoundEmitter(position)))
+                    Destroy(UIController.editTarget.gameObject.GetComponent<Outline>());
 
             UIController.Instance.infoPanel.gameObject.SetActive(true);
-            UIController.Instance.editTarget = placementManager.GetSoundEmitter(position);
+            UIController.editTarget = placementManager.GetSoundEmitter(position);
 
             // Create new outline
-            if (!UIController.Instance.editTarget.gameObject.GetComponent<Outline>())
-                UIController.Instance.editTarget.gameObject.AddComponent<Outline>();
+            if (!UIController.editTarget.gameObject.GetComponent<Outline>())
+                UIController.editTarget.gameObject.AddComponent<Outline>();
 
             UIController.Instance.UpdateInfoPanel();
         }
         else 
         {
             UIController.Instance.infoPanel.gameObject.SetActive(false);
-            if (UIController.Instance.editTarget) 
+            if (UIController.editTarget) 
             {
-                Destroy(UIController.Instance.editTarget.gameObject.GetComponent<Outline>());
-                UIController.Instance.editTarget = null;
+                Destroy(UIController.editTarget.gameObject.GetComponent<Outline>());
+                UIController.editTarget = null;
             }
         }
     }

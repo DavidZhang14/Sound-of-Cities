@@ -15,17 +15,17 @@ public class InfoPanel : MonoBehaviour
     }
     public void UpdatePitch()
     {
-        UIController.Instance.editTarget.pitch = (short)pitchDropdown.value;
-        UIController.Instance.editTarget.UpdateSound();
+        UIController.editTarget.pitch = (short)pitchDropdown.value;
+        UIController.editTarget.UpdateSound();
     }
     public void UpdateTargetGrid()
     {
-        UIController.Instance.editTarget.targetGrid = (short)(targetBeatDropdown.value * 8 + targetGridDropdown.value + 1);
+        UIController.editTarget.targetGrid = (short)(targetBeatDropdown.value * 8 + targetGridDropdown.value + 1);
         //UpdateSound() is not necessary for changing targetGrid
     }
     public void UpdateObjectVolume() {
-        UIController.Instance.editTarget.objectVolume = (short)volumeSlider.value;
-        UIController.Instance.editTarget.UpdateSound();
+        UIController.editTarget.objectVolume = (short)volumeSlider.value;
+        UIController.editTarget.UpdateSound();
     }
     private void OnEnable(){
         UpdateBeatDropdownText();
