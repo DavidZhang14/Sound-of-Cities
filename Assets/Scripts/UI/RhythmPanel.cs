@@ -1,11 +1,12 @@
 using UnityEngine;
 using UnityEngine.UI;
+using Unity.Netcode;
 
-public class RhythmPanel : MonoBehaviour
+public class RhythmPanel : NetworkBehaviour
 {
     public static RhythmPanel instance;
-    public short currentGrid = 0;
-    public short currentBeat = 0;
+    public NetworkVariable<short> currentGrid = new(0);
+    public NetworkVariable<short> currentBeat = new(0);
     [SerializeField] private RawImage[] Beats = new RawImage[5];
     
     public static short beatPerMeasure = 4;
@@ -24,21 +25,23 @@ public class RhythmPanel : MonoBehaviour
         MusicController.NewGridReached -= NewGrid;
     }
     private void NewGrid() {
-        currentGrid += 1;
-        if (currentGrid > gridPerMeasure) currentGrid = 1;
-        if (currentGrid % 8 == 1) NewBeat();
+        if (!IsHost) return;
+        currentGrid.Value += 1;
+        if (currentGrid.Value > gridPerMeasure) currentGrid.Value = 1;
+        if (currentGrid.Value % 8 == 1) NewBeat();
     }
     private void NewBeat() {
-        currentBeat += 1;
-        if (currentBeat > beatPerMeasure) currentBeat = 1; 
-        UpdateRhythmPanel();
+        currentBeat.Value += 1;
+        if (currentBeat.Value > beatPerMeasure) currentBeat.Value = 1; 
+        UpdateRhythmPanelClientRpc();
     }
-    private void UpdateRhythmPanel() {
-        if (currentBeat == 1) {
+    [ClientRpc]
+    private void UpdateRhythmPanelClientRpc() {
+        if (currentBeat.Value == 1) {
             for (int i = 0; i < beatPerMeasure - 1; i++) Beats[i].color = transparent;
         }
         else {
-            for (int i = 0; i < currentBeat - 1; i++) Beats[i].color = opaque;
+            for (int i = 0; i < currentBeat.Value - 1; i++) Beats[i].color = opaque;
         }
     }
     public void UpdateBeatPerMeasure(short newMeter) {
@@ -47,7 +50,7 @@ public class RhythmPanel : MonoBehaviour
         for (int i = 0; i < beatPerMeasure - 1; i++) 
         {
             Beats[i].gameObject.SetActive(true);
-            if (currentBeat < i + 2) Beats[i].color = transparent;
+            if (currentBeat.Value < i + 2) Beats[i].color = transparent;
         }
         for (int i = beatPerMeasure - 1; i < Beats.Length; i++) Beats[i].gameObject.SetActive(false);
     }

@@ -3,6 +3,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEditor;
+using Unity.Netcode;
 
 public class AdvancedPanel : MonoBehaviour
 {
@@ -65,6 +66,7 @@ public class AdvancedPanel : MonoBehaviour
                 structure.soundEmitter.UpdateSound();
             }
         }
+        if(UIController.editTarget) UIController.Instance.UpdateInfoPanel();
     }
 
     public void TransposeDown() {
@@ -77,5 +79,13 @@ public class AdvancedPanel : MonoBehaviour
                 structure.soundEmitter.UpdateSound();
             }
         }
+        if(UIController.editTarget) UIController.Instance.UpdateInfoPanel();
+    }
+
+    public void StartHost() {
+        NetworkManager.Singleton.StartHost();
+    }
+    public void StartClient() {
+        NetworkManager.Singleton.StartClient();
     }
 }
