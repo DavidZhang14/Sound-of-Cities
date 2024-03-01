@@ -3,12 +3,11 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEditor;
-using Unity.Netcode;
 
 public class AdvancedPanel : MonoBehaviour
 {
     [SerializeField] private Slider volumeSlider, tempoSlider, loopLengthSlider;
-    [SerializeField] private TMP_Text volumeText, tempoText, loopLengthText;
+    [SerializeField] private TMP_Text volumeText, tempoText, loopLengthText, ipText;
     [SerializeField] private RTPC volumeRTPC, tempoRTPC;
     [SerializeField] private Toggle randomPitchToggle, randomRhythmToggle;
 
@@ -35,7 +34,7 @@ public class AdvancedPanel : MonoBehaviour
             GameManager.randomRhythm = v;
         });
     } 
-    private void OnEnable() {
+    private void OnEnable() {  
         volumeSlider.value = volumeRTPC.GetValue(gameObject);
         volumeText.SetText("Master Volume\n" + (int)volumeSlider.value);
 
@@ -47,7 +46,11 @@ public class AdvancedPanel : MonoBehaviour
 
         randomPitchToggle.isOn = GameManager.randomPitch;
         randomRhythmToggle.isOn = GameManager.randomRhythm;
+
+        ipText.SetText("Local IP Address: " + GameManager.localIp);
+
     }
+
     public void Exit() {
         #if UNITY_EDITOR
             EditorApplication.ExitPlaymode();
@@ -80,12 +83,5 @@ public class AdvancedPanel : MonoBehaviour
             }
         }
         if(UIController.editTarget) UIController.Instance.UpdateInfoPanel();
-    }
-
-    public void StartHost() {
-        NetworkManager.Singleton.StartHost();
-    }
-    public void StartClient() {
-        NetworkManager.Singleton.StartClient();
     }
 }

@@ -4,7 +4,10 @@ using System.Diagnostics;
 using Debug = UnityEngine.Debug;
 using TMPro;
 using System.IO;
-public class GameManager : MonoBehaviour
+using Unity.Netcode;
+using System.Net;
+using Unity.Netcode.Transports.UTP;
+public class GameManager : NetworkBehaviour
 {
     public static GameManager instance;
     private CameraMovement cameraMovement;
@@ -16,6 +19,7 @@ public class GameManager : MonoBehaviour
     private StructureManager structureManager;
     public PlacementManager placementManager;
     public GameObject loadBtnPrefab;
+    public static string localIp = null;
     private string savePath;
     public static bool randomPitch = true, randomRhythm = true;
 
@@ -43,6 +47,8 @@ public class GameManager : MonoBehaviour
         savePath = Application.persistentDataPath + "/save/";
         if (!Directory.Exists(savePath))
             Directory.CreateDirectory(savePath);
+
+        StartHost();
     }
 
     private void SpecialPlacementHandler()
@@ -154,5 +160,24 @@ public class GameManager : MonoBehaviour
     }
     public void ExplorerButtonClicked() {
         Process.Start(savePath);
+    }
+
+    public void StartHost() {
+        if (NetworkManager.Singleton.IsServer) return;
+
+        NetworkManager.Singleton.Shutdown();
+        IPHostEntry hostEntry=Dns.GetHostEntry(Dns.GetHostName());
+        foreach (IPAddress ip in hostEntry.AddressList) {
+            if (ip.AddressFamily==System.Net.Sockets.AddressFamily.InterNetwork) {
+                localIp = ip.ToString();
+            }
+        }
+        if (localIp != null) NetworkManager.Singleton.GetComponent<UnityTransport>().SetConnectionData(localIp, 7777);
+        NetworkManager.Singleton.StartHost();
+    }
+    public void StartClient() {
+        if (!NetworkManager.Singleton.IsServer) return;
+        NetworkManager.Singleton.Shutdown();
+        NetworkManager.Singleton.StartClient();
     }
 }
