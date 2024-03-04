@@ -19,7 +19,8 @@ public class GameManager : NetworkBehaviour
     private StructureManager structureManager;
     public PlacementManager placementManager;
     public GameObject loadBtnPrefab;
-    public static string localIp = null;
+    public static string serverIP = null;
+    public static bool clientMode = false;
     private string savePath;
     public static bool randomPitch = true, randomRhythm = true;
 
@@ -47,8 +48,9 @@ public class GameManager : NetworkBehaviour
         savePath = Application.persistentDataPath + "/save/";
         if (!Directory.Exists(savePath))
             Directory.CreateDirectory(savePath);
-
-        StartHost();
+            
+        if (clientMode) StartClient(); 
+        else StartHost();
     }
 
     private void SpecialPlacementHandler()
@@ -169,10 +171,10 @@ public class GameManager : NetworkBehaviour
         IPHostEntry hostEntry=Dns.GetHostEntry(Dns.GetHostName());
         foreach (IPAddress ip in hostEntry.AddressList) {
             if (ip.AddressFamily==System.Net.Sockets.AddressFamily.InterNetwork) {
-                localIp = ip.ToString();
+                serverIP = ip.ToString();
             }
         }
-        if (localIp != null) NetworkManager.Singleton.GetComponent<UnityTransport>().SetConnectionData(localIp, 7777);
+        if (serverIP != null) NetworkManager.Singleton.GetComponent<UnityTransport>().SetConnectionData(serverIP, 7777);
         NetworkManager.Singleton.StartHost();
     }
     public void StartClient() {
