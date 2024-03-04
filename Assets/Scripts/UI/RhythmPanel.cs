@@ -25,7 +25,7 @@ public class RhythmPanel : NetworkBehaviour
         MusicController.NewGridReached -= NewGrid;
     }
     private void NewGrid() {
-        if (!IsHost) return;
+        if (!NetworkManager.Singleton.IsHost) return;
         currentGrid.Value += 1;
         if (currentGrid.Value > gridPerMeasure) currentGrid.Value = 1;
         if (currentGrid.Value % 8 == 1) NewBeat();
@@ -33,15 +33,15 @@ public class RhythmPanel : NetworkBehaviour
     private void NewBeat() {
         currentBeat.Value += 1;
         if (currentBeat.Value > beatPerMeasure) currentBeat.Value = 1; 
-        UpdateRhythmPanelClientRpc();
+        UpdateRhythmPanelClientRpc(currentBeat.Value);
     }
     [ClientRpc]
-    private void UpdateRhythmPanelClientRpc() {
-        if (currentBeat.Value == 1) {
+    private void UpdateRhythmPanelClientRpc(short beat) {
+        if (beat == 1) {
             for (int i = 0; i < beatPerMeasure - 1; i++) Beats[i].color = transparent;
         }
         else {
-            for (int i = 0; i < currentBeat.Value - 1; i++) Beats[i].color = opaque;
+            for (int i = 0; i < beat - 1; i++) Beats[i].color = opaque;
         }
     }
     public void UpdateBeatPerMeasure(short newMeter) {

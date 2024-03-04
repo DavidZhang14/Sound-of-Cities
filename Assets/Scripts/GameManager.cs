@@ -179,7 +179,6 @@ public class GameManager : NetworkBehaviour
         NetworkManager.Singleton.StartHost();
     }
     public void StartClient() {
-        if (!NetworkManager.Singleton.IsServer) return;
         NetworkManager.Singleton.Shutdown();
         Assert.IsTrue(serverIP != null);
         NetworkManager.Singleton.GetComponent<UnityTransport>().SetConnectionData(serverIP, 7777);
