@@ -7,6 +7,7 @@ using System.IO;
 using Unity.Netcode;
 using System.Net;
 using Unity.Netcode.Transports.UTP;
+using UnityEngine.Assertions;
 public class GameManager : NetworkBehaviour
 {
     public static GameManager instance;
@@ -180,6 +181,8 @@ public class GameManager : NetworkBehaviour
     public void StartClient() {
         if (!NetworkManager.Singleton.IsServer) return;
         NetworkManager.Singleton.Shutdown();
+        Assert.IsTrue(serverIP != null);
+        NetworkManager.Singleton.GetComponent<UnityTransport>().SetConnectionData(serverIP, 7777);
         NetworkManager.Singleton.StartClient();
     }
 }
