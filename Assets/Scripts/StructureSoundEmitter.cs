@@ -6,20 +6,16 @@ public class StructureSoundEmitter : MonoBehaviour
     public string instrument = "Harp";
     public short targetGrid;
     public short objectVolume = 100;
-    private RhythmPanel rhythmPanel;
-    private void Awake() {
-        rhythmPanel = GameObject.Find("RhythmPanel").GetComponent<RhythmPanel>();
-    }
     void OnEnable() {
-        MusicController.NewGridReached += EmitSound;
+        RhythmPanel.TriggerSound += EmitSound;
         UpdateSound();
     }
     void OnDisable() {
-        MusicController.NewGridReached -= EmitSound;
+        RhythmPanel.TriggerSound -= EmitSound;
     }
     private void EmitSound() {
-        if (rhythmPanel.currentGrid.Value == targetGrid)
-        AkSoundEngine.PostEvent("Note_Trigger", gameObject);
+        if (RhythmPanel.currentGrid.Value == targetGrid)
+            AkSoundEngine.PostEvent("Note_Trigger", gameObject);
     }
     public void UpdateSound() {
         AkSoundEngine.SetRTPCValue("Pitch", pitch, gameObject);

@@ -185,6 +185,7 @@ public class GameManager : NetworkBehaviour
             RelayServerData relayServerData = new(allocation, "dtls");
             NetworkManager.Singleton.GetComponent<UnityTransport>().SetRelayServerData(relayServerData);
             NetworkManager.Singleton.StartHost();
+            RhythmPanel.instance.Reset();
         }
         catch (RelayServiceException e) {
             Debug.LogError(e);

@@ -1,12 +1,15 @@
 using UnityEngine;
 using UnityEngine.UI;
 using Unity.Netcode;
+using UnityEngine.Assertions;
 
 public class RhythmPanel : NetworkBehaviour
 {
+    public delegate void MusicControl();
+    public static event MusicControl NewGridReached, TriggerSound;
     public static RhythmPanel instance;
-    public NetworkVariable<short> currentGrid = new(0);
-    public NetworkVariable<short> currentBeat = new(0);
+    public static NetworkVariable<short> currentGrid = new(0);
+    public static NetworkVariable<short> currentBeat = new(0);
     [SerializeField] private RawImage[] Beats = new RawImage[5];
     
     public static short beatPerMeasure = 4;
@@ -19,24 +22,27 @@ public class RhythmPanel : NetworkBehaviour
         else Destroy(gameObject);
     }
     void OnEnable() {
-        MusicController.NewGridReached += NewGrid;
+        NewGridReached += NewGrid;
     }
     void OnDisable() {
-        MusicController.NewGridReached -= NewGrid;
+        NewGridReached -= NewGrid;
     }
+    //The following two methods are called only at host
     private void NewGrid() {
-        if (!NetworkManager.Singleton.IsHost) return;
         currentGrid.Value += 1;
         if (currentGrid.Value > gridPerMeasure) currentGrid.Value = 1;
         if (currentGrid.Value % 8 == 1) NewBeat();
+        TriggerSoundClientRpc();
     }
     private void NewBeat() {
         currentBeat.Value += 1;
         if (currentBeat.Value > beatPerMeasure) currentBeat.Value = 1; 
         UpdateRhythmPanelClientRpc(currentBeat.Value);
     }
-    [ClientRpc]
-    private void UpdateRhythmPanelClientRpc(short beat) {
+    [ClientRpc] private void TriggerSoundClientRpc() {
+        TriggerSound?.Invoke();
+    }
+    [ClientRpc] private void UpdateRhythmPanelClientRpc(short beat) {
         if (beat == 1) {
             for (int i = 0; i < beatPerMeasure - 1; i++) Beats[i].color = transparent;
         }
@@ -53,5 +59,12 @@ public class RhythmPanel : NetworkBehaviour
             if (currentBeat.Value < i + 2) Beats[i].color = transparent;
         }
         for (int i = beatPerMeasure - 1; i < Beats.Length; i++) Beats[i].gameObject.SetActive(false);
+    }
+    private void CallbackFunction(object in_cookie, AkCallbackType in_type, object in_info) {
+        NewGridReached?.Invoke();
+    }
+    public void Reset() {
+        Assert.IsTrue(NetworkManager.Singleton.IsHost);
+        AkSoundEngine.PostEvent("Main_Loop", gameObject, (uint)AkCallbackType.AK_MusicSyncGrid, CallbackFunction, null);
     }
 }

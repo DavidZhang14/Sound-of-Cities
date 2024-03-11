@@ -20,7 +20,7 @@ public class AdvancedPanel : MonoBehaviour
         });
         tempoSlider.onValueChanged.AddListener((v) => {
             tempoRTPC.SetGlobalValue(v);
-            MusicController.instance.Reset();
+            RhythmPanel.instance.Reset();
             tempoText.SetText("Tempo\n" + (int)v);
         });
         loopLengthSlider.onValueChanged.AddListener((v) => {
