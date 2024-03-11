@@ -3,6 +3,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEditor;
+using Unity.Netcode;
 
 public class AdvancedPanel : MonoBehaviour
 {
@@ -38,7 +39,13 @@ public class AdvancedPanel : MonoBehaviour
         volumeSlider.value = volumeRTPC.GetValue(gameObject);
         volumeText.SetText("Master Volume\n" + (int)volumeSlider.value);
 
-        tempoSlider.value = tempoRTPC.GetValue(gameObject);
+        if (NetworkManager.Singleton.IsHost) {
+            tempoSlider.interactable = true;
+            tempoSlider.value = tempoRTPC.GetValue(gameObject);
+        }
+        else {
+            tempoSlider.interactable = false;
+        }
         tempoText.SetText("Tempo\n" + (int)tempoSlider.value);
 
         loopLengthSlider.value = RhythmPanel.beatPerMeasure;
