@@ -47,7 +47,7 @@ public class AdvancedPanel : MonoBehaviour
         randomPitchToggle.isOn = GameManager.randomPitch;
         randomRhythmToggle.isOn = GameManager.randomRhythm;
 
-        ipText.SetText("Local IP Address: " + GameManager.serverIP);
+        ipText.SetText("Join Code: " + GameManager.joinCode);
 
     }
 

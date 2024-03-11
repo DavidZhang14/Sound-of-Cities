@@ -18,7 +18,7 @@ public class MenuScene : MonoBehaviour
         clientButton.onClick.AddListener(() =>
         {
             GameManager.clientMode = true;
-            GameManager.serverIP = ipInputField.text;
+            GameManager.joinCode = ipInputField.text;
             // Load next scene
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         });

@@ -8,6 +8,11 @@ using Unity.Netcode;
 using System.Net;
 using Unity.Netcode.Transports.UTP;
 using UnityEngine.Assertions;
+using Unity.Services.Core;
+using Unity.Services.Authentication;
+using Unity.Services.Relay;
+using Unity.Services.Relay.Models;
+using Unity.Networking.Transport.Relay;
 public class GameManager : NetworkBehaviour
 {
     public static GameManager instance;
@@ -20,7 +25,7 @@ public class GameManager : NetworkBehaviour
     private StructureManager structureManager;
     public PlacementManager placementManager;
     public GameObject loadBtnPrefab;
-    public static string serverIP = null;
+    public static string joinCode = null;
     public static bool clientMode = false;
     private string savePath;
     public static bool randomPitch = true, randomRhythm = true;
@@ -33,7 +38,7 @@ public class GameManager : NetworkBehaviour
         else Destroy(gameObject);
     }
 
-    private void Start()
+    private async void Start()
     {
         if (CameraMovement.instance != null) cameraMovement = CameraMovement.instance;
         else Debug.LogError("CameraMovement not found.");
@@ -49,7 +54,13 @@ public class GameManager : NetworkBehaviour
         savePath = Application.persistentDataPath + "/save/";
         if (!Directory.Exists(savePath))
             Directory.CreateDirectory(savePath);
-            
+        
+        //Multiplayer
+        await UnityServices.InitializeAsync();
+        AuthenticationService.Instance.SignedIn += () => {
+            Debug.Log("Signed in " + AuthenticationService.Instance.PlayerId);
+        };
+        await AuthenticationService.Instance.SignInAnonymouslyAsync();
         if (clientMode) StartClient(); 
         else StartHost();
     }
@@ -165,23 +176,31 @@ public class GameManager : NetworkBehaviour
         Process.Start(savePath);
     }
 
-    public void StartHost() {
+    public async void StartHost() {
         if (NetworkManager.Singleton.IsServer) return;
-
         NetworkManager.Singleton.Shutdown();
-        IPHostEntry hostEntry=Dns.GetHostEntry(Dns.GetHostName());
-        foreach (IPAddress ip in hostEntry.AddressList) {
-            if (ip.AddressFamily==System.Net.Sockets.AddressFamily.InterNetwork) {
-                serverIP = ip.ToString();
-            }
+        try {
+            Allocation allocation = await RelayService.Instance.CreateAllocationAsync(3);
+            joinCode = await RelayService.Instance.GetJoinCodeAsync(allocation.AllocationId);
+            RelayServerData relayServerData = new(allocation, "dtls");
+            NetworkManager.Singleton.GetComponent<UnityTransport>().SetRelayServerData(relayServerData);
+            NetworkManager.Singleton.StartHost();
         }
-        if (serverIP != null) NetworkManager.Singleton.GetComponent<UnityTransport>().SetConnectionData(serverIP, 7777);
-        NetworkManager.Singleton.StartHost();
+        catch (RelayServiceException e) {
+            Debug.LogError(e);
+        }
     }
-    public void StartClient() {
+    public async void StartClient() {
         NetworkManager.Singleton.Shutdown();
-        Assert.IsTrue(serverIP != null);
-        NetworkManager.Singleton.GetComponent<UnityTransport>().SetConnectionData(serverIP, 7777);
-        NetworkManager.Singleton.StartClient();
+        Assert.IsTrue(joinCode != null);
+        try {
+            JoinAllocation joinAllocation = await RelayService.Instance.JoinAllocationAsync(joinCode);
+            RelayServerData relayServerData = new(joinAllocation, "dtls");
+            NetworkManager.Singleton.GetComponent<UnityTransport>().SetRelayServerData(relayServerData);
+            NetworkManager.Singleton.StartClient();
+        }
+        catch (RelayServiceException e) {
+            Debug.LogError(e);
+        }
     }
 }
