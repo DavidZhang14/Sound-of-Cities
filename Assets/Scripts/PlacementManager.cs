@@ -225,7 +225,7 @@ public class PlacementManager : MonoBehaviour
         structureDictionary.TryGetValue(deletePos, out Structure structure);
 
         // If the structure is the edit target, close the info panel
-        if (structure.soundEmitter == UIController.editTarget)
+        if (UIController.editTarget != null && structure.soundEmitter == UIController.editTarget)
             InfoPanel.instance.gameObject.SetActive(false);
 
         Destroy(structure.gameObject);

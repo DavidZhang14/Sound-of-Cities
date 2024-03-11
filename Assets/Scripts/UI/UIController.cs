@@ -27,7 +27,7 @@ public class UIController : MonoBehaviour
     }
     private void Start()
     {
-        buttonList = new List<Button> { placeHouseButton, placeRoadButton, placeSpecialButton, editButton };
+        buttonList = new List<Button> { placeHouseButton, placeRoadButton, editButton };
 
         placeRoadButton.onClick.AddListener(() =>
         {
@@ -43,13 +43,14 @@ public class UIController : MonoBehaviour
             OnHousePlacement?.Invoke();
 
         });
+        /*
         placeSpecialButton.onClick.AddListener(() =>
         {
             ResetButtonColor();
             ModifyOutline(placeSpecialButton);
             OnSpecialPlacement?.Invoke();
 
-        });
+        });*/
         editButton.onClick.AddListener(() =>
         {
             ResetButtonColor();
@@ -88,8 +89,7 @@ public class UIController : MonoBehaviour
         // Number hotkeys
         if (Input.GetKeyDown(KeyCode.F1)) placeRoadButton.onClick.Invoke();
         else if (Input.GetKeyDown(KeyCode.F2)) placeHouseButton.onClick.Invoke();
-        else if (Input.GetKeyDown(KeyCode.F3)) placeSpecialButton.onClick.Invoke();
-        else if (Input.GetKeyDown(KeyCode.F4)) editButton.onClick.Invoke();
+        else if (Input.GetKeyDown(KeyCode.F3)) editButton.onClick.Invoke();
     }
     public void OpenConfirmationPanel(string message) {
         ConfirmationPanel.SetActive(true);
