@@ -36049,6 +36049,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1916978683}
   - component: {fileID: 1916978682}
+  - component: {fileID: 1916978684}
+  - component: {fileID: 1916978685}
   m_Layer: 0
   m_Name: InputSystem
   m_TagString: Untagged
@@ -36087,6 +36089,243 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1916978684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1916978681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: aeb1b6727b9e1ca4c9a8a9f8b36bed88,
+    type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1916978682}
+        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
+        m_MethodName: MIDI_PitchControl
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 9
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: fc86016b-34cc-4266-8946-b3dafe7b1d9a
+    m_ActionName: MIDI/Pitch A
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1916978682}
+        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
+        m_MethodName: MIDI_PitchControl
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 10
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 1306bb18-1461-4fe8-a52a-14dc4bd59c0c
+    m_ActionName: MIDI/Pitch A#
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1916978682}
+        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
+        m_MethodName: MIDI_PitchControl
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 11
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 9bd8543f-ea7f-40ae-b659-57b0a32dcdde
+    m_ActionName: MIDI/Pitch B
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1916978682}
+        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
+        m_MethodName: MIDI_PitchControl
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 8d2e8022-a4ed-4fd7-8520-e3f5de5d8999
+    m_ActionName: MIDI/Pitch C
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1916978682}
+        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
+        m_MethodName: MIDI_PitchControl
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 4fefc14d-fce1-4d07-9bdf-0a892437124d
+    m_ActionName: MIDI/Pitch C#
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1916978682}
+        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
+        m_MethodName: MIDI_PitchControl
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: a1241562-dc8c-4b3d-a184-a4853ff059ec
+    m_ActionName: MIDI/Pitch D
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1916978682}
+        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
+        m_MethodName: MIDI_PitchControl
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 69daa4dd-acc2-4581-9370-0488b5664a13
+    m_ActionName: MIDI/Pitch D#
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1916978682}
+        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
+        m_MethodName: MIDI_PitchControl
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 4
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 6f732b8f-b36f-449d-9fc2-12a981a23650
+    m_ActionName: MIDI/Pitch E[/MidiDevice/note004,/MidiDevice/note016,/MidiDevice/note028,/MidiDevice/note040,/MidiDevice/note052,/MidiDevice/note064,/MidiDevice/note076,/MidiDevice/note088,/MidiDevice/note100,/MidiDevice/note112]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1916978682}
+        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
+        m_MethodName: MIDI_PitchControl
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: aa38d756-0be7-4f7e-866e-5e9e9ce1d4f0
+    m_ActionName: MIDI/Pitch F[/MidiDevice/note005,/MidiDevice/note017,/MidiDevice/note029,/MidiDevice/note041,/MidiDevice/note053,/MidiDevice/note065,/MidiDevice/note077,/MidiDevice/note089,/MidiDevice/note101,/MidiDevice/note113]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1916978682}
+        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
+        m_MethodName: MIDI_PitchControl
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 6
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: ac07603b-9e43-4a1f-8e28-718577e52840
+    m_ActionName: MIDI/Pitch F#[/MidiDevice/note006,/MidiDevice/note018,/MidiDevice/note030,/MidiDevice/note042,/MidiDevice/note054,/MidiDevice/note066,/MidiDevice/note078,/MidiDevice/note090,/MidiDevice/note102,/MidiDevice/note114]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1916978682}
+        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
+        m_MethodName: MIDI_PitchControl
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 7
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: f6d1f220-a1c1-404f-9697-d0deddb26b48
+    m_ActionName: MIDI/Pitch G[/MidiDevice/note007,/MidiDevice/note019,/MidiDevice/note031,/MidiDevice/note043,/MidiDevice/note055,/MidiDevice/note067,/MidiDevice/note079,/MidiDevice/note091,/MidiDevice/note103,/MidiDevice/note115]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1916978682}
+        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
+        m_MethodName: MIDI_PitchControl
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 8
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: fd96eceb-9812-4af6-b5e8-322bc311274c
+    m_ActionName: MIDI/Pitch G#[/MidiDevice/note008,/MidiDevice/note020,/MidiDevice/note032,/MidiDevice/note044,/MidiDevice/note056,/MidiDevice/note068,/MidiDevice/note080,/MidiDevice/note092,/MidiDevice/note104,/MidiDevice/note116]
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: MIDI
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
+--- !u!114 &1916978685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1916978681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7565ab2637895694ab9d785032f9ff1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _channel: -1
+  _productName: 
 --- !u!1001 &1922138722
 PrefabInstance:
   m_ObjectHideFlags: 0

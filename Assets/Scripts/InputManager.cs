@@ -18,6 +18,7 @@ public class InputManager : MonoBehaviour
 	{
 		get { return cameraMovementVector; }
 	}
+
 	private void Awake() {
 		if (instance == null) {
 			instance = this;
@@ -182,6 +183,14 @@ public class InputManager : MonoBehaviour
 					UIController.Instance.UpdateInfoPanel();
 				}
 			}
+		}
+	}
+	public void MIDI_PitchControl(int pitch) {
+		Debug.Log("MIDI triggered at pitch " + pitch);
+		if (UIController.editTarget) {
+			UIController.editTarget.pitch = (short)pitch;
+			UIController.editTarget.UpdateSound();
+			UIController.Instance.UpdateInfoPanel();
 		}
 	}
 }

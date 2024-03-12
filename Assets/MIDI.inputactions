@@ -1,0 +1,1503 @@
+{
+    "name": "MIDI",
+    "maps": [
+        {
+            "name": "MIDI",
+            "id": "392e1d83-636c-47ae-bd96-257834339aaa",
+            "actions": [
+                {
+                    "name": "Pitch A",
+                    "type": "Button",
+                    "id": "fc86016b-34cc-4266-8946-b3dafe7b1d9a",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Pitch A#",
+                    "type": "Button",
+                    "id": "1306bb18-1461-4fe8-a52a-14dc4bd59c0c",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Pitch B",
+                    "type": "Button",
+                    "id": "9bd8543f-ea7f-40ae-b659-57b0a32dcdde",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Pitch C",
+                    "type": "Button",
+                    "id": "8d2e8022-a4ed-4fd7-8520-e3f5de5d8999",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Pitch C#",
+                    "type": "Button",
+                    "id": "4fefc14d-fce1-4d07-9bdf-0a892437124d",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Pitch D",
+                    "type": "Button",
+                    "id": "a1241562-dc8c-4b3d-a184-a4853ff059ec",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Pitch D#",
+                    "type": "Button",
+                    "id": "69daa4dd-acc2-4581-9370-0488b5664a13",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Pitch E",
+                    "type": "Button",
+                    "id": "6f732b8f-b36f-449d-9fc2-12a981a23650",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Pitch F",
+                    "type": "Button",
+                    "id": "aa38d756-0be7-4f7e-866e-5e9e9ce1d4f0",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Pitch F#",
+                    "type": "Button",
+                    "id": "ac07603b-9e43-4a1f-8e28-718577e52840",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Pitch G",
+                    "type": "Button",
+                    "id": "f6d1f220-a1c1-404f-9697-d0deddb26b48",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Pitch G#",
+                    "type": "Button",
+                    "id": "fd96eceb-9812-4af6-b5e8-322bc311274c",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "f2c918b9-1e74-4e73-82e1-9192c5248a6a",
+                    "path": "<MidiDevice>/note009",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch A",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "836a3f5a-2b2d-4ce9-80e0-692d57e3d407",
+                    "path": "<MidiDevice>/note021",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch A",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a0e0c3d5-0506-455b-a898-1c9c4d968173",
+                    "path": "<MidiDevice>/note033",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch A",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b04b2e77-1a63-444b-b3d1-859b273bf42a",
+                    "path": "<MidiDevice>/note045",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch A",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8162595f-f671-4629-9629-782b4a3bfa23",
+                    "path": "<MidiDevice>/note057",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch A",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7492d6c0-b2b6-4c85-9310-2a796cbd2787",
+                    "path": "<MidiDevice>/note069",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch A",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "312b4ae9-5d88-4865-9298-587c7ca4cc30",
+                    "path": "<MidiDevice>/note081",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch A",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "85eedb5b-d5c7-4776-917c-ea789169936a",
+                    "path": "<MidiDevice>/note093",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch A",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4f2f8b5a-9895-492f-aa6c-16e260c4b5c3",
+                    "path": "<MidiDevice>/note105",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch A",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "963c4da7-6575-4a65-b538-536293069ade",
+                    "path": "<MidiDevice>/note117",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch A",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "11f992db-2d10-4702-8da5-2f335ad2c10e",
+                    "path": "<MidiDevice>/note010",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch A#",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "cdb2513a-ce4b-4e7f-b549-6ad7168cd59a",
+                    "path": "<MidiDevice>/note022",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch A#",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b0bd0e9c-0749-4da7-9046-18792dd0c91d",
+                    "path": "<MidiDevice>/note034",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch A#",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0a90e775-1220-4704-9f39-455f1369a2aa",
+                    "path": "<MidiDevice>/note046",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch A#",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "043da751-3a04-489c-88d0-7a7251652262",
+                    "path": "<MidiDevice>/note058",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch A#",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3651cab8-e288-4345-9e0f-b9cc522b08f2",
+                    "path": "<MidiDevice>/note070",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch A#",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4e8e2426-cb25-4d4c-81db-6c924e5e0efd",
+                    "path": "<MidiDevice>/note082",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch A#",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c4e0cb97-e337-4ff2-8058-0efe6336330c",
+                    "path": "<MidiDevice>/note094",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch A#",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "069b85ae-a868-4ae6-848c-de2881a8827f",
+                    "path": "<MidiDevice>/note106",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch A#",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2ec85364-f0f7-4a10-a1d1-56b3db6a2c39",
+                    "path": "<MidiDevice>/note118",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch A#",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5644a294-1c5c-4c5f-93cf-d8a166005594",
+                    "path": "<MidiDevice>/note011",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch B",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "31af64a3-fb2c-4c6e-baa9-237db327e352",
+                    "path": "<MidiDevice>/note023",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch B",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f892aa6b-eb68-4384-a7b9-8c48c7fbd207",
+                    "path": "<MidiDevice>/note035",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch B",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "41394759-63dc-4ecf-855f-ede4dc30c7e6",
+                    "path": "<MidiDevice>/note047",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch B",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ca0f53f4-e42a-4e48-b925-191e8255b2cf",
+                    "path": "<MidiDevice>/note059",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch B",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e7fe9277-0c43-4fda-b714-32113d43d58f",
+                    "path": "<MidiDevice>/note071",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch B",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b77ab956-1714-4ea3-8eab-60b6bff79213",
+                    "path": "<MidiDevice>/note083",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch B",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5f769bfa-7590-4ace-94d9-8916850dadc3",
+                    "path": "<MidiDevice>/note095",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch B",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "fd9b9201-6b46-4913-ac61-ff1f8d0d1833",
+                    "path": "<MidiDevice>/note107",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch B",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "91833f21-171c-489b-99ff-053433b34971",
+                    "path": "<MidiDevice>/note119",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch B",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "964eb316-2904-44c4-a9ce-ae054061e2c4",
+                    "path": "<MidiDevice>/note000",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch C",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5a2f6344-7580-4f69-b4dc-72702fffb0bc",
+                    "path": "<MidiDevice>/note012",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch C",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b0366010-cc95-46c2-8286-b89c08041d08",
+                    "path": "<MidiDevice>/note024",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch C",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f39d4a59-64a8-45e2-9f38-76338f765eb9",
+                    "path": "<MidiDevice>/note036",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch C",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ebc3d92e-75c9-4fb0-bdff-29c837af7969",
+                    "path": "<MidiDevice>/note048",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch C",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "21d69102-6666-4aa6-bfdd-cf1f7cf872b7",
+                    "path": "<MidiDevice>/note060",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch C",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ae1c7614-9086-46cc-b76e-58c185e95003",
+                    "path": "<MidiDevice>/note072",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch C",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d5cabe2f-c7d5-40e7-abcd-af288204b8b6",
+                    "path": "<MidiDevice>/note084",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch C",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "51f82cd2-e1ee-4969-ab19-44082f0e54d3",
+                    "path": "<MidiDevice>/note096",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch C",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d99dc2c8-6b77-4ee1-a90d-2db29c0cb874",
+                    "path": "<MidiDevice>/note108",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch C",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6c076f11-db00-4acd-b441-29ed152fa273",
+                    "path": "<MidiDevice>/note001",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch C#",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2c9e1ba8-227a-4910-bd08-ac5d2974311f",
+                    "path": "<MidiDevice>/note013",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch C#",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "45db5bce-2bd3-491f-8ef6-8cc62224cf7f",
+                    "path": "<MidiDevice>/note025",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch C#",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b65c3735-bb5e-4dff-b008-efe3ea556c27",
+                    "path": "<MidiDevice>/note037",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch C#",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5565eb45-26f0-41fa-935b-e649403d975f",
+                    "path": "<MidiDevice>/note049",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch C#",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "27e20cd9-10f9-4634-96d1-8cd960551462",
+                    "path": "<MidiDevice>/note061",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch C#",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f32b3bea-2dee-4d6c-9a97-02e64c64e3b0",
+                    "path": "<MidiDevice>/note073",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch C#",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "cdf408b6-8327-4cf5-9fb9-d4f4c1ac5628",
+                    "path": "<MidiDevice>/note085",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch C#",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e99f39be-0b8d-46c8-95b5-f07e97ccfb1f",
+                    "path": "<MidiDevice>/note097",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch C#",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a07feab7-351b-4269-a6ff-571c4605517f",
+                    "path": "<MidiDevice>/note109",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch C#",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "43874d25-69f1-42d5-929c-78ed94334ecb",
+                    "path": "<MidiDevice>/note002",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch D",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ec5e1a21-4a84-405e-b8d7-0698664eddd6",
+                    "path": "<MidiDevice>/note014",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch D",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "40c1d47d-61ab-40f0-8486-d55b653593d5",
+                    "path": "<MidiDevice>/note026",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch D",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0b2bad3a-7c1a-40b3-aa30-fc5519e6e079",
+                    "path": "<MidiDevice>/note038",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch D",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c7dd0e4b-0ff6-46a0-9857-32272518bdf5",
+                    "path": "<MidiDevice>/note050",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch D",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c2f8d87b-1f99-4c28-bbc4-9c2c624834d0",
+                    "path": "<MidiDevice>/note062",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch D",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "11b99af4-2f1e-467c-a977-0588da99171c",
+                    "path": "<MidiDevice>/note074",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch D",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b7919db9-5a0c-453d-874c-d4d1740728c0",
+                    "path": "<MidiDevice>/note086",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch D",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ff565b5b-1744-4f4f-8f5e-e1a05b08d0fe",
+                    "path": "<MidiDevice>/note098",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch D",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c14f26a8-fa33-4881-af28-32a95af89b2f",
+                    "path": "<MidiDevice>/note110",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch D",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "be368986-64c1-4dce-902b-948e825c12de",
+                    "path": "<MidiDevice>/note003",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch D#",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8ae54cc2-b8ee-4660-a3bc-670705a2a233",
+                    "path": "<MidiDevice>/note015",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch D#",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7f520bfa-72bc-4e6e-8401-98b046d4bff1",
+                    "path": "<MidiDevice>/note027",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch D#",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6f2f899a-89cc-4b7c-8c26-e467476bcaa7",
+                    "path": "<MidiDevice>/note039",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch D#",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8b2bc6c3-9ba4-4d34-b630-bdd7757577f8",
+                    "path": "<MidiDevice>/note051",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch D#",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "290f4021-2b6c-479e-8507-3cf46842e549",
+                    "path": "<MidiDevice>/note063",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch D#",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c119a9fe-f36b-4aab-8283-624f6b21320c",
+                    "path": "<MidiDevice>/note075",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch D#",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "be1a6dca-4b33-4f5f-8fc3-d26f8bc73d4f",
+                    "path": "<MidiDevice>/note087",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch D#",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9f8dc9f1-f234-472d-a747-6b1fed819b77",
+                    "path": "<MidiDevice>/note099",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch D#",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "81927dbf-5d32-46e8-bcde-053c56415ed1",
+                    "path": "<MidiDevice>/note111",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch D#",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f1b7a32f-9c2e-445d-9910-1a03b90cb5fb",
+                    "path": "<MidiDevice>/note004",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch E",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "06f02022-e542-46a8-86d5-65b7261b5789",
+                    "path": "<MidiDevice>/note016",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch E",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "95406d62-ff58-40cc-a416-3b55b6b9602f",
+                    "path": "<MidiDevice>/note028",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch E",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5811007e-f0c4-4b7a-9764-8fe28ca5bc5e",
+                    "path": "<MidiDevice>/note040",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch E",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e44636ce-960d-4e67-9983-fe0c23f7bea5",
+                    "path": "<MidiDevice>/note052",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch E",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "10bc49bb-f3bb-40ec-b182-0fd759762583",
+                    "path": "<MidiDevice>/note064",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch E",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "44697945-543a-49cd-82f0-7874b7585403",
+                    "path": "<MidiDevice>/note076",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch E",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0270d917-5477-48f9-b0e0-71c5b7a4e829",
+                    "path": "<MidiDevice>/note088",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch E",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d9b80444-8134-4b79-9af8-a59d25423943",
+                    "path": "<MidiDevice>/note100",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch E",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d2b09d4a-384f-423a-a43b-5ac5170e3211",
+                    "path": "<MidiDevice>/note112",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch E",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "868fd7e2-6f2d-47d8-9221-c82b73af9df1",
+                    "path": "<MidiDevice>/note005",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch F",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "18c6bf4e-ead8-4147-8ebd-6e9470ec59a0",
+                    "path": "<MidiDevice>/note017",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch F",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e9579020-d5a3-4293-ae28-32d5eb8537a7",
+                    "path": "<MidiDevice>/note029",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch F",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e1ac6b4e-4d8f-4dcc-9276-b7cc7a0f3437",
+                    "path": "<MidiDevice>/note041",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch F",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4e67d579-49bd-4ada-8531-6e1c1bfa4e98",
+                    "path": "<MidiDevice>/note053",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch F",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "af8638d3-20ef-4017-bc0c-d68f802eb42f",
+                    "path": "<MidiDevice>/note065",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch F",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5a0e364c-b6c9-4392-94ae-d1b1d95461f6",
+                    "path": "<MidiDevice>/note077",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch F",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ec2ad14c-68e5-4d4a-854b-1f1079e468b6",
+                    "path": "<MidiDevice>/note089",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch F",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "58f9a009-27a6-4f88-a7d4-98c2f506ba77",
+                    "path": "<MidiDevice>/note101",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch F",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "352383a8-8fb9-4c3f-a74c-a79071000aaa",
+                    "path": "<MidiDevice>/note113",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch F",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e974de7d-88fc-4f25-8084-531b823a3eeb",
+                    "path": "<MidiDevice>/note006",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch F#",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "63f86590-a644-4ace-a3a1-fb321f843253",
+                    "path": "<MidiDevice>/note018",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch F#",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9f13ffd3-394a-48e3-bcac-1ac4869eaf2f",
+                    "path": "<MidiDevice>/note030",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch F#",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0be88bd7-ec91-469b-8f10-15d0fa384947",
+                    "path": "<MidiDevice>/note042",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch F#",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "43f2317e-dd28-4ee2-94b8-28f7e2e26482",
+                    "path": "<MidiDevice>/note054",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch F#",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "00597854-050b-4b21-81b0-eef117fb7094",
+                    "path": "<MidiDevice>/note066",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch F#",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e8e39911-e7a2-46b5-84c2-68498680de95",
+                    "path": "<MidiDevice>/note078",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch F#",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d0ae7b3f-a77f-4382-b82b-4ac0d887b5ae",
+                    "path": "<MidiDevice>/note090",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch F#",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ccb691a5-71fb-4ae7-a4e5-39ce6b51b2eb",
+                    "path": "<MidiDevice>/note102",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch F#",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "eed9885b-ac91-4e95-aedf-92e5fdcab149",
+                    "path": "<MidiDevice>/note114",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch F#",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "287fc3f3-5e3f-414e-ac74-bc85573121fc",
+                    "path": "<MidiDevice>/note007",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch G",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "15663e57-e46c-495c-a4f4-eccee1304720",
+                    "path": "<MidiDevice>/note019",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch G",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "fa7d8eec-1937-4c82-ac2a-ded177fbee60",
+                    "path": "<MidiDevice>/note031",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch G",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "36773911-77ba-42a4-9fd1-9d138ad1dc7f",
+                    "path": "<MidiDevice>/note043",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch G",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4b414874-2da3-46c1-af22-eac65ea3cf79",
+                    "path": "<MidiDevice>/note055",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch G",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a79a12fd-ab60-4744-95e5-821176b0338e",
+                    "path": "<MidiDevice>/note067",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch G",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1669060d-b5e2-45b2-8788-b4dce8e0b55f",
+                    "path": "<MidiDevice>/note079",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch G",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "46bacb8b-04ba-4d65-9d63-a2b4b452980b",
+                    "path": "<MidiDevice>/note091",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch G",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "86c01f66-c7bc-4392-9edd-bb3d38ee54db",
+                    "path": "<MidiDevice>/note103",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch G",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f64f2cd2-09f4-4d9d-a8d7-1d8a1531cc5a",
+                    "path": "<MidiDevice>/note115",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch G",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "279b14b4-8674-4c89-b9a1-e5b23069b255",
+                    "path": "<MidiDevice>/note008",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch G#",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "df1fbd1d-6482-4ecf-967e-5f6f813c8ef5",
+                    "path": "<MidiDevice>/note020",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch G#",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0013091c-25a4-4de4-acc4-02750160cc09",
+                    "path": "<MidiDevice>/note032",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch G#",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ea41fff9-0edb-4ffa-8e88-0df4ab049124",
+                    "path": "<MidiDevice>/note044",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch G#",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d206a4eb-2ab3-4b05-8632-995c528032fa",
+                    "path": "<MidiDevice>/note056",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch G#",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0b3f0225-d310-4b77-b294-e00366b3a531",
+                    "path": "<MidiDevice>/note068",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch G#",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ecb7d2a6-1c58-44a5-a655-97290d116a9f",
+                    "path": "<MidiDevice>/note080",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch G#",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "bc031642-7e39-443a-b4d6-eef9398870cd",
+                    "path": "<MidiDevice>/note092",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch G#",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a531883d-46ee-4ae5-9716-ffc1e2dc15bd",
+                    "path": "<MidiDevice>/note104",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch G#",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2cb0ae83-4e53-4112-9fd8-a91034151e97",
+                    "path": "<MidiDevice>/note116",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pitch G#",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "Keyboard&Mouse",
+            "bindingGroup": "Keyboard&Mouse",
+            "devices": [
+                {
+                    "devicePath": "<Keyboard>",
+                    "isOptional": false,
+                    "isOR": false
+                },
+                {
+                    "devicePath": "<Mouse>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        },
+        {
+            "name": "Gamepad",
+            "bindingGroup": "Gamepad",
+            "devices": [
+                {
+                    "devicePath": "<Gamepad>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        },
+        {
+            "name": "Touch",
+            "bindingGroup": "Touch",
+            "devices": [
+                {
+                    "devicePath": "<Touchscreen>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        },
+        {
+            "name": "Joystick",
+            "bindingGroup": "Joystick",
+            "devices": [
+                {
+                    "devicePath": "<Joystick>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        },
+        {
+            "name": "XR",
+            "bindingGroup": "XR",
+            "devices": [
+                {
+                    "devicePath": "<XRController>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        }
+    ]
+}
