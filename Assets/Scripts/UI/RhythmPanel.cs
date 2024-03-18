@@ -21,9 +21,11 @@ public class RhythmPanel : NetworkBehaviour
         else Destroy(gameObject);
     }
     void OnEnable() {
+        // NewGridReached is only called on the host, not the client
         NewGridReached += NewGrid;
     }
     void OnDisable() {
+        // NewGridReached is only called on the host, not the client
         NewGridReached -= NewGrid;
     }
     //The following two methods are called only at host
@@ -39,6 +41,7 @@ public class RhythmPanel : NetworkBehaviour
         UpdateRhythmPanelClientRpc(currentBeat.Value);
     }
     [ClientRpc] private void TriggerSoundClientRpc() {
+        //This method is called on both the host and the client
         TriggerSound?.Invoke();
     }
     [ClientRpc] private void UpdateRhythmPanelClientRpc(short beat) {

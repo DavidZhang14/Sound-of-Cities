@@ -5,7 +5,6 @@ using Debug = UnityEngine.Debug;
 using TMPro;
 using System.IO;
 using Unity.Netcode;
-using System.Net;
 using Unity.Netcode.Transports.UTP;
 using UnityEngine.Assertions;
 using Unity.Services.Core;
@@ -26,7 +25,7 @@ public class GameManager : NetworkBehaviour
     public PlacementManager placementManager;
     public GameObject loadBtnPrefab;
     public static string joinCode = null;
-    public static bool clientMode = false;
+    public static bool clientMode = false, singlePlayer = true;
     private string savePath;
     public static bool randomPitch = true, randomRhythm = true;
 
@@ -61,8 +60,11 @@ public class GameManager : NetworkBehaviour
             Debug.Log("Signed in " + AuthenticationService.Instance.PlayerId);
         };
         await AuthenticationService.Instance.SignInAnonymouslyAsync();
-        if (clientMode) StartClient(); 
-        else StartHost();
+        if (singlePlayer) StartSinglePlayer();
+        else {
+            if (clientMode) StartClient(); 
+            else StartHost();
+        }
     }
 
     private void SpecialPlacementHandler()
@@ -175,7 +177,12 @@ public class GameManager : NetworkBehaviour
     public void ExplorerButtonClicked() {
         Process.Start(savePath);
     }
-
+    private void StartSinglePlayer() {
+        string serverIP = "127.0.0.1";
+        NetworkManager.Singleton.GetComponent<UnityTransport>().SetConnectionData(serverIP, 7777);
+        NetworkManager.Singleton.StartHost();
+        RhythmPanel.instance.Reset();
+    }
     public async void StartHost() {
         if (NetworkManager.Singleton.IsServer) return;
         NetworkManager.Singleton.Shutdown();
