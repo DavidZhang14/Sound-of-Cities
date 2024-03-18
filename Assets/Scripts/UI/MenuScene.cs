@@ -2,11 +2,12 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
+using System;
 
 public class MenuScene : MonoBehaviour
 {
     [SerializeField] private Button singlePlayerButton, hostButton, clientButton;
-    [SerializeField] private TMP_InputField ipInputField;
+    [SerializeField] private TMP_InputField joinCodeInputField;
     private void Start() {
         singlePlayerButton.onClick.AddListener(() => {
             GameManager.singlePlayer = true;
@@ -23,9 +24,10 @@ public class MenuScene : MonoBehaviour
 
         clientButton.onClick.AddListener(() =>
         {
+            if (String.IsNullOrWhiteSpace(joinCodeInputField.text)) return;
             GameManager.singlePlayer = false;
             GameManager.clientMode = true;
-            GameManager.joinCode = ipInputField.text;
+            GameManager.joinCode = joinCodeInputField.text;
             // Load next scene
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         });

@@ -86,7 +86,7 @@ public class UIController : MonoBehaviour
     private void Update() {
         if (Input.GetKeyDown(KeyCode.Escape)) advancedPanel.SetActive(!advancedPanel.activeSelf);
         
-        // Number hotkeys
+        // Function number hotkeys
         if (Input.GetKeyDown(KeyCode.F1)) placeRoadButton.onClick.Invoke();
         else if (Input.GetKeyDown(KeyCode.F2)) placeHouseButton.onClick.Invoke();
         else if (Input.GetKeyDown(KeyCode.F3)) editButton.onClick.Invoke();

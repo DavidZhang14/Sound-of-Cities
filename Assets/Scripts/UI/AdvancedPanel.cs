@@ -8,7 +8,7 @@ using Unity.Netcode;
 public class AdvancedPanel : MonoBehaviour
 {
     [SerializeField] private Slider volumeSlider, tempoSlider, loopLengthSlider;
-    [SerializeField] private TMP_Text volumeText, tempoText, loopLengthText, ipText;
+    [SerializeField] private TMP_Text volumeText, tempoText, loopLengthText, joinCodeText;
     [SerializeField] private RTPC volumeRTPC, tempoRTPC;
     [SerializeField] private Toggle randomPitchToggle, randomRhythmToggle;
 
@@ -54,7 +54,8 @@ public class AdvancedPanel : MonoBehaviour
         randomPitchToggle.isOn = GameManager.randomPitch;
         randomRhythmToggle.isOn = GameManager.randomRhythm;
 
-        ipText.SetText("Join Code: " + GameManager.joinCode);
+        if (!GameManager.singlePlayer)
+            joinCodeText.SetText("Join Code: " + GameManager.joinCode);
 
     }
 
@@ -64,6 +65,10 @@ public class AdvancedPanel : MonoBehaviour
         #else
             Application.Quit();
         #endif
+    }
+
+    public void Return() {
+        gameObject.SetActive(false);
     }
 
     public void TransposeUp() {

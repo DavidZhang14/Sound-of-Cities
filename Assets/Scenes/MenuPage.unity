@@ -1209,7 +1209,7 @@ MonoBehaviour:
   singlePlayerButton: {fileID: 843801260}
   hostButton: {fileID: 1110859847}
   clientButton: {fileID: 1048211362}
-  ipInputField: {fileID: 909905728}
+  joinCodeInputField: {fileID: 909905728}
 --- !u!1 &1048211360
 GameObject:
   m_ObjectHideFlags: 0
