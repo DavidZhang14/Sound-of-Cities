@@ -19,12 +19,15 @@ public class AdvancedPanel : MonoBehaviour
             volumeText.SetText("Master Volume\n" + (int)v);
         });
         tempoSlider.onValueChanged.AddListener((v) => {
+            //tempoSlider is interactable only in host mode
+            if (!NetworkManager.Singleton.IsHost) return;
             tempoRTPC.SetGlobalValue(v);
             RhythmPanel.instance.Reset();
             tempoText.SetText("Tempo\n" + (int)v);
+            RhythmPanel.tempo.Value = (short)v;
         });
         loopLengthSlider.onValueChanged.AddListener((v) => {
-            RhythmPanel.instance.UpdateBeatPerMeasure((short)v);
+            RhythmPanel.instance.UpdateBeatPerMeasureClientRpc((short)v);
             if (InfoPanel.instance) InfoPanel.instance.UpdateBeatDropdownText();
             loopLengthText.SetText("Loop Length\n" + (int)v);
         });
@@ -41,10 +44,13 @@ public class AdvancedPanel : MonoBehaviour
 
         if (NetworkManager.Singleton.IsHost) {
             tempoSlider.interactable = true;
+            loopLengthSlider.interactable = true;
             tempoSlider.value = tempoRTPC.GetValue(gameObject);
         }
         else {
             tempoSlider.interactable = false;
+            loopLengthSlider.interactable = false;
+            tempoSlider.value = RhythmPanel.tempo.Value;
         }
         tempoText.SetText("Tempo\n" + (int)tempoSlider.value);
 

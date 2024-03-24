@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using Unity.Netcode;
+using UnityEngine.Assertions;
 
 public class RhythmPanel : NetworkBehaviour
 {
@@ -9,6 +10,7 @@ public class RhythmPanel : NetworkBehaviour
     public static RhythmPanel instance;
     public static NetworkVariable<short> currentGrid = new(0);
     public static NetworkVariable<short> currentBeat = new(0);
+    public static NetworkVariable<short> tempo = new(0);
     [SerializeField] private RawImage[] Beats = new RawImage[5];
 
     public static short beatPerMeasure = 4;
@@ -52,7 +54,7 @@ public class RhythmPanel : NetworkBehaviour
             for (int i = 0; i < beat - 1; i++) Beats[i].color = opaque;
         }
     }
-    public void UpdateBeatPerMeasure(short newMeter) {
+    [ClientRpc] public void UpdateBeatPerMeasureClientRpc(short newMeter) {
         beatPerMeasure = newMeter;
         gridPerMeasure = (short)(newMeter*8);
         for (int i = 0; i < beatPerMeasure - 1; i++) 
@@ -66,6 +68,7 @@ public class RhythmPanel : NetworkBehaviour
         NewGridReached?.Invoke();
     }
     public void Reset() {
+        Assert.IsTrue(NetworkManager.Singleton.IsHost);
         AkSoundEngine.PostEvent("Main_Loop", gameObject, (uint)AkCallbackType.AK_MusicSyncGrid, CallbackFunction, null);
     }
 }
