@@ -186,7 +186,7 @@ public class InputManager : MonoBehaviour
 		}
 	}
 	public void MIDI_PitchControl(int pitch) {
-		Debug.Log("MIDI triggered at pitch " + pitch);
+		//Debug.Log("MIDI triggered at pitch " + pitch);
 		if (UIController.editTarget) {
 			UIController.editTarget.pitch = (short)pitch;
 			UIController.editTarget.UpdateSound();
