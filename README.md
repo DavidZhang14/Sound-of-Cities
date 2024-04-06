@@ -1,4 +1,5 @@
-# Sound-of-Cities-Demo
+# Sound-of-Cities 城市之声
+![alt text](https://github.com/DavidZhang14/Sound-of-Cities/blob/main/Assets/screenshot.png)
 
 ## Video Demonstration 视频演示
 [English (Youtube)](https://www.youtube.com/watch?v=8S8e_oA-3V8)
@@ -40,9 +41,11 @@ It doesn’t necessarily have to be a city simulation. It can be placing pieces 
 
 也未必做成城市模拟，可以是在室内摆放家具，也可以在自然场景里摆一些花草树木之类。
 
-
+## Credits
 Unity Version: 2021.3.33f1
 Wwise Version: 2022.1.9.8365
+
+Special thanks to Yuetong Wang and Bryan Jacobs for testing and suggestions.
 
 The art assets and some non-audio parts of the code come from this free online tutorial by Sunny Valley Studio.
 https://www.youtube.com/playlist?list=PLcRSafycjWFd6YOvRE3GQqURFpIxZpErI
