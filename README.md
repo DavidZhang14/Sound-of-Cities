@@ -2,6 +2,7 @@
 ![alt text](https://github.com/DavidZhang14/Sound-of-Cities/blob/main/Assets/screenshot.png)
 
 ## Video Demonstration 视频演示
+[中文 (Bilibili)](https://www.bilibili.com/video/BV19m411z7uW/)  
 [English (Youtube)](https://www.youtube.com/watch?v=8S8e_oA-3V8)
 
 ## Design Concept 设计理念
@@ -21,8 +22,9 @@ You can sync the tempo and meter (beat per measure) among multiple machines thro
 您可以通过网络在多台机器之间同步速度和拍号（每小节几拍）。在主机上点击主菜单中的“Host”按钮，打开高级面板（按Escape键）找到Join Code。在客户端上，输入Join Code。速度和节拍只能由主机更改。
 
 ## Shortcuts 快捷键
-[F1, F2, F3] - Build road, Build structure, Edit
-[shift + 1, 2, 3, 4...] - Beat 1, Beat 2, Beat 3, Beat 4...
+[Esc Key] - Advanced settings panel  
+[F1, F2, F3] - Build road, Build structure, Edit  
+[shift + 1, 2, 3, 4...] - Beat 1, Beat 2, Beat 3, Beat 4...  
 [tilde, 1, 2, 3, 4...] - On beat, +1/8 beat, + 1/4 beat, + 3/8 beat, + 1/2 beat...
 
 For pitches, you can use your MIDI devices! Just make sure you have your MIDI gear connected before starting the program. 
