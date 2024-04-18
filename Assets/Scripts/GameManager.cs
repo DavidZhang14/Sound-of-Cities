@@ -12,6 +12,7 @@ using Unity.Services.Authentication;
 using Unity.Services.Relay;
 using Unity.Services.Relay.Models;
 using Unity.Networking.Transport.Relay;
+using AK.Wwise;
 public class GameManager : NetworkBehaviour
 {
     public static GameManager instance;
@@ -28,6 +29,8 @@ public class GameManager : NetworkBehaviour
     public static bool clientMode = false, singlePlayer = true;
     private string savePath;
     public static bool randomPitch = true, randomRhythm = true;
+    public static bool loadBeatPerMeasure = true, loadTempo = true;
+    public RTPC volumeRTPC, tempoRTPC;
 
     private void Awake() {
         if (instance == null) {

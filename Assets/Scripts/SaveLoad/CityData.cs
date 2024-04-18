@@ -13,12 +13,15 @@ public class CityData
         }
         this.playerPosition[0] = playerPosition.x;
         this.playerPosition[1] = playerPosition.z;
+        tempo = RhythmPanel.tempo.Value;
+        beatPerMeasure = RhythmPanel.beatPerMeasure;
     }
 
     // Data
     public float[] playerPosition = new float[2];
     public List<SerializableStructure> structures = new();
     public bool randomPitch, randomRhythm;
+    public short beatPerMeasure = 4, tempo = 90;
 
     // Deserialization
     private readonly Vector3 cameraOffset = new(-4, 7, -6);
@@ -38,6 +41,16 @@ public class CityData
                 structures[i].pitch, 
                 structures[i].targetGrid,
                 structures[i].objectVolume);
+        }
+        if (GameManager.loadTempo) {
+            GameManager.instance.tempoRTPC.SetGlobalValue(tempo);
+            RhythmPanel.tempo.Value = tempo;
+            RhythmPanel.instance.Reset();
+        }
+        if (GameManager.loadBeatPerMeasure) {
+            RhythmPanel.instance.UpdateBeatPerMeasureClientRpc(beatPerMeasure);
+            RhythmPanel.beatPerMeasure = beatPerMeasure;
+            if (InfoPanel.instance) InfoPanel.instance.UpdateBeatDropdownText();
         }
     }
 }

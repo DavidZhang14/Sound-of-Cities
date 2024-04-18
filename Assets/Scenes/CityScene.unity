@@ -10350,16 +10350,6 @@ MonoBehaviour:
   tempoText: {fileID: 425822795}
   loopLengthText: {fileID: 1409814429}
   joinCodeText: {fileID: 2107811946}
-  volumeRTPC:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: eb6df67c9c8cecb41a248e84dfee6e9f,
-      type: 2}
-  tempoRTPC:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 02ee32414187ae645b71a524eb7ad3df,
-      type: 2}
   randomPitchToggle: {fileID: 1521741468}
   randomRhythmToggle: {fileID: 947043937}
 --- !u!1 &603889760
@@ -39472,6 +39462,16 @@ MonoBehaviour:
   placementManager: {fileID: 540532163}
   loadBtnPrefab: {fileID: 3148823762518958598, guid: 3f0d2e04864540846ace988fc9d0455d,
     type: 3}
+  volumeRTPC:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: eb6df67c9c8cecb41a248e84dfee6e9f,
+      type: 2}
+  tempoRTPC:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 02ee32414187ae645b71a524eb7ad3df,
+      type: 2}
 --- !u!4 &2039921796
 Transform:
   m_ObjectHideFlags: 0
