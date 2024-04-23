@@ -2,18 +2,30 @@ Switch Group	ID	Name			Wwise Object Path	Notes
 	1908158473	Pitch			\Default Work Unit\Pitch	
 
 Switch	ID	Name	Switch Group			Notes
-	84696440	G	Pitch			
-	84696441	F	Pitch			
-	84696442	E	Pitch			
-	84696443	D	Pitch			
-	84696444	C	Pitch			
-	84696445	B	Pitch			
-	84696446	A	Pitch			
-	164139463	A_sharp	Pitch			
-	844677726	D_sharp	Pitch			
-	951594152	F_sharp	Pitch			
-	2816864521	C_sharp	Pitch			
-	3736223277	G_sharp	Pitch			
+	767392880	A_sharp5	Pitch			
+	767392881	A_sharp4	Pitch			
+	1476030750	C_sharp5	Pitch			
+	1476030751	C_sharp4	Pitch			
+	1786192860	G4	Pitch			
+	1786192861	G5	Pitch			
+	1802970446	F5	Pitch			
+	1802970447	F4	Pitch			
+	1819748154	E4	Pitch			
+	1819748155	E5	Pitch			
+	1836525716	D5	Pitch			
+	1836525717	D4	Pitch			
+	1853303296	C4	Pitch			
+	1853303297	C5	Pitch			
+	1870081010	B5	Pitch			
+	1870081011	B4	Pitch			
+	1886858606	A4	Pitch			
+	1886858607	A5	Pitch			
+	2679765454	D_sharp4	Pitch			
+	2679765455	D_sharp5	Pitch			
+	3214401762	G_sharp5	Pitch			
+	3214401763	G_sharp4	Pitch			
+	4058926156	F_sharp4	Pitch			
+	4058926157	F_sharp5	Pitch			
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	2415836739	Volume			\Default Work Unit\Volume	

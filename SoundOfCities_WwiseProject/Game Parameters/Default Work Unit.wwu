@@ -13,7 +13,7 @@
 				<GameParameter Name="Pitch" ID="{6B92152C-AA6E-459E-B7B0-9F8C54A15FB4}">
 					<PropertyList>
 						<Property Name="InitialValue" Type="Real64" Value="0"/>
-						<Property Name="Max" Type="Real64" Value="12"/>
+						<Property Name="Max" Type="Real64" Value="24"/>
 					</PropertyList>
 				</GameParameter>
 				<GameParameter Name="Volume" ID="{394BAEAF-7246-43F9-AF83-01C667CB918B}">

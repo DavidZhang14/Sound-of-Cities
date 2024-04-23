@@ -1,6 +1,5 @@
 ﻿using SVS;
 using UnityEngine;
-using System.Diagnostics;
 using Debug = UnityEngine.Debug;
 using TMPro;
 using System.IO;
@@ -27,7 +26,7 @@ public class GameManager : NetworkBehaviour
     public GameObject loadBtnPrefab;
     public static string joinCode = null;
     public static bool clientMode = false, singlePlayer = true;
-    private string savePath;
+    public static string savePath;
     public static bool randomPitch = true, randomRhythm = true;
     public static bool loadBeatPerMeasure = true, loadTempo = true;
     public RTPC volumeRTPC, tempoRTPC;
@@ -131,7 +130,7 @@ public class GameManager : NetworkBehaviour
             if (!UIController.editTarget.gameObject.GetComponent<Outline>())
                 UIController.editTarget.gameObject.AddComponent<Outline>();
 
-            UIController.Instance.UpdateInfoPanel();
+            InfoPanel.Instance.UpdateInfoPanel();
         }
         else 
         {
@@ -176,9 +175,6 @@ public class GameManager : NetworkBehaviour
         string saveName = GameObject.Find("SaveInput").GetComponent<TMP_InputField>().text;
         SaveSystem.SaveCity(saveName);
         GameObject.Find("SavePanel").SetActive(false);
-    }
-    public void ExplorerButtonClicked() {
-        Process.Start(savePath);
     }
     private void StartSinglePlayer() {
         string serverIP = "127.0.0.1";

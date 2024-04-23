@@ -75,14 +75,6 @@ public class UIController : MonoBehaviour
         }
     }
 
-    public void UpdateInfoPanel() 
-    {
-        infoPanel.Instrument.text = editTarget.instrument;
-        infoPanel.targetBeatDropdown.SetValueWithoutNotify((editTarget.targetGrid - 1) / 8);
-        infoPanel.targetGridDropdown.SetValueWithoutNotify((editTarget.targetGrid - 1) % 8);
-        infoPanel.pitchDropdown.value = editTarget.pitch;
-        infoPanel.volumeSlider.value = editTarget.objectVolume;
-    }
     private void Update() {
         if (Input.GetKeyDown(KeyCode.Escape)) advancedPanel.SetActive(!advancedPanel.activeSelf);
         

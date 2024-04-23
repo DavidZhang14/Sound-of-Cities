@@ -50,7 +50,7 @@ public class CityData
         if (GameManager.loadBeatPerMeasure) {
             RhythmPanel.instance.UpdateBeatPerMeasureClientRpc(beatPerMeasure);
             RhythmPanel.beatPerMeasure = beatPerMeasure;
-            if (InfoPanel.instance) InfoPanel.instance.UpdateBeatDropdownText();
+            if (InfoPanel.Instance) InfoPanel.Instance.UpdateBeatDropdownText();
         }
     }
 }

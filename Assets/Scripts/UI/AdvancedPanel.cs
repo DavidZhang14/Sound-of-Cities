@@ -30,7 +30,7 @@ public class AdvancedPanel : MonoBehaviour
         });
         loopLengthSlider.onValueChanged.AddListener((v) => {
             RhythmPanel.instance.UpdateBeatPerMeasureClientRpc((short)v);
-            if (InfoPanel.instance) InfoPanel.instance.UpdateBeatDropdownText();
+            if (InfoPanel.Instance) InfoPanel.Instance.UpdateBeatDropdownText();
             loopLengthText.SetText("Loop Length\n" + (int)v);
         });
         randomPitchToggle.onValueChanged.AddListener((v) => {
@@ -89,7 +89,7 @@ public class AdvancedPanel : MonoBehaviour
                 structure.soundEmitter.UpdateSound();
             }
         }
-        if(UIController.editTarget) UIController.Instance.UpdateInfoPanel();
+        if(UIController.editTarget) InfoPanel.Instance.UpdateInfoPanel();
     }
 
     public void TransposeDown() {
@@ -102,6 +102,6 @@ public class AdvancedPanel : MonoBehaviour
                 structure.soundEmitter.UpdateSound();
             }
         }
-        if(UIController.editTarget) UIController.Instance.UpdateInfoPanel();
+        if(UIController.editTarget) InfoPanel.Instance.UpdateInfoPanel();
     }
 }

@@ -6,9 +6,10 @@ public class StructureSoundEmitter : MonoBehaviour
     public string instrument = "Harp";
     public short targetGrid;
     public short objectVolume = 100;
+    public short octave = 0;
     void OnEnable() {
-        RhythmPanel.TriggerSound += EmitSound;
         UpdateSound();
+        RhythmPanel.TriggerSound += EmitSound;
     }
     void OnDisable() {
         RhythmPanel.TriggerSound -= EmitSound;
@@ -18,7 +19,7 @@ public class StructureSoundEmitter : MonoBehaviour
             AkSoundEngine.PostEvent("Note_Trigger", gameObject);
     }
     public void UpdateSound() {
-        AkSoundEngine.SetRTPCValue("Pitch", pitch, gameObject);
+        AkSoundEngine.SetRTPCValue("Pitch", pitch + octave * 12, gameObject);
         AkSoundEngine.SetRTPCValue("ObjectVolume", objectVolume, gameObject);
         AkSoundEngine.SetSwitch("Instrument", instrument, gameObject);
     }

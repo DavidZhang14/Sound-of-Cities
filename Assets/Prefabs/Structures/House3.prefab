@@ -161,6 +161,8 @@ MonoBehaviour:
   pitch: 4
   instrument: Strumstick
   targetGrid: 1
+  objectVolume: 100
+  octave: 0
 --- !u!54 &2399895010994064467
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -10,7 +10,7 @@ public class RhythmPanel : NetworkBehaviour
     public static RhythmPanel instance;
     public static NetworkVariable<short> currentGrid = new(0);
     public static NetworkVariable<short> currentBeat = new(0);
-    public static NetworkVariable<short> tempo = new(0);
+    public static NetworkVariable<short> tempo = new(90);
     [SerializeField] private RawImage[] Beats = new RawImage[5];
 
     public static short beatPerMeasure = 4;

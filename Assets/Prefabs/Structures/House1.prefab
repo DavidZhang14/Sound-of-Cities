@@ -64,6 +64,8 @@ MonoBehaviour:
   pitch: 0
   instrument: Recorder
   targetGrid: 1
+  objectVolume: 100
+  octave: 0
 --- !u!54 &6513372689905031247
 Rigidbody:
   m_ObjectHideFlags: 0

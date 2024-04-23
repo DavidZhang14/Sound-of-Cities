@@ -49,7 +49,8 @@ public class PlacementManager : MonoBehaviour
         structureDictionary.Add(position, structure);
 
         // Set pitch, rhythm, and object volume
-        structure.soundEmitter.pitch = pitch;
+        structure.soundEmitter.pitch = (short)(pitch % 12);
+        structure.soundEmitter.octave = (short)(pitch / 12);
         structure.soundEmitter.targetGrid = targetGrid;
         structure.soundEmitter.objectVolume = objectVolume;
         structure.soundEmitter.UpdateSound();
@@ -191,7 +192,7 @@ public class PlacementManager : MonoBehaviour
             }
         }
         // Close info panel
-        if (InfoPanel.instance) InfoPanel.instance.gameObject.SetActive(false);
+        if (InfoPanel.Instance) InfoPanel.Instance.gameObject.SetActive(false);
         ConfirmationPanel.YesButtonClicked -= ClearCity;
         ConfirmationPanel.NoButtonClicked -= ClearCityCancelled;
     }
@@ -226,7 +227,7 @@ public class PlacementManager : MonoBehaviour
 
         // If the structure is the edit target, close the info panel
         if (UIController.editTarget != null && structure.soundEmitter == UIController.editTarget)
-            InfoPanel.instance.gameObject.SetActive(false);
+            InfoPanel.Instance.gameObject.SetActive(false);
 
         Destroy(structure.gameObject);
         structureDictionary.Remove(deletePos);

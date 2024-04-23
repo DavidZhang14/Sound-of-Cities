@@ -41,18 +41,30 @@ namespace AK
 
             namespace SWITCH
             {
-                static const AkUniqueID A = 84696446U;
-                static const AkUniqueID A_SHARP = 164139463U;
-                static const AkUniqueID B = 84696445U;
-                static const AkUniqueID C = 84696444U;
-                static const AkUniqueID C_SHARP = 2816864521U;
-                static const AkUniqueID D = 84696443U;
-                static const AkUniqueID D_SHARP = 844677726U;
-                static const AkUniqueID E = 84696442U;
-                static const AkUniqueID F = 84696441U;
-                static const AkUniqueID F_SHARP = 951594152U;
-                static const AkUniqueID G = 84696440U;
-                static const AkUniqueID G_SHARP = 3736223277U;
+                static const AkUniqueID A4 = 1886858606U;
+                static const AkUniqueID A5 = 1886858607U;
+                static const AkUniqueID A_SHARP4 = 767392881U;
+                static const AkUniqueID A_SHARP5 = 767392880U;
+                static const AkUniqueID B4 = 1870081011U;
+                static const AkUniqueID B5 = 1870081010U;
+                static const AkUniqueID C4 = 1853303296U;
+                static const AkUniqueID C5 = 1853303297U;
+                static const AkUniqueID C_SHARP4 = 1476030751U;
+                static const AkUniqueID C_SHARP5 = 1476030750U;
+                static const AkUniqueID D4 = 1836525717U;
+                static const AkUniqueID D5 = 1836525716U;
+                static const AkUniqueID D_SHARP4 = 2679765454U;
+                static const AkUniqueID D_SHARP5 = 2679765455U;
+                static const AkUniqueID E4 = 1819748154U;
+                static const AkUniqueID E5 = 1819748155U;
+                static const AkUniqueID F4 = 1802970447U;
+                static const AkUniqueID F5 = 1802970446U;
+                static const AkUniqueID F_SHARP4 = 4058926156U;
+                static const AkUniqueID F_SHARP5 = 4058926157U;
+                static const AkUniqueID G4 = 1786192860U;
+                static const AkUniqueID G5 = 1786192861U;
+                static const AkUniqueID G_SHARP4 = 3214401763U;
+                static const AkUniqueID G_SHARP5 = 3214401762U;
             } // namespace SWITCH
         } // namespace PITCH
 

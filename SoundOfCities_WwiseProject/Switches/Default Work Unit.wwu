@@ -8,18 +8,30 @@
 						<Property Name="UseGameParameter" Type="bool" Value="True"/>
 					</PropertyList>
 					<ChildrenList>
-						<Switch Name="C" ID="{9AE5F630-1B25-4CFC-B214-A021C3C527F4}"/>
-						<Switch Name="C_sharp" ID="{D01B9261-DF49-4881-A7CA-6674F2BD800B}"/>
-						<Switch Name="D" ID="{2D97AF80-B47A-4257-ADCD-2F929489B148}"/>
-						<Switch Name="D_sharp" ID="{B8AD9B42-BE64-4E4B-8878-46804031A88E}"/>
-						<Switch Name="E" ID="{5F18C1A7-8A28-4F3C-8383-90A1A3D7E1FB}"/>
-						<Switch Name="F" ID="{64B3B6F4-5B41-43E3-9C50-10382C6F9BFA}"/>
-						<Switch Name="F_sharp" ID="{1F29AB0C-5AB9-49B9-8449-D33ECEA31D1E}"/>
-						<Switch Name="G" ID="{BC311CF6-3AC8-433F-A4CE-548EACD7AA29}"/>
-						<Switch Name="G_sharp" ID="{1AA1CE70-EA5B-4B91-980C-0E578B45532B}"/>
-						<Switch Name="A" ID="{80DE4746-DACE-4E70-A541-7D40B1BD7430}"/>
-						<Switch Name="A_sharp" ID="{93890C6E-1F9F-40A8-821D-B8B1B957E2B3}"/>
-						<Switch Name="B" ID="{BC6FB9CA-118E-4890-93B4-DF6EDA326648}"/>
+						<Switch Name="C4" ID="{9AE5F630-1B25-4CFC-B214-A021C3C527F4}"/>
+						<Switch Name="C_sharp4" ID="{D01B9261-DF49-4881-A7CA-6674F2BD800B}"/>
+						<Switch Name="D4" ID="{2D97AF80-B47A-4257-ADCD-2F929489B148}"/>
+						<Switch Name="D_sharp4" ID="{B8AD9B42-BE64-4E4B-8878-46804031A88E}"/>
+						<Switch Name="E4" ID="{5F18C1A7-8A28-4F3C-8383-90A1A3D7E1FB}"/>
+						<Switch Name="F4" ID="{64B3B6F4-5B41-43E3-9C50-10382C6F9BFA}"/>
+						<Switch Name="F_sharp4" ID="{1F29AB0C-5AB9-49B9-8449-D33ECEA31D1E}"/>
+						<Switch Name="G4" ID="{BC311CF6-3AC8-433F-A4CE-548EACD7AA29}"/>
+						<Switch Name="G_sharp4" ID="{1AA1CE70-EA5B-4B91-980C-0E578B45532B}"/>
+						<Switch Name="A4" ID="{80DE4746-DACE-4E70-A541-7D40B1BD7430}"/>
+						<Switch Name="A_sharp4" ID="{93890C6E-1F9F-40A8-821D-B8B1B957E2B3}"/>
+						<Switch Name="B4" ID="{BC6FB9CA-118E-4890-93B4-DF6EDA326648}"/>
+						<Switch Name="C5" ID="{14831E2C-6E21-444D-A491-1C47E1190F0D}"/>
+						<Switch Name="C_sharp5" ID="{60A37AD9-D1A3-428C-BE3A-47D3338EDBBE}"/>
+						<Switch Name="D5" ID="{2A3848C5-B82A-49D1-907D-3C153327DCE3}"/>
+						<Switch Name="D_sharp5" ID="{A1DA3DD5-0B11-4569-8601-DC1B53A9DDEC}"/>
+						<Switch Name="E5" ID="{F9D826B8-739A-437A-AEE6-96448BF6FDE7}"/>
+						<Switch Name="F5" ID="{6E1A1D54-52EF-43F3-A0DB-5346A55367CF}"/>
+						<Switch Name="F_sharp5" ID="{3DDB8378-5CDF-4951-9ABC-86F7862F0260}"/>
+						<Switch Name="G5" ID="{C0230404-46DE-4C89-A9BB-1E354DD03218}"/>
+						<Switch Name="G_sharp5" ID="{36077FAE-D355-41A6-A146-220BC9337C23}"/>
+						<Switch Name="A5" ID="{65080136-8532-4F19-9CAC-E7D89ABE0074}"/>
+						<Switch Name="A_sharp5" ID="{2307AE66-D14C-4F3F-9241-86C667B9C942}"/>
+						<Switch Name="B5" ID="{4F19E3C3-3D8B-4DB9-A6B8-D55F6DF1CEC6}"/>
 					</ChildrenList>
 					<SwitchOnRTPC>
 						<GameParameterRef Name="Pitch" ID="{6B92152C-AA6E-459E-B7B0-9F8C54A15FB4}"/>
@@ -90,7 +102,67 @@
 								</Point>
 								<Point>
 									<XPos>12</XPos>
-									<YPos>0</YPos>
+									<YPos>13</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>13</XPos>
+									<YPos>14</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>14</XPos>
+									<YPos>15</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>15</XPos>
+									<YPos>16</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>16</XPos>
+									<YPos>17</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>17</XPos>
+									<YPos>18</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>18</XPos>
+									<YPos>19</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>19</XPos>
+									<YPos>20</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>20</XPos>
+									<YPos>21</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>21</XPos>
+									<YPos>22</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>22</XPos>
+									<YPos>23</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>23</XPos>
+									<YPos>24</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>24</XPos>
+									<YPos>24</YPos>
 									<Flags>37</Flags>
 								</Point>
 							</PointList>

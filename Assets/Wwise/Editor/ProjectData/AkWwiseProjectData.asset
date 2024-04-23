@@ -94,7 +94,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: d4b514fe4a80544c843d323e6844ee2f
     GuidInternal: 
-    m_lastTime: -8584974552793841514
+    m_lastTime: -8584877018134448775
     List:
     - name: Main_Loop
       guid: 40394ec22fd0c8479c1c7ee0ae6ea453
@@ -124,7 +124,7 @@ MonoBehaviour:
     ParentPath: Events\MIDI
     guid: 44d996f522980f4eab14761fdfdbcb2e
     GuidInternal: 
-    m_lastTime: -8584914250979907242
+    m_lastTime: -8584876974234235201
     List:
     - name: Note_Trigger
       guid: 6e2ae1cea1326d40a986f9e6701882f6
@@ -155,7 +155,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 789d1955a94f0c42a6f708ae99567410
     GuidInternal: 
-    m_lastTime: -8584938528095948650
+    m_lastTime: -8584876980610515393
     List:
     - name: Attenuation
       guid: f38cd04d4a94d646b202ec79e8362131
@@ -253,7 +253,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: 85618ebb61fd914caee7f1816f7129ad
     GuidInternal: 
-    m_lastTime: -8585283007947850150
+    m_lastTime: -8584876977386944120
     List:
     - name: Instrument
       guid: 36c5dd9c5c3877478ce79d02e2b19279
@@ -400,25 +400,9 @@ MonoBehaviour:
         guid: 6c8ac985064d4f45915909d6ec270468
       Path: Switches\Default Work Unit\Pitch
       values:
-      - name: A
-        guid: 4647de80ceda704ea5417d40b1bd7430
-        id: 84696446
-        PathAndIcons:
-        - ElementName: Switches
-          ObjectType: 5
-          guid: 00000000000000000000000000000000
-        - ElementName: Default Work Unit
-          ObjectType: 12
-          guid: 85618ebb61fd914caee7f1816f7129ad
-        - ElementName: Pitch
-          ObjectType: 11
-          guid: 6c8ac985064d4f45915909d6ec270468
-        - ElementName: A
-          ObjectType: 10
-          guid: 4647de80ceda704ea5417d40b1bd7430
-      - name: A_sharp
+      - name: A_sharp4
         guid: 6e0c89939f1fa840821db8b1b957e2b3
-        id: 164139463
+        id: 767392881
         PathAndIcons:
         - ElementName: Switches
           ObjectType: 5
@@ -429,12 +413,12 @@ MonoBehaviour:
         - ElementName: Pitch
           ObjectType: 11
           guid: 6c8ac985064d4f45915909d6ec270468
-        - ElementName: A_sharp
+        - ElementName: A_sharp4
           ObjectType: 10
           guid: 6e0c89939f1fa840821db8b1b957e2b3
-      - name: B
-        guid: cab96fbc8e11904893b4df6eda326648
-        id: 84696445
+      - name: A_sharp5
+        guid: 66ae07234cd13f4f924186c667b9c942
+        id: 767392880
         PathAndIcons:
         - ElementName: Switches
           ObjectType: 5
@@ -445,12 +429,60 @@ MonoBehaviour:
         - ElementName: Pitch
           ObjectType: 11
           guid: 6c8ac985064d4f45915909d6ec270468
-        - ElementName: B
+        - ElementName: A_sharp5
+          ObjectType: 10
+          guid: 66ae07234cd13f4f924186c667b9c942
+      - name: A4
+        guid: 4647de80ceda704ea5417d40b1bd7430
+        id: 1886858606
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 85618ebb61fd914caee7f1816f7129ad
+        - ElementName: Pitch
+          ObjectType: 11
+          guid: 6c8ac985064d4f45915909d6ec270468
+        - ElementName: A4
+          ObjectType: 10
+          guid: 4647de80ceda704ea5417d40b1bd7430
+      - name: A5
+        guid: 360108653285194f9cace7d89abe0074
+        id: 1886858607
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 85618ebb61fd914caee7f1816f7129ad
+        - ElementName: Pitch
+          ObjectType: 11
+          guid: 6c8ac985064d4f45915909d6ec270468
+        - ElementName: A5
+          ObjectType: 10
+          guid: 360108653285194f9cace7d89abe0074
+      - name: B4
+        guid: cab96fbc8e11904893b4df6eda326648
+        id: 1870081011
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 85618ebb61fd914caee7f1816f7129ad
+        - ElementName: Pitch
+          ObjectType: 11
+          guid: 6c8ac985064d4f45915909d6ec270468
+        - ElementName: B4
           ObjectType: 10
           guid: cab96fbc8e11904893b4df6eda326648
-      - name: C
-        guid: 30f6e59a251bfc4cb214a021c3c527f4
-        id: 84696444
+      - name: B5
+        guid: c3e3194f8b3db94da6b8d55f6df1cec6
+        id: 1870081010
         PathAndIcons:
         - ElementName: Switches
           ObjectType: 5
@@ -461,12 +493,12 @@ MonoBehaviour:
         - ElementName: Pitch
           ObjectType: 11
           guid: 6c8ac985064d4f45915909d6ec270468
-        - ElementName: C
+        - ElementName: B5
           ObjectType: 10
-          guid: 30f6e59a251bfc4cb214a021c3c527f4
-      - name: C_sharp
+          guid: c3e3194f8b3db94da6b8d55f6df1cec6
+      - name: C_sharp4
         guid: 61921bd049df8148a7ca6674f2bd800b
-        id: 2816864521
+        id: 1476030751
         PathAndIcons:
         - ElementName: Switches
           ObjectType: 5
@@ -477,12 +509,12 @@ MonoBehaviour:
         - ElementName: Pitch
           ObjectType: 11
           guid: 6c8ac985064d4f45915909d6ec270468
-        - ElementName: C_sharp
+        - ElementName: C_sharp4
           ObjectType: 10
           guid: 61921bd049df8148a7ca6674f2bd800b
-      - name: D
-        guid: 80af972d7ab45742adcd2f929489b148
-        id: 84696443
+      - name: C_sharp5
+        guid: d97aa360a3d18c42be3a47d3338edbbe
+        id: 1476030750
         PathAndIcons:
         - ElementName: Switches
           ObjectType: 5
@@ -493,12 +525,12 @@ MonoBehaviour:
         - ElementName: Pitch
           ObjectType: 11
           guid: 6c8ac985064d4f45915909d6ec270468
-        - ElementName: D
+        - ElementName: C_sharp5
           ObjectType: 10
-          guid: 80af972d7ab45742adcd2f929489b148
-      - name: D_sharp
-        guid: 429badb864be4b4e887846804031a88e
-        id: 844677726
+          guid: d97aa360a3d18c42be3a47d3338edbbe
+      - name: C4
+        guid: 30f6e59a251bfc4cb214a021c3c527f4
+        id: 1853303296
         PathAndIcons:
         - ElementName: Switches
           ObjectType: 5
@@ -509,12 +541,44 @@ MonoBehaviour:
         - ElementName: Pitch
           ObjectType: 11
           guid: 6c8ac985064d4f45915909d6ec270468
-        - ElementName: D_sharp
+        - ElementName: C4
+          ObjectType: 10
+          guid: 30f6e59a251bfc4cb214a021c3c527f4
+      - name: C5
+        guid: 2c1e8314216e4d44a4911c47e1190f0d
+        id: 1853303297
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 85618ebb61fd914caee7f1816f7129ad
+        - ElementName: Pitch
+          ObjectType: 11
+          guid: 6c8ac985064d4f45915909d6ec270468
+        - ElementName: C5
+          ObjectType: 10
+          guid: 2c1e8314216e4d44a4911c47e1190f0d
+      - name: D_sharp4
+        guid: 429badb864be4b4e887846804031a88e
+        id: 2679765454
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 85618ebb61fd914caee7f1816f7129ad
+        - ElementName: Pitch
+          ObjectType: 11
+          guid: 6c8ac985064d4f45915909d6ec270468
+        - ElementName: D_sharp4
           ObjectType: 10
           guid: 429badb864be4b4e887846804031a88e
-      - name: E
-        guid: a7c1185f288a3c4f838390a1a3d7e1fb
-        id: 84696442
+      - name: D_sharp5
+        guid: d53ddaa1110b69458601dc1b53a9ddec
+        id: 2679765455
         PathAndIcons:
         - ElementName: Switches
           ObjectType: 5
@@ -525,12 +589,60 @@ MonoBehaviour:
         - ElementName: Pitch
           ObjectType: 11
           guid: 6c8ac985064d4f45915909d6ec270468
-        - ElementName: E
+        - ElementName: D_sharp5
+          ObjectType: 10
+          guid: d53ddaa1110b69458601dc1b53a9ddec
+      - name: D4
+        guid: 80af972d7ab45742adcd2f929489b148
+        id: 1836525717
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 85618ebb61fd914caee7f1816f7129ad
+        - ElementName: Pitch
+          ObjectType: 11
+          guid: 6c8ac985064d4f45915909d6ec270468
+        - ElementName: D4
+          ObjectType: 10
+          guid: 80af972d7ab45742adcd2f929489b148
+      - name: D5
+        guid: c548382a2ab8d149907d3c153327dce3
+        id: 1836525716
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 85618ebb61fd914caee7f1816f7129ad
+        - ElementName: Pitch
+          ObjectType: 11
+          guid: 6c8ac985064d4f45915909d6ec270468
+        - ElementName: D5
+          ObjectType: 10
+          guid: c548382a2ab8d149907d3c153327dce3
+      - name: E4
+        guid: a7c1185f288a3c4f838390a1a3d7e1fb
+        id: 1819748154
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 85618ebb61fd914caee7f1816f7129ad
+        - ElementName: Pitch
+          ObjectType: 11
+          guid: 6c8ac985064d4f45915909d6ec270468
+        - ElementName: E4
           ObjectType: 10
           guid: a7c1185f288a3c4f838390a1a3d7e1fb
-      - name: F
-        guid: f4b6b364415be3439c5010382c6f9bfa
-        id: 84696441
+      - name: E5
+        guid: b826d8f99a737a43aee696448bf6fde7
+        id: 1819748155
         PathAndIcons:
         - ElementName: Switches
           ObjectType: 5
@@ -541,12 +653,12 @@ MonoBehaviour:
         - ElementName: Pitch
           ObjectType: 11
           guid: 6c8ac985064d4f45915909d6ec270468
-        - ElementName: F
+        - ElementName: E5
           ObjectType: 10
-          guid: f4b6b364415be3439c5010382c6f9bfa
-      - name: F_sharp
+          guid: b826d8f99a737a43aee696448bf6fde7
+      - name: F_sharp4
         guid: 0cab291fb95ab9498449d33ecea31d1e
-        id: 951594152
+        id: 4058926156
         PathAndIcons:
         - ElementName: Switches
           ObjectType: 5
@@ -557,12 +669,12 @@ MonoBehaviour:
         - ElementName: Pitch
           ObjectType: 11
           guid: 6c8ac985064d4f45915909d6ec270468
-        - ElementName: F_sharp
+        - ElementName: F_sharp4
           ObjectType: 10
           guid: 0cab291fb95ab9498449d33ecea31d1e
-      - name: G
-        guid: f61c31bcc83a3f43a4ce548eacd7aa29
-        id: 84696440
+      - name: F_sharp5
+        guid: 7883db3ddf5c51499abc86f7862f0260
+        id: 4058926157
         PathAndIcons:
         - ElementName: Switches
           ObjectType: 5
@@ -573,12 +685,12 @@ MonoBehaviour:
         - ElementName: Pitch
           ObjectType: 11
           guid: 6c8ac985064d4f45915909d6ec270468
-        - ElementName: G
+        - ElementName: F_sharp5
           ObjectType: 10
-          guid: f61c31bcc83a3f43a4ce548eacd7aa29
-      - name: G_sharp
-        guid: 70cea11a5bea914b980c0e578b45532b
-        id: 3736223277
+          guid: 7883db3ddf5c51499abc86f7862f0260
+      - name: F4
+        guid: f4b6b364415be3439c5010382c6f9bfa
+        id: 1802970447
         PathAndIcons:
         - ElementName: Switches
           ObjectType: 5
@@ -589,9 +701,89 @@ MonoBehaviour:
         - ElementName: Pitch
           ObjectType: 11
           guid: 6c8ac985064d4f45915909d6ec270468
-        - ElementName: G_sharp
+        - ElementName: F4
+          ObjectType: 10
+          guid: f4b6b364415be3439c5010382c6f9bfa
+      - name: F5
+        guid: 541d1a6eef52f343a0db5346a55367cf
+        id: 1802970446
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 85618ebb61fd914caee7f1816f7129ad
+        - ElementName: Pitch
+          ObjectType: 11
+          guid: 6c8ac985064d4f45915909d6ec270468
+        - ElementName: F5
+          ObjectType: 10
+          guid: 541d1a6eef52f343a0db5346a55367cf
+      - name: G_sharp4
+        guid: 70cea11a5bea914b980c0e578b45532b
+        id: 3214401763
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 85618ebb61fd914caee7f1816f7129ad
+        - ElementName: Pitch
+          ObjectType: 11
+          guid: 6c8ac985064d4f45915909d6ec270468
+        - ElementName: G_sharp4
           ObjectType: 10
           guid: 70cea11a5bea914b980c0e578b45532b
+      - name: G_sharp5
+        guid: ae7f073655d3a641a146220bc9337c23
+        id: 3214401762
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 85618ebb61fd914caee7f1816f7129ad
+        - ElementName: Pitch
+          ObjectType: 11
+          guid: 6c8ac985064d4f45915909d6ec270468
+        - ElementName: G_sharp5
+          ObjectType: 10
+          guid: ae7f073655d3a641a146220bc9337c23
+      - name: G4
+        guid: f61c31bcc83a3f43a4ce548eacd7aa29
+        id: 1786192860
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 85618ebb61fd914caee7f1816f7129ad
+        - ElementName: Pitch
+          ObjectType: 11
+          guid: 6c8ac985064d4f45915909d6ec270468
+        - ElementName: G4
+          ObjectType: 10
+          guid: f61c31bcc83a3f43a4ce548eacd7aa29
+      - name: G5
+        guid: 040423c0de46894ca9bb1e354dd03218
+        id: 1786192861
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 85618ebb61fd914caee7f1816f7129ad
+        - ElementName: Pitch
+          ObjectType: 11
+          guid: 6c8ac985064d4f45915909d6ec270468
+        - ElementName: G5
+          ObjectType: 10
+          guid: 040423c0de46894ca9bb1e354dd03218
       ValueGuids: []
       ValueIcons: []
       valuesInternal: []
@@ -610,7 +802,7 @@ MonoBehaviour:
     m_lastTime: -8585286319930929214
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 1a0000001b000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0
