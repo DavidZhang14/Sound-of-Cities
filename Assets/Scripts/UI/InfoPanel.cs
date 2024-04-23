@@ -42,7 +42,7 @@ public class InfoPanel : MonoBehaviour
         Instrument.text = UIController.editTarget.instrument;
         targetBeatDropdown.SetValueWithoutNotify((UIController.editTarget.targetGrid - 1) / 8);
         targetGridDropdown.SetValueWithoutNotify((UIController.editTarget.targetGrid - 1) % 8);
-        octaveDropdown.SetValueWithoutNotify(UIController.editTarget.pitch / 12);
+        octaveDropdown.SetValueWithoutNotify(UIController.editTarget.octave);
         pitchDropdown.value = UIController.editTarget.pitch % 12;
         volumeSlider.value = UIController.editTarget.objectVolume;
     }
